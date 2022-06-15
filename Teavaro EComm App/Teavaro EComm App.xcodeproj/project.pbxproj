@@ -39,6 +39,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91A03E6285A07E200E1C682 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C95AD6CC285A065600F3D7E6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C91A03E7285A07F100E1C682 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C95AD6D1285A065600F3D7E6 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C91A03E8285A084D00E1C682 /* DataModule */ = {
+			isa = PBXGroup;
+			children = (
+				C95AD6C9285A065500F3D7E6 /* Teavaro_EComm_App.xcdatamodeld */,
+			);
+			path = DataModule;
+			sourceTree = "<group>";
+		};
+		C91A03E9285A086500E1C682 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C95AD6CE285A065600F3D7E6 /* LaunchScreen.storyboard */,
+				C95AD6C4285A065500F3D7E6 /* ViewController.swift */,
+				C95AD6C6285A065500F3D7E6 /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		C95AD6B4285A065500F3D7E6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +92,12 @@
 		C95AD6BF285A065500F3D7E6 /* Teavaro EComm App */ = {
 			isa = PBXGroup;
 			children = (
+				C91A03E9285A086500E1C682 /* Scenes */,
+				C91A03E8285A084D00E1C682 /* DataModule */,
+				C91A03E7285A07F100E1C682 /* SupportingFiles */,
+				C91A03E6285A07E200E1C682 /* Resources */,
 				C95AD6C0285A065500F3D7E6 /* AppDelegate.swift */,
 				C95AD6C2285A065500F3D7E6 /* SceneDelegate.swift */,
-				C95AD6C4285A065500F3D7E6 /* ViewController.swift */,
-				C95AD6C6285A065500F3D7E6 /* Main.storyboard */,
-				C95AD6CC285A065600F3D7E6 /* Assets.xcassets */,
-				C95AD6CE285A065600F3D7E6 /* LaunchScreen.storyboard */,
-				C95AD6D1285A065600F3D7E6 /* Info.plist */,
-				C95AD6C9285A065500F3D7E6 /* Teavaro_EComm_App.xcdatamodeld */,
 			);
 			path = "Teavaro EComm App";
 			sourceTree = "<group>";
@@ -293,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GV86YZ8K5S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Teavaro EComm App/Info.plist";
+				INFOPLIST_FILE = "Teavaro EComm App/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GV86YZ8K5S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Teavaro EComm App/Info.plist";
+				INFOPLIST_FILE = "Teavaro EComm App/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
