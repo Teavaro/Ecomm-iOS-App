@@ -10,6 +10,9 @@
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
+		C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477F286E085500C1DCAB /* CustomSecureTextField.swift */; };
+		C9404782286F0C2600C1DCAB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404781286F0C2600C1DCAB /* LoginView.swift */; };
+		C9404784286F0C9F00C1DCAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404783286F0C9F00C1DCAB /* ProfileView.swift */; };
 		C94D5761286DB7FD00AF5D70 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94D5760286DB7FD00AF5D70 /* AccountView.swift */; };
 		C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779728622C3E006DDD74 /* AppMain.swift */; };
 		C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779928622C3E006DDD74 /* ItemsListingView.swift */; };
@@ -35,6 +38,9 @@
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		C940477F286E085500C1DCAB /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
+		C9404781286F0C2600C1DCAB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C9404783286F0C9F00C1DCAB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C94D5760286DB7FD00AF5D70 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		C9FE779428622C3E006DDD74 /* Teavaro Ecomm Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teavaro Ecomm Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE779728622C3E006DDD74 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 			children = (
 				C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */,
 				C940477B286DF8E400C1DCAB /* BlurView.swift */,
+				C940477F286E085500C1DCAB /* CustomSecureTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				C94D5760286DB7FD00AF5D70 /* AccountView.swift */,
+				C9404781286F0C2600C1DCAB /* LoginView.swift */,
+				C9404783286F0C9F00C1DCAB /* ProfileView.swift */,
 			);
 			path = AccountScene;
 			sourceTree = "<group>";
@@ -319,13 +328,16 @@
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */,
 				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
+				C9404782286F0C2600C1DCAB /* LoginView.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
+				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
+				C9404784286F0C9F00C1DCAB /* ProfileView.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
