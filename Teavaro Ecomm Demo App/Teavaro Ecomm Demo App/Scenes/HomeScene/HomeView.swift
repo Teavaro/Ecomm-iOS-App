@@ -14,21 +14,21 @@ struct HomeView: View {
 //            Image(uiImage: UIImage(imageLiteralResourceName: "logo-angro"))
 //                .padding()
             TabView {
-                ItemsListingView()
+                AngroView()
                     .tabItem {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
-                OrderView()
-                    .tabItem {
-                        Label("Cart", systemImage: "cart")
+                        Label("Angro", systemImage: "house")
                     }
                 ItemsListingView()
+                    .tabItem {
+                        Label("Shop", systemImage: "bag")
+                    }
+                WishlistView()
                     .tabItem {
                         Label("Wishlist", systemImage: "heart")
                     }
-                AccountView()
+                CheckoutView()
                     .tabItem {
-                        Label("Account", systemImage: "person.crop.circle")
+                        Label("Account", systemImage: "cart")
                     }
             }
         }

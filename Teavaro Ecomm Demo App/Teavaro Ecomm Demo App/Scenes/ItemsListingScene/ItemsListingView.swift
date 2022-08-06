@@ -14,16 +14,13 @@ struct ItemsListingView: View {
             VStack(alignment: .leading) {
                 
                 List {
-                    ForEach(sections) { section in
-                        Section(header: Text(section.name)) {
-                            ForEach(section.items) { item in
-                                NavigationLink(destination: ItemDetail(item: item)) {ItemRow(item: item)
-                                }
+                    ForEach(store.getItems()) { item in
+                            NavigationLink(destination: ItemDetail(item: item)) {
+                                ItemRow(item: item)
                             }
                         }
-                    }
                 }
-                // .navigationTitle("Menu")
+                 .navigationTitle("Shop")
             }
            
         }

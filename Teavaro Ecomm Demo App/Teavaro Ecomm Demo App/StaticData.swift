@@ -43,8 +43,14 @@ class Order: ObservableObject {
     }
 }
 
-var sections = [MenuSection(id: UUID(), name: "Section1", items: items1), MenuSection(id: UUID(), name: "Section2", items: items2), MenuSection(id: UUID(), name: "Sections3", items: items3)]
+//var sections = [MenuSection(id: UUID(), name: "Section1", items: items1), MenuSection(id: UUID(), name: "Section2", items: items2), MenuSection(id: UUID(), name: "Sections3", items: items3)]
+
+var store = Store()
+
+//var sections = [MenuSection(id: UUID(), name: "Section1", items: items1)]
 
 var items1 = [MenuItem(id: UUID(), name: "Meat", price: 10), MenuItem(id: UUID(), name: "Fish", price: 7), MenuItem(id: UUID(), name: "Chicken", price: 15)]
 var items2 = [MenuItem(id: UUID(), name: "Mango", price: 5), MenuItem(id: UUID(), name: "Banana", price: 3), MenuItem(id: UUID(), name: "Strawberry", price: 6)]
 var items3 = [MenuItem(id: UUID(), name: "Tomato", price: 2), MenuItem(id: UUID(), name: "Carrot", price: 1), MenuItem(id: UUID(), name: "Cucumber", price: 2)]
+
+

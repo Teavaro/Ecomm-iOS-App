@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
+		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
+		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
+		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
+		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = SOURCE_ROOT; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
@@ -74,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0065CCBC289DAD6800317DDD /* AngroScene */ = {
+			isa = PBXGroup;
+			children = (
+				0065CCBD289DAD8000317DDD /* AngroView.swift */,
+			);
+			path = AngroScene;
+			sourceTree = "<group>";
+		};
 		C9404778286DF8A100C1DCAB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +155,8 @@
 				C9FE779D28622C3F006DDD74 /* Preview Content */,
 				C9FE77AA286338C2006DDD74 /* StaticData.swift */,
 				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
+				0065CCBF289DB09C00317DDD /* Store.swift */,
+				0065CCC1289DB21400317DDD /* ShopItem.swift */,
 			);
 			path = "Teavaro Ecomm Demo App";
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 		C9FE77B428636C61006DDD74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0065CCBC289DAD6800317DDD /* AngroScene */,
 				C94D575F286DB54B00AF5D70 /* OrderScene */,
 				C94D575D286DB4CA00AF5D70 /* CheckoutScene */,
 				C9FE77B528636FD7006DDD74 /* HomeScene */,
@@ -195,6 +214,7 @@
 		C9FE77B828637016006DDD74 /* WishListScene */ = {
 			isa = PBXGroup;
 			children = (
+				009C9ACE289D6F4000599DB0 /* WishlistView.swift */,
 			);
 			path = WishListScene;
 			sourceTree = "<group>";
@@ -327,13 +347,17 @@
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */,
+				0065CCC0289DB09C00317DDD /* Store.swift in Sources */,
+				009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */,
 				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
+				0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */,
 				C9404782286F0C2600C1DCAB /* LoginView.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
+				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,

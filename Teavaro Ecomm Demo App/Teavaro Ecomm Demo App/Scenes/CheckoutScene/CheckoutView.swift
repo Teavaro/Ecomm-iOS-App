@@ -29,40 +29,49 @@ struct CheckoutView: View {
     
     var body: some View {
         // Text(s.$viewModel.ggg)
-        Form {
-            Section {
-                Picker("How do you want to pay?", selection: $paymentType) {
-                    ForEach(paymentTypes, id: \.self) {
-                        Text($0)
-                    }
-                }.pickerStyle(.wheel)
-                Toggle("Add iDine loyalty card", isOn: $addLoyaltyDetails.animation())
-                    .padding()
-                if addLoyaltyDetails {
-                    TextField("Enter your iDine ID", text: $loyaltyNumber)
-                        .padding()
-                }
+//        Form {
+//            Section {
+//                Picker("How do you want to pay?", selection: $paymentType) {
+//                    ForEach(paymentTypes, id: \.self) {
+//                        Text($0)
+//                    }
+//                }.pickerStyle(.wheel)
+//                Toggle("Add iDine loyalty card", isOn: $addLoyaltyDetails.animation())
+//                    .padding()
+//                if addLoyaltyDetails {
+//                    TextField("Enter your iDine ID", text: $loyaltyNumber)
+//                        .padding()
+//                }
+//
+//            }
+//            Section(header: Text("Add a tip?")) {
+//                Picker("Percentage:", selection: $tipAmount) {
+//                    ForEach(tipAmounts, id: \.self) {
+//                        Text("\($0)%")
+//                    }
+//                }
+//                .pickerStyle(.segmented)
+//                .padding()
+//            }
+//            Section(header: Text("TOTAL: \(totalPrice)").font(.largeTitle)) {
+//                Button("Confirm order") {
+//                    showingPaymentAlert.toggle()
+//                }
+//            }
+//        }
+//        .navigationTitle("Payment")
+//        .navigationBarTitleDisplayMode(.inline)
+//        .alert(isPresented: $showingPaymentAlert) {
+//            Alert(title: Text("Order confirmed"), message: Text("Your total was \(totalPrice) – thank you!"), dismissButton: .default(Text("OK")))
+//        }
+        NavigationView{
+            VStack(alignment: .leading) {
                 
-            }
-            Section(header: Text("Add a tip?")) {
-                Picker("Percentage:", selection: $tipAmount) {
-                    ForEach(tipAmounts, id: \.self) {
-                        Text("\($0)%")
-                    }
+                List {
+                    
                 }
-                .pickerStyle(.segmented)
-                .padding()
+                .navigationTitle("Checkout")
             }
-            Section(header: Text("TOTAL: \(totalPrice)").font(.largeTitle)) {
-                Button("Confirm order") {
-                    showingPaymentAlert.toggle()
-                }
-            }
-        }
-        .navigationTitle("Payment")
-        .navigationBarTitleDisplayMode(.inline)
-        .alert(isPresented: $showingPaymentAlert) {
-            Alert(title: Text("Order confirmed"), message: Text("Your total was \(totalPrice) – thank you!"), dismissButton: .default(Text("OK")))
         }
     }
 }

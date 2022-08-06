@@ -9,17 +9,18 @@ import SwiftUI
 
 struct ItemRow : View {
     
-    let item: MenuItem
+    let item: ShopItem
 
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(imageLiteralResourceName: "Image"))
+            Image(uiImage: UIImage(imageLiteralResourceName: item.picture))
+                .resizable()
+                .frame(width: 100, height: 100)
                 .clipShape(Circle())
-                .overlay(Circle().stroke(.gray, lineWidth: 2))
-            Spacer()
             VStack(alignment: .leading) {
-                Text(item.name)
-                Text("Price " + "\(item.price)" + " L.E").padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                Text(item.title)
+                    .bold()
+                Text("Price " + "$\(item.price)").padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             }
         }.padding()
     }
@@ -27,6 +28,6 @@ struct ItemRow : View {
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRow(item: items1.first!)
+        ItemRow(item: store.getItems().first!)
     }
 }
