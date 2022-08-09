@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CCD28A1A61C000E2F03 /* CartItemRow.swift */; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
 		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00183CCD28A1A61C000E2F03 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				C9FE77BD286373B8006DDD74 /* CheckoutView.swift */,
 				C9FE77C82864EF3D006DDD74 /* CheckoutViewModel.swift */,
+				00183CCD28A1A61C000E2F03 /* CartItemRow.swift */,
 			);
 			path = CheckoutScene;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
 				C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */,
 				C9FE77C52864EEBC006DDD74 /* ViewFactory.swift in Sources */,
+				00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

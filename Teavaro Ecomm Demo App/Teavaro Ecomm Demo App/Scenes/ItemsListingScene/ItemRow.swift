@@ -26,8 +26,8 @@ struct ItemRow : View {
     }
 }
 
-struct ItemRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemRow(item: store.getItems().first!)
-    }
-}
+//struct ItemRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemRow(item: store.listItems.first!)
+//    }
+//}

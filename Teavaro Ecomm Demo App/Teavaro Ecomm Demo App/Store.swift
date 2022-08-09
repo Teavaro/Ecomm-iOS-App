@@ -5,11 +5,16 @@
 //  Created by bdado on 5/8/22.
 //
 
+import Foundation
 import SwiftUI
 
-class Store {
+class Store: ObservableObject {
 
-    private var listItems: [ShopItem] = []
+    @Published var listItems: [ShopItem] = []
+    @Published var listWish: [ShopItem] = []
+    @Published var listCart: [ShopItem] = []
+    @Published var listOffer: [ShopItem] = []
+    
     var isLogin = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
 
@@ -24,67 +29,55 @@ class Store {
         listItems.append(ShopItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", description: description, price: 50.00, picture: "mixed"))
     }
 
-    func addItemToCart(id: Int) {
-        listItems[id].countOnCart += 1
+    func addItemToCart(item: ShopItem) {
+        if let index = listCart.firstIndex(where: { $0.id == item.id }) {
+            listCart[index].countOnCart += 1
+        }
+        else{
+            listCart.append(item)
+        }
     }
 
-    func removeItemFromCart(id: Int) {
-        listItems[id].countOnCart = 0
+    func removeItemFromCart(offsets: IndexSet) {
+        listCart.remove(atOffsets: offsets)
     }
 
     func addItemToWish(id: Int) {
-        listItems[id].isWish = true
+        listWish.append(listItems[id])
     }
-
-    func removeItemFromWish(id: Int) {
-        listItems[id].isWish = false
-    }
-
-    func getItems() -> Array<ShopItem> {
-        return listItems
-    }
-
-    func getItemsCart() -> Array<ShopItem> {
-        var listCart: [ShopItem] = []
-        for item in listItems {
-            if (item.countOnCart > 0){
-                listCart.append(item)
-            }
+    
+    
+    func isItemInWish(item: ShopItem) -> Bool {
+        if listWish.firstIndex(of: item) != nil {
+            return true
         }
-        return listCart
+        else{
+            return false
+        }
     }
 
-    func getItemsWish() -> Array<ShopItem> {
-        var listWish: [ShopItem] = []
-        for item in listItems {
-            if (item.isWish){
-                listWish.append(item)
-            }
-        }
-        return listWish
+    func removeItemFromWish(offsets: IndexSet) {
+        listWish.remove(atOffsets: offsets)
     }
 
     func getTotalPriceCart() -> Float {
         var total: Float = 0
-        for item in listItems {
+        for item in listCart {
             total += item.price * Float(item.countOnCart)
         }
         return total
     }
 
-    func getItemsOffer() -> Array<ShopItem> {
-        var listOffer: [ShopItem] = []
+    func updateItemsOffer(){
+        listOffer = []
         for item in listItems {
             if (item.isOffer){
                 listOffer.append(item)
             }
         }
-        return listOffer
     }
 
     func removeAllCartItems() {
-//        for item in listItems {
-//            item.countOnCart = 0
-//        }
+        listCart.removeAll()
     }
 }

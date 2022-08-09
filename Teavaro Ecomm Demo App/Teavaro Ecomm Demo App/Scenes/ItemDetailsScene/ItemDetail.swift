@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ItemDetail : View {
     
+    @EnvironmentObject var store: Store
     @EnvironmentObject var order: Order
     let item: ShopItem
+    var allowAddWish: Bool? = true
+    var allowAddCart: Bool? = true
 
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -34,12 +37,18 @@ struct ItemDetail : View {
             Text(item.description)
                 .padding(EdgeInsets(top: 25, leading: 10, bottom: 10, trailing: 10))
             
-            insertButton(title: "Add to Wishlist.", action: {
-                print("Product added.")
-            })
-            insertButton(title: "Add to Cart", action: {
-                print("Product added.")
-            })
+            if allowAddWish! && !store.isItemInWish(item: item){
+                insertButton(title: "Add to Wishlist", action: {
+                    store.addItemToWish(id: item.id)
+                    print("Product added.")
+                })
+            }
+            if allowAddCart! {
+                insertButton(title: "Add to Cart", action: {
+                    store.addItemToCart(item: item)
+                    print("Product added.")
+                })
+            }
             Spacer()
         }
         .padding()
@@ -48,10 +57,10 @@ struct ItemDetail : View {
     }
 }
 
-struct ItemDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ItemDetail(item: store.getItems().first!).environmentObject(Order())
-        }
-    }
-}
+//struct ItemDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            ItemDetail(item: store.getItems().first!).environmentObject(Order())
+//        }
+//    }
+//}

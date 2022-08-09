@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShopItem: Identifiable{
+struct ShopItem: Identifiable,Equatable{
     public var id: Int
     public var title: String
     public var description: String
@@ -16,6 +16,5 @@ struct ShopItem: Identifiable{
     public var isOffer: Bool = false
     public var isInStock: Bool = true
     public var isWish: Bool = false
-    public var countOnCart: Int = 0
-    
+    public var countOnCart: Int = 1
 }

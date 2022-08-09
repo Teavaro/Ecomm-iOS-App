@@ -28,7 +28,7 @@ struct HomeView: View {
                     }
                 CheckoutView()
                     .tabItem {
-                        Label("Account", systemImage: "cart")
+                        Label("Cart", systemImage: "cart")
                     }
             }
         }

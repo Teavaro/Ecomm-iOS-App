@@ -15,7 +15,7 @@ struct AngroView: View {
                 List {
                     
                 }
-                 .navigationTitle("Angro")
+                .navigationTitle("Angro")
             }
         }
     }

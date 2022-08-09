@@ -11,6 +11,7 @@ import SwiftUI
 struct AppMain: App {
 
     @StateObject var order = Order()
+    @StateObject var store = Store()
     
     let persistenceController = PersistenceController.shared
 
@@ -18,6 +19,7 @@ struct AppMain: App {
         WindowGroup {
             HomeView()
                 .environmentObject(order)
+                .environmentObject(store)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
