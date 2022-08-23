@@ -27,6 +27,7 @@ class Store: ObservableObject {
         listItems.append(ShopItem(id: 5, title: "Frito-Lay Doritos & Cheetos Mix", description: description, price: 20.00, picture: "watermelon"))
         listItems.append(ShopItem(id: 6, title: "Green Mountain Coffee Roast", description: description, price: 20.00, picture: "grapes"))
         listItems.append(ShopItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", description: description, price: 50.00, picture: "mixed"))
+        updateItemsOffer()
     }
 
     func addItemToCart(item: ShopItem) {

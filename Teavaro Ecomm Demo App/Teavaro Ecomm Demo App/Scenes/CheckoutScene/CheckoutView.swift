@@ -118,10 +118,7 @@ struct CheckoutView: View {
                         primaryButton: .destructive(Text("Proceed"), action: {
                             store.removeAllCartItems()
                         }),
-                        secondaryButton: .cancel(Text("Cancel"), action: { // 1
-
-                            
-                        })
+                        secondaryButton: .cancel(Text("Cancel"))
                     )
                 }
             }
