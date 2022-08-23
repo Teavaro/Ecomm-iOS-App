@@ -30,6 +30,10 @@ struct HomeView: View {
                     .tabItem {
                         Label("Cart", systemImage: "cart")
                     }
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
             }
         }
     }

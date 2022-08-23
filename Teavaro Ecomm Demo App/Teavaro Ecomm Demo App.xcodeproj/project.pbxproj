@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CCD28A1A61C000E2F03 /* CartItemRow.swift */; };
+		00183CD228B52984000E2F03 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD128B52984000E2F03 /* SettingsView.swift */; };
+		00183CD728B53541000E2F03 /* Login1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD628B53541000E2F03 /* Login1View.swift */; };
+		00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD928B56140000E2F03 /* PermissionsView.swift */; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
 		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		00183CCD28A1A61C000E2F03 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
+		00183CD128B52984000E2F03 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		00183CD628B53541000E2F03 /* Login1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1View.swift; sourceTree = "<group>"; };
+		00183CD928B56140000E2F03 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
@@ -84,6 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00183CCF28B5295E000E2F03 /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD128B52984000E2F03 /* SettingsView.swift */,
+			);
+			path = SettingsScene;
+			sourceTree = "<group>";
+		};
+		00183CD328B5338C000E2F03 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD628B53541000E2F03 /* Login1View.swift */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		00183CD828B56124000E2F03 /* PermissionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD928B56140000E2F03 /* PermissionsView.swift */,
+			);
+			path = PermissionsScene;
+			sourceTree = "<group>";
+		};
 		0065CCBC289DAD6800317DDD /* AngroScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +205,9 @@
 		C9FE77B428636C61006DDD74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00183CD828B56124000E2F03 /* PermissionsScene */,
+				00183CD328B5338C000E2F03 /* LoginScene */,
+				00183CCF28B5295E000E2F03 /* SettingsScene */,
 				0065CCBC289DAD6800317DDD /* AngroScene */,
 				C94D575F286DB54B00AF5D70 /* OrderScene */,
 				C94D575D286DB4CA00AF5D70 /* CheckoutScene */,
@@ -345,6 +378,7 @@
 			files = (
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
+				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
 				C94D5761286DB7FD00AF5D70 /* AccountView.swift in Sources */,
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
@@ -361,6 +395,7 @@
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
 				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
+				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
@@ -370,6 +405,7 @@
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
 				C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */,
 				C9FE77C52864EEBC006DDD74 /* ViewFactory.swift in Sources */,
+				00183CD728B53541000E2F03 /* Login1View.swift in Sources */,
 				00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

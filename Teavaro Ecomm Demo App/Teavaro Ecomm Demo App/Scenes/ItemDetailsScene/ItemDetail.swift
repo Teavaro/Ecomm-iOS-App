@@ -11,6 +11,7 @@ struct ItemDetail : View {
     
     @EnvironmentObject var store: Store
     @EnvironmentObject var order: Order
+    @Environment(\.dismiss) private var dismiss
     let item: ShopItem
     var allowAddWish: Bool? = true
     var allowAddCart: Bool? = true
@@ -47,6 +48,7 @@ struct ItemDetail : View {
                 insertButton(title: "Add to Cart", action: {
                     store.addItemToCart(item: item)
                     print("Product added.")
+                    dismiss()
                 })
             }
             Spacer()
