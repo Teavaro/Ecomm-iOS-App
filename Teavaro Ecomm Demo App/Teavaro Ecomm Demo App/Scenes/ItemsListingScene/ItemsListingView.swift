@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ItemsListingView: View {
+struct ItemsListingView: View{
     
     @EnvironmentObject var store: Store
     

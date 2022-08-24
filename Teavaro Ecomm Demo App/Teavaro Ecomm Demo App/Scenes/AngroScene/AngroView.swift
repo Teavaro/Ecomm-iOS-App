@@ -11,7 +11,7 @@ import CoreData
 struct AngroView: View {
     
     @EnvironmentObject var store: Store
-    @State private var willMoveToShopScreen = false
+    @Binding var tabSelection: Int
     
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -25,6 +25,7 @@ struct AngroView: View {
             .font(.title)
             .background(.cyan)
             .cornerRadius(5)
+            .buttonStyle(PlainButtonStyle())
     }
     
     fileprivate func headerView() -> some View {
@@ -37,7 +38,7 @@ struct AngroView: View {
                 .bold()
                 .foregroundColor(.white)
             insertButton(title: "Explore Fresh", action: {
-                willMoveToShopScreen.toggle()
+                tabSelection = 2
             })
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 400, maxHeight: 400, alignment: .center)
@@ -72,6 +73,7 @@ struct AngroView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300, alignment: .center)
                 }
                 .navigationTitle("Angro")
+                .listStyle(.plain)
             }
         }
     }
@@ -79,6 +81,6 @@ struct AngroView: View {
 
 struct AngroView_Previews: PreviewProvider {
     static var previews: some View {
-        AngroView()
+        AngroView(tabSelection: .constant(1))
     }
 }

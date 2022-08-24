@@ -16,7 +16,7 @@ struct PermissionsView: View {
     @State private var nba: Bool = false
     @Environment(\.dismiss) private var dismiss
     
-    fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
+    fileprivate func insertButton(title: String, color: Color, action: @escaping() -> Void) -> some View {
         return Button {
             action()
         } label: {
@@ -25,7 +25,7 @@ struct PermissionsView: View {
                 .foregroundColor(.white)
         }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             .frame(maxWidth: .infinity, alignment: .center)
-            .background(.cyan)
+            .background(color)
             .cornerRadius(5)
             .padding(.top, 30)
     }
@@ -52,11 +52,14 @@ struct PermissionsView: View {
                 .foregroundColor(.gray)
                 .padding(.top, 30)
             Toggle("Used to provide personalised online marketing based on a unique network token. Trustpid creates and manages the marketing token in a way that does not directly identify you to this website.", isOn: $nba)
-            
-            insertButton(title: "Login", action: {
-                store.isLogin.toggle()
-                dismiss()
-            })
+            HStack{
+                insertButton(title: "Reject All", color: .gray, action: {
+                    dismiss()
+                })
+                insertButton(title: "Accept", color: .cyan, action: {
+                    dismiss()
+                })
+            }
             Spacer()
         }
         .padding(30)

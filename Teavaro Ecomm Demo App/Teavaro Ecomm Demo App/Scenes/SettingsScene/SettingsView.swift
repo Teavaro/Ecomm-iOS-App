@@ -45,6 +45,7 @@ struct SettingsView: View {
                     }
                 }
                 .navigationTitle("Settings")
+                .listStyle(.insetGrouped)
             }
         }
     }
