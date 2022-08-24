@@ -54,7 +54,7 @@ struct Login1View: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    store.isLogin.toggle()
+                    store.isLogin = true
                     dismiss()
                 }
                 else{

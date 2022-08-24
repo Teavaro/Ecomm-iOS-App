@@ -11,44 +11,46 @@ import CoreData
 struct SettingsView: View {
     
     @EnvironmentObject var store: Store
-    @State private var willMoveToShopScreen = false
-    
-    fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
-        return Button {
-            action()
-        } label: {
-            Text(title)
-                .bold()
-                .foregroundColor(.white)
-        }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            .frame(width: 300, height: 50, alignment: .center)
-            .font(.title)
-            .background(.cyan)
-            .cornerRadius(5)
-    }
+    @State var showingConfirmationAlert = false
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 List {
                     Section(){
-                        NavigationLink(destination: Login1View()) {
-                            Text("Login")
-                                .bold()
-                        }
-                    }
-                    Section(){
                         NavigationLink(destination: PermissionsView()) {
                             Text("Permissions")
                                 .bold()
                         }
                     }
+                    Section(){
+                        if(!store.isLogin){
+                            NavigationLink(destination: Login1View()) {
+                                Text("Login")
+                                    .bold()
+                            }
+                        }
+                        else{
+                            Button("Logout", action: {
+                                self.showingConfirmationAlert.toggle()
+                            })
+                        }
+                    }
                 }
-                
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Settings"))
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.insetGrouped)
+                .alert(isPresented: $showingConfirmationAlert) {
+                    Alert(
+                        title: Text("Logout confirmation"),
+                        message: Text("Do you want to proceed with logout?"),
+                        primaryButton: .destructive(Text("Proceed"), action: {
+                            store.isLogin = false
+                        }),
+                        secondaryButton: .cancel(Text("Cancel"))
+                    )
+                }
             }
         }
     }
