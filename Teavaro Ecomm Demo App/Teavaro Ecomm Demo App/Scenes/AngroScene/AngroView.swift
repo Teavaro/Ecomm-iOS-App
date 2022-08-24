@@ -46,7 +46,6 @@ struct AngroView: View {
             Image("bg_image")
                 .resizable()
         )
-        .padding(.top)
     }
     
     var body: some View {
@@ -72,7 +71,9 @@ struct AngroView: View {
                         .padding(.top)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300, alignment: .center)
                 }
-                .navigationTitle("Angro")
+                .navigationBarTitle(Text(""), displayMode: .inline)
+                .navigationBarItems(leading: TitleView(title: "Angro"))
+                .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.plain)
             }
         }

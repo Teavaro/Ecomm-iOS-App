@@ -23,9 +23,10 @@ struct ItemsListingView: View{
                         }
                     }
                 }
-                .navigationTitle("Shop")
+                .navigationBarTitle(Text(""), displayMode: .inline)
+                .navigationBarItems(leading: TitleView(title: "Shop"))
+                .navigationBarColor(backgroundColor: .white, titleColor: .black)
             }
-           
         }
     }
 }

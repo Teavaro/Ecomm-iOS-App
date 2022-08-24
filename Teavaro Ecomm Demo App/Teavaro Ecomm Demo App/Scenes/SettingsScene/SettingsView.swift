@@ -44,7 +44,10 @@ struct SettingsView: View {
                         }
                     }
                 }
-                .navigationTitle("Settings")
+                
+                .navigationBarTitle(Text(""), displayMode: .inline)
+                .navigationBarItems(leading: TitleView(title: "Settings"))
+                .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.insetGrouped)
             }
         }

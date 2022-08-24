@@ -107,7 +107,10 @@ struct CheckoutView: View {
                         Text("Your cart is currently empty.")
                     }
                 }
-                .navigationTitle("Checkout")
+                
+                .navigationBarTitle(Text(""), displayMode: .inline)
+                .navigationBarItems(leading: TitleView(title: "Cart"))
+                .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .toolbar {
                     EditButton()
                 }

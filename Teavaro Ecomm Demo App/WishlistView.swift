@@ -29,7 +29,9 @@ struct WishlistView: View {
                         Text("Your wishlist is currently empty.")
                     }
                 }
-                 .navigationTitle("Wishlist")
+                .navigationBarTitle(Text(""), displayMode: .inline)
+                .navigationBarItems(leading: TitleView(title: "Wishlist"))
+                .navigationBarColor(backgroundColor: .white, titleColor: .black)
                  .toolbar {
                      EditButton()
                  }
