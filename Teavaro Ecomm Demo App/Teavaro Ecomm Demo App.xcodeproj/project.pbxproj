@@ -24,6 +24,10 @@
 		C9404782286F0C2600C1DCAB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404781286F0C2600C1DCAB /* LoginView.swift */; };
 		C9404784286F0C9F00C1DCAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404783286F0C9F00C1DCAB /* ProfileView.swift */; };
 		C94D5761286DB7FD00AF5D70 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94D5760286DB7FD00AF5D70 /* AccountView.swift */; };
+		C95FD77628BCF6DE0048A496 /* SwrveConversationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */; };
+		C95FD77828BCF6DE0048A496 /* SwrveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77728BCF6DE0048A496 /* SwrveSDK */; };
+		C95FD77A28BCF6DE0048A496 /* SwrveSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */; };
+		C95FD77D28BCF7320048A496 /* FunnelConnectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77C28BCF7320048A496 /* FunnelConnectSDK */; };
 		C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779728622C3E006DDD74 /* AppMain.swift */; };
 		C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779928622C3E006DDD74 /* ItemsListingView.swift */; };
 		C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FE779B28622C3F006DDD74 /* Assets.xcassets */; };
@@ -88,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95FD77D28BCF7320048A496 /* FunnelConnectSDK in Frameworks */,
+				C95FD77A28BCF6DE0048A496 /* SwrveSDKCommon in Frameworks */,
+				C95FD77628BCF6DE0048A496 /* SwrveConversationSDK in Frameworks */,
+				C95FD77828BCF6DE0048A496 /* SwrveSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +336,12 @@
 			dependencies = (
 			);
 			name = "Teavaro Ecomm Demo App";
+			packageProductDependencies = (
+				C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */,
+				C95FD77728BCF6DE0048A496 /* SwrveSDK */,
+				C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */,
+				C95FD77C28BCF7320048A496 /* FunnelConnectSDK */,
+			);
 			productName = "Teavaro Ecomm Demo App";
 			productReference = C9FE779428622C3E006DDD74 /* Teavaro Ecomm Demo App.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +370,10 @@
 				Base,
 			);
 			mainGroup = C9FE778B28622C3E006DDD74;
+			packageReferences = (
+				C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */,
+				C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */,
+			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -617,6 +635,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swrve/swrve-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Teavaro/FunnelConnect-iOS-SDK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveConversationSDK;
+		};
+		C95FD77728BCF6DE0048A496 /* SwrveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDK;
+		};
+		C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDKCommon;
+		};
+		C95FD77C28BCF7320048A496 /* FunnelConnectSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */;
+			productName = FunnelConnectSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */ = {
