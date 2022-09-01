@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import FunnelConnectSDK
 
 struct AngroView: View {
     
@@ -38,6 +39,7 @@ struct AngroView: View {
                 .bold()
                 .foregroundColor(.white)
             insertButton(title: "Explore Fresh", action: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "exploreFresh")
                 tabSelection = 2
             })
         }
@@ -76,6 +78,9 @@ struct AngroView: View {
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.plain)
             }
+            .onAppear(perform: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
+            })
         }
     }
 }

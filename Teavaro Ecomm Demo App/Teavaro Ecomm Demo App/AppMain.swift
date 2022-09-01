@@ -6,21 +6,30 @@
 //
 
 import SwiftUI
+import FunnelConnectSDK
 
 @main
 struct AppMain: App {
+    
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
-    @StateObject var order = Order()
     @StateObject var store = Store()
     
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        WindowGroup {
+        try? FunnelConnectSDK.shared.cdp().startService()
+        return WindowGroup {
             HomeView()
-                .environmentObject(order)
                 .environmentObject(store)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
+    class AppDelegate: NSObject, UIApplicationDelegate {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+            FunnelConnectSDK.shared.initialize(sdkToken: "test123", options:  FCOptions(enableLogging: true))
+          return true
+        }
+      }
 }
