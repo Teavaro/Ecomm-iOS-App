@@ -41,12 +41,14 @@ struct ItemDetail : View {
             
             if allowAddWish! && !store.isItemInWish(item: item){
                 insertButton(title: "Add to Wishlist", action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "addToWishlist")
                     store.addItemToWish(id: item.id)
                     print("Product added.")
                 })
             }
             if allowAddCart! {
                 insertButton(title: "Add to Cart", action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "addToCart")
                     store.addItemToCart(item: item)
                     print("Product added.")
                     dismiss()

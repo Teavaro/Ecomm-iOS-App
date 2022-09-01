@@ -13,15 +13,14 @@ struct AppMain: App {
     
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
-    @StateObject var order = Order()
     @StateObject var store = Store()
     
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        WindowGroup {
+        try? FunnelConnectSDK.shared.cdp().startService()
+        return WindowGroup {
             HomeView()
-                .environmentObject(order)
                 .environmentObject(store)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

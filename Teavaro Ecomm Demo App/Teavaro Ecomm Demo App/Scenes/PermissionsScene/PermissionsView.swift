@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import FunnelConnectSDK
 
 struct PermissionsView: View {
     
@@ -39,6 +40,14 @@ struct PermissionsView: View {
         .padding(.top, 25)
     }
     
+    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
+        let permissions = PermissionsMap()
+        permissions.addPermission(key: "OM", accepted: om)
+        permissions.addPermission(key: "NBA", accepted: nba)
+        permissions.addPermission(key: "OPT", accepted: opt)
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsVersion: 1)
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Performance Cookies:")
@@ -54,9 +63,21 @@ struct PermissionsView: View {
             Toggle("Used to provide personalised online marketing based on a unique network token. Trustpid creates and manages the marketing token in a way that does not directly identify you to this website.", isOn: $nba)
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "rejectPermissions")
+                    updatePermissions(om: false, nba: false, opt: false)
+                    try? FunnelConnectSDK.shared.trustPid().rejectConsent()
                     dismiss()
                 })
                 insertButton(title: "Accept", color: .cyan, action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
+                    updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
+                    if(self.nba) {
+                        try? FunnelConnectSDK.shared.trustPid().acceptConsent()
+                        try? FunnelConnectSDK.shared.trustPid().startService(isStub: true)
+                    }
+                    else{
+                        try? FunnelConnectSDK.shared.trustPid().rejectConsent()
+                    }
                     dismiss()
                 })
             }
@@ -65,6 +86,13 @@ struct PermissionsView: View {
         .padding(30)
         .navigationTitle("Permissions")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear(perform: {
+            let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions()
+            self.om = permissions?.getPermission(key: "OM") ?? false
+            self.opt = permissions?.getPermission(key: "OPT") ?? false
+            self.nba = permissions?.getPermission(key: "NBA") ?? false
+            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "permissions")
+        })
     }
 }
 

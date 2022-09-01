@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FunnelConnectSDK
 
 let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
 let tipAmounts = [10, 15, 20, 25, 0]
@@ -43,42 +44,6 @@ struct CheckoutView: View {
     }
     
     var body: some View {
-        // Text(s.$viewModel.ggg)
-//        Form {
-//            Section {
-//                Picker("How do you want to pay?", selection: $paymentType) {
-//                    ForEach(paymentTypes, id: \.self) {
-//                        Text($0)
-//                    }
-//                }.pickerStyle(.wheel)
-//                Toggle("Add iDine loyalty card", isOn: $addLoyaltyDetails.animation())
-//                    .padding()
-//                if addLoyaltyDetails {
-//                    TextField("Enter your iDine ID", text: $loyaltyNumber)
-//                        .padding()
-//                }
-//
-//            }
-//            Section(header: Text("Add a tip?")) {
-//                Picker("Percentage:", selection: $tipAmount) {
-//                    ForEach(tipAmounts, id: \.self) {
-//                        Text("\($0)%")
-//                    }
-//                }
-//                .pickerStyle(.segmented)
-//                .padding()
-//            }
-//            Section(header: Text("TOTAL: \(totalPrice)").font(.largeTitle)) {
-//                Button("Confirm order") {
-//                    showingPaymentAlert.toggle()
-//                }
-//            }
-//        }
-//        .navigationTitle("Payment")
-//        .navigationBarTitleDisplayMode(.inline)
-//        .alert(isPresented: $showingPaymentAlert) {
-//            Alert(title: Text("Order confirmed"), message: Text("Your total was \(totalPrice) – thank you!"), dismissButton: .default(Text("OK")))
-//        }
         NavigationView{
             VStack(alignment: .leading) {
                 
@@ -89,6 +54,7 @@ struct CheckoutView: View {
                         }
                     }
                     .onDelete{ offsets in
+                        try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "removeFromCart")
                         store.removeItemFromCart(offsets: offsets)
                     }
                     if store.listCart.count > 0 {
@@ -100,6 +66,7 @@ struct CheckoutView: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                         }
                         insertButton(title: "Proceed to checkout", action: {
+                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "proceedToCheckout")
                             showingPaymentConfirmationAlert.toggle()
                         })
                     }
@@ -125,6 +92,9 @@ struct CheckoutView: View {
                     )
                 }
             }
+            .onAppear(perform: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "cart")
+            })
         }
     }
 }

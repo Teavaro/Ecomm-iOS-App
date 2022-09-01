@@ -7,8 +7,9 @@
 
 import SwiftUI
 import CoreData
+import FunnelConnectSDK
 
-struct Login1View: View {
+struct LoginView: View {
     
     @EnvironmentObject var store: Store
     @State private var loginId: String = ""
@@ -55,6 +56,7 @@ struct Login1View: View {
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
                     store.isLogin = true
+                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "email", userId: loginId))
                     dismiss()
                 }
                 else{
@@ -68,12 +70,15 @@ struct Login1View: View {
         .navigationBarTitleDisplayMode(.inline)
         .alert("Need to insert email and password!", isPresented: $showingEmptyFieldsAlert) {
                     Button("Ok", role: .cancel) { }
-                }
+        }
+        .onAppear(perform: {
+            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "login")
+        })
     }
 }
 
-struct Login1View_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        Login1View()
+        LoginView()
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import FunnelConnectSDK
 
 struct SettingsView: View {
     
@@ -25,7 +26,7 @@ struct SettingsView: View {
                     }
                     Section(){
                         if(!store.isLogin){
-                            NavigationLink(destination: Login1View()) {
+                            NavigationLink(destination: LoginView()) {
                                 Text("Login")
                                     .bold()
                             }
@@ -52,6 +53,9 @@ struct SettingsView: View {
                     )
                 }
             }
+            .onAppear(perform: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
+            })
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FunnelConnectSDK
 
 struct WishlistView: View {
     
@@ -22,6 +23,7 @@ struct WishlistView: View {
                             }
                         }
                         .onDelete{ offsets in
+                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "removeFromWishlist")
                             store.removeItemFromWish(offsets: offsets)
                         }
                     }
@@ -36,6 +38,9 @@ struct WishlistView: View {
                      EditButton()
                  }
             }
+            .onAppear(perform: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "wishlist")
+            })
         }
     }
 }
