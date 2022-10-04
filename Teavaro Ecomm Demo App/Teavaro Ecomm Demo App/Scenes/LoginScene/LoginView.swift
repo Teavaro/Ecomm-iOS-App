@@ -56,7 +56,7 @@ struct LoginView: View {
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
                     store.isLogin = true
-                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "email", userId: loginId))
+                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "slsc", userId: loginId.hash256))
                     dismiss()
                 }
                 else{

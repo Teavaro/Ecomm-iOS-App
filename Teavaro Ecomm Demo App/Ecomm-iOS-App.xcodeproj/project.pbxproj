@@ -16,18 +16,17 @@
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
 		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
+		008B3F9128E77BFF00561A98 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3F8F28E77BFF00561A98 /* SwrveSDKCommon.xcframework */; };
+		008B3F9228E77BFF00561A98 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3F9028E77BFF00561A98 /* SwrveSDK.xcframework */; };
+		008B3F9428E77C2600561A98 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3F9328E77C2600561A98 /* SDWebImage.xcframework */; };
+		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
+		00D3EC6628DE1EE10010B40C /* FunnelConnectSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D3EC6528DE1EE10010B40C /* FunnelConnectSDK.xcframework */; settings = {ATTRIBUTES = (Required, ); }; };
+		00D3EC6A28E2A75A0010B40C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
 		C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477F286E085500C1DCAB /* CustomSecureTextField.swift */; };
-		C9404782286F0C2600C1DCAB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404781286F0C2600C1DCAB /* LoginView.swift */; };
-		C9404784286F0C9F00C1DCAB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404783286F0C9F00C1DCAB /* ProfileView.swift */; };
-		C94D5761286DB7FD00AF5D70 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94D5760286DB7FD00AF5D70 /* AccountView.swift */; };
-		C95FD77628BCF6DE0048A496 /* SwrveConversationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */; };
-		C95FD77828BCF6DE0048A496 /* SwrveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77728BCF6DE0048A496 /* SwrveSDK */; };
-		C95FD77A28BCF6DE0048A496 /* SwrveSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */; };
-		C95FD77D28BCF7320048A496 /* FunnelConnectSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C95FD77C28BCF7320048A496 /* FunnelConnectSDK */; };
 		C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779728622C3E006DDD74 /* AppMain.swift */; };
 		C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779928622C3E006DDD74 /* ItemsListingView.swift */; };
 		C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FE779B28622C3F006DDD74 /* Assets.xcassets */; };
@@ -55,16 +54,23 @@
 		00183CD928B56140000E2F03 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
 		00183CDB28B69AD5000E2F03 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
-		0063A6B028C0EC0700729E63 /* FunnelConnectSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FunnelConnectSDK.xcframework; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		008B3F8E28E77B1E00561A98 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		008B3F8F28E77BFF00561A98 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = Carthage/Build/SwrveSDKCommon.xcframework; sourceTree = "<group>"; };
+		008B3F9028E77BFF00561A98 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = Carthage/Build/SwrveSDK.xcframework; sourceTree = "<group>"; };
+		008B3F9328E77C2600561A98 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = Carthage/Build/SDWebImage.xcframework; sourceTree = "<group>"; };
+		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
+		00D3EC6528DE1EE10010B40C /* FunnelConnectSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FunnelConnectSDK.xcframework; path = "../../../Downloads/FunnelConnect-iOS-SDK-main/FunnelConnectSDK.xcframework"; sourceTree = "<group>"; };
+		00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 		C940477F286E085500C1DCAB /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
-		C9FE779428622C3E006DDD74 /* Teavaro Ecomm Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teavaro Ecomm Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecomm-iOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE779728622C3E006DDD74 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		C9FE779928622C3E006DDD74 /* ItemsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListingView.swift; sourceTree = "<group>"; };
 		C9FE779B28622C3F006DDD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,10 +96,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95FD77D28BCF7320048A496 /* FunnelConnectSDK in Frameworks */,
-				C95FD77A28BCF6DE0048A496 /* SwrveSDKCommon in Frameworks */,
-				C95FD77628BCF6DE0048A496 /* SwrveConversationSDK in Frameworks */,
-				C95FD77828BCF6DE0048A496 /* SwrveSDK in Frameworks */,
+				008B3F9228E77BFF00561A98 /* SwrveSDK.xcframework in Frameworks */,
+				008B3F9428E77C2600561A98 /* SDWebImage.xcframework in Frameworks */,
+				008B3F9128E77BFF00561A98 /* SwrveSDKCommon.xcframework in Frameworks */,
+				00D3EC6628DE1EE10010B40C /* FunnelConnectSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +156,10 @@
 		00CDFF3028C0EA590096810C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0063A6B028C0EC0700729E63 /* FunnelConnectSDK.xcframework */,
+				008B3F9028E77BFF00561A98 /* SwrveSDK.xcframework */,
+				008B3F8F28E77BFF00561A98 /* SwrveSDKCommon.xcframework */,
+				00D3EC6528DE1EE10010B40C /* FunnelConnectSDK.xcframework */,
+				008B3F9328E77C2600561A98 /* SDWebImage.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 		C9FE778B28622C3E006DDD74 = {
 			isa = PBXGroup;
 			children = (
+				008B3F8E28E77B1E00561A98 /* Bridging-Header.h */,
+				00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */,
+				0092251128CF893200125041 /* Extensions.swift */,
 				00CDFF2E28C0E93A0096810C /* Packages */,
 				C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */,
 				C9FE779528622C3E006DDD74 /* Products */,
@@ -204,7 +216,7 @@
 		C9FE779528622C3E006DDD74 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9FE779428622C3E006DDD74 /* Teavaro Ecomm Demo App.app */,
+				C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +224,7 @@
 		C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */ = {
 			isa = PBXGroup;
 			children = (
+				00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */,
 				C9404778286DF8A100C1DCAB /* CustomViews */,
 				C9FE77CC2864EF7B006DDD74 /* DI */,
 				C9FE77C12864EE85006DDD74 /* MVVM */,
@@ -327,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9FE779328622C3E006DDD74 /* Teavaro Ecomm Demo App */ = {
+		C9FE779328622C3E006DDD74 /* Ecomm-iOS-App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Teavaro Ecomm Demo App" */;
+			buildConfigurationList = C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Ecomm-iOS-App" */;
 			buildPhases = (
 				C9FE779028622C3E006DDD74 /* Sources */,
 				C9FE779128622C3E006DDD74 /* Frameworks */,
@@ -339,15 +352,11 @@
 			);
 			dependencies = (
 			);
-			name = "Teavaro Ecomm Demo App";
+			name = "Ecomm-iOS-App";
 			packageProductDependencies = (
-				C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */,
-				C95FD77728BCF6DE0048A496 /* SwrveSDK */,
-				C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */,
-				C95FD77C28BCF7320048A496 /* FunnelConnectSDK */,
 			);
 			productName = "Teavaro Ecomm Demo App";
-			productReference = C9FE779428622C3E006DDD74 /* Teavaro Ecomm Demo App.app */;
+			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -365,7 +374,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Teavaro Ecomm Demo App" */;
+			buildConfigurationList = C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Ecomm-iOS-App" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -375,14 +384,12 @@
 			);
 			mainGroup = C9FE778B28622C3E006DDD74;
 			packageReferences = (
-				C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */,
-				C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */,
 			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9FE779328622C3E006DDD74 /* Teavaro Ecomm Demo App */,
+				C9FE779328622C3E006DDD74 /* Ecomm-iOS-App */,
 			);
 		};
 /* End PBXProject section */
@@ -394,6 +401,7 @@
 			files = (
 				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
 				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
+				00D3EC6A28E2A75A0010B40C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +437,7 @@
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
+				0092251228CF893200125041 /* Extensions.swift in Sources */,
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
 				C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */,
 				C9FE77C52864EEBC006DDD74 /* ViewFactory.swift in Sources */,
@@ -557,20 +566,26 @@
 		C9FE77A828622C3F006DDD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,6 +595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bdado/Documents/Ecomm-iOS-App/Teavaro Ecomm Demo App/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -588,20 +604,26 @@
 		C9FE77A928622C3F006DDD74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -611,6 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bdado/Documents/Ecomm-iOS-App/Teavaro Ecomm Demo App/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -619,7 +642,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Teavaro Ecomm Demo App" */ = {
+		C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Ecomm-iOS-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9FE77A528622C3F006DDD74 /* Debug */,
@@ -628,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Teavaro Ecomm Demo App" */ = {
+		C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Ecomm-iOS-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9FE77A828622C3F006DDD74 /* Debug */,
@@ -638,48 +661,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swrve/swrve-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-		C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Teavaro/FunnelConnect-iOS-SDK";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C95FD77528BCF6DE0048A496 /* SwrveConversationSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
-			productName = SwrveConversationSDK;
-		};
-		C95FD77728BCF6DE0048A496 /* SwrveSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
-			productName = SwrveSDK;
-		};
-		C95FD77928BCF6DE0048A496 /* SwrveSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C95FD77428BCF6DE0048A496 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
-			productName = SwrveSDKCommon;
-		};
-		C95FD77C28BCF7320048A496 /* FunnelConnectSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C95FD77B28BCF7320048A496 /* XCRemoteSwiftPackageReference "FunnelConnect-iOS-SDK" */;
-			productName = FunnelConnectSDK;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */ = {

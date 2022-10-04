@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FunnelConnectSDK
+import SwrveSDK
 
 @main
 struct AppMain: App {
@@ -18,7 +19,7 @@ struct AppMain: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        try? FunnelConnectSDK.shared.cdp().startService()
+        
         return WindowGroup {
             HomeView()
                 .environmentObject(store)
@@ -28,7 +29,19 @@ struct AppMain: App {
     
     class AppDelegate: NSObject, UIApplicationDelegate {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-            FunnelConnectSDK.shared.initialize(sdkToken: "test123", options:  FCOptions(enableLogging: true))
+            
+            print("excecuting FunnelConnectSDK.initialize()")
+            FunnelConnectSDK.shared.initialize(sdkToken: "BXDX2QY]37Yo^LH}Y4oDmNo6", options:  FCOptions(enableLogging: true))
+            
+            DispatchQueue.main.async {
+                let config = SwrveConfig()
+                config.initMode = SWRVE_INIT_MODE_MANAGED
+                print("excecuting SwrveSDK.sharedInstance()")
+                SwrveSDK.sharedInstance(withAppID: 32153,
+                    apiKey: "FiIpd4eZ8CtQ6carAAx9",
+                    config: config)
+                print("end SwrveSDK.sharedInstance()")
+            }
           return true
         }
       }

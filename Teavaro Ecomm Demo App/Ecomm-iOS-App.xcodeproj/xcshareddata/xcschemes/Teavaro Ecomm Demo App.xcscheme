@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C9FE779328622C3E006DDD74"
-               BuildableName = "Teavaro Ecomm Demo App.app"
-               BlueprintName = "Teavaro Ecomm Demo App"
-               ReferencedContainer = "container:Teavaro Ecomm Demo App.xcodeproj">
+               BuildableName = "Ecomm-iOS-App.app"
+               BlueprintName = "Ecomm-iOS-App"
+               ReferencedContainer = "container:Ecomm-iOS-App.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C9FE779328622C3E006DDD74"
-            BuildableName = "Teavaro Ecomm Demo App.app"
-            BlueprintName = "Teavaro Ecomm Demo App"
-            ReferencedContainer = "container:Teavaro Ecomm Demo App.xcodeproj">
+            BuildableName = "Ecomm-iOS-App.app"
+            BlueprintName = "Ecomm-iOS-App"
+            ReferencedContainer = "container:Ecomm-iOS-App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C9FE779328622C3E006DDD74"
-            BuildableName = "Teavaro Ecomm Demo App.app"
-            BlueprintName = "Teavaro Ecomm Demo App"
-            ReferencedContainer = "container:Teavaro Ecomm Demo App.xcodeproj">
+            BuildableName = "Ecomm-iOS-App.app"
+            BlueprintName = "Ecomm-iOS-App"
+            ReferencedContainer = "container:Ecomm-iOS-App.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
