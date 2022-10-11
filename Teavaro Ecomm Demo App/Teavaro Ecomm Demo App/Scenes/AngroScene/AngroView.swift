@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import FunnelConnectSDK
+import SwrveSDK
 
 struct AngroView: View {
     
@@ -79,15 +80,18 @@ struct AngroView: View {
                 .listStyle(.plain)
             }
             .onAppear(perform: {
-                print("excecuting FunnelConnectSDK.startService()")
-                try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
-                    if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
-                        print("excecuting SwrveSDK.start(withUserId: umid)")
-                        SwrveSDK.start(withUserId: umid)
-                    }
-                }, errorCallback_: {_ in
-                    
-                })
+                if(!store.isFunnelConnectStarted){
+                    print("excecuting FunnelConnectSDK.startService()")
+                    try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
+                        if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
+                            print("excecuting SwrveSDK.start(withUserId: umid)")
+                            SwrveSDK.start(withUserId: umid)
+                            store.isFunnelConnectStarted = true
+                        }
+                    }, errorCallback_: {_ in
+                        
+                    })
+                }
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
             })
         }

@@ -15,7 +15,6 @@ struct AppMain: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
     @StateObject var store = Store()
-    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -27,15 +26,30 @@ struct AppMain: App {
         }
     }
     
-    class AppDelegate: NSObject, UIApplicationDelegate {
+    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate { //, SwrvePushResponseDelegate
+        
+        
+        let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
+        let NotificationActionOneIdentifier = "ACTION1"
+        let NotificationActionTwoIdentifier = "ACTION2"
+        
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+            
+            
             
             print("excecuting FunnelConnectSDK.initialize()")
             FunnelConnectSDK.shared.initialize(sdkToken: "BXDX2QY]37Yo^LH}Y4oDmNo6", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
+                config.pushResponseDelegate = self
+                config.pushEnabled = true
                 config.initMode = SWRVE_INIT_MODE_MANAGED
+                config.pushNotificationEvents = Set(["full_permission_button_clicked"])
+                config.provisionalPushNotificationEvents = Set(["Swrve.session.start"])
+                if #available(iOS 10.0, *) {
+                    config.notificationCategories = self.produceUNNotificationCategory() as! Set<UNNotificationCategory>
+                }
                 print("excecuting SwrveSDK.sharedInstance()")
                 SwrveSDK.sharedInstance(withAppID: 32153,
                     apiKey: "FiIpd4eZ8CtQ6carAAx9",
@@ -43,6 +57,18 @@ struct AppMain: App {
                 print("end SwrveSDK.sharedInstance()")
             }
           return true
+        }
+        
+        @available(iOS 10.0, *)
+        func produceUNNotificationCategory() -> NSSet {
+
+            let fgAction = UNNotificationAction(identifier: NotificationActionOneIdentifier, title: "Foreground", options: [UNNotificationActionOptions.foreground])
+
+            let bgAction = UNNotificationAction(identifier: NotificationActionTwoIdentifier, title: "Background", options: [])
+
+            let exampleCategory = UNNotificationCategory(identifier: NotificationCategoryIdentifier, actions: [fgAction, bgAction], intentIdentifiers: [], options: [])
+
+            return NSSet(array:[exampleCategory])
         }
       }
 }
