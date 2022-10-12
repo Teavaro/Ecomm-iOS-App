@@ -1,0 +1,34 @@
+platform :ios, '10.0'
+
+target 'SwrveSDK-iOS' do
+  pod 'SwrveSDK', :path => '../'
+  pod 'SwrveSDKCommon', :path => '../'
+
+  target 'SwrveSDK-iOSTests' do
+    pod 'OCMock', '~> 3.8.1'
+    inherit! :search_paths
+  end
+end
+
+target 'SwrveSDK-tvOS' do
+  platform :tvos, '10.0'
+  pod 'SwrveSDK', :path => '../'
+  pod 'SwrveSDKCommon', :path => '../'
+
+  target 'SwrveSDK-tvOSTests' do
+    platform :tvos, '10.0'
+    pod 'OCMock', '~> 3.8.1'
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer_representation|
+  unless installer_representation.pods_project.nil?
+    installer_representation.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        # Need to specify the deployment version xcodebuild otherwise causes warnings
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = "10.0"
+      end
+    end
+  end
+end
