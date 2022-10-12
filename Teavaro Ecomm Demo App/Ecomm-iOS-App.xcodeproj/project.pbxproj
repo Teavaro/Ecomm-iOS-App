@@ -24,9 +24,9 @@
 		008B3FE228F514B900561A98 /* SwrveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3FDD28F514B900561A98 /* SwrveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		008B3FE328F514B900561A98 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3FDE28F514B900561A98 /* SwrveSDKCommon.xcframework */; };
 		008B3FE428F514B900561A98 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 008B3FDE28F514B900561A98 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		008B3FE828F5E4A100561A98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008B3FE728F5E4A100561A98 /* GoogleService-Info.plist */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
-		00D3EC6A28E2A75A0010B40C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
@@ -83,9 +83,9 @@
 		008B3FDC28F514B900561A98 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SDWebImage.xcframework"; sourceTree = "<group>"; };
 		008B3FDD28F514B900561A98 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDK.xcframework"; sourceTree = "<group>"; };
 		008B3FDE28F514B900561A98 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
+		008B3FE728F5E4A100561A98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
-		00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		C9FE778B28622C3E006DDD74 = {
 			isa = PBXGroup;
 			children = (
+				008B3FE728F5E4A100561A98 /* GoogleService-Info.plist */,
 				008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */,
-				00D3EC6928E2A75A0010B40C /* GoogleService-Info.plist */,
 				0092251128CF893200125041 /* Extensions.swift */,
 				00CDFF2E28C0E93A0096810C /* Packages */,
 				C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */,
@@ -423,7 +423,7 @@
 			files = (
 				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
 				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
-				00D3EC6A28E2A75A0010B40C /* GoogleService-Info.plist in Resources */,
+				008B3FE828F5E4A100561A98 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,7 +600,7 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -640,7 +640,7 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
