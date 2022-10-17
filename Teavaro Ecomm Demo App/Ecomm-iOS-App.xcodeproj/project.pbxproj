@@ -13,20 +13,20 @@
 		00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD928B56140000E2F03 /* PermissionsView.swift */; };
 		00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDB28B69AD5000E2F03 /* TitleView.swift */; };
 		00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */; };
+		004E967E28FDBA940001B85E /* FunnelConnectSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004E967D28FDBA940001B85E /* FunnelConnectSDK.xcframework */; };
+		004E967F28FDBA940001B85E /* FunnelConnectSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 004E967D28FDBA940001B85E /* FunnelConnectSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
 		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
+		0086814528FDBD8000E06586 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814428FDBD8000E06586 /* SDWebImage.xcframework */; };
+		0086814628FDBD8000E06586 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814428FDBD8000E06586 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0086814828FDBD8500E06586 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814728FDBD8500E06586 /* SwrveSDK.xcframework */; };
+		0086814928FDBD8500E06586 /* SwrveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814728FDBD8500E06586 /* SwrveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0086814B28FDBD8900E06586 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814A28FDBD8900E06586 /* SwrveSDKCommon.xcframework */; };
+		0086814C28FDBD8900E06586 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0086814A28FDBD8900E06586 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		008B3FE828F5E4A100561A98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008B3FE728F5E4A100561A98 /* GoogleService-Info.plist */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
-		009E4F2328F72FB500816637 /* FunnelConnectSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2228F72FB500816637 /* FunnelConnectSDK.xcframework */; };
-		009E4F2428F72FB500816637 /* FunnelConnectSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2228F72FB500816637 /* FunnelConnectSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		009E4F2628F72FBD00816637 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2528F72FBD00816637 /* SDWebImage.xcframework */; };
-		009E4F2728F72FBD00816637 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2528F72FBD00816637 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		009E4F2928F72FC200816637 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2828F72FC200816637 /* SwrveSDK.xcframework */; };
-		009E4F2A28F72FC200816637 /* SwrveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2828F72FC200816637 /* SwrveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		009E4F2C28F72FC700816637 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2B28F72FC700816637 /* SwrveSDKCommon.xcframework */; };
-		009E4F2D28F72FC700816637 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 009E4F2B28F72FC700816637 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
@@ -58,10 +58,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				009E4F2428F72FB500816637 /* FunnelConnectSDK.xcframework in Embed Frameworks */,
-				009E4F2728F72FBD00816637 /* SDWebImage.xcframework in Embed Frameworks */,
-				009E4F2A28F72FC200816637 /* SwrveSDK.xcframework in Embed Frameworks */,
-				009E4F2D28F72FC700816637 /* SwrveSDKCommon.xcframework in Embed Frameworks */,
+				004E967F28FDBA940001B85E /* FunnelConnectSDK.xcframework in Embed Frameworks */,
+				0086814628FDBD8000E06586 /* SDWebImage.xcframework in Embed Frameworks */,
+				0086814928FDBD8500E06586 /* SwrveSDK.xcframework in Embed Frameworks */,
+				0086814C28FDBD8900E06586 /* SwrveSDKCommon.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,17 +75,17 @@
 		00183CD928B56140000E2F03 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
 		00183CDB28B69AD5000E2F03 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		004E967D28FDBA940001B85E /* FunnelConnectSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FunnelConnectSDK.xcframework; path = "Teavaro Ecomm Demo App/FunnelConnect-iOS-SDK-main/FunnelConnectSDK.xcframework"; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		0086814428FDBD8000E06586 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SDWebImage.xcframework"; sourceTree = "<group>"; };
+		0086814728FDBD8500E06586 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDK.xcframework"; sourceTree = "<group>"; };
+		0086814A28FDBD8900E06586 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
 		008B3FE728F5E4A100561A98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
-		009E4F2228F72FB500816637 /* FunnelConnectSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FunnelConnectSDK.xcframework; path = "Teavaro Ecomm Demo App/FunnelConnect-iOS-SDK-main/FunnelConnectSDK.xcframework"; sourceTree = "<group>"; };
-		009E4F2528F72FBD00816637 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SDWebImage.xcframework"; sourceTree = "<group>"; };
-		009E4F2828F72FC200816637 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDK.xcframework"; sourceTree = "<group>"; };
-		009E4F2B28F72FC700816637 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/Carthage/Build/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -117,10 +117,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009E4F2328F72FB500816637 /* FunnelConnectSDK.xcframework in Frameworks */,
-				009E4F2628F72FBD00816637 /* SDWebImage.xcframework in Frameworks */,
-				009E4F2928F72FC200816637 /* SwrveSDK.xcframework in Frameworks */,
-				009E4F2C28F72FC700816637 /* SwrveSDKCommon.xcframework in Frameworks */,
+				004E967E28FDBA940001B85E /* FunnelConnectSDK.xcframework in Frameworks */,
+				0086814528FDBD8000E06586 /* SDWebImage.xcframework in Frameworks */,
+				0086814828FDBD8500E06586 /* SwrveSDK.xcframework in Frameworks */,
+				0086814B28FDBD8900E06586 /* SwrveSDKCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,10 +177,10 @@
 		00CDFF3028C0EA590096810C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				009E4F2B28F72FC700816637 /* SwrveSDKCommon.xcframework */,
-				009E4F2828F72FC200816637 /* SwrveSDK.xcframework */,
-				009E4F2528F72FBD00816637 /* SDWebImage.xcframework */,
-				009E4F2228F72FB500816637 /* FunnelConnectSDK.xcframework */,
+				0086814A28FDBD8900E06586 /* SwrveSDKCommon.xcframework */,
+				0086814728FDBD8500E06586 /* SwrveSDK.xcframework */,
+				0086814428FDBD8000E06586 /* SDWebImage.xcframework */,
+				004E967D28FDBA940001B85E /* FunnelConnectSDK.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -600,9 +600,10 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FunnelConnect SDK Sample App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -619,9 +620,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bdado/Documents/Ecomm-iOS-App/Teavaro Ecomm Demo App/Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_BUILDER = "";
 			};
 			name = Debug;
 		};
@@ -640,9 +643,10 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FunnelConnect SDK Sample App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -659,9 +663,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/bdado/Documents/Ecomm-iOS-App/Teavaro Ecomm Demo App/Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_BUILDER = "";
 			};
 			name = Release;
 		};

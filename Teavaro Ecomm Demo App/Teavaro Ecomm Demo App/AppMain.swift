@@ -26,7 +26,7 @@ struct AppMain: App {
         }
     }
     
-    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate { //, SwrvePushResponseDelegate
+    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate{
         
         
         let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
@@ -34,8 +34,6 @@ struct AppMain: App {
         let NotificationActionTwoIdentifier = "ACTION2"
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-            
-            
             
             print("excecuting FunnelConnectSDK.initialize()")
             FunnelConnectSDK.shared.initialize(sdkToken: "BXDX2QY]37Yo^LH}Y4oDmNo6", options:  FCOptions(enableLogging: true))
