@@ -81,16 +81,28 @@ struct AngroView: View {
             }
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
-                    print("excecuting FunnelConnectSDK.startService()")
-                    try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
-                        if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
-                            print("excecuting SwrveSDK.start(withUserId: umid)")
-                            SwrveSDK.start(withUserId: umid)
-                            store.isFunnelConnectStarted = true
+                    FunnelConnectSDK.shared.didInitializeWithResult {
+                        print("excecuting FunnelConnectSDK.trustpid.startService()")
+                        if((try? FunnelConnectSDK.shared.trustPid().isConsentAccepted()) != nil){
+                            try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
+                                store.isFunnelConnectStarted = true
+                            }, errorCallback: {_ in
+                                
+                            })
                         }
-                    }, errorCallback_: {_ in
+                        print("excecuting FunnelConnectSDK.cdp.startService()")
+                        try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
+                            if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
+                                print("excecuting SwrveSDK.start(withUserId: umid)")
+                                SwrveSDK.start(withUserId: umid)
+                                store.isFunnelConnectStarted = true
+                            }
+                        }, errorCallback_: {_ in
+                            
+                        })
+                    } failure: {_ in
                         
-                    })
+                    }
                 }
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
             })
