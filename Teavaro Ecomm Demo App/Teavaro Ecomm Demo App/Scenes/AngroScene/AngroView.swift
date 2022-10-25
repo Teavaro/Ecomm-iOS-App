@@ -90,6 +90,9 @@ struct AngroView: View {
                                 
                             })
                         }
+                        else{
+                            
+                        }
                         print("excecuting FunnelConnectSDK.cdp.startService()")
                         try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
                             if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {

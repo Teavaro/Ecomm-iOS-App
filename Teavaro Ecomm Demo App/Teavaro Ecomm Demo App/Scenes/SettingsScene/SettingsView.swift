@@ -54,7 +54,7 @@ struct SettingsView: View {
                 }
             }
             .onAppear(perform: {
-//                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
             })
         }
     }
