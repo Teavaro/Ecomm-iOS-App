@@ -1,0 +1,1141 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+/Users/bdado/Desktop/Iran/Programs/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk
+iPhoneOS15.0.sdk
+/Users/bdado/Library/Caches/org.carthage.CarthageKit/DerivedData/13.0_13A233/swrve-ios-sdk/8.2.0/Build/Intermediates.noindex/ArchiveIntermediates/SwrveSDKCommon/IntermediateBuildFilesPath/SwrveSDK.build/Release-iphoneos/SwrveSDKCommon.build/DerivedSources/SwrveSDKCommon_vers.c
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveFrameworks
++[SwrveSEConfig isValidAppGroupId:]
++[SwrveSEConfig saveAppGroupId:userId:eventServerUrl:deviceId:sessionToken:appVersion:isQAUser:]
++[SwrveSEConfig deliveryConfig:]
++[SwrveSEConfig saveTrackingStateStopped:isTrackingStateStopped:]
++[SwrveSEConfig isTrackingStateStopped:]
++[SwrveSEConfig nextSeqnumForAppGroupId:userId:]
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_CLASSLIST_REFERENCES_$_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_CLASSLIST_REFERENCES_$_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.47
+__OBJC_$_CLASS_METHODS_SwrveSEConfig
+__OBJC_METACLASS_RO_$_SwrveSEConfig
+__OBJC_CLASS_RO_$_SwrveSEConfig
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveSEConfig.m
+SwrveSDKCommon/Common/SwrveSEConfig.m
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk
++[SwrveNotificationManager updateLastProcessedPushId:]
++[SwrveNotificationManager handleContent:withCompletionCallback:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_2
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_3
+___copy_helper_block_e4_20s
+___destroy_helper_block_e4_20s
+___copy_helper_block_e4_20s28s
+___destroy_helper_block_e4_20s28s
+___copy_helper_block_e4_20s24s32s36r
+___destroy_helper_block_e4_20s24s32s36r
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke.44
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_2.55
+___copy_helper_block_e4_24s28s32r
+___destroy_helper_block_e4_24s28s32r
+___65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke.76
+___copy_helper_block_e4_20b24r
+___destroy_helper_block_e4_20s24r
++[SwrveNotificationManager mediaTextFromProvidedContent:]
++[SwrveNotificationManager categoryFromUserInfo:]
++[SwrveNotificationManager verifyCategoryGenerated:withCompletedCallback:]
+___74+[SwrveNotificationManager verifyCategoryGenerated:withCompletedCallback:]_block_invoke
+___copy_helper_block_e4_20s24b
+___destroy_helper_block_e4_20s24s
++[SwrveNotificationManager downloadAttachment:withCompletedContentCallback:]
+___76+[SwrveNotificationManager downloadAttachment:withCompletedContentCallback:]_block_invoke
+___copy_helper_block_e4_20b24r28r
+___destroy_helper_block_e4_20s24r28r
++[SwrveNotificationManager fileExtensionFromMIMEType:]
++[SwrveNotificationManager attachmentFromCache:inCacheDir:]
++[SwrveNotificationManager cachedUrlFor:withPathExtension:inCacheDir:]
++[SwrveNotificationManager cachedUrlWithoutFileExtension:inCacheDir:]
++[SwrveNotificationManager notificationResponseReceived:withUserInfo:]
++[SwrveNotificationManager canProcessEngageNotification:]
++[SwrveNotificationManager notificationIdFromUserInfo:]
++[SwrveNotificationManager deeplinkFromUserInfo:]
++[SwrveNotificationManager deeplinkFromUrl:]
++[SwrveNotificationManager deeplinkFromButton:]
++[SwrveNotificationManager sendButtonClickEventForNotificationId:andCampaignType:andContextId:andActionText:andPayload:]
++[SwrveNotificationManager sendEngagedEventForNotificationId:andUserInfo:]
++[SwrveNotificationManager campaignTypeFromUserInfo:]
++[SwrveNotificationManager loadCampaignFromNotification:]
++[SwrveNotificationManager campaignIdFromNotificationPayload:]
++[SwrveNotificationManager loadCampaignFromButton:]
++[SwrveNotificationManager loadCampaign:]
++[SwrveNotificationManager clearAllAuthenticatedNotifications]
+___62+[SwrveNotificationManager clearAllAuthenticatedNotifications]_block_invoke
++[SwrveNotificationManager authenticatedNotificationsFrom:]
++[SwrveNotificationManager setMediaDownloadFailed:]
+___clang_at_available_requires_core_foundation_framework
+_lastProcessedPushId
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
+___block_descriptor_24_e4_20s_e7_v8?0c4l
+_OBJC_SELECTOR_REFERENCES_.21
+___block_descriptor_32_e4_20s28s_e7_v8?0c4l
+___block_descriptor_40_e4_20s24s32s36r_e14_v8?0"NSSet"4l
+_OBJC_SELECTOR_REFERENCES_.25
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_CLASSLIST_REFERENCES_$_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_CLASSLIST_REFERENCES_$_.33
+_OBJC_CLASSLIST_REFERENCES_$_.40
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.69
+___block_descriptor_36_e4_24s28s32r_e45_v12?0"UNNotificationAttachment"4"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.73
+___block_descriptor_28_e4_20bs24r_e5_v4?0l
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_CLASSLIST_REFERENCES_$_.92
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_CLASSLIST_REFERENCES_$_.97
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_CLASSLIST_REFERENCES_$_.100
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_CLASSLIST_REFERENCES_$_.105
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_CLASSLIST_REFERENCES_$_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.120
+___block_descriptor_28_e4_20s24bs_e14_v8?0"NSSet"4l
+_OBJC_CLASSLIST_REFERENCES_$_.121
+_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_CLASSLIST_REFERENCES_$_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_CLASSLIST_REFERENCES_$_.129
+_OBJC_CLASSLIST_REFERENCES_$_.130
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_CLASSLIST_REFERENCES_$_.133
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_CLASSLIST_REFERENCES_$_.157
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_CLASSLIST_REFERENCES_$_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_CLASSLIST_REFERENCES_$_.173
+_OBJC_SELECTOR_REFERENCES_.177
+_OBJC_CLASSLIST_REFERENCES_$_.182
+_OBJC_CLASSLIST_REFERENCES_$_.185
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.189
+___block_descriptor_32_e4_20bs24r28r_e44_v16?0"NSURL"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.192
+_OBJC_SELECTOR_REFERENCES_.194
+_OBJC_SELECTOR_REFERENCES_.226
+_OBJC_SELECTOR_REFERENCES_.228
+_OBJC_SELECTOR_REFERENCES_.230
+_OBJC_SELECTOR_REFERENCES_.232
+_OBJC_SELECTOR_REFERENCES_.234
+_OBJC_SELECTOR_REFERENCES_.238
+_OBJC_SELECTOR_REFERENCES_.240
+_OBJC_SELECTOR_REFERENCES_.242
+_OBJC_SELECTOR_REFERENCES_.246
+_OBJC_CLASSLIST_REFERENCES_$_.251
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.255
+_OBJC_CLASSLIST_REFERENCES_$_.256
+_OBJC_SELECTOR_REFERENCES_.258
+_OBJC_SELECTOR_REFERENCES_.260
+_OBJC_SELECTOR_REFERENCES_.262
+_OBJC_SELECTOR_REFERENCES_.264
+_OBJC_SELECTOR_REFERENCES_.266
+_OBJC_SELECTOR_REFERENCES_.268
+_OBJC_CLASSLIST_REFERENCES_$_.269
+_OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.273
+_OBJC_SELECTOR_REFERENCES_.275
+_OBJC_SELECTOR_REFERENCES_.279
+_OBJC_SELECTOR_REFERENCES_.281
+_OBJC_SELECTOR_REFERENCES_.283
+_OBJC_SELECTOR_REFERENCES_.285
+_OBJC_SELECTOR_REFERENCES_.287
+_OBJC_SELECTOR_REFERENCES_.289
+_OBJC_SELECTOR_REFERENCES_.291
+_OBJC_CLASSLIST_REFERENCES_$_.292
+_OBJC_SELECTOR_REFERENCES_.294
+_OBJC_SELECTOR_REFERENCES_.296
+_OBJC_SELECTOR_REFERENCES_.298
+_OBJC_CLASSLIST_REFERENCES_$_.309
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_SELECTOR_REFERENCES_.313
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_SELECTOR_REFERENCES_.317
+_OBJC_SELECTOR_REFERENCES_.327
+_OBJC_SELECTOR_REFERENCES_.343
+_OBJC_SELECTOR_REFERENCES_.345
+_OBJC_SELECTOR_REFERENCES_.351
+_OBJC_SELECTOR_REFERENCES_.353
+_OBJC_SELECTOR_REFERENCES_.355
+_OBJC_CLASSLIST_REFERENCES_$_.356
+_OBJC_SELECTOR_REFERENCES_.358
+_OBJC_SELECTOR_REFERENCES_.362
+_OBJC_SELECTOR_REFERENCES_.364
+_OBJC_SELECTOR_REFERENCES_.366
+___block_descriptor_24_e4_20s_e16_v8?0"NSArray"4l
+_OBJC_SELECTOR_REFERENCES_.369
+_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_SELECTOR_REFERENCES_.373
+_OBJC_SELECTOR_REFERENCES_.375
+_OBJC_SELECTOR_REFERENCES_.377
+__OBJC_$_CLASS_METHODS_SwrveNotificationManager
+__OBJC_METACLASS_RO_$_SwrveNotificationManager
+__OBJC_CLASS_RO_$_SwrveNotificationManager
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveNotificationManager.m
+SwrveSDKCommon/Common/SwrveNotificationManager.m
+__62+[SwrveNotificationManager clearAllAuthenticatedNotifications]_block_invoke
+__destroy_helper_block_e4_20s24r28r
+__copy_helper_block_e4_20b24r28r
+__76+[SwrveNotificationManager downloadAttachment:withCompletedContentCallback:]_block_invoke
+__destroy_helper_block_e4_20s24s
+__copy_helper_block_e4_20s24b
+__74+[SwrveNotificationManager verifyCategoryGenerated:withCompletedCallback:]_block_invoke
+__destroy_helper_block_e4_20s24r
+__copy_helper_block_e4_20b24r
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke.76
+__destroy_helper_block_e4_24s28s32r
+__copy_helper_block_e4_24s28s32r
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_2.55
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke.44
+__destroy_helper_block_e4_20s24s32s36r
+__copy_helper_block_e4_20s24s32s36r
+__destroy_helper_block_e4_20s28s
+__copy_helper_block_e4_20s28s
+__destroy_helper_block_e4_20s
+__copy_helper_block_e4_20s
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_3
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke_2
+__65+[SwrveNotificationManager handleContent:withCompletionCallback:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+-[SwrveRESTClient initWithTimeoutInterval:]
+-[SwrveRESTClient initWithTimeoutInterval:urlSessionDelegate:]
+-[SwrveRESTClient sendHttpGETRequest:queryString:]
+-[SwrveRESTClient sendHttpGETRequest:]
+-[SwrveRESTClient sendHttpGETRequest:queryString:completionHandler:]
+-[SwrveRESTClient sendHttpGETRequest:completionHandler:]
+-[SwrveRESTClient sendHttpPOSTRequest:jsonData:]
+-[SwrveRESTClient sendHttpPOSTRequest:jsonData:completionHandler:]
+-[SwrveRESTClient sendHttpRequest:completionHandler:]
+___53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke
+___53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke_2
+___copy_helper_block_e4_20b24s28s32s
+___destroy_helper_block_e4_20s24s28s32s
+___copy_helper_block_e4_20b
+___53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke.60
+-[SwrveRESTClient timeoutInterval]
+-[SwrveRESTClient setTimeoutInterval:]
+-[SwrveRESTClient urlSessionDelegate]
+-[SwrveRESTClient setUrlSessionDelegate:]
+-[SwrveRESTClient .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_CLASSLIST_REFERENCES_$_.13
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_CLASSLIST_REFERENCES_$_.45
+_OBJC_CLASSLIST_REFERENCES_$_.46
+_OBJC_CLASSLIST_REFERENCES_$_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_SELECTOR_REFERENCES_.53
+_OBJC_SELECTOR_REFERENCES_.55
+___block_descriptor_36_e4_20bs24s28s32s_e5_v4?0l
+___block_descriptor_24_e4_20bs_e45_v16?0"NSData"4"NSURLResponse"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.62
+___block_descriptor_24_e4_20s_e5_v4?0l
+__OBJC_METACLASS_RO_$_SwrveRESTClient
+__OBJC_$_INSTANCE_METHODS_SwrveRESTClient
+_OBJC_IVAR_$_SwrveRESTClient.urlSessionDelegate
+_OBJC_IVAR_$_SwrveRESTClient.timeoutInterval
+__OBJC_$_INSTANCE_VARIABLES_SwrveRESTClient
+__OBJC_$_PROP_LIST_SwrveRESTClient
+__OBJC_CLASS_RO_$_SwrveRESTClient
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveRESTClient.m
+SwrveSDKCommon/Common/SwrveRESTClient.m
+__53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke.60
+__copy_helper_block_e4_20b
+__destroy_helper_block_e4_20s24s28s32s
+__copy_helper_block_e4_20b24s28s32s
+__53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke_2
+__53-[SwrveRESTClient sendHttpRequest:completionHandler:]_block_invoke
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveNotificationConstants.m
++[SwrveAssetsManager assetQItemWith:andDigest:andIsExternal:andIsImage:]
+-[SwrveAssetsManager initWithRestClient:andCacheFolder:]
+-[SwrveAssetsManager downloadAssets:withCompletionHandler:]
+-[SwrveAssetsManager downloadAsset:withCompletionHandler:]
+___58-[SwrveAssetsManager downloadAsset:withCompletionHandler:]_block_invoke
+___copy_helper_block_e4_20s24s28s32b
+-[SwrveAssetsManager downloadAssetFromExternalSource:withCompletionHandler:]
+___76-[SwrveAssetsManager downloadAssetFromExternalSource:withCompletionHandler:]_block_invoke
+-[SwrveAssetsManager filterExistingFiles:]
+-[SwrveAssetsManager isDownloaded:]
+-[SwrveAssetsManager verifySHA:against:]
+-[SwrveAssetsManager assetsOnDisk]
+-[SwrveAssetsManager fileAssetName:mimeType:]
+-[SwrveAssetsManager restClient]
+-[SwrveAssetsManager setRestClient:]
+-[SwrveAssetsManager cdnImages]
+-[SwrveAssetsManager setCdnImages:]
+-[SwrveAssetsManager cdnFonts]
+-[SwrveAssetsManager setCdnFonts:]
+-[SwrveAssetsManager cacheFolder]
+-[SwrveAssetsManager setCacheFolder:]
+-[SwrveAssetsManager .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.42
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_CLASSLIST_REFERENCES_$_.50
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.77
+___block_descriptor_36_e4_20s24s28s32bs_e45_v16?0"NSURLResponse"4"NSData"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.80
+_OBJC_CLASSLIST_REFERENCES_$_.85
+_OBJC_SELECTOR_REFERENCES_.95
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_SELECTOR_REFERENCES_.110
+_verifySHA:against:.hex
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_CLASSLIST_REFERENCES_$_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.127
+__OBJC_$_CLASS_METHODS_SwrveAssetsManager
+__OBJC_METACLASS_RO_$_SwrveAssetsManager
+__OBJC_$_INSTANCE_METHODS_SwrveAssetsManager
+_OBJC_IVAR_$_SwrveAssetsManager.assetsOnDiskSet
+_OBJC_IVAR_$_SwrveAssetsManager.assetsCurrentlyDownloading
+_OBJC_IVAR_$_SwrveAssetsManager.restClient
+_OBJC_IVAR_$_SwrveAssetsManager.cdnImages
+_OBJC_IVAR_$_SwrveAssetsManager.cdnFonts
+_OBJC_IVAR_$_SwrveAssetsManager.cacheFolder
+__OBJC_$_INSTANCE_VARIABLES_SwrveAssetsManager
+__OBJC_$_PROP_LIST_SwrveAssetsManager
+__OBJC_CLASS_RO_$_SwrveAssetsManager
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveAssetsManager.m
+SwrveSDKCommon/Common/SwrveAssetsManager.m
+__76-[SwrveAssetsManager downloadAssetFromExternalSource:withCompletionHandler:]_block_invoke
+__copy_helper_block_e4_20s24s28s32b
+__58-[SwrveAssetsManager downloadAsset:withCompletionHandler:]_block_invoke
+-[SwrveUser initWithExternalId:swrveId:verified:]
+-[SwrveUser hash]
+-[SwrveUser isEqual:]
+-[SwrveUser initWithCoder:]
+-[SwrveUser encodeWithCoder:]
++[SwrveUser sessionTokenFromAppId:apiKey:userId:startTime:]
++[SwrveUser sourceFromUserID:startTime:apiKey:]
++[SwrveUser md5FromSource:]
++[SwrveUser sessionTokenFromAppId:userID:startTime:digest:]
++[SwrveUser supportsSecureCoding]
+-[SwrveUser swrveId]
+-[SwrveUser setSwrveId:]
+-[SwrveUser externalId]
+-[SwrveUser setExternalId:]
+-[SwrveUser verified]
+-[SwrveUser setVerified:]
+-[SwrveUser .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_CLASSLIST_REFERENCES_$_.39
+_OBJC_SELECTOR_REFERENCES_.50
+__OBJC_$_CLASS_METHODS_SwrveUser
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+__OBJC_PROTOCOL_$_NSCoding
+__OBJC_LABEL_PROTOCOL_$_NSCoding
+__OBJC_$_PROTOCOL_REFS_NSSecureCoding
+__OBJC_$_PROTOCOL_CLASS_METHODS_NSSecureCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSSecureCoding
+__OBJC_$_CLASS_PROP_LIST_NSSecureCoding
+__OBJC_PROTOCOL_$_NSSecureCoding
+__OBJC_LABEL_PROTOCOL_$_NSSecureCoding
+__OBJC_CLASS_PROTOCOLS_$_SwrveUser
+__OBJC_$_CLASS_PROP_LIST_SwrveUser
+__OBJC_METACLASS_RO_$_SwrveUser
+__OBJC_$_INSTANCE_METHODS_SwrveUser
+_OBJC_IVAR_$_SwrveUser._verified
+_OBJC_IVAR_$_SwrveUser._swrveId
+_OBJC_IVAR_$_SwrveUser._externalId
+__OBJC_$_INSTANCE_VARIABLES_SwrveUser
+__OBJC_$_PROP_LIST_SwrveUser
+__OBJC_CLASS_RO_$_SwrveUser
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveUser.m
+SwrveSDKCommon/Common/SwrveUser.m
++[SwrveLocalStorage resetDirectoryCreation]
++[SwrveLocalStorage defaults]
++[SwrveLocalStorage saveIDFA:]
++[SwrveLocalStorage idfa]
++[SwrveLocalStorage saveFlushFrequency:]
++[SwrveLocalStorage flushFrequency]
++[SwrveLocalStorage saveflushDelay:]
++[SwrveLocalStorage flushDelay]
++[SwrveLocalStorage saveETag:forUserId:]
++[SwrveLocalStorage eTagForUserId:]
++[SwrveLocalStorage removeETagForUserId:]
++[SwrveLocalStorage saveDeviceToken:]
++[SwrveLocalStorage deviceToken]
++[SwrveLocalStorage removeDeviceToken]
++[SwrveLocalStorage saveSeqNum:withCustomKey:]
++[SwrveLocalStorage seqNumWithCustomKey:]
++[SwrveLocalStorage removeSeqNumWithCustomKey:]
++[SwrveLocalStorage saveSwrveUserId:]
++[SwrveLocalStorage swrveUserId]
++[SwrveLocalStorage removeSwrveUserId]
++[SwrveLocalStorage trackingState]
++[SwrveLocalStorage saveTrackingState:]
++[SwrveLocalStorage savePermissions:]
++[SwrveLocalStorage getPermissions]
++[SwrveLocalStorage saveAskedForPushPermission:]
++[SwrveLocalStorage askedForPushPermission]
++[SwrveLocalStorage qaUser]
++[SwrveLocalStorage saveQaUser:]
++[SwrveLocalStorage saveDeviceUUID:]
++[SwrveLocalStorage deviceUUID]
++[SwrveLocalStorage saveSwrveUsers:]
++[SwrveLocalStorage swrveUsers]
++[SwrveLocalStorage applicationSupportPath]
+___43+[SwrveLocalStorage applicationSupportPath]_block_invoke
++[SwrveLocalStorage cachePath]
+___30+[SwrveLocalStorage cachePath]_block_invoke
++[SwrveLocalStorage documentPath]
+___33+[SwrveLocalStorage documentPath]_block_invoke
++[SwrveLocalStorage swrveAppSupportDir]
+___39+[SwrveLocalStorage swrveAppSupportDir]_block_invoke
++[SwrveLocalStorage swrveCacheVersionFilePath]
++[SwrveLocalStorage appInstallTimeSeconds]
++[SwrveLocalStorage userJoinedTimeSeconds:]
++[SwrveLocalStorage saveAppInstallTime:]
++[SwrveLocalStorage saveUserJoinedTime:forUserId:]
++[SwrveLocalStorage userInitDateFilePath:]
++[SwrveLocalStorage eventsFilePathForUserId:]
++[SwrveLocalStorage campaignsFilePathForUserId:]
++[SwrveLocalStorage campaignsSignatureFilePathForUserId:]
++[SwrveLocalStorage campaignsAdFilePathForUserId:]
++[SwrveLocalStorage campaignsAdSignatureFilePathForUserId:]
++[SwrveLocalStorage debugCampaignsNoticationFilePathForUserId:]
++[SwrveLocalStorage debugCampaignsNotificationSignatureFilePathForUserId:]
++[SwrveLocalStorage campaignsStateFilePathForUserId:]
++[SwrveLocalStorage userResourcesFilePathForUserId:]
++[SwrveLocalStorage userResourcesSignatureFilePathForUserId:]
++[SwrveLocalStorage userResourcesDiffFilePathForUserId:]
++[SwrveLocalStorage userResourcesDiffSignatureFilePathForUserId:]
++[SwrveLocalStorage applicationSupportFileForUserId:andName:]
++[SwrveLocalStorage anonymousEventsFilePath]
++[SwrveLocalStorage swrveCacheFolder]
+___37+[SwrveLocalStorage swrveCacheFolder]_block_invoke
++[SwrveLocalStorage offlineCampaignsFilePathForUserId:]
++[SwrveLocalStorage offlineCampaignsSignatureFilePathForUserId:]
++[SwrveLocalStorage realTimeUserPropertiesFilePathForUserId:]
++[SwrveLocalStorage offlineRealTimeUserPropertiesSignatureFilePathForUserId:]
++[SwrveLocalStorage readValueFromDictionaryFile:forKey:]
++[SwrveLocalStorage writeValueToDictionaryFile:value:key:]
++[SwrveLocalStorage removeValueFromDictionaryFile:forKey:]
++[SwrveLocalStorage valueToDictionaryFileModfy:value:key:remove:]
++[SwrveLocalStorage setFileProtectionNone:]
+_applicationSupportPathOnceToken
+_swrveAppSupportDirOnceToken
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_CLASSLIST_REFERENCES_$_.73
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_CLASSLIST_REFERENCES_$_.82
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_CLASSLIST_REFERENCES_$_.126
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_SELECTOR_REFERENCES_.134
+_OBJC_CLASSLIST_REFERENCES_$_.135
+_applicationSupportPath._path
+___block_descriptor_20_e5_v4?0l
+___block_literal_global
+_OBJC_SELECTOR_REFERENCES_.140
+_OBJC_CLASSLIST_REFERENCES_$_.141
+_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_SELECTOR_REFERENCES_.145
+_OBJC_CLASSLIST_REFERENCES_$_.146
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_CLASSLIST_REFERENCES_$_.151
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.161
+_cachePath._path
+_cachePath.doOnceToken
+___block_literal_global.162
+_documentPath._path
+_documentPath.doOnceToken
+___block_literal_global.163
+_swrveAppSupportDir._path
+___block_literal_global.164
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_CLASSLIST_REFERENCES_$_.191
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_SELECTOR_REFERENCES_.195
+_OBJC_SELECTOR_REFERENCES_.199
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.209
+_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_SELECTOR_REFERENCES_.215
+_OBJC_SELECTOR_REFERENCES_.219
+_OBJC_SELECTOR_REFERENCES_.221
+_swrveCacheFolder._path
+_swrveCacheFolder.doOnceToken
+___block_literal_global.222
+_OBJC_SELECTOR_REFERENCES_.224
+_OBJC_CLASSLIST_REFERENCES_$_.229
+_OBJC_SELECTOR_REFERENCES_.231
+_OBJC_SELECTOR_REFERENCES_.233
+_OBJC_CLASSLIST_REFERENCES_$_.234
+_OBJC_SELECTOR_REFERENCES_.236
+_OBJC_SELECTOR_REFERENCES_.244
+_OBJC_SELECTOR_REFERENCES_.248
+__OBJC_$_CLASS_METHODS_SwrveLocalStorage
+__OBJC_METACLASS_RO_$_SwrveLocalStorage
+__OBJC_CLASS_RO_$_SwrveLocalStorage
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveLocalStorage.m
+SwrveSDKCommon/Common/SwrveLocalStorage.m
+__37+[SwrveLocalStorage swrveCacheFolder]_block_invoke
+Desktop/Iran/Programs/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/usr/include/dispatch/once.h
+/Users/bdado
+__39+[SwrveLocalStorage swrveAppSupportDir]_block_invoke
+__33+[SwrveLocalStorage documentPath]_block_invoke
+__30+[SwrveLocalStorage cachePath]_block_invoke
+__43+[SwrveLocalStorage applicationSupportPath]_block_invoke
++[SwrveQA sharedInstance]
+___25+[SwrveQA sharedInstance]_block_invoke
+___copy_helper_block_e4_
+___destroy_helper_block_e4_
++[SwrveQA updateQAUser:andSessionToken:]
+-[SwrveQA updateQAUser:andSessionToken:]
++[SwrveQA wrappedEvent:]
++[SwrveQA assetFailedToDownload:resolvedUrl:reason:]
++[SwrveQA assetFailedToDisplay:]
++[SwrveQA embeddedPersonalizationFailed:variantId:unresolvedData:reason:]
++[SwrveQA campaignsDownloaded:]
++[SwrveQA campaignButtonClicked:variantId:buttonName:actionType:actionValue:]
++[SwrveQA messageCampaignTriggered:eventPayload:displayed:campaignInfoDict:]
++[SwrveQA conversationCampaignTriggered:eventPayload:displayed:campaignInfoDict:]
++[SwrveQA conversationCampaignTriggeredNoDisplay:eventPayload:]
++[SwrveQA campaignTriggered:eventPayload:displayed:reason:campaignInfo:]
+-[SwrveQA queueManager]
+-[SwrveQA setQueueManager:]
+-[SwrveQA isQALogging]
+-[SwrveQA setIsQALogging:]
+-[SwrveQA resetDeviceState]
+-[SwrveQA setResetDeviceState:]
+-[SwrveQA .cxx_destruct]
+_shared
+_onceToken
+___block_descriptor_24_e4__e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_CLASSLIST_REFERENCES_$_.30
+_OBJC_CLASSLIST_REFERENCES_$_.35
+_OBJC_SELECTOR_REFERENCES_.46
+_OBJC_CLASSLIST_REFERENCES_$_.55
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_CLASSLIST_REFERENCES_$_.116
+_OBJC_SELECTOR_REFERENCES_.131
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_SELECTOR_REFERENCES_.141
+__OBJC_$_CLASS_METHODS_SwrveQA
+__OBJC_METACLASS_RO_$_SwrveQA
+__OBJC_$_INSTANCE_METHODS_SwrveQA
+_OBJC_IVAR_$_SwrveQA._isQALogging
+_OBJC_IVAR_$_SwrveQA._resetDeviceState
+_OBJC_IVAR_$_SwrveQA._queueManager
+__OBJC_$_INSTANCE_VARIABLES_SwrveQA
+__OBJC_$_PROP_LIST_SwrveQA
+__OBJC_CLASS_RO_$_SwrveQA
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveQA.m
+SwrveSDKCommon/Common/SwrveQA.m
+__destroy_helper_block_e4_
+__copy_helper_block_e4_
+__25+[SwrveQA sharedInstance]_block_invoke
++[SwrveEvents qalogWrappedEvent:]
++[SwrveEvents qalogCampaignsDownloaded:]
++[SwrveEvents qalogCampaignButtonClicked:]
++[SwrveEvents qaLogEvent:logType:]
++[SwrveEvents qaWrapperEvent:]
++[SwrveEvents convertToJSONString:]
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_CLASSLIST_REFERENCES_$_.18
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_CLASSLIST_REFERENCES_$_.25
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_CLASSLIST_REFERENCES_$_.60
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_CLASSLIST_REFERENCES_$_.95
+__OBJC_$_CLASS_METHODS_SwrveEvents
+__OBJC_METACLASS_RO_$_SwrveEvents
+__OBJC_CLASS_RO_$_SwrveEvents
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveEvents.m
+SwrveSDKCommon/Common/SwrveEvents.m
++[SwrveLogger setLogLevel:]
++[SwrveLogger error:]
++[SwrveLogger warning:]
++[SwrveLogger debug:]
+_logLevel
+__OBJC_$_CLASS_METHODS_SwrveLogger
+__OBJC_METACLASS_RO_$_SwrveLogger
+__OBJC_CLASS_RO_$_SwrveLogger
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveLogger.m
+SwrveSDKCommon/Common/SwrveLogger.m
+-[SwrveQAEventsQueueManager initWithSessionToken:]
+-[SwrveQAEventsQueueManager makeRequest]
+___40-[SwrveQAEventsQueueManager makeRequest]_block_invoke
+-[SwrveQAEventsQueueManager createJSONBodyForQAEvent]
+-[SwrveQAEventsQueueManager queueEvent:]
+___40-[SwrveQAEventsQueueManager queueEvent:]_block_invoke
+-[SwrveQAEventsQueueManager flushEvents]
+-[SwrveQAEventsQueueManager queue]
+-[SwrveQAEventsQueueManager setQueue:]
+-[SwrveQAEventsQueueManager restClient]
+-[SwrveQAEventsQueueManager setRestClient:]
+-[SwrveQAEventsQueueManager sessionToken]
+-[SwrveQAEventsQueueManager setSessionToken:]
+-[SwrveQAEventsQueueManager flushTimer]
+-[SwrveQAEventsQueueManager setFlushTimer:]
+-[SwrveQAEventsQueueManager .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.11
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_CLASSLIST_REFERENCES_$_.32
+_OBJC_CLASSLIST_REFERENCES_$_.38
+___block_descriptor_20_e45_v16?0"NSURLResponse"4"NSData"8"NSError"12l
+_OBJC_CLASSLIST_REFERENCES_$_.67
+_OBJC_CLASSLIST_REFERENCES_$_.78
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_CLASSLIST_REFERENCES_$_.108
+_OBJC_CLASSLIST_REFERENCES_$_.113
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+__OBJC_METACLASS_RO_$_SwrveQAEventsQueueManager
+__OBJC_$_INSTANCE_METHODS_SwrveQAEventsQueueManager
+_OBJC_IVAR_$_SwrveQAEventsQueueManager._queue
+_OBJC_IVAR_$_SwrveQAEventsQueueManager._restClient
+_OBJC_IVAR_$_SwrveQAEventsQueueManager._sessionToken
+_OBJC_IVAR_$_SwrveQAEventsQueueManager._flushTimer
+__OBJC_$_INSTANCE_VARIABLES_SwrveQAEventsQueueManager
+__OBJC_$_PROP_LIST_SwrveQAEventsQueueManager
+__OBJC_CLASS_RO_$_SwrveQAEventsQueueManager
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveQAEventsQueueManager.m
+SwrveSDKCommon/Common/SwrveQAEventsQueueManager.m
+__40-[SwrveQAEventsQueueManager queueEvent:]_block_invoke
+__40-[SwrveQAEventsQueueManager makeRequest]_block_invoke
+-[SwrveCampaignDelivery initAppGroupId:]
+-[SwrveCampaignDelivery sendPushDelivery:]
+___42-[SwrveCampaignDelivery sendPushDelivery:]_block_invoke
+___copy_helper_block_e4_20r24r
+___destroy_helper_block_e4_20r24r
+-[SwrveCampaignDelivery pushDeliveryEvent:userId:]
+-[SwrveCampaignDelivery appGroupId]
+-[SwrveCampaignDelivery setAppGroupId:]
+-[SwrveCampaignDelivery .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.19
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_OBJC_CLASSLIST_REFERENCES_$_.41
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_SELECTOR_REFERENCES_.56
+_OBJC_CLASSLIST_REFERENCES_$_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_CLASSLIST_REFERENCES_$_.70
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_CLASSLIST_REFERENCES_$_.91
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_CLASSLIST_REFERENCES_$_.94
+___block_descriptor_28_e4_20r24r_e45_v16?0"NSURLResponse"4"NSData"8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.136
+_OBJC_CLASSLIST_REFERENCES_$_.155
+__OBJC_METACLASS_RO_$_SwrveCampaignDelivery
+__OBJC_$_INSTANCE_METHODS_SwrveCampaignDelivery
+_OBJC_IVAR_$_SwrveCampaignDelivery.appGroupId
+__OBJC_$_INSTANCE_VARIABLES_SwrveCampaignDelivery
+__OBJC_$_PROP_LIST_SwrveCampaignDelivery
+__OBJC_CLASS_RO_$_SwrveCampaignDelivery
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveCampaignDelivery.m
+SwrveSDKCommon/Common/SwrveCampaignDelivery.m
+__destroy_helper_block_e4_20r24r
+__copy_helper_block_e4_20r24r
+__42-[SwrveCampaignDelivery sendPushDelivery:]_block_invoke
+-[SwrveQACampaignInfo initWithCampaignID:variantID:type:displayed:reason:]
+-[SwrveQACampaignInfo isEqual:]
+-[SwrveQACampaignInfo campaignID]
+-[SwrveQACampaignInfo setCampaignID:]
+-[SwrveQACampaignInfo variantID]
+-[SwrveQACampaignInfo setVariantID:]
+-[SwrveQACampaignInfo type]
+-[SwrveQACampaignInfo setType:]
+-[SwrveQACampaignInfo isDisplayed]
+-[SwrveQACampaignInfo setDisplayed:]
+-[SwrveQACampaignInfo reason]
+-[SwrveQACampaignInfo setReason:]
+-[SwrveQACampaignInfo .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.24
+__OBJC_METACLASS_RO_$_SwrveQACampaignInfo
+__OBJC_$_INSTANCE_METHODS_SwrveQACampaignInfo
+_OBJC_IVAR_$_SwrveQACampaignInfo.displayed
+_OBJC_IVAR_$_SwrveQACampaignInfo.campaignID
+_OBJC_IVAR_$_SwrveQACampaignInfo.variantID
+_OBJC_IVAR_$_SwrveQACampaignInfo.type
+_OBJC_IVAR_$_SwrveQACampaignInfo.reason
+__OBJC_$_INSTANCE_VARIABLES_SwrveQACampaignInfo
+__OBJC_$_PROP_LIST_SwrveQACampaignInfo
+__OBJC_CLASS_RO_$_SwrveQACampaignInfo
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveQACampaignInfo.m
+SwrveSDKCommon/Common/SwrveQACampaignInfo.m
++[SwrvePush sharedInstance]
+___27+[SwrvePush sharedInstance]_block_invoke
++[SwrvePush sharedInstanceWithPushDelegate:andCommonDelegate:]
+___62+[SwrvePush sharedInstanceWithPushDelegate:andCommonDelegate:]_block_invoke
+___copy_helper_block_e4_20s24s
++[SwrvePush resetSharedInstance]
+-[SwrvePush setPushDelegate:]
+-[SwrvePush setCommonDelegate:]
+-[SwrvePush setResponseDelegate:]
+-[SwrvePush registerForPushNotifications:]
+-[SwrvePush setPushNotificationsDeviceToken:]
+-[SwrvePush deviceTokenString:]
+-[SwrvePush observeSwizzling]
+-[SwrvePush deswizzlePushMethods]
+-[SwrvePush didReceiveRemoteNotification:withBackgroundCompletionHandler:]
+-[SwrvePush didReceiveRemoteNotification:withBackgroundCompletionHandler:withLocalUserId:]
+-[SwrvePush handleAuthenticatedPushNotification:withLocalUserId:withCompletionHandler:]
+___87-[SwrvePush handleAuthenticatedPushNotification:withLocalUserId:withCompletionHandler:]_block_invoke
+___87-[SwrvePush handleAuthenticatedPushNotification:withLocalUserId:withCompletionHandler:]_block_invoke_2
+___copy_helper_block_e4_20b24s28r32r
+___destroy_helper_block_e4_20s24s28r32r
++[SwrvePush isValidNotificationContent:]
++[SwrvePush pushIdFromNotificationContent:andPushIdKey:]
+-[SwrvePush sendPushDelivery:]
++[SwrvePush handleNotificationContent:withAppGroupIdentifier:withCompletedContentCallback:]
+___91+[SwrvePush handleNotificationContent:withAppGroupIdentifier:withCompletedContentCallback:]_block_invoke
+___copy_helper_block_e4_20b24s
+-[SwrvePush userNotificationCenter:willPresentNotification:withCompletionHandler:]
+-[SwrvePush userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:]
+-[SwrvePush handleSilentPushNotification:withCompletionHandler:]
+-[SwrvePush processInfluenceData]
+-[SwrvePush saveConfigForPushDelivery]
+-[SwrvePush getNow]
+-[SwrvePush application:didRegisterForRemoteNotificationsWithDeviceToken:]
+-[SwrvePush application:didFailToRegisterForRemoteNotificationsWithError:]
+-[SwrvePush .cxx_destruct]
+__pushDelegate
+__commonDelegate
+__responseDelegate
+_pushInstance
+_sharedInstanceToken
+___block_descriptor_28_e4_20s24s_e5_v4?0l
+_OBJC_CLASSLIST_REFERENCES_$_.48
+_OBJC_CLASSLIST_REFERENCES_$_.57
+_didSwizzle
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_CLASSLIST_REFERENCES_$_.81
+_OBJC_CLASSLIST_REFERENCES_$_.86
+_OBJC_CLASSLIST_REFERENCES_$_.102
+_OBJC_CLASSLIST_REFERENCES_$_.122
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_CLASSLIST_REFERENCES_$_.136
+_OBJC_SELECTOR_REFERENCES_.138
+_OBJC_SELECTOR_REFERENCES_.147
+_OBJC_CLASSLIST_REFERENCES_$_.148
+_OBJC_CLASSLIST_REFERENCES_$_.164
+_OBJC_CLASSLIST_REFERENCES_$_.167
+_OBJC_SELECTOR_REFERENCES_.169
+_OBJC_CLASSLIST_REFERENCES_$_.170
+___block_descriptor_32_e4_20bs24r28r_e16_v8?0"NSError"4l
+_OBJC_SELECTOR_REFERENCES_.179
+___block_descriptor_36_e4_20bs24s28r32r_e37_v8?0"UNMutableNotificationContent"4l
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_CLASSLIST_REFERENCES_$_.196
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_CLASSLIST_REFERENCES_$_.199
+_OBJC_SELECTOR_REFERENCES_.201
+_OBJC_SELECTOR_REFERENCES_.203
+___block_descriptor_28_e4_20bs24s_e37_v8?0"UNMutableNotificationContent"4l
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_SELECTOR_REFERENCES_.213
+_OBJC_SELECTOR_REFERENCES_.217
+_OBJC_SELECTOR_REFERENCES_.223
+_OBJC_SELECTOR_REFERENCES_.229
+_OBJC_CLASSLIST_REFERENCES_$_.232
+_OBJC_SELECTOR_REFERENCES_.250
+_OBJC_SELECTOR_REFERENCES_.252
+_OBJC_SELECTOR_REFERENCES_.254
+_OBJC_SELECTOR_REFERENCES_.256
+_OBJC_CLASSLIST_REFERENCES_$_.257
+_OBJC_SELECTOR_REFERENCES_.259
+_OBJC_SELECTOR_REFERENCES_.261
+_OBJC_SELECTOR_REFERENCES_.263
+_OBJC_SELECTOR_REFERENCES_.267
+__OBJC_$_CLASS_METHODS_SwrvePush
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_UNUserNotificationCenterDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UNUserNotificationCenterDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_UNUserNotificationCenterDelegate
+__OBJC_PROTOCOL_$_UNUserNotificationCenterDelegate
+__OBJC_LABEL_PROTOCOL_$_UNUserNotificationCenterDelegate
+__OBJC_CLASS_PROTOCOLS_$_SwrvePush
+__OBJC_METACLASS_RO_$_SwrvePush
+__OBJC_$_INSTANCE_METHODS_SwrvePush
+_OBJC_IVAR_$_SwrvePush.didRegisterForRemoteNotificationsWithDeviceTokenImpl
+_OBJC_IVAR_$_SwrvePush.didFailToRegisterForRemoteNotificationsWithErrorImpl
+_OBJC_IVAR_$_SwrvePush.lastProcessedPushId
+__OBJC_$_INSTANCE_VARIABLES_SwrvePush
+__OBJC_$_PROP_LIST_SwrvePush
+__OBJC_CLASS_RO_$_SwrvePush
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/Push/SwrvePush.m
+SwrveSDKCommon/Common/Push/SwrvePush.m
+__copy_helper_block_e4_20b24s
+__91+[SwrvePush handleNotificationContent:withAppGroupIdentifier:withCompletedContentCallback:]_block_invoke
+__destroy_helper_block_e4_20s24s28r32r
+__copy_helper_block_e4_20b24s28r32r
+__87-[SwrvePush handleAuthenticatedPushNotification:withLocalUserId:withCompletionHandler:]_block_invoke_2
+__87-[SwrvePush handleAuthenticatedPushNotification:withLocalUserId:withCompletionHandler:]_block_invoke
+__copy_helper_block_e4_20s24s
+__62+[SwrvePush sharedInstanceWithPushDelegate:andCommonDelegate:]_block_invoke
+__27+[SwrvePush sharedInstance]_block_invoke
+-[SwrveSignatureProtectedFile protectedFileType:userID:signatureKey:errorDelegate:]
+-[SwrveSignatureProtectedFile initFile:signatureFilename:usingKey:]
+-[SwrveSignatureProtectedFile initFile:signatureFilename:usingKey:signatureErrorDelegate:]
+-[SwrveSignatureProtectedFile writeToFile:]
+-[SwrveSignatureProtectedFile writeToDefaults:]
+-[SwrveSignatureProtectedFile writeWithRespectToPlatform:]
+-[SwrveSignatureProtectedFile readFromFile]
+-[SwrveSignatureProtectedFile readFromDefaults]
+-[SwrveSignatureProtectedFile readWithRespectToPlatform]
+-[SwrveSignatureProtectedFile createHMACWithMD5:]
+-[SwrveSignatureProtectedFile signatureError:]
+-[SwrveSignatureProtectedFile filename]
+-[SwrveSignatureProtectedFile setFilename:]
+-[SwrveSignatureProtectedFile signatureFilename]
+-[SwrveSignatureProtectedFile setSignatureFilename:]
+-[SwrveSignatureProtectedFile key]
+-[SwrveSignatureProtectedFile signatureErrorDelegate]
+-[SwrveSignatureProtectedFile setSignatureErrorDelegate:]
+-[SwrveSignatureProtectedFile .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.53
+_OBJC_CLASSLIST_REFERENCES_$_.64
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.82
+__OBJC_$_PROTOCOL_REFS_SwrveSignatureErrorDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SwrveSignatureErrorDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SwrveSignatureErrorDelegate
+__OBJC_PROTOCOL_$_SwrveSignatureErrorDelegate
+__OBJC_LABEL_PROTOCOL_$_SwrveSignatureErrorDelegate
+__OBJC_CLASS_PROTOCOLS_$_SwrveSignatureProtectedFile
+__OBJC_METACLASS_RO_$_SwrveSignatureProtectedFile
+__OBJC_$_INSTANCE_METHODS_SwrveSignatureProtectedFile
+_OBJC_IVAR_$_SwrveSignatureProtectedFile.filename
+_OBJC_IVAR_$_SwrveSignatureProtectedFile.signatureFilename
+_OBJC_IVAR_$_SwrveSignatureProtectedFile.key
+_OBJC_IVAR_$_SwrveSignatureProtectedFile.signatureErrorDelegate
+__OBJC_$_INSTANCE_VARIABLES_SwrveSignatureProtectedFile
+__OBJC_$_PROP_LIST_SwrveSignatureProtectedFile
+__OBJC_CLASS_RO_$_SwrveSignatureProtectedFile
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveSignatureProtectedFile.m
+SwrveSDKCommon/Common/SwrveSignatureProtectedFile.m
+-[SwrveQAImagePersonalizationInfo initWithCampaign:variantID:hasFallback:unresolvedUrl:]
+-[SwrveQAImagePersonalizationInfo campaignID]
+-[SwrveQAImagePersonalizationInfo setCampaignID:]
+-[SwrveQAImagePersonalizationInfo variantID]
+-[SwrveQAImagePersonalizationInfo setVariantID:]
+-[SwrveQAImagePersonalizationInfo assetName]
+-[SwrveQAImagePersonalizationInfo setAssetName:]
+-[SwrveQAImagePersonalizationInfo hasFallback]
+-[SwrveQAImagePersonalizationInfo setHasFallback:]
+-[SwrveQAImagePersonalizationInfo unresolvedUrl]
+-[SwrveQAImagePersonalizationInfo setUnresolvedUrl:]
+-[SwrveQAImagePersonalizationInfo resolvedUrl]
+-[SwrveQAImagePersonalizationInfo setResolvedUrl:]
+-[SwrveQAImagePersonalizationInfo reason]
+-[SwrveQAImagePersonalizationInfo setReason:]
+-[SwrveQAImagePersonalizationInfo .cxx_destruct]
+__OBJC_METACLASS_RO_$_SwrveQAImagePersonalizationInfo
+__OBJC_$_INSTANCE_METHODS_SwrveQAImagePersonalizationInfo
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.hasFallback
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.campaignID
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.variantID
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.assetName
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.unresolvedUrl
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.resolvedUrl
+_OBJC_IVAR_$_SwrveQAImagePersonalizationInfo.reason
+__OBJC_$_INSTANCE_VARIABLES_SwrveQAImagePersonalizationInfo
+__OBJC_$_PROP_LIST_SwrveQAImagePersonalizationInfo
+__OBJC_CLASS_RO_$_SwrveQAImagePersonalizationInfo
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveQAImagePersonalizationInfo.m
+SwrveSDKCommon/Common/SwrveQAImagePersonalizationInfo.m
++[SwrveCampaignInfluence saveInfluencedData:withId:withAppGroupID:atDate:]
++[SwrveCampaignInfluence removeInfluenceDataForId:fromAppGroupId:]
++[SwrveCampaignInfluence removeInfluenceDataFromUserDefaults:forId:]
++[SwrveCampaignInfluence processInfluenceDataWithDate:]
+_OBJC_CLASSLIST_REFERENCES_$_.10
+_OBJC_CLASSLIST_REFERENCES_$_.22
+_OBJC_SELECTOR_REFERENCES_.60
+__OBJC_$_CLASS_METHODS_SwrveCampaignInfluence
+__OBJC_METACLASS_RO_$_SwrveCampaignInfluence
+__OBJC_CLASS_RO_$_SwrveCampaignInfluence
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveCampaignInfluence.m
+SwrveSDKCommon/Common/SwrveCampaignInfluence.m
++[SwrveCommon addSharedInstance:]
++[SwrveCommon sharedInstance]
++[SwrveCommon supportedOS]
++[SwrveCommon sharedUIApplication]
+__sharedInstance
+_OBJC_CLASSLIST_REFERENCES_$_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_CLASSLIST_REFERENCES_$_.12
+__OBJC_$_CLASS_METHODS_SwrveCommon
+__OBJC_METACLASS_RO_$_SwrveCommon
+__OBJC_CLASS_RO_$_SwrveCommon
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveCommon.m
+SwrveSDKCommon/Common/SwrveCommon.m
++[SwrveSwizzleHelper swizzleMethod:inClass:withImplementationIn:]
++[SwrveSwizzleHelper deswizzleMethod:inClass:originalImplementation:]
+_emptyImplementation
+__OBJC_$_CLASS_METHODS_SwrveSwizzleHelper
+__OBJC_METACLASS_RO_$_SwrveSwizzleHelper
+__OBJC_CLASS_RO_$_SwrveSwizzleHelper
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/Push/SwrveSwizzleHelper.m
+emptyImplementation
+SwrveSDKCommon/Common/Push/SwrveSwizzleHelper.m
+_class_getInstanceMethodSelfOrParents
++[TextTemplating templatedTextFromString:withProperties:andError:]
++[TextTemplating fallbackFromString:]
++[TextTemplating templatedTextFromJSONString:withProperties:andError:]
++[TextTemplating fallbackFromJSONString:]
+_OBJC_CLASSLIST_REFERENCES_$_.3
+__OBJC_$_CLASS_METHODS_TextTemplating
+__OBJC_METACLASS_RO_$_TextTemplating
+__OBJC_CLASS_RO_$_TextTemplating
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/TextTemplating.m
+SwrveSDKCommon/Common/TextTemplating.m
++[SwrveNotificationOptions categoryOptionsForKeys:]
++[SwrveNotificationOptions categoryOptionForKey:]
++[SwrveNotificationOptions actionOptionsForKeys:]
++[SwrveNotificationOptions actionOptionForKey:]
+__OBJC_$_CLASS_METHODS_SwrveNotificationOptions
+__OBJC_METACLASS_RO_$_SwrveNotificationOptions
+__OBJC_CLASS_RO_$_SwrveNotificationOptions
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveNotificationOptions.m
+SwrveSDKCommon/Common/SwrveNotificationOptions.m
++[SwrvePermissions permissionsStatusCache]
+___42+[SwrvePermissions permissionsStatusCache]_block_invoke
++[SwrvePermissions processPermissionRequest:withSDK:]
++[SwrvePermissions currentStatusWithSDK:]
++[SwrvePermissions updatePermissionsStatusCache:]
++[SwrvePermissions pushAuthorizationWithSDK:]
++[SwrvePermissions pushAuthorizationWithSDK:WithCallback:]
+___58+[SwrvePermissions pushAuthorizationWithSDK:WithCallback:]_block_invoke
+___copy_helper_block_e4_20s24b28r
+___destroy_helper_block_e4_20s24s28r
++[SwrvePermissions bgRefreshStatusToDictionary:]
++[SwrvePermissions compareStatusAndQueueEventsWithSDK:]
++[SwrvePermissions currentPermissionFilters]
++[SwrvePermissions didWeAskForPushPermissionsAlready]
++[SwrvePermissions checkPermissionNameAndAddFilters:to:withCurrentStatus:]
++[SwrvePermissions compareStatusAndQueueEvent:lastStatus:currentStatus:withSDK:]
++[SwrvePermissions checkLocationAlways:]
++[SwrvePermissions requestLocationAlways:]
+___42+[SwrvePermissions requestLocationAlways:]_block_invoke
+___42+[SwrvePermissions requestLocationAlways:]_block_invoke_2
++[SwrvePermissions checkLocationWhenInUse:]
++[SwrvePermissions requestLocationWhenInUse:]
+___45+[SwrvePermissions requestLocationWhenInUse:]_block_invoke
+___45+[SwrvePermissions requestLocationWhenInUse:]_block_invoke_2
++[SwrvePermissions checkPhotoLibrary:]
++[SwrvePermissions requestPhotoLibrary:]
+___40+[SwrvePermissions requestPhotoLibrary:]_block_invoke
+___40+[SwrvePermissions requestPhotoLibrary:]_block_invoke_2
++[SwrvePermissions checkCamera:]
++[SwrvePermissions requestCamera:]
+___34+[SwrvePermissions requestCamera:]_block_invoke
+___34+[SwrvePermissions requestCamera:]_block_invoke_2
++[SwrvePermissions checkContacts:]
++[SwrvePermissions requestContacts:]
+___36+[SwrvePermissions requestContacts:]_block_invoke
+___36+[SwrvePermissions requestContacts:]_block_invoke_2
++[SwrvePermissions checkAdTracking:]
++[SwrvePermissions requestAdTracking:]
+___38+[SwrvePermissions requestAdTracking:]_block_invoke
+___38+[SwrvePermissions requestAdTracking:]_block_invoke_2
++[SwrvePermissions requestPushNotifications:provisional:]
++[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]
+___73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke
+___73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke_2
+___73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke_3
+___copy_helper_block_e4_20s24s28s32s
++[SwrvePermissions sendPermissionEvent:withState:withSDK:]
++[SwrvePermissions refreshDeviceToken:]
+___39+[SwrvePermissions refreshDeviceToken:]_block_invoke
+___39+[SwrvePermissions refreshDeviceToken:]_block_invoke_2
+___copy_helper_block_e4_20s24s28s
+___destroy_helper_block_e4_20s24s28s
+_permissionsStatusCache.dic
+_permissionsStatusCache.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.90
+___block_descriptor_32_e4_20s24bs28r_e31_v8?0"UNNotificationSettings"4l
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_SELECTOR_REFERENCES_.149
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_SELECTOR_REFERENCES_.183
+___block_descriptor_36_e4_20s24s28s32s_e19_v12?0c4"NSError"8l
+___block_descriptor_32_e4_20s24s28s_e31_v8?0"UNNotificationSettings"4l
+__OBJC_$_CLASS_METHODS_SwrvePermissions
+__OBJC_METACLASS_RO_$_SwrvePermissions
+__OBJC_CLASS_RO_$_SwrvePermissions
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/Permissions/SwrvePermissions.m
+__destroy_helper_block_e4_20s24s28s
+__copy_helper_block_e4_20s24s28s
+__39+[SwrvePermissions refreshDeviceToken:]_block_invoke_2
+SwrveSDKCommon/Common/Permissions/SwrvePermissions.m
+__39+[SwrvePermissions refreshDeviceToken:]_block_invoke
+__copy_helper_block_e4_20s24s28s32s
+__73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke_3
+__73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke_2
+__73+[SwrvePermissions registerForRemoteNotifications:withCategories:andSDK:]_block_invoke
+__38+[SwrvePermissions requestAdTracking:]_block_invoke_2
+__38+[SwrvePermissions requestAdTracking:]_block_invoke
+__36+[SwrvePermissions requestContacts:]_block_invoke_2
+__36+[SwrvePermissions requestContacts:]_block_invoke
+__34+[SwrvePermissions requestCamera:]_block_invoke_2
+__34+[SwrvePermissions requestCamera:]_block_invoke
+__40+[SwrvePermissions requestPhotoLibrary:]_block_invoke_2
+__40+[SwrvePermissions requestPhotoLibrary:]_block_invoke
+__45+[SwrvePermissions requestLocationWhenInUse:]_block_invoke_2
+__45+[SwrvePermissions requestLocationWhenInUse:]_block_invoke
+__42+[SwrvePermissions requestLocationAlways:]_block_invoke_2
+__42+[SwrvePermissions requestLocationAlways:]_block_invoke
+__destroy_helper_block_e4_20s24s28r
+__copy_helper_block_e4_20s24b28r
+__58+[SwrvePermissions pushAuthorizationWithSDK:WithCallback:]_block_invoke
+stringFromPermissionState
+SwrveSDKCommon/Common/Permissions/SwrvePermissions.h
+__42+[SwrvePermissions permissionsStatusCache]_block_invoke
++[SwrveUtils deviceScreenBounds]
++[SwrveUtils estimate_dpi]
++[SwrveUtils hardwareMachineName]
++[SwrveUtils carrierInfo]
+___25+[SwrveUtils carrierInfo]_block_invoke
++[SwrveUtils parseURLQueryParams:]
++[SwrveUtils getStringFromDic:withKey:]
++[SwrveUtils getTimeEpoch]
++[SwrveUtils supportsConversations]
++[SwrveUtils platformDeviceType]
++[SwrveUtils isValidIDFA:]
++[SwrveUtils sha1:]
++[SwrveUtils combineDictionary:withDictionary:]
++[SwrveUtils isDifferentUserForAuthenticatedPush:userId:]
++[SwrveUtils isAuthenticatedPush:]
++[SwrveUtils startBackgroundTaskCommon:withName:]
+___49+[SwrveUtils startBackgroundTaskCommon:withName:]_block_invoke
+___copy_helper_block_e4_20s24r
++[SwrveUtils stopBackgroundTaskCommon:withName:]
+_carrierInfo.netinfo
+_carrierInfo.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.14
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_CLASSLIST_REFERENCES_$_.87
+_OBJC_CLASSLIST_REFERENCES_$_.93
+___block_descriptor_28_e4_20s24r_e5_v4?0l
+__OBJC_$_CLASS_METHODS_SwrveUtils
+__OBJC_METACLASS_RO_$_SwrveUtils
+__OBJC_CLASS_RO_$_SwrveUtils
+/Users/bdado/Documents/Ecomm-iOS-App/Carthage/Checkouts/swrve-ios-sdk/SwrveSDKCommon/Common/SwrveUtils.m
+SwrveSDKCommon/Common/SwrveUtils.m
+__copy_helper_block_e4_20s24r
+__49+[SwrveUtils startBackgroundTaskCommon:withName:]_block_invoke
+__25+[SwrveUtils carrierInfo]_block_invoke
