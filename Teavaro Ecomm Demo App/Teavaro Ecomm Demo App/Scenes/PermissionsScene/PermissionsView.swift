@@ -28,7 +28,7 @@ struct PermissionsView: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .background(color)
             .cornerRadius(5)
-            .padding(.top, 30)
+            .padding(.top, 10)
     }
     
     fileprivate func insertText(text: String) -> some View  {
@@ -68,8 +68,8 @@ struct PermissionsView: View {
                     try? FunnelConnectSDK.shared.trustPid().rejectConsent()
                     dismiss()
                 })
-                insertButton(title: "Accept", color: .cyan, action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
+                insertButton(title: "Save settings", color: .gray, action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "savePermissions")
                     updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
                     if(self.nba) {
                         try? FunnelConnectSDK.shared.trustPid().acceptConsent()
@@ -77,13 +77,17 @@ struct PermissionsView: View {
                     }
                     else{
                         try? FunnelConnectSDK.shared.trustPid().rejectConsent()
-                        UserDefaultsUtils.setCdpOm(om: false)
-                        UserDefaultsUtils.setCdpNba(nba: false)
-                        UserDefaultsUtils.setCdpOpt(opt: false)
                     }
                     dismiss()
                 })
             }
+            insertButton(title: "Accept All", color: .cyan, action: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
+                updatePermissions(om: true, nba: true, opt: true)
+                    try? FunnelConnectSDK.shared.trustPid().acceptConsent()
+                    try? FunnelConnectSDK.shared.trustPid().startService()
+                dismiss()
+            })
             Spacer()
         }
         .padding(30)
