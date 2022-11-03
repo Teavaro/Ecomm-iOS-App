@@ -37,6 +37,17 @@ struct SettingsView: View {
                             })
                         }
                     }
+                    Section(){
+                        Button("Clear data", action: {
+                            try? FunnelConnectSDK.shared.clearData()
+                            try? FunnelConnectSDK.shared.clearCookies()
+                            UserDefaultsUtils.setPermissionsRequested(value: false)
+                            UserDefaultsUtils.setCdpOm(om: false)
+                            UserDefaultsUtils.setCdpOpt(opt: false)
+                            UserDefaultsUtils.setCdpNba(nba: false)
+                            store.isFunnelConnectStarted = false
+                        })
+                    }
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Settings"))
@@ -54,7 +65,7 @@ struct SettingsView: View {
                 }
             }
             .onAppear(perform: {
-//                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
             })
         }
     }

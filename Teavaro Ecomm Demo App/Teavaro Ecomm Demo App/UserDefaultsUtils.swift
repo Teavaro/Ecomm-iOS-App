@@ -13,6 +13,7 @@ class UserDefaultsUtils {
     private static let CDP_OM = "CDP_OM"
     private static let CDP_OPT = "CDP_OPT"
     private static let CDP_NBA = "CDP_NBA"
+    private static let PERMISSIONS_REQUESTED = "PERMISSIONS_REQUESTED"
     private static let userDefaults = UserDefaults.standard
     
     static func isCdpConsentAccepted() -> Bool {
@@ -49,5 +50,13 @@ class UserDefaultsUtils {
     
     static func setCdpNba(nba: Bool) {
         self.userDefaults.set(nba, forKey: CDP_NBA)
+    }
+    
+    static func isPermissionsRequested() -> Bool {
+        return self.userDefaults.bool(forKey: PERMISSIONS_REQUESTED)
+    }
+    
+    static func setPermissionsRequested(value: Bool) {
+        self.userDefaults.set(value, forKey: PERMISSIONS_REQUESTED)
     }
 }

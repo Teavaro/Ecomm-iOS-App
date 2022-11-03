@@ -9,11 +9,13 @@ import SwiftUI
 import CoreData
 import FunnelConnectSDK
 import SwrveSDK
+import Combine
 
 struct AngroView: View {
     
     @EnvironmentObject var store: Store
     @Binding var tabSelection: Int
+    @State private var showModal = false
     
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -93,6 +95,9 @@ struct AngroView: View {
                         else{
                             
                         }
+                        if(!UserDefaultsUtils.isPermissionsRequested()){
+                            self.showModal = true
+                        }
                         print("excecuting FunnelConnectSDK.cdp.startService()")
                         try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
                             if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
@@ -109,6 +114,23 @@ struct AngroView: View {
                 }
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
             })
+        }
+        .sheet(isPresented: $showModal, onDismiss: {
+            print(self.showModal)
+        }) {
+            ModalView(showModal: self.$showModal)
+        }
+    }
+        
+}
+
+struct ModalView: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showModal: Bool
+
+    var body: some View {
+        VStack {
+            PermissionsView()
         }
     }
 }

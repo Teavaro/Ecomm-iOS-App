@@ -45,7 +45,9 @@ struct PermissionsView: View {
         UserDefaultsUtils.setCdpOm(om: om)
         UserDefaultsUtils.setCdpNba(nba: nba)
         UserDefaultsUtils.setCdpOpt(opt: opt)
-        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsVersion: -1, dataCallback: {_ in }, errorCallback: {_ in })
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsVersion: -1, dataCallback: {_ in
+            UserDefaultsUtils.setPermissionsRequested(value: true)
+        }, errorCallback: {_ in })
     }
     
     var body: some View {
