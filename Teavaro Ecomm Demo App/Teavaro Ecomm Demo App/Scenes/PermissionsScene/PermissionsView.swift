@@ -45,8 +45,8 @@ struct PermissionsView: View {
         UserDefaultsUtils.setCdpOm(om: om)
         UserDefaultsUtils.setCdpNba(nba: nba)
         UserDefaultsUtils.setCdpOpt(opt: opt)
+        UserDefaultsUtils.setPermissionsRequested(value: true)
         try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsVersion: -1, dataCallback: {_ in
-            UserDefaultsUtils.setPermissionsRequested(value: true)
         }, errorCallback: {_ in })
     }
     
@@ -70,24 +70,24 @@ struct PermissionsView: View {
                     try? FunnelConnectSDK.shared.trustPid().rejectConsent()
                     dismiss()
                 })
-                insertButton(title: "Save settings", color: .gray, action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "savePermissions")
-                    updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
-                    if(self.nba) {
+                insertButton(title: "Accept All", color: .green, action: {
+                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
+                    updatePermissions(om: true, nba: true, opt: true)
                         try? FunnelConnectSDK.shared.trustPid().acceptConsent()
                         try? FunnelConnectSDK.shared.trustPid().startService()
-                    }
-                    else{
-                        try? FunnelConnectSDK.shared.trustPid().rejectConsent()
-                    }
                     dismiss()
                 })
             }
-            insertButton(title: "Accept All", color: .cyan, action: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
-                updatePermissions(om: true, nba: true, opt: true)
+            insertButton(title: "Save settings", color: Color(UIColor.lightGray), action: {
+                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "savePermissions")
+                updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
+                if(self.nba) {
                     try? FunnelConnectSDK.shared.trustPid().acceptConsent()
                     try? FunnelConnectSDK.shared.trustPid().startService()
+                }
+                else{
+                    try? FunnelConnectSDK.shared.trustPid().rejectConsent()
+                }
                 dismiss()
             })
             Spacer()

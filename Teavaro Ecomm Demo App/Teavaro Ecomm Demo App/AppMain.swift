@@ -18,7 +18,6 @@ struct AppMain: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        
         return WindowGroup {
             HomeView()
                 .environmentObject(store)
@@ -26,9 +25,11 @@ struct AppMain: App {
         }
     }
     
+    init() {
+            
+        }
+    
     class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate{
-        
-        
         let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
@@ -36,7 +37,8 @@ struct AppMain: App {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
             print("excecuting FunnelConnectSDK.initialize()")
-            FunnelConnectSDK.shared.initialize(sdkToken: "BXDX2QY]37Yo^LH}Y4oDmNo6", options:  FCOptions(enableLogging: true))
+//            BXDX2QY]37Yo^LH}Y4oDmNo6
+            FunnelConnectSDK.shared.initialize(sdkToken: "tmi123", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
