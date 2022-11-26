@@ -20,7 +20,7 @@ struct SettingsView: View {
                 List {
                     Section(){
                         NavigationLink(destination: PermissionsView()) {
-                            Text("Permissions")
+                            Text("Consent Management")
                                 .bold()
                         }
                     }
@@ -39,13 +39,10 @@ struct SettingsView: View {
                     }
                     Section(){
                         Button("Clear data", action: {
+                            updatePermissions(om: false, nba: false, opt: false)
+                            store.isFunnelConnectStarted = false
                             try? FunnelConnectSDK.shared.clearData()
                             try? FunnelConnectSDK.shared.clearCookies()
-                            UserDefaultsUtils.setPermissionsRequested(value: false)
-                            UserDefaultsUtils.setCdpOm(om: false)
-                            UserDefaultsUtils.setCdpOpt(opt: false)
-                            UserDefaultsUtils.setCdpNba(nba: false)
-                            store.isFunnelConnectStarted = false
                         })
                     }
                 }
@@ -68,6 +65,16 @@ struct SettingsView: View {
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
             })
         }
+    }
+    
+    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
+        let permissions = PermissionsMap()
+        permissions.addPermission(key: "CS-TMI",accepted: om)
+        permissions.addPermission(key: "CS-OPT",accepted: opt)
+        permissions.addPermission(key: "CS-NBA",accepted: nba)
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
+            UserDefaultsUtils.setPermissionsRequested(value: true)
+        }, errorCallback: {_ in })
     }
 }
 

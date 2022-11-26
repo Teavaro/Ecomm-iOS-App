@@ -13,7 +13,7 @@ struct TitleView: View {
     
     var body: some View {
         HStack   {
-            Image(uiImage: UIImage(imageLiteralResourceName: "logo"))
+            Image(uiImage: UIImage(imageLiteralResourceName: "logo2"))
                 .resizable()
                 .frame(minWidth: 40, maxWidth: 40, minHeight: 40, maxHeight: 40, alignment: .center)
             Text(title)

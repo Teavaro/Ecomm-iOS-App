@@ -42,27 +42,27 @@ struct PermissionsView: View {
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
         let permissions = PermissionsMap()
-        UserDefaultsUtils.setCdpOm(om: om)
-        UserDefaultsUtils.setCdpNba(nba: nba)
-        UserDefaultsUtils.setCdpOpt(opt: opt)
-        UserDefaultsUtils.setPermissionsRequested(value: true)
-        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsVersion: -1, dataCallback: {_ in
+        permissions.addPermission(key: "CS-TMI",accepted: om)
+        permissions.addPermission(key: "CS-OPT",accepted: opt)
+        permissions.addPermission(key: "CS-NBA",accepted: nba)
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
+            UserDefaultsUtils.setPermissionsRequested(value: true)
         }, errorCallback: {_ in })
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Performance Cookies:")
+            Text("Analytics Tracking:")
                 .foregroundColor(.gray)
-            Toggle("These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.", isOn: $om)
-            Text("Targeting Cookies:")
-                .foregroundColor(.gray)
-                .padding(.top, 30)
-            Toggle("These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites.", isOn: $opt)
-            Text("Network-based Marketing(TrustPid):")
+            Toggle("Used for reporting and optimisation.", isOn: $om)
+            Text("Personalisation:")
                 .foregroundColor(.gray)
                 .padding(.top, 30)
-            Toggle("Used to provide personalised online marketing based on a unique network token. Trustpid creates and manages the marketing token in a way that does not directly identify you to this website.", isOn: $nba)
+            Toggle("Used to deliver personalised experiences.", isOn: $opt)
+            Text("Network Token:")
+                .foregroundColor(.gray)
+                .padding(.top, 30)
+            Toggle("This enables us to use a mobile network token to collect behavioural data for analytics and personalisation.", isOn: $nba)
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
                     try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "rejectPermissions")
@@ -96,9 +96,11 @@ struct PermissionsView: View {
         .navigationTitle("Permissions")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            self.om = UserDefaultsUtils.isCdpOm()
-            self.opt = UserDefaultsUtils.isCdpOpt()
-            self.nba = UserDefaultsUtils.isCdpNba()
+            if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
+                self.om = permissions.getPermission(key: "CS-TMI")
+                self.opt = permissions.getPermission(key: "CS-OPT")
+                self.nba = permissions.getPermission(key: "CS-NBA")
+            }
             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "permissions")
         })
     }

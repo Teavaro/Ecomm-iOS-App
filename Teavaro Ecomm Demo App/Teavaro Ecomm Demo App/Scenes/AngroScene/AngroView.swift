@@ -16,6 +16,8 @@ struct AngroView: View {
     @EnvironmentObject var store: Store
     @Binding var tabSelection: Int
     @State private var showModal = false
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -77,7 +79,8 @@ struct AngroView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300, alignment: .center)
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
-                .navigationBarItems(leading: TitleView(title: "Angro"))
+                .navigationBarItems(leading: TitleView(title: "Grocery shop"))
+                .navigationBarItems(trailing: Text("v\(appVersion ?? "")(\(buildVersion ?? ""))"))
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.plain)
             }
@@ -85,27 +88,28 @@ struct AngroView: View {
                 if(!store.isFunnelConnectStarted){
                     FunnelConnectSDK.shared.didInitializeWithResult {
                         print("excecuting FunnelConnectSDK.trustpid.startService()")
-                        if((try? FunnelConnectSDK.shared.trustPid().isConsentAccepted()) != nil){
-                            try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-                                store.isFunnelConnectStarted = true
-                            }, errorCallback: {_ in
-                                
-                            })
-                        }
-                        else{
-                            
-                        }
-                        if(!UserDefaultsUtils.isPermissionsRequested()){
-                            self.showModal = true
+                        if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
+                            if(isConsentAccepted){
+                                try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
+                                    store.isFunnelConnectStarted = true
+                                }, errorCallback: {_ in
+                                    
+                                })
+                            }
                         }
                         print("excecuting FunnelConnectSDK.cdp.startService()")
-                        try? FunnelConnectSDK.shared.cdp().startService(dataCallback: {_ in
+                        try? FunnelConnectSDK.shared.cdp().startService(fcUser: FCUser(userIdType: "",userId: ""), notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
                             if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
+                                if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
+                                    if(permissions.isEmpty()){
+                                        showModal.toggle()
+                                    }
+                                }
                                 print("excecuting SwrveSDK.start(withUserId: umid)")
                                 SwrveSDK.start(withUserId: umid)
                                 store.isFunnelConnectStarted = true
                             }
-                        }, errorCallback_: {_ in
+                        }, errorCallback: {_ in
                             
                         })
                     } failure: {_ in

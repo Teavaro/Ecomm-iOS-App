@@ -16,6 +16,7 @@ class Store: ObservableObject {
     @Published var listOffer: [ShopItem] = []
     @Published var isLogin = false
     var isFunnelConnectStarted = false
+    var isPermissionsValidated = false
     
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
 

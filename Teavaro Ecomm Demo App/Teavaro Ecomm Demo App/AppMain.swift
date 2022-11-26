@@ -38,7 +38,7 @@ struct AppMain: App {
             
             print("excecuting FunnelConnectSDK.initialize()")
 //            BXDX2QY]37Yo^LH}Y4oDmNo6
-            FunnelConnectSDK.shared.initialize(sdkToken: "tmi123", options:  FCOptions(enableLogging: true))
+            FunnelConnectSDK.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
