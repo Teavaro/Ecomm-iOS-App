@@ -73,8 +73,7 @@ struct PermissionsView: View {
                 insertButton(title: "Accept All", color: .green, action: {
                     try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
                     updatePermissions(om: true, nba: true, opt: true)
-                        try? FunnelConnectSDK.shared.trustPid().acceptConsent()
-                        try? FunnelConnectSDK.shared.trustPid().startService()
+                    startTrustPid()
                     dismiss()
                 })
             }
@@ -82,8 +81,7 @@ struct PermissionsView: View {
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "savePermissions")
                 updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
                 if(self.nba) {
-                    try? FunnelConnectSDK.shared.trustPid().acceptConsent()
-                    try? FunnelConnectSDK.shared.trustPid().startService()
+                    startTrustPid()
                 }
                 else{
                     try? FunnelConnectSDK.shared.trustPid().rejectConsent()
@@ -104,6 +102,12 @@ struct PermissionsView: View {
             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "permissions")
         })
     }
+}
+
+func startTrustPid(){
+    try? FunnelConnectSDK.shared.trustPid().acceptConsent()
+    let isStub = UserDefaultsUtils.isStub()
+    try? FunnelConnectSDK.shared.trustPid().startService(isStub: isStub)
 }
 
 struct Permissions_Previews: PreviewProvider {

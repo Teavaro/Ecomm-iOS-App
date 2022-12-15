@@ -13,6 +13,8 @@
 		00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD928B56140000E2F03 /* PermissionsView.swift */; };
 		00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDB28B69AD5000E2F03 /* TitleView.swift */; };
 		00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */; };
+		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
+		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
 		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
 		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
@@ -76,6 +78,8 @@
 		00183CD928B56140000E2F03 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
 		00183CDB28B69AD5000E2F03 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
 				0065CCBF289DB09C00317DDD /* Store.swift */,
 				0065CCC1289DB21400317DDD /* ShopItem.swift */,
+				00184F2C2943C32C0033EF94 /* HttpRequest.swift */,
+				00184F2E2943C7380033EF94 /* PushNotification.swift */,
 			);
 			path = "Teavaro Ecomm Demo App";
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
+				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */,
@@ -450,6 +457,7 @@
 				00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */,
 				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
 				0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */,
+				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
@@ -599,7 +607,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -642,7 +650,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;

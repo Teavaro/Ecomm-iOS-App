@@ -79,7 +79,7 @@ struct AngroView: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300, alignment: .center)
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
-                .navigationBarItems(leading: TitleView(title: "Grocery shop"))
+                .navigationBarItems(leading: TitleView(title: "Home"))
                 .navigationBarItems(trailing: Text("v\(appVersion ?? "")(\(buildVersion ?? ""))"))
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .listStyle(.plain)
@@ -98,14 +98,14 @@ struct AngroView: View {
                             }
                         }
                         print("excecuting FunnelConnectSDK.cdp.startService()")
-                        try? FunnelConnectSDK.shared.cdp().startService(fcUser: FCUser(userIdType: "",userId: ""), notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
+                        try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
                             if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
                                 if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
                                     if(permissions.isEmpty()){
                                         showModal.toggle()
                                     }
                                 }
-                                print("excecuting SwrveSDK.start(withUserId: umid)")
+                                print("excecuting SwrveSDK.start(withUserId: \(umid)")
                                 SwrveSDK.start(withUserId: umid)
                                 store.isFunnelConnectStarted = true
                             }

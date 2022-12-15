@@ -18,7 +18,7 @@ struct HomeView: View {
             TabView(selection: $tabSelection) {
                 AngroView(tabSelection: $tabSelection)
                     .tabItem {
-                        Label("Angro", systemImage: "house")
+                        Label("Home", systemImage: "house")
                     }
                     .tag(1)
                 ItemsListingView()

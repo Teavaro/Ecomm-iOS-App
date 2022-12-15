@@ -15,6 +15,7 @@ class UserDefaultsUtils {
     private static let CDP_NBA = "CDP_NBA"
     private static let PERMISSIONS_REQUESTED = "PERMISSIONS_REQUESTED"
     private static let userDefaults = UserDefaults.standard
+    private static let IS_STUB = "IS_STUB"
     
     static func isCdpConsentAccepted() -> Bool {
         return self.userDefaults.bool(forKey: CDP_CONSENT)
@@ -58,5 +59,13 @@ class UserDefaultsUtils {
     
     static func setPermissionsRequested(value: Bool) {
         self.userDefaults.set(value, forKey: PERMISSIONS_REQUESTED)
+    }
+    
+    static func isStub() -> Bool {
+        return self.userDefaults.bool(forKey: IS_STUB)
+    }
+    
+    static func setStub(value: Bool) {
+        self.userDefaults.set(value, forKey: IS_STUB)
     }
 }
