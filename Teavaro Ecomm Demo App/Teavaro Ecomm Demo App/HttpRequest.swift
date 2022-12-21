@@ -13,7 +13,6 @@ class HttpRequest {
         if let serviceUrl = URL(string: urlString){
             print("iran: url good")
             var request = URLRequest(url: serviceUrl)
-//            request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: [])
             request.httpMethod = "POST"
             request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
             let session = URLSession.shared
