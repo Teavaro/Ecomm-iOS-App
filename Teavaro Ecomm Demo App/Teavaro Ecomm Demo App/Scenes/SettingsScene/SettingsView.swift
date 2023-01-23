@@ -47,12 +47,14 @@ struct SettingsView: View {
                                 showModal1.toggle()
                             }
                     }
-                    Section(){
-                        Button("Send Notification", action: {
-                            if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
-                                PushNotification().send(user: umid, message: "Swrve+App+Push+Notification")
-                            }
-                        })
+                    if (store.isCdpStarted) {
+                        Section(){
+                            Button("Send Notification", action: {
+                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
+                                    PushNotification().send(user: umid, message: "Swrve+App+Push+Notification")
+                                }
+                            })
+                        }
                     }
                     Section(){
                         Button("Clear Data", action: {

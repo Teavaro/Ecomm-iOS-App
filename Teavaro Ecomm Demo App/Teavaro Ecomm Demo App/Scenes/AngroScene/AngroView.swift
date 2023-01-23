@@ -61,6 +61,9 @@ struct AngroView: View {
                 List {
                     headerView()
                     
+                    CeltraWebView(htmlContent: store.getBanner())
+                        .frame(height: 70)
+                    
                     Text("Best selling items:")
                         .font(.title)
                         .bold()
@@ -73,10 +76,6 @@ struct AngroView: View {
                         }
                     }
                     
-                    Image("bg_special_offer")
-                        .resizable()
-                        .padding(.top)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300, alignment: .center)
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Home"))
@@ -87,31 +86,33 @@ struct AngroView: View {
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
                     FunnelConnectSDK.shared.didInitializeWithResult {
-                        print("excecuting FunnelConnectSDK.trustpid.startService()")
-                        if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
-                            if(isConsentAccepted){
-                                try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-                                    store.isFunnelConnectStarted = true
-                                }, errorCallback: {_ in
-                                    
-                                })
+                        DispatchQueue.main.async {
+                            print("excecuting FunnelConnectSDK.trustpid.startService()")
+                            if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
+                                if(isConsentAccepted){
+                                    try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
+                                        store.isFunnelConnectStarted = true
+                                    }, errorCallback: {_ in
+                                        
+                                    })
+                                }
                             }
-                        }
-                        print("excecuting FunnelConnectSDK.cdp.startService()")
-                        try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
-                            if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
-                                if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
-                                    if(permissions.isEmpty()){
+                            print("excecuting FunnelConnectSDK.cdp.startService()")
+                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: { data in
+                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
+                                    store.isCdpStarted.toggle()
+                                    store.infoResponse = data
+                                    if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
                                         showModal.toggle()
                                     }
+                                    print("excecuting SwrveSDK.start(withUserId: \(umid)")
+                                    SwrveSDK.start(withUserId: umid)
+                                    store.isFunnelConnectStarted = true
                                 }
-                                print("excecuting SwrveSDK.start(withUserId: \(umid)")
-                                SwrveSDK.start(withUserId: umid)
-                                store.isFunnelConnectStarted = true
-                            }
-                        }, errorCallback: {_ in
-                            
-                        })
+                            }, errorCallback: {_ in
+                                
+                            })
+                        }
                     } failure: {_ in
                         
                     }
@@ -144,3 +145,5 @@ struct AngroView_Previews: PreviewProvider {
         AngroView(tabSelection: .constant(1))
     }
 }
+
+

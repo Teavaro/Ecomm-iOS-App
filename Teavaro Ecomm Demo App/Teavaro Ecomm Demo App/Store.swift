@@ -15,6 +15,10 @@ class Store: ObservableObject {
     @Published var listCart: [ShopItem] = []
     @Published var listOffer: [ShopItem] = []
     @Published var isLogin = false
+    @Published var isCdpStarted = false
+    var infoResponse = """
+    {}
+    """
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     
@@ -82,5 +86,52 @@ class Store: ObservableObject {
 
     func removeAllCartItems() {
         listCart.removeAll()
+    }
+    
+    func getBanner() -> String{
+        var text = ""
+        var obj: InfoResponse? = nil
+        do {
+            let decoder = JSONDecoder()
+            obj = try decoder.decode(InfoResponse.self, from: infoResponse.data(using: .utf8)!)
+        } catch {
+            print("iran:error:\(error)")
+        }
+        if obj != nil{
+            print("iran:attributes",obj!.attributes)
+            for (key, value) in obj!.attributes {
+                text += "&amp;" + key + "=" + value
+            }
+        }
+        
+        print("iran:infoResponse", infoResponse)
+        print("iran:attr", text)
+        var htmlContent = """
+            <!DOCTYPE html>
+               <html>
+               <body>
+                <div class="celtra-ad-v3">
+                    <img src="data:image/png,celtra" style="display: none" onerror="
+                        (function(img) {
+                            var params = {'clickUrl':'','widthBreakpoint':'','expandDirection':'undefined','preferredClickThroughWindow':'new','clickEvent':'advertiser','externalAdServer':'Custom','tagVersion':'html-standard-7'};
+                            var req = document.createElement('script');
+                            req.id = params.scriptId = 'celtra-script-' + (window.celtraScriptIndex = (window.celtraScriptIndex||0)+1);
+                            params.clientTimestamp = new Date/1000;
+                            params.clientTimeZoneOffsetInMinutes = new Date().getTimezoneOffset();
+                            params.hostPageLoadId=window.celtraHostPageLoadId=window.celtraHostPageLoadId||(Math.random()+'').slice(2);
+                            var qs = '';
+                            for (var k in params) {
+                                qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+                            }
+                            var src = 'https://ads.celtra.com/67444e1d/web.js?' + qs + '$text';
+                            req.src = src;
+                            img.parentNode.insertBefore(req, img.nextSibling);
+                        })(this);
+                    "/>
+                </div>
+               </body>
+               </html>
+            """
+        return htmlContent
     }
 }

@@ -29,7 +29,7 @@ struct AppMain: App {
             
         }
     
-    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate{
+    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate, UNUserNotificationCenterDelegate{
         let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
@@ -72,9 +72,11 @@ struct AppMain: App {
         }
         
         @available(iOS 10.0, *)
-        func willPresent(_ notification: UNNotification!, withCompletionHandler completionHandler: ((UNNotificationPresentationOptions) -> Void)!) {
+        func willPresent(_ notification: UNNotification, withCompletionHandler completionHandler: ((UNNotificationPresentationOptions) -> Void)) {
             // Called when a push is received when the app is in the foreground.
-            completionHandler([.alert, .badge, .sound])
+            completionHandler([.banner, .list, .sound])
         }
       }
+    
+    
 }
