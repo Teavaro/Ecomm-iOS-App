@@ -123,7 +123,7 @@ class Store: ObservableObject {
                             for (var k in params) {
                                 qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
                             }
-                            var src = 'https://ads.celtra.com/67444e1d/web.js?' + qs + '$text';
+                            var src = 'https://ads.celtra.com/67444e1d/web.js?' + qs + '\(text)';
                             req.src = src;
                             img.parentNode.insertBefore(req, img.nextSibling);
                         })(this);
