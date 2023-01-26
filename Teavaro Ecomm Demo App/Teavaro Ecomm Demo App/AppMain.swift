@@ -37,6 +37,18 @@ struct AppMain: App {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
             print("excecuting FunnelConnectSDK.initialize()")
+            
+            let center = UNUserNotificationCenter.current()
+                        center.delegate = self
+                        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                            if error == nil {
+                                DispatchQueue.main.async {
+                                    print("DID REQUEST NOTIFICATIONS")
+                                    UIApplication.shared.registerForRemoteNotifications()
+                                }
+                            }
+                        }
+            
 //            BXDX2QY]37Yo^LH}Y4oDmNo6
             FunnelConnectSDK.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  FCOptions(enableLogging: true))
             
