@@ -85,11 +85,9 @@ struct AppMain: App {
         
         @available(iOS 10.0, *)
         func didReceive(_ response: UNNotificationResponse, withCompletionHandler completionHandler: (() -> Void)) {
-            var userInfo = response.notification.request.content.userInfo
+            let userInfo = response.notification.request.content.userInfo
             if let infoNotification = userInfo["New Group 1"]{
-                print("Notification clicked: \(userInfo)")
-                let asd = (infoNotification as! [AnyHashable: Any])["product_id"]!
-                print("product_id: \(asd)")
+                AppState.shared.section = (infoNotification as! [AnyHashable: Any])["section"]! as? String
             }
             completionHandler()
         }
@@ -100,4 +98,9 @@ struct AppMain: App {
         }
       }
     
+}
+
+class AppState: ObservableObject {
+    static let shared = AppState()
+    @Published var section : String?
 }

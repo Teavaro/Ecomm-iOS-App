@@ -18,7 +18,9 @@ struct CeltraWebView: UIViewRepresentable {
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {
-        webView.loadHTMLString(htmlContent, baseURL: nil)
+        DispatchQueue.main.async {
+            webView.loadHTMLString(htmlContent, baseURL: nil)
+        }
     }
 }
 

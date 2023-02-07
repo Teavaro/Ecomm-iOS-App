@@ -9,19 +9,18 @@ import Foundation
 import SwiftUI
 
 class Store: ObservableObject {
-
     @Published var listItems: [ShopItem] = []
     @Published var listWish: [ShopItem] = []
     @Published var listCart: [ShopItem] = []
     @Published var listOffer: [ShopItem] = []
     @Published var isLogin = false
     @Published var isCdpStarted = false
+    @Published var showModal = false
     var infoResponse = """
     {}
     """
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
-    
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
 
     init() {

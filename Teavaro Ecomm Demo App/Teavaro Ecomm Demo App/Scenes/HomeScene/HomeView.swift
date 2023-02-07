@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State var tabSelection = 1
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -43,7 +44,22 @@ struct HomeView: View {
                     .tag(5)
             }
         }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                if let section = AppState.shared.section{
+                    if(section == "store"){
+                        tabSelection = 2
+                    }
+                    AppState.shared.section = nil
+                }
+            } else if newPhase == .inactive {
+                
+            } else if newPhase == .background {
+                
+            }
+        }
     }
+        
 }
 
 struct HomeView_Previews: PreviewProvider {
