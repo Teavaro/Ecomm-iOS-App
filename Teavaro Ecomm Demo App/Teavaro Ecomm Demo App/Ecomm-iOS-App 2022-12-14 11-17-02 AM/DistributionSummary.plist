@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ecomm-iOS-App.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>8</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>1C66949B64F8521E8237AD94D199D9A8C90D8C51</string>
+				<key>dateExpires</key>
+				<string>24/3/23</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1C66949B64F8521E8237AD94D199D9A8C90D8C51</string>
+						<key>dateExpires</key>
+						<string>24/3/23</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>FunnelConnectSDK.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C84BGQ5GW8</string>
+						<key>name</key>
+						<string>Teavaro Ltd</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>5.13.4</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1C66949B64F8521E8237AD94D199D9A8C90D8C51</string>
+						<key>dateExpires</key>
+						<string>24/3/23</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>SDWebImage.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C84BGQ5GW8</string>
+						<key>name</key>
+						<string>Teavaro Ltd</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>5.13.4</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1C66949B64F8521E8237AD94D199D9A8C90D8C51</string>
+						<key>dateExpires</key>
+						<string>24/3/23</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>SwrveSDK.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C84BGQ5GW8</string>
+						<key>name</key>
+						<string>Teavaro Ltd</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1C66949B64F8521E8237AD94D199D9A8C90D8C51</string>
+						<key>dateExpires</key>
+						<string>24/3/23</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>SwrveSDKCommon.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>C84BGQ5GW8</string>
+						<key>name</key>
+						<string>Teavaro Ltd</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>C84BGQ5GW8.com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>C84BGQ5GW8</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Ecomm-iOS-App.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>24101cf0-931a-4ca7-afef-fb72f1787aa9</string>
+				<key>dateExpires</key>
+				<string>4/10/23</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>C84BGQ5GW8</string>
+				<key>name</key>
+				<string>Teavaro Ltd</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>

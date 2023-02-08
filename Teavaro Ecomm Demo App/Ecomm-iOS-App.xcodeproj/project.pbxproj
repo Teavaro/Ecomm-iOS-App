@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CCD28A1A61C000E2F03 /* CartItemRow.swift */; };
+		00183CD228B52984000E2F03 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD128B52984000E2F03 /* SettingsView.swift */; };
+		00183CD728B53541000E2F03 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD628B53541000E2F03 /* LoginView.swift */; };
+		00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD928B56140000E2F03 /* PermissionsView.swift */; };
+		00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDB28B69AD5000E2F03 /* TitleView.swift */; };
+		00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */; };
+		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
+		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
+		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
+		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
+		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
+		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
+		0073235A29102F56003D15D9 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; };
+		0073235B29102F56003D15D9 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0073235C29102F56003D15D9 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235729102F56003D15D9 /* SwrveSDK.xcframework */; };
+		0073235D29102F56003D15D9 /* SwrveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235729102F56003D15D9 /* SwrveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0073235E29102F56003D15D9 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235829102F56003D15D9 /* SDWebImage.xcframework */; };
+		0073235F29102F56003D15D9 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235829102F56003D15D9 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		008513D529102135006898F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008513D429102135006898F7 /* GoogleService-Info.plist */; };
+		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
+		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
+		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
+		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
+		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
+		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
+		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
+		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
+		C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477F286E085500C1DCAB /* CustomSecureTextField.swift */; };
+		C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779728622C3E006DDD74 /* AppMain.swift */; };
+		C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE779928622C3E006DDD74 /* ItemsListingView.swift */; };
+		C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FE779B28622C3F006DDD74 /* Assets.xcassets */; };
+		C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FE779E28622C3F006DDD74 /* Preview Assets.xcassets */; };
+		C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77A028622C3F006DDD74 /* Persistence.swift */; };
+		C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */; };
+		C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77AA286338C2006DDD74 /* StaticData.swift */; };
+		C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77AC28633D74006DDD74 /* ItemRow.swift */; };
+		C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77AE286347DA006DDD74 /* ItemDetail.swift */; };
+		C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77B028635C5E006DDD74 /* OrderView.swift */; };
+		C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77B2286367A6006DDD74 /* HomeView.swift */; };
+		C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77BD286373B8006DDD74 /* CheckoutView.swift */; };
+		C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77BF2864CF1C006DDD74 /* Resolver.swift */; };
+		C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77C22864EE8F006DDD74 /* ViewModelFactory.swift */; };
+		C9FE77C52864EEBC006DDD74 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77C42864EEBC006DDD74 /* ViewFactory.swift */; };
+		C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77C62864EEF5006DDD74 /* BaseViewModel.swift */; };
+		C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77C82864EF3D006DDD74 /* CheckoutViewModel.swift */; };
+		C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77CA2864EF6D006DDD74 /* DI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		008B3FDB28F5140A00561A98 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0073235D29102F56003D15D9 /* SwrveSDK.xcframework in Embed Frameworks */,
+				0073235F29102F56003D15D9 /* SDWebImage.xcframework in Embed Frameworks */,
+				001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */,
+				0073235B29102F56003D15D9 /* SwrveSDKCommon.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00183CCD28A1A61C000E2F03 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
+		00183CD128B52984000E2F03 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		00183CD628B53541000E2F03 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		00183CD928B56140000E2F03 /* PermissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsView.swift; sourceTree = "<group>"; };
+		00183CDB28B69AD5000E2F03 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
+		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
+		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
+		0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
+		0073235729102F56003D15D9 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDK.xcframework"; sourceTree = "<group>"; };
+		0073235829102F56003D15D9 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/SDWebImage.xcframework"; sourceTree = "<group>"; };
+		008513D429102135006898F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		008513D6291021DD006898F7 /* UserDefaultsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtils.swift; sourceTree = "<group>"; };
+		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
+		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
+		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
+		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
+		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
+		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		C940477F286E085500C1DCAB /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
+		C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecomm-iOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FE779728622C3E006DDD74 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		C9FE779928622C3E006DDD74 /* ItemsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListingView.swift; sourceTree = "<group>"; };
+		C9FE779B28622C3F006DDD74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9FE779E28622C3F006DDD74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9FE77A028622C3F006DDD74 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C9FE77A328622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Teavaro_Ecomm_Demo_App.xcdatamodel; sourceTree = "<group>"; };
+		C9FE77AA286338C2006DDD74 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		C9FE77AC28633D74006DDD74 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		C9FE77AE286347DA006DDD74 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		C9FE77B028635C5E006DDD74 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		C9FE77B2286367A6006DDD74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C9FE77BD286373B8006DDD74 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		C9FE77BF2864CF1C006DDD74 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		C9FE77C22864EE8F006DDD74 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		C9FE77C42864EEBC006DDD74 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		C9FE77C62864EEF5006DDD74 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		C9FE77C82864EF3D006DDD74 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		C9FE77CA2864EF6D006DDD74 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9FE779128622C3E006DDD74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0073235C29102F56003D15D9 /* SwrveSDK.xcframework in Frameworks */,
+				0073235E29102F56003D15D9 /* SDWebImage.xcframework in Frameworks */,
+				001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */,
+				0073235A29102F56003D15D9 /* SwrveSDKCommon.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00183CCF28B5295E000E2F03 /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD128B52984000E2F03 /* SettingsView.swift */,
+			);
+			path = SettingsScene;
+			sourceTree = "<group>";
+		};
+		00183CD328B5338C000E2F03 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD628B53541000E2F03 /* LoginView.swift */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		00183CD828B56124000E2F03 /* PermissionsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00183CD928B56140000E2F03 /* PermissionsView.swift */,
+			);
+			path = PermissionsScene;
+			sourceTree = "<group>";
+		};
+		0065CCBC289DAD6800317DDD /* AngroScene */ = {
+			isa = PBXGroup;
+			children = (
+				0065CCBD289DAD8000317DDD /* AngroView.swift */,
+			);
+			path = AngroScene;
+			sourceTree = "<group>";
+		};
+		00CDFF2D28C048450096810C /* WishListScene */ = {
+			isa = PBXGroup;
+			children = (
+				009C9ACE289D6F4000599DB0 /* WishlistView.swift */,
+			);
+			path = WishListScene;
+			sourceTree = "<group>";
+		};
+		00CDFF2E28C0E93A0096810C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		00CDFF3028C0EA590096810C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */,
+				0073235829102F56003D15D9 /* SDWebImage.xcframework */,
+				0073235729102F56003D15D9 /* SwrveSDK.xcframework */,
+				0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9404778286DF8A100C1DCAB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */,
+				C940477B286DF8E400C1DCAB /* BlurView.swift */,
+				C940477F286E085500C1DCAB /* CustomSecureTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		C94D575D286DB4CA00AF5D70 /* CheckoutScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77BD286373B8006DDD74 /* CheckoutView.swift */,
+				C9FE77C82864EF3D006DDD74 /* CheckoutViewModel.swift */,
+				00183CCD28A1A61C000E2F03 /* CartItemRow.swift */,
+			);
+			path = CheckoutScene;
+			sourceTree = "<group>";
+		};
+		C94D575E286DB50000AF5D70 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77BF2864CF1C006DDD74 /* Resolver.swift */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		C94D575F286DB54B00AF5D70 /* OrderScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77B028635C5E006DDD74 /* OrderView.swift */,
+			);
+			path = OrderScene;
+			sourceTree = "<group>";
+		};
+		C9FE778B28622C3E006DDD74 = {
+			isa = PBXGroup;
+			children = (
+				008513D429102135006898F7 /* GoogleService-Info.plist */,
+				008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */,
+				0092251128CF893200125041 /* Extensions.swift */,
+				00CDFF2E28C0E93A0096810C /* Packages */,
+				C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */,
+				C9FE779528622C3E006DDD74 /* Products */,
+				00CDFF3028C0EA590096810C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9FE779528622C3E006DDD74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */ = {
+			isa = PBXGroup;
+			children = (
+				00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */,
+				C9404778286DF8A100C1DCAB /* CustomViews */,
+				C9FE77CC2864EF7B006DDD74 /* DI */,
+				C9FE77C12864EE85006DDD74 /* MVVM */,
+				C9FE77BB2863709B006DDD74 /* Data */,
+				C9FE77BA28637081006DDD74 /* Resources */,
+				C9FE77B428636C61006DDD74 /* Scenes */,
+				C9FE779728622C3E006DDD74 /* AppMain.swift */,
+				008513D6291021DD006898F7 /* UserDefaultsUtils.swift */,
+				00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */,
+				C9FE77A028622C3F006DDD74 /* Persistence.swift */,
+				C9FE779D28622C3F006DDD74 /* Preview Content */,
+				C9FE77AA286338C2006DDD74 /* StaticData.swift */,
+				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
+				0065CCBF289DB09C00317DDD /* Store.swift */,
+				0065CCC1289DB21400317DDD /* ShopItem.swift */,
+				00184F2C2943C32C0033EF94 /* HttpRequest.swift */,
+				00184F2E2943C7380033EF94 /* PushNotification.swift */,
+				00ABB34F297AF43C001F7092 /* CeltraWebView.swift */,
+				00ABB351297B29D3001F7092 /* InfoResponse.swift */,
+			);
+			path = "Teavaro Ecomm Demo App";
+			sourceTree = "<group>";
+		};
+		C9FE779D28622C3F006DDD74 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE779E28622C3F006DDD74 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9FE77B428636C61006DDD74 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				00CDFF2D28C048450096810C /* WishListScene */,
+				00183CD828B56124000E2F03 /* PermissionsScene */,
+				00183CD328B5338C000E2F03 /* LoginScene */,
+				00183CCF28B5295E000E2F03 /* SettingsScene */,
+				0065CCBC289DAD6800317DDD /* AngroScene */,
+				C94D575F286DB54B00AF5D70 /* OrderScene */,
+				C94D575D286DB4CA00AF5D70 /* CheckoutScene */,
+				C9FE77B528636FD7006DDD74 /* HomeScene */,
+				C9FE77B628636FF2006DDD74 /* ItemsListingScene */,
+				C9FE77B928637070006DDD74 /* ItemDetailsScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C9FE77B528636FD7006DDD74 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77B2286367A6006DDD74 /* HomeView.swift */,
+				00183CDB28B69AD5000E2F03 /* TitleView.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		C9FE77B628636FF2006DDD74 /* ItemsListingScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE779928622C3E006DDD74 /* ItemsListingView.swift */,
+				C9FE77AC28633D74006DDD74 /* ItemRow.swift */,
+			);
+			path = ItemsListingScene;
+			sourceTree = "<group>";
+		};
+		C9FE77B928637070006DDD74 /* ItemDetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77AE286347DA006DDD74 /* ItemDetail.swift */,
+			);
+			path = ItemDetailsScene;
+			sourceTree = "<group>";
+		};
+		C9FE77BA28637081006DDD74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE779B28622C3F006DDD74 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9FE77BB2863709B006DDD74 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77BC286370A3006DDD74 /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C9FE77BC286370A3006DDD74 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C9FE77C12864EE85006DDD74 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE77C22864EE8F006DDD74 /* ViewModelFactory.swift */,
+				C9FE77C42864EEBC006DDD74 /* ViewFactory.swift */,
+				C9FE77C62864EEF5006DDD74 /* BaseViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		C9FE77CC2864EF7B006DDD74 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C94D575E286DB50000AF5D70 /* Framework */,
+				C9FE77CA2864EF6D006DDD74 /* DI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9FE779328622C3E006DDD74 /* Ecomm-iOS-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Ecomm-iOS-App" */;
+			buildPhases = (
+				C9FE779028622C3E006DDD74 /* Sources */,
+				C9FE779128622C3E006DDD74 /* Frameworks */,
+				C9FE779228622C3E006DDD74 /* Resources */,
+				008B3FDB28F5140A00561A98 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ecomm-iOS-App";
+			packageProductDependencies = (
+			);
+			productName = "Teavaro Ecomm Demo App";
+			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9FE778C28622C3E006DDD74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					C9FE779328622C3E006DDD74 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Ecomm-iOS-App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9FE778B28622C3E006DDD74;
+			packageReferences = (
+			);
+			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9FE779328622C3E006DDD74 /* Ecomm-iOS-App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9FE779228622C3E006DDD74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
+				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
+				008513D529102135006898F7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9FE779028622C3E006DDD74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
+				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
+				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
+				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
+				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
+				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
+				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
+				00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */,
+				00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */,
+				00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */,
+				C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */,
+				0065CCC0289DB09C00317DDD /* Store.swift in Sources */,
+				009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */,
+				00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */,
+				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
+				0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */,
+				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
+				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
+				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
+				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
+				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
+				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
+				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
+				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
+				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
+				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
+				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
+				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
+				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
+				0092251228CF893200125041 /* Extensions.swift in Sources */,
+				008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */,
+				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
+				C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */,
+				C9FE77C52864EEBC006DDD74 /* ViewFactory.swift in Sources */,
+				00183CD728B53541000E2F03 /* LoginView.swift in Sources */,
+				00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9FE77A528622C3F006DDD74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9FE77A628622C3F006DDD74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9FE77A828622C3F006DDD74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
+				DEVELOPMENT_TEAM = C84BGQ5GW8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Ecomm IOS Demo App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_BUILDER = "";
+			};
+			name = Debug;
+		};
+		C9FE77A928622C3F006DDD74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
+				DEVELOPMENT_TEAM = C84BGQ5GW8;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Ecomm IOS Demo App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_BUILDER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9FE778F28622C3E006DDD74 /* Build configuration list for PBXProject "Ecomm-iOS-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FE77A528622C3F006DDD74 /* Debug */,
+				C9FE77A628622C3F006DDD74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Ecomm-iOS-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FE77A828622C3F006DDD74 /* Debug */,
+				C9FE77A928622C3F006DDD74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9FE77A328622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodel */,
+			);
+			currentVersion = C9FE77A328622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodel */;
+			path = Teavaro_Ecomm_Demo_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C9FE778C28622C3E006DDD74 /* Project object */;
+}
