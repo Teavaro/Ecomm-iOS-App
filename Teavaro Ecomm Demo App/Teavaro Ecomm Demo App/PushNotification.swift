@@ -15,7 +15,7 @@ class PushNotification {
     private let swrveKeyCampaign = "708f47c5-e22d-457b-9d34-4cd35a160acb"
     
     func send(user: String, message: String){
-        let newUrl = url+"?push_key="+swrveKeyCampaign+"&user="+user+"&message="+message
+        let newUrl = url+"?push_key="+swrveKeyCampaign+"&user="+user //+"&message="+message
         HttpRequest().request(urlString: newUrl)
     }
 }

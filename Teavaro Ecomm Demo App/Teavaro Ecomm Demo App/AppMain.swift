@@ -13,8 +13,8 @@ import SwrveSDK
 struct AppMain: App {
     
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-
     @StateObject var store = Store()
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
@@ -39,15 +39,15 @@ struct AppMain: App {
             print("excecuting FunnelConnectSDK.initialize()")
             
             let center = UNUserNotificationCenter.current()
-                        center.delegate = self
-                        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-                            if error == nil {
-                                DispatchQueue.main.async {
-                                    print("DID REQUEST NOTIFICATIONS")
-                                    UIApplication.shared.registerForRemoteNotifications()
-                                }
-                            }
-                        }
+            center.delegate = self
+            center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                if error == nil {
+                    DispatchQueue.main.async {
+                        print("DID REQUEST NOTIFICATIONS")
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                }
+            }
             
 //            BXDX2QY]37Yo^LH}Y4oDmNo6
             FunnelConnectSDK.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  FCOptions(enableLogging: true))
@@ -84,11 +84,23 @@ struct AppMain: App {
         }
         
         @available(iOS 10.0, *)
+        func didReceive(_ response: UNNotificationResponse, withCompletionHandler completionHandler: (() -> Void)) {
+            let userInfo = response.notification.request.content.userInfo
+            if let infoNotification = userInfo["New Group 1"]{
+                AppState.shared.section = (infoNotification as! [AnyHashable: Any])["section"]! as? String
+            }
+            completionHandler()
+        }
+        
+        @available(iOS 10.0, *)
         func willPresent(_ notification: UNNotification, withCompletionHandler completionHandler: ((UNNotificationPresentationOptions) -> Void)) {
-            // Called when a push is received when the app is in the foreground.
             completionHandler([.banner, .list, .sound])
         }
       }
     
-    
+}
+
+class AppState: ObservableObject {
+    static let shared = AppState()
+    @Published var section : String?
 }

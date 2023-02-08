@@ -15,7 +15,6 @@ struct AngroView: View {
     
     @EnvironmentObject var store: Store
     @Binding var tabSelection: Int
-    @State private var showModal = false
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
@@ -103,7 +102,7 @@ struct AngroView: View {
                                     store.isCdpStarted.toggle()
                                     store.infoResponse = data
                                     if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
-                                        showModal.toggle()
+                                        store.showModal.toggle()
                                     }
                                     print("excecuting SwrveSDK.start(withUserId: \(umid)")
                                     SwrveSDK.start(withUserId: umid)
@@ -120,10 +119,10 @@ struct AngroView: View {
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
             })
         }
-        .sheet(isPresented: $showModal, onDismiss: {
-            print(self.showModal)
+        .sheet(isPresented: $store.showModal, onDismiss: {
+            print(store.showModal)
         }) {
-            ModalView(showModal: self.$showModal)
+            ModalView(showModal: $store.showModal)
         }
     }
         
