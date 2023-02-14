@@ -15,6 +15,11 @@
 		00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */; };
 		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
 		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
+		0019CA2E299B489600A7D771 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2D299B489600A7D771 /* DataManager.swift */; };
+		0019CA33299B4BE500A7D771 /* CartItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */; };
+		0019CA34299B4BE500A7D771 /* CartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */; };
+		0019CA35299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */; };
+		0019CA36299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */; };
 		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
 		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
@@ -82,6 +87,11 @@
 		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		0019CA2D299B489600A7D771 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -349,7 +359,12 @@
 		C9FE77BC286370A3006DDD74 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */,
+				0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */,
+				0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */,
+				0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */,
 				C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */,
+				0019CA2D299B489600A7D771 /* DataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -450,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
+				0019CA34299B4BE500A7D771 /* CartItem+CoreDataProperties.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
@@ -458,7 +474,9 @@
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */,
 				00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */,
+				0019CA35299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift in Sources */,
 				00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */,
+				0019CA36299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift in Sources */,
 				C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */,
 				0065CCC0289DB09C00317DDD /* Store.swift in Sources */,
 				009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */,
@@ -474,10 +492,12 @@
 				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
 				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
+				0019CA2E299B489600A7D771 /* DataManager.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
+				0019CA33299B4BE500A7D771 /* CartItem+CoreDataClass.swift in Sources */,
 				0092251228CF893200125041 /* Extensions.swift in Sources */,
 				008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */,
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
