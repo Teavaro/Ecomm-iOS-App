@@ -16,6 +16,7 @@ class Store: ObservableObject {
     @Published var isLogin = false
     @Published var isCdpStarted = false
     @Published var showModal = false
+    let cartId: Int16 = 12
     var infoResponse = """
     {}
     """
@@ -24,18 +25,11 @@ class Store: ObservableObject {
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
 
     init() {
-        listItems.append(ShopItem(id: 0, title: "Jacob’s Baked Crinklys Cheese", description: description,price: 60.00, picture: "crinklys", isOffer: true))
-        listItems.append(ShopItem(id: 1, title: "Pork Cocktail Sausages, Pack", description: description, price: 54.00, picture: "pork", isOffer: true, isInStock: false))
-        listItems.append(ShopItem(id: 2, title: "Broccoli and Cauliflower Mix", description: description, price: 6.00, picture: "cauliflower"))
-        listItems.append(ShopItem(id: 3, title: "Morrisons Creamed Rice Pudding", description: description, price: 44.00, picture: "paprika"))
-        listItems.append(ShopItem(id: 4, title: "Fresh For The Bold Ground Amazon", description: description, price: 12.00, picture: "burst"))
-        listItems.append(ShopItem(id: 5, title: "Frito-Lay Doritos & Cheetos Mix", description: description, price: 20.00, picture: "watermelon"))
-        listItems.append(ShopItem(id: 6, title: "Green Mountain Coffee Roast", description: description, price: 20.00, picture: "grapes"))
-        listItems.append(ShopItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", description: description, price: 50.00, picture: "mixed"))
-        updateItemsOffer()
+        initializeData()
     }
 
     func addItemToCart(item: ShopItem) {
+        DataManager.shared.addItemToCart(itemId: item.id)
         if let index = listCart.firstIndex(where: { $0.id == item.id }) {
             listCart[index].countOnCart += 1
         }
@@ -45,11 +39,16 @@ class Store: ObservableObject {
     }
 
     func removeItemFromCart(offsets: IndexSet) {
+        
+//        DataManager.shared.doOnItem(itemId: item.id, action: {item in
+//
+//        })
         listCart.remove(atOffsets: offsets)
     }
 
-    func addItemToWish(id: Int) {
-        listWish.append(listItems[id])
+    func addItemToWish(id: Int16) {
+        DataManager.shared.addItemToWish(itemId: id)
+        listWish.append(listItems[Int(id)])
     }
     
     
@@ -132,5 +131,36 @@ class Store: ObservableObject {
                </html>
             """
         return htmlContent
+    }
+    
+    func initializeData(){
+//        DataManager.shared.clearData()
+        var listOfItems = DataManager.shared.getItems()
+        print("\(listOfItems.count) Items ferched")
+        
+        if(listOfItems.isEmpty){
+            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese", desc: description,price: 60.00, picture: "crinklys", isOffer: true)
+            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 54.00, picture: "pork", isOffer: true, isInStock: false)
+            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 6.00, picture: "cauliflower")
+            DataManager.shared.addItem(id: 3, title: "Morrisons Creamed Rice Pudding", desc: description, price: 44.00, picture: "paprika")
+            DataManager.shared.addItem(id: 4, title: "Fresh For The Bold Ground Amazon", desc: description, price: 12.00, picture: "burst")
+            DataManager.shared.addItem(id: 5, title: "Frito-Lay Doritos & Cheetos Mix", desc: description, price: 20.00, picture: "watermelon")
+            DataManager.shared.addItem(id: 6, title: "Green Mountain Coffee Roast", desc: description, price: 20.00, picture: "grapes")
+            DataManager.shared.addItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", desc: description, price: 50.00, picture: "mixed")
+            listOfItems = DataManager.shared.getItems()
+        }
+        for item in listOfItems{
+            if(item.picture != nil){
+                let it = ShopItem(id: item.id, title: item.title ?? "", description: item.desc ?? "", price: item.price, picture: item.picture ?? "", isOffer: item.isOffer, isInStock: item.isInStock)
+                listItems.append(it)
+                if(item.countInCart > 0){
+                    listCart.append(it)
+                }
+                if(item.isInWish == true){
+                    listWish.append(it)
+                }
+            }
+        }
+        updateItemsOffer()
     }
 }

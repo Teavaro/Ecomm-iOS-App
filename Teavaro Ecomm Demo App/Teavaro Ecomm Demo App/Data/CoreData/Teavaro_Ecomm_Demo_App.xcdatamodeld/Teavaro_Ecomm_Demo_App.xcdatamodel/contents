@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AbandonedCart" representedClassName="AbandonedCart" syncable="YES">
+    <entity name="AbandonedCarts" representedClassName="AbandonedCarts" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItem" inverseName="cart" inverseEntity="CartItem"/>
+        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="abandonedCarts" inverseEntity="Item"/>
     </entity>
-    <entity name="CartItem" representedClassName="CartItem" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AbandonedCart" inverseName="items" inverseEntity="AbandonedCart"/>
-    </entity>
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    <entity name="Item" representedClassName=".Item" syncable="YES">
+        <attribute name="countInCart" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isInStock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isInWish" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isOffer" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="abandonedCarts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AbandonedCarts" inverseName="items" inverseEntity="AbandonedCarts"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="AbandonedCart" positionX="-36" positionY="18" width="128" height="59"/>
-        <element name="CartItem" positionX="-9" positionY="45" width="128" height="59"/>
+        <element name="Item" positionX="-9" positionY="45" width="128" height="179"/>
+        <element name="AbandonedCarts" positionX="-9" positionY="99" width="128" height="59"/>
     </elements>
 </model>

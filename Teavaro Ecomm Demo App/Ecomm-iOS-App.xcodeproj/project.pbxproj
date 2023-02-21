@@ -16,10 +16,6 @@
 		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
 		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
 		0019CA2E299B489600A7D771 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2D299B489600A7D771 /* DataManager.swift */; };
-		0019CA33299B4BE500A7D771 /* CartItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */; };
-		0019CA34299B4BE500A7D771 /* CartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */; };
-		0019CA35299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */; };
-		0019CA36299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */; };
 		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
 		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
@@ -35,6 +31,10 @@
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
+		00A4C4A2299FD9FC00B2B334 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */; };
+		00A4C4A3299FD9FC00B2B334 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */; };
+		00A4C4A4299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
+		00A4C4A5299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */; };
 		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
@@ -88,10 +88,6 @@
 		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		0019CA2D299B489600A7D771 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCart+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -104,6 +100,10 @@
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
+		00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
 		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -359,10 +359,10 @@
 		C9FE77BC286370A3006DDD74 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				0019CA2F299B4BE500A7D771 /* CartItem+CoreDataClass.swift */,
-				0019CA30299B4BE500A7D771 /* CartItem+CoreDataProperties.swift */,
-				0019CA31299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift */,
-				0019CA32299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift */,
+				00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */,
+				00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */,
+				00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */,
+				00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */,
 				C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */,
 				0019CA2D299B489600A7D771 /* DataManager.swift */,
 			);
@@ -465,18 +465,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
-				0019CA34299B4BE500A7D771 /* CartItem+CoreDataProperties.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
 				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
+				00A4C4A2299FD9FC00B2B334 /* Item+CoreDataClass.swift in Sources */,
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */,
 				00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */,
-				0019CA35299B4BE500A7D771 /* AbandonedCart+CoreDataClass.swift in Sources */,
 				00183CDC28B69AD5000E2F03 /* TitleView.swift in Sources */,
-				0019CA36299B4BE500A7D771 /* AbandonedCart+CoreDataProperties.swift in Sources */,
 				C9FE77C72864EEF5006DDD74 /* BaseViewModel.swift in Sources */,
 				0065CCC0289DB09C00317DDD /* Store.swift in Sources */,
 				009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */,
@@ -486,18 +484,20 @@
 				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
+				00A4C4A3299FD9FC00B2B334 /* Item+CoreDataProperties.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
 				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
 				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
+				00A4C4A5299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
 				0019CA2E299B489600A7D771 /* DataManager.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
+				00A4C4A4299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
-				0019CA33299B4BE500A7D771 /* CartItem+CoreDataClass.swift in Sources */,
 				0092251228CF893200125041 /* Extensions.swift in Sources */,
 				008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */,
 				C9FE779828622C3E006DDD74 /* AppMain.swift in Sources */,
@@ -547,6 +547,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -607,6 +608,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

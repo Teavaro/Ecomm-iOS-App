@@ -23,12 +23,6 @@ extension AbandonedCarts {
 // MARK: Generated accessors for carts
 extension AbandonedCarts {
 
-    @objc(addCartsObject:)
-    @NSManaged public func addToCarts(_ value: Cart)
-
-    @objc(removeCartsObject:)
-    @NSManaged public func removeFromCarts(_ value: Cart)
-
     @objc(addCarts:)
     @NSManaged public func addToCarts(_ values: NSSet)
 

@@ -8,7 +8,7 @@
 import Foundation
 
 struct ShopItem: Identifiable,Equatable{
-    public var id: Int
+    public var id: Int16
     public var title: String
     public var description: String
     public var price: Float

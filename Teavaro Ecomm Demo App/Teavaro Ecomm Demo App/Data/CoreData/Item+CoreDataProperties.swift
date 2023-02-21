@@ -19,11 +19,12 @@ extension Item {
     @NSManaged public var desc: String?
     @NSManaged public var id: Int16
     @NSManaged public var isOffer: Bool
+    @NSManaged public var isInStock: Bool
     @NSManaged public var picture: String?
     @NSManaged public var price: Float
     @NSManaged public var title: String?
-    @NSManaged public var cart: Cart?
-    @NSManaged public var shop: Shop?
+    @NSManaged public var isInWish: Bool
+    @NSManaged public var countInCart: Int16
 
 }
 

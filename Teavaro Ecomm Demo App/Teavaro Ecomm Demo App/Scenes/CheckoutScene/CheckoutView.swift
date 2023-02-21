@@ -46,7 +46,6 @@ struct CheckoutView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                
                 List {
                     ForEach(store.listCart) { item in
                         NavigationLink(destination: ItemDetail(item: item, allowAddWish: false, allowAddCart: false)) {
@@ -74,7 +73,6 @@ struct CheckoutView: View {
                         Text("Your cart is currently empty.")
                     }
                 }
-                
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Cart"))
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
