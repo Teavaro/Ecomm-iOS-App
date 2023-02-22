@@ -2,7 +2,7 @@
 //  AbandonedCarts+CoreDataProperties.swift
 //  Ecomm-iOS-App
 //
-//  Created by bdado on 17/2/23.
+//  Created by bdado on 22/2/23.
 //
 //
 
@@ -16,18 +16,25 @@ extension AbandonedCarts {
         return NSFetchRequest<AbandonedCarts>(entityName: "AbandonedCarts")
     }
 
-    @NSManaged public var carts: NSSet?
+    @NSManaged public var id: Int16
+    @NSManaged public var items: NSSet?
 
 }
 
-// MARK: Generated accessors for carts
+// MARK: Generated accessors for items
 extension AbandonedCarts {
 
-    @objc(addCarts:)
-    @NSManaged public func addToCarts(_ values: NSSet)
+    @objc(addItemsObject:)
+    @NSManaged public func addToItems(_ value: Item)
 
-    @objc(removeCarts:)
-    @NSManaged public func removeFromCarts(_ values: NSSet)
+    @objc(removeItemsObject:)
+    @NSManaged public func removeFromItems(_ value: Item)
+
+    @objc(addItems:)
+    @NSManaged public func addToItems(_ values: NSSet)
+
+    @objc(removeItems:)
+    @NSManaged public func removeFromItems(_ values: NSSet)
 
 }
 
