@@ -31,10 +31,10 @@
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
-		00A4C4A2299FD9FC00B2B334 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */; };
-		00A4C4A3299FD9FC00B2B334 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */; };
-		00A4C4A4299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
-		00A4C4A5299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */; };
+		00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
+		00A4C4B329A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */; };
+		00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */; };
+		00A4C4B529A6A82D00B2B334 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */; };
 		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
@@ -100,10 +100,10 @@
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
-		00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
-		00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataClass.swift"; sourceTree = "<group>"; };
-		00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
 		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -359,10 +359,10 @@
 		C9FE77BC286370A3006DDD74 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				00A4C49A299FD9FC00B2B334 /* Item+CoreDataClass.swift */,
-				00A4C49B299FD9FC00B2B334 /* Item+CoreDataProperties.swift */,
-				00A4C49C299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift */,
-				00A4C49D299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift */,
+				00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */,
+				00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */,
+				00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */,
+				00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */,
 				C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */,
 				0019CA2D299B489600A7D771 /* DataManager.swift */,
 			);
@@ -464,12 +464,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
 				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
-				00A4C4A2299FD9FC00B2B334 /* Item+CoreDataClass.swift in Sources */,
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */,
@@ -484,18 +484,18 @@
 				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
-				00A4C4A3299FD9FC00B2B334 /* Item+CoreDataProperties.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
+				00A4C4B329A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */,
 				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
+				00A4C4B529A6A82D00B2B334 /* Item+CoreDataProperties.swift in Sources */,
 				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
-				00A4C4A5299FD9FC00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
 				0019CA2E299B489600A7D771 /* DataManager.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
-				00A4C4A4299FD9FC00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
+				00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
 				0092251228CF893200125041 /* Extensions.swift in Sources */,

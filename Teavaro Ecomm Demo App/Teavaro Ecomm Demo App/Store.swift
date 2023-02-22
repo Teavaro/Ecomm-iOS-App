@@ -39,10 +39,10 @@ class Store: ObservableObject {
     }
 
     func removeItemFromCart(offsets: IndexSet) {
-        
-//        DataManager.shared.doOnItem(itemId: item.id, action: {item in
-//
-//        })
+        if let pos = offsets.first{
+            let item = listCart[pos]
+            DataManager.shared.removeItemFromCart(itemId: Int16(item.id))
+        }
         listCart.remove(atOffsets: offsets)
     }
 
@@ -62,6 +62,10 @@ class Store: ObservableObject {
     }
 
     func removeItemFromWish(offsets: IndexSet) {
+        if let pos = offsets.first{
+            let item = listWish[pos]
+            DataManager.shared.removeItemFromWish(itemId: Int16(item.id))
+        }
         listWish.remove(atOffsets: offsets)
     }
 
@@ -73,16 +77,8 @@ class Store: ObservableObject {
         return total
     }
 
-    func updateItemsOffer(){
-        listOffer = []
-        for item in listItems {
-            if (item.isOffer){
-                listOffer.append(item)
-            }
-        }
-    }
-
     func removeAllCartItems() {
+        DataManager.shared.clearCart()
         listCart.removeAll()
     }
     
@@ -159,8 +155,11 @@ class Store: ObservableObject {
                 if(item.isInWish == true){
                     listWish.append(it)
                 }
+                if (item.isOffer){
+                    listOffer.append(it)
+                }
             }
         }
-        updateItemsOffer()
+        print("count abandoned carts: \(DataManager.shared.getAbandonedCars().count)")
     }
 }

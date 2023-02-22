@@ -68,6 +68,11 @@ struct CheckoutView: View {
                             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "proceedToCheckout")
                             showingPaymentConfirmationAlert.toggle()
                         })
+                        insertButton(title: "Clear Cart", action: {
+                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
+//                            DataManager.shared.addAbandonedCart(items: store.listCart)
+                            store.removeAllCartItems()
+                        })
                     }
                     else{
                         Text("Your cart is currently empty.")
