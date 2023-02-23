@@ -165,14 +165,15 @@ class DataManager {
         }
     }
     
-    func addAbandonedCart(items: [Item]){
+    func addAbandonedCart(items: [Item]) -> Int{
         let entity = NSEntityDescription.entity(forEntityName: "AbandonedCarts", in: persistentContainer.viewContext)
         let cart = AbandonedCarts(entity: entity!, insertInto: persistentContainer.viewContext)
-        cart.id = 0
+        cart.id = Int(UUID().hashValue)
         for item in items {
             cart.addToItems(item)
         }
         save()
+        return cart.id
     }
     
     func getAbandonedCarts() -> [AbandonedCarts] {

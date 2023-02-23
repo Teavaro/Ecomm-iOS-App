@@ -99,7 +99,9 @@ struct CheckoutView: View {
                         title: Text("Clear confirmation"),
                         message: Text("Do you want to clear the cart?"),
                         primaryButton: .destructive(Text("Yes"), action: {
-                            DataManager.shared.addAbandonedCart(items: store.listCart)
+                            let idCart = DataManager.shared.addAbandonedCart(items: store.listCart)
+                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
+                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "shopping_cart_id", value: String(idCart))
                             store.removeAllCartItems()
                         }),
                         secondaryButton: .cancel(Text("No"))

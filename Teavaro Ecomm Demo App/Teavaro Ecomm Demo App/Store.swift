@@ -131,6 +131,7 @@ class Store: ObservableObject {
     
     func initializeData(){
 //        DataManager.shared.clearData()
+//        DataManager.shared.clearAbandonedCarts()
         listItems = DataManager.shared.getItems()
         print("\(listItems.count) Items ferched")
         
@@ -148,6 +149,8 @@ class Store: ObservableObject {
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
-        print("count abandoned carts: \(DataManager.shared.getAbandonedCarts().count)")
+        let carts = DataManager.shared.getAbandonedCarts()
+        print("count abandoned carts: \(carts.count)")
+        print("id abandoned carts: \(carts.first?.id)")
     }
 }

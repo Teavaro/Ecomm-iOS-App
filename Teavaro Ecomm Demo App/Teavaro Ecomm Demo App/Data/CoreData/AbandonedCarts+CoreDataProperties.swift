@@ -16,7 +16,7 @@ extension AbandonedCarts {
         return NSFetchRequest<AbandonedCarts>(entityName: "AbandonedCarts")
     }
 
-    @NSManaged public var id: Int16
+    @NSManaged public var id: Int
     @NSManaged public var items: NSSet?
 
 }
