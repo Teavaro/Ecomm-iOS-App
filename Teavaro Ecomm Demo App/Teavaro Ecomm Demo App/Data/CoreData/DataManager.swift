@@ -60,9 +60,59 @@ class DataManager {
       return fetchedItems
     }
     
+    func getWishItems() -> [Item] {
+      let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "isInWish == %i", true)
+      var fetchedItems: [Item] = []
+      do {
+          fetchedItems = try persistentContainer.viewContext.fetch(request)
+      } catch let error {
+        print("Error fetching items \(error)")
+      }
+      return fetchedItems
+    }
+    
+    func getCartItems() -> [Item] {
+      let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "countInCart > %i", 0)
+      var fetchedItems: [Item] = []
+      do {
+          fetchedItems = try persistentContainer.viewContext.fetch(request)
+      } catch let error {
+        print("Error fetching items \(error)")
+      }
+      return fetchedItems
+    }
+    
+    func getOfferItems() -> [Item] {
+      let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "isOffer == %i", true)
+      var fetchedItems: [Item] = []
+      do {
+          fetchedItems = try persistentContainer.viewContext.fetch(request)
+      } catch let error {
+        print("Error fetching items \(error)")
+      }
+      return fetchedItems
+    }
+    
     func clearData(){
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         var fetchedItems: [Item] = []
+        do {
+            fetchedItems = try persistentContainer.viewContext.fetch(request)
+            for item in fetchedItems {
+                persistentContainer.viewContext.delete(item)
+            }
+            save()
+        } catch let error {
+          print("Error fetching items \(error)")
+        }
+    }
+    
+    func clearAbandonedCarts(){
+        let request: NSFetchRequest<AbandonedCarts> = AbandonedCarts.fetchRequest()
+        var fetchedItems: [AbandonedCarts] = []
         do {
             fetchedItems = try persistentContainer.viewContext.fetch(request)
             for item in fetchedItems {
@@ -119,11 +169,13 @@ class DataManager {
         let entity = NSEntityDescription.entity(forEntityName: "AbandonedCarts", in: persistentContainer.viewContext)
         let cart = AbandonedCarts(entity: entity!, insertInto: persistentContainer.viewContext)
         cart.id = 0
-        cart.items?.addingObjects(from: items)
+        for item in items {
+            cart.addToItems(item)
+        }
         save()
     }
     
-    func getAbandonedCars() -> [AbandonedCarts] {
+    func getAbandonedCarts() -> [AbandonedCarts] {
       let request: NSFetchRequest<AbandonedCarts> = AbandonedCarts.fetchRequest()
       var fetchedItems: [AbandonedCarts] = []
       do {
@@ -132,6 +184,22 @@ class DataManager {
         print("Error fetching items \(error)")
       }
       return fetchedItems
+    }
+    
+    func getAbandonedCartItems(itemId: Int16) -> [Item] {
+      let request: NSFetchRequest<AbandonedCarts> = AbandonedCarts.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %i", 0)
+      var fetchedCarts: [AbandonedCarts] = []
+        var fetchedItems: [Item] = []
+      do {
+          fetchedCarts = try persistentContainer.viewContext.fetch(request)
+          if let cart = fetchedCarts.first{
+              fetchedItems = cart.items?.allObjects as! [Item]
+          }
+      } catch let error {
+        print("Error fetching items \(error)")
+      }
+        return fetchedItems
     }
     
     func removeItemFromCart(itemId: Int16){
@@ -144,19 +212,5 @@ class DataManager {
         doOnItem(itemId: itemId, action: { item in
             item.isInWish = false
         })
-    }
-    
-    func createItem(id: Int16, title: String, desc: String, price: Float, picture: String, isOffer: Bool = false, isInStock: Bool = false) {
-        let entity = NSEntityDescription.entity(forEntityName: "Item", in: persistentContainer.viewContext)
-        let item = Item(entity: entity!, insertInto: persistentContainer.viewContext)
-        item.id = id
-        item.title = title
-        item.desc = desc
-        item.price = price
-        item.picture = picture
-        item.isOffer = isOffer
-        item.isInStock = isInStock
-        item.countInCart = 0
-        save()
     }
 }

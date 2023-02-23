@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CartItemRow : View {
     
-    let item: ShopItem
+    let item: Item
 
     var body: some View {
         VStack{
-            Text(item.title)
+            Text(item.title ?? "")
                 .bold()
                 .font(.title2)
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -29,8 +29,8 @@ struct CartItemRow : View {
                 Spacer()
                 VStack(alignment: .trailing) {
                     Text("$\(String(format: "%.2f", item.price)) / piece")
-                    Text("\(item.countOnCart)")
-                    Text("$\(String(format: "%.2f", item.price * Float(item.countOnCart)))")
+                    Text("\(item.countInCart)")
+                    Text("$\(String(format: "%.2f", item.price * Float(item.countInCart)))")
                 }
             }.padding()
         }

@@ -13,7 +13,7 @@ struct ItemDetail : View {
     @EnvironmentObject var store: Store
     @EnvironmentObject var order: Order
     @Environment(\.dismiss) private var dismiss
-    let item: ShopItem
+    let item: Item
     var allowAddWish: Bool? = true
     var allowAddCart: Bool? = true
 
@@ -32,11 +32,11 @@ struct ItemDetail : View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image(uiImage: UIImage(imageLiteralResourceName: item.picture))
+            Image(uiImage: UIImage(imageLiteralResourceName: item.picture ?? ""))
                 .resizable()
                 .scaledToFit()
             
-            Text(item.description)
+            Text(item.desc ?? "")
                 .padding(EdgeInsets(top: 25, leading: 10, bottom: 10, trailing: 10))
             
             if allowAddWish! && !store.isItemInWish(item: item){
@@ -57,7 +57,7 @@ struct ItemDetail : View {
             Spacer()
         }
         .padding()
-        .navigationTitle(item.title)
+        .navigationTitle(item.title ?? "")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

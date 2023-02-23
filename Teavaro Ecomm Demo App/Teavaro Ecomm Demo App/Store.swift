@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 class Store: ObservableObject {
-    @Published var listItems: [ShopItem] = []
-    @Published var listWish: [ShopItem] = []
-    @Published var listCart: [ShopItem] = []
-    @Published var listOffer: [ShopItem] = []
+    @Published var listItems: [Item] = []
+    @Published var listWish: [Item] = []
+    @Published var listCart: [Item] = []
+    @Published var listOffer: [Item] = []
     @Published var isLogin = false
     @Published var isCdpStarted = false
     @Published var showModal = false
@@ -28,10 +28,10 @@ class Store: ObservableObject {
         initializeData()
     }
 
-    func addItemToCart(item: ShopItem) {
+    func addItemToCart(item: Item) {
         DataManager.shared.addItemToCart(itemId: item.id)
         if let index = listCart.firstIndex(where: { $0.id == item.id }) {
-            listCart[index].countOnCart += 1
+            listCart[index].countInCart += 1
         }
         else{
             listCart.append(item)
@@ -52,7 +52,7 @@ class Store: ObservableObject {
     }
     
     
-    func isItemInWish(item: ShopItem) -> Bool {
+    func isItemInWish(item: Item) -> Bool {
         if listWish.firstIndex(of: item) != nil {
             return true
         }
@@ -72,7 +72,7 @@ class Store: ObservableObject {
     func getTotalPriceCart() -> Float {
         var total: Float = 0
         for item in listCart {
-            total += item.price * Float(item.countOnCart)
+            total += item.price * Float(item.countInCart)
         }
         return total
     }
@@ -131,10 +131,10 @@ class Store: ObservableObject {
     
     func initializeData(){
 //        DataManager.shared.clearData()
-        var listOfItems = DataManager.shared.getItems()
-        print("\(listOfItems.count) Items ferched")
+        listItems = DataManager.shared.getItems()
+        print("\(listItems.count) Items ferched")
         
-        if(listOfItems.isEmpty){
+        if(listItems.isEmpty){
             DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese", desc: description,price: 60.00, picture: "crinklys", isOffer: true)
             DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 54.00, picture: "pork", isOffer: true, isInStock: false)
             DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 6.00, picture: "cauliflower")
@@ -143,23 +143,11 @@ class Store: ObservableObject {
             DataManager.shared.addItem(id: 5, title: "Frito-Lay Doritos & Cheetos Mix", desc: description, price: 20.00, picture: "watermelon")
             DataManager.shared.addItem(id: 6, title: "Green Mountain Coffee Roast", desc: description, price: 20.00, picture: "grapes")
             DataManager.shared.addItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", desc: description, price: 50.00, picture: "mixed")
-            listOfItems = DataManager.shared.getItems()
+            listItems = DataManager.shared.getItems()
         }
-        for item in listOfItems{
-            if(item.picture != nil){
-                let it = ShopItem(id: item.id, title: item.title ?? "", description: item.desc ?? "", price: item.price, picture: item.picture ?? "", isOffer: item.isOffer, isInStock: item.isInStock)
-                listItems.append(it)
-                if(item.countInCart > 0){
-                    listCart.append(it)
-                }
-                if(item.isInWish == true){
-                    listWish.append(it)
-                }
-                if (item.isOffer){
-                    listOffer.append(it)
-                }
-            }
-        }
-        print("count abandoned carts: \(DataManager.shared.getAbandonedCars().count)")
+        listWish = DataManager.shared.getWishItems()
+        listCart = DataManager.shared.getCartItems()
+        listOffer = DataManager.shared.getOfferItems()
+        print("count abandoned carts: \(DataManager.shared.getAbandonedCarts().count)")
     }
 }

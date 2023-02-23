@@ -26,9 +26,4 @@ extension Item {
     @NSManaged public var isInWish: Bool
     @NSManaged public var countInCart: Int16
     @NSManaged public var abandonedCarts: AbandonedCarts?
-
-}
-
-extension Item : Identifiable {
-
 }

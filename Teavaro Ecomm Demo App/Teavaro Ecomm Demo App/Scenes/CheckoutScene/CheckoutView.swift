@@ -20,6 +20,7 @@ struct CheckoutView: View {
     @State var loyaltyNumber = ""
     @State var tipAmount = 15
     @State var showingPaymentConfirmationAlert = false
+    @State var showingClearConfirmationAlert = false
     @State var showingPaymentAlert = false
     
     var totalPrice: String {
@@ -70,8 +71,7 @@ struct CheckoutView: View {
                         })
                         insertButton(title: "Clear Cart", action: {
                             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
-//                            DataManager.shared.addAbandonedCart(items: store.listCart)
-                            store.removeAllCartItems()
+                            showingClearConfirmationAlert.toggle()
                         })
                     }
                     else{
@@ -92,6 +92,17 @@ struct CheckoutView: View {
                             store.removeAllCartItems()
                         }),
                         secondaryButton: .cancel(Text("Cancel"))
+                    )
+                }
+                .alert(isPresented: $showingClearConfirmationAlert) {
+                    Alert(
+                        title: Text("Clear confirmation"),
+                        message: Text("Do you want to clear the cart?"),
+                        primaryButton: .destructive(Text("Yes"), action: {
+                            DataManager.shared.addAbandonedCart(items: store.listCart)
+                            store.removeAllCartItems()
+                        }),
+                        secondaryButton: .cancel(Text("No"))
                     )
                 }
             }
