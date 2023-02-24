@@ -34,7 +34,7 @@ struct AppMain: App {
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
         
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil, open url: URL) -> Bool {
             
             print("excecuting FunnelConnectSDK.initialize()")
             

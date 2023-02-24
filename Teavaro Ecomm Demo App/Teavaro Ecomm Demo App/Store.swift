@@ -149,8 +149,5 @@ class Store: ObservableObject {
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
-        let carts = DataManager.shared.getAbandonedCarts()
-        print("count abandoned carts: \(carts.count)")
-        print("id abandoned carts: \(carts.first?.id)")
     }
 }

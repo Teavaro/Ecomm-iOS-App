@@ -34,6 +34,7 @@
 		00A4C4B329A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */; };
 		00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */; };
 		00A4C4B529A6A82D00B2B334 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */; };
+		00A4C4BA29A7F6DA00B2B334 /* ACItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */; };
 		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
@@ -102,6 +103,7 @@
 		00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACItemsListingView.swift; sourceTree = "<group>"; };
 		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
 		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -175,6 +177,14 @@
 				0065CCBD289DAD8000317DDD /* AngroView.swift */,
 			);
 			path = AngroScene;
+			sourceTree = "<group>";
+		};
+		00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */,
+			);
+			path = AbandonedCartsScene;
 			sourceTree = "<group>";
 		};
 		00CDFF2D28C048450096810C /* WishListScene */ = {
@@ -297,6 +307,7 @@
 		C9FE77B428636C61006DDD74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */,
 				00CDFF2D28C048450096810C /* WishListScene */,
 				00183CD828B56124000E2F03 /* PermissionsScene */,
 				00183CD328B5338C000E2F03 /* LoginScene */,
@@ -493,6 +504,7 @@
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
 				00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
+				00A4C4BA29A7F6DA00B2B334 /* ACItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
 				0092251228CF893200125041 /* Extensions.swift in Sources */,
 				008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */,
@@ -638,7 +650,7 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ecomm IOS Demo App";
@@ -681,7 +693,7 @@
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ecomm IOS Demo App";

@@ -60,8 +60,8 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-//                    CeltraWebView(htmlContent: store.getBanner())
-//                        .frame(height: 70)
+                    CeltraWebView(htmlContent: store.getBanner())
+                        .frame(height: 70)
                     
                     Text("Best selling items:")
                         .font(.title)

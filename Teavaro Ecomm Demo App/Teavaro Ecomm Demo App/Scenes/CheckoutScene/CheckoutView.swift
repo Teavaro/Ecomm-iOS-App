@@ -69,10 +69,34 @@ struct CheckoutView: View {
                             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "proceedToCheckout")
                             showingPaymentConfirmationAlert.toggle()
                         })
+                        .alert(isPresented: $showingPaymentConfirmationAlert) {
+                            Alert(
+                                title: Text("Checkout confirmation"),
+                                message: Text("Do you want to proceed with checkout?"),
+                                primaryButton: .destructive(Text("Proceed"), action: {
+                                    store.removeAllCartItems()
+                                }),
+                                secondaryButton: .cancel(Text("Cancel"))
+                            )
+                        }
                         insertButton(title: "Clear Cart", action: {
                             try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
                             showingClearConfirmationAlert.toggle()
                         })
+                        .alert(isPresented: $showingClearConfirmationAlert) {
+                            Alert(
+                                title: Text("Clear confirmation"),
+                                message: Text("Do you want to clear the cart?"),
+                                primaryButton: .destructive(Text("Yes"), action: {
+                                    let idCart = DataManager.shared.addAbandonedCart(items: store.listCart)
+                                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
+                                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "shopping_cart_id", value: String(idCart))
+                                    store.removeAllCartItems()
+                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?id=\(idCart)"
+                                }),
+                                secondaryButton: .cancel(Text("No"))
+                            )
+                        }
                     }
                     else{
                         Text("Your cart is currently empty.")
@@ -83,29 +107,6 @@ struct CheckoutView: View {
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .toolbar {
                     EditButton()
-                }
-                .alert(isPresented: $showingPaymentConfirmationAlert) {
-                    Alert(
-                        title: Text("Checkout confirmation"),
-                        message: Text("Do you want to proceed with checkout?"),
-                        primaryButton: .destructive(Text("Proceed"), action: {
-                            store.removeAllCartItems()
-                        }),
-                        secondaryButton: .cancel(Text("Cancel"))
-                    )
-                }
-                .alert(isPresented: $showingClearConfirmationAlert) {
-                    Alert(
-                        title: Text("Clear confirmation"),
-                        message: Text("Do you want to clear the cart?"),
-                        primaryButton: .destructive(Text("Yes"), action: {
-                            let idCart = DataManager.shared.addAbandonedCart(items: store.listCart)
-                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "clearCart")
-                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "shopping_cart_id", value: String(idCart))
-                            store.removeAllCartItems()
-                        }),
-                        secondaryButton: .cancel(Text("No"))
-                    )
                 }
             }
             .onAppear(perform: {

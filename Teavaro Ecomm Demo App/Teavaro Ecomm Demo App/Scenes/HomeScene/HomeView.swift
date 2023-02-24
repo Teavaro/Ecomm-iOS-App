@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject var store: Store
     @State var tabSelection = 1
+    @State var showAbandonedCarts = false
+    @State var abandonedCartId: Int = 0
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
@@ -58,8 +61,36 @@ struct HomeView: View {
                 
             }
         }
+        .onOpenURL { url in
+            guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                return
+            }
+            if let parameter = components.queryItems?.first{
+                if(components.host == "showAbandonedCart" && parameter.name == "id" && parameter.value != nil){
+                    abandonedCartId = Int(parameter.value!) ?? 0
+                    showAbandonedCarts = true
+                }
+            }
+        }
+        .sheet(isPresented: $showAbandonedCarts, onDismiss: {
+            print(showAbandonedCarts)
+        }) {
+            ModalAbandonedCarts(showAbandonedCarts: $showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: abandonedCartId))
+        }
     }
         
+}
+
+struct ModalAbandonedCarts: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showAbandonedCarts: Bool
+    var listItems: [Item]
+
+    var body: some View {
+        VStack {
+            ACItemsListingView(listItems: listItems)
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

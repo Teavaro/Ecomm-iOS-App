@@ -168,7 +168,7 @@ class DataManager {
     func addAbandonedCart(items: [Item]) -> Int{
         let entity = NSEntityDescription.entity(forEntityName: "AbandonedCarts", in: persistentContainer.viewContext)
         let cart = AbandonedCarts(entity: entity!, insertInto: persistentContainer.viewContext)
-        cart.id = Int(UUID().hashValue)
+        cart.id = getUniqueId()
         for item in items {
             cart.addToItems(item)
         }
@@ -187,9 +187,9 @@ class DataManager {
       return fetchedItems
     }
     
-    func getAbandonedCartItems(itemId: Int16) -> [Item] {
+    func getAbandonedCartItems(itemId: Int) -> [Item] {
       let request: NSFetchRequest<AbandonedCarts> = AbandonedCarts.fetchRequest()
-        request.predicate = NSPredicate(format: "id == %i", 0)
+        request.predicate = NSPredicate(format: "id == %i", itemId)
       var fetchedCarts: [AbandonedCarts] = []
         var fetchedItems: [Item] = []
       do {
@@ -213,5 +213,15 @@ class DataManager {
         doOnItem(itemId: itemId, action: { item in
             item.isInWish = false
         })
+    }
+    
+    func getUniqueId() -> Int{
+        let uniqueId = Int(String(UUID().hashValue).prefix(5)) ?? 0
+        if(uniqueId < 0){
+            return uniqueId * -1
+        }
+        else{
+            return uniqueId
+        }
     }
 }
