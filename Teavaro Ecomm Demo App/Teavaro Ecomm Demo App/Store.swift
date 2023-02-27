@@ -87,19 +87,21 @@ class Store: ObservableObject {
         var obj: InfoResponse? = nil
         do {
             let decoder = JSONDecoder()
-            obj = try decoder.decode(InfoResponse.self, from: infoResponse.data(using: .utf8)!)
+            if let info = infoResponse.data(using: .utf8){
+                obj = try decoder.decode(InfoResponse.self, from: info)
+            }
         } catch {
-            print("iran:error:\(error)")
+            print("readingAttrFromInfoResponse:error:\(error)")
         }
         if obj != nil{
-            print("iran:attributes",obj!.attributes)
+//            print("iran:attributes",obj!.attributes)
             for (key, value) in obj!.attributes {
                 text += "&amp;" + key + "=" + value
             }
         }
         
-        print("iran:infoResponse", infoResponse)
-        print("iran:attr", text)
+//        print("iran:infoResponse", infoResponse)
+//        print("iran:attr", text)
         var htmlContent = """
             <!DOCTYPE html>
                <html>
@@ -133,7 +135,7 @@ class Store: ObservableObject {
 //        DataManager.shared.clearData()
 //        DataManager.shared.clearAbandonedCarts()
         listItems = DataManager.shared.getItems()
-        print("\(listItems.count) Items ferched")
+//        print("\(listItems.count) Items ferched")
         
         if(listItems.isEmpty){
             DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese", desc: description,price: 60.00, picture: "crinklys", isOffer: true)

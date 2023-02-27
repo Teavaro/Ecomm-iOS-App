@@ -42,6 +42,7 @@ struct WishlistView: View {
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "wishlist")
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
     

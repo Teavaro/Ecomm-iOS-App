@@ -113,6 +113,7 @@ struct CheckoutView: View {
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "cart")
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

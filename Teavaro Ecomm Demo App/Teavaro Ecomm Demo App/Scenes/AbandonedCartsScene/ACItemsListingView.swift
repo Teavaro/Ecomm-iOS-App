@@ -32,6 +32,7 @@ struct ACItemsListingView: View{
                 try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "abandonedCart")
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

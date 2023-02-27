@@ -34,7 +34,7 @@ struct AppMain: App {
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
         
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil, open url: URL) -> Bool {
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
             print("excecuting FunnelConnectSDK.initialize()")
             
@@ -49,8 +49,7 @@ struct AppMain: App {
                 }
             }
             
-//            BXDX2QY]37Yo^LH}Y4oDmNo6
-            FunnelConnectSDK.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  FCOptions(enableLogging: true))
+            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()

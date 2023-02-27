@@ -88,6 +88,7 @@ struct SettingsView: View {
                 ModalView1(showModal1: self.$showModal1)
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     fileprivate func clearData(){

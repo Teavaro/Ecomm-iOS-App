@@ -90,7 +90,7 @@ struct AngroView: View {
                             if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
                                 if(isConsentAccepted){
                                     try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-                                        store.isFunnelConnectStarted = true
+//                                        store.isFunnelConnectStarted = true
                                     }, errorCallback: {_ in
                                         
                                     })
@@ -124,8 +124,8 @@ struct AngroView: View {
         }) {
             ModalView(showModal: $store.showModal)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-        
 }
 
 struct ModalView: View {
