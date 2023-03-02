@@ -29,7 +29,7 @@ struct ACItemsListingView: View{
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "abandonedCart")
+                TrackUtils.impression(value: "abandoned_cart_view")
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())

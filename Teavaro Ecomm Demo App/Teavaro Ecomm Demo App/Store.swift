@@ -51,7 +51,6 @@ class Store: ObservableObject {
         listWish.append(listItems[Int(id)])
     }
     
-    
     func isItemInWish(item: Item) -> Bool {
         if listWish.firstIndex(of: item) != nil {
             return true

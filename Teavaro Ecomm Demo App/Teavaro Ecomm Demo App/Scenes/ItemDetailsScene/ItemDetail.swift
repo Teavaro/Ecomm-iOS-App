@@ -41,14 +41,16 @@ struct ItemDetail : View {
             
             if allowAddWish! && !store.isItemInWish(item: item){
                 insertButton(title: "Add to Wishlist", action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "addToWishlist")
+                    let events = [TrackUtils.CLICK: "add_to_wish", "item_id": String(item.id)]
+                    TrackUtils.events(events: events)
                     store.addItemToWish(id: item.id)
                     print("Product added.")
                 })
             }
             if allowAddCart! {
                 insertButton(title: "Add to Cart", action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "addToCart")
+                    let events = [TrackUtils.CLICK: "add_to_cart", "item_id": String(item.id)]
+                    TrackUtils.events(events: events)
                     store.addItemToCart(item: item)
                     print("Product added.")
                     dismiss()
@@ -59,6 +61,10 @@ struct ItemDetail : View {
         .padding()
         .navigationTitle(item.title ?? "")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear(perform: {
+            let events = [TrackUtils.IMPRESSION: "item_view", "item_id": String(item.id)]
+            TrackUtils.events(events: events)
+        })
     }
 }
 

@@ -23,7 +23,7 @@ struct WishlistView: View {
                             }
                         }
                         .onDelete{ offsets in
-                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "removeFromWishlist")
+                            TrackUtils.click(value: "remove_item_from_wishlist")
                             store.removeItemFromWish(offsets: offsets)
                         }
                     }
@@ -39,7 +39,7 @@ struct WishlistView: View {
                  }
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "wishlist")
+                TrackUtils.impression(value: "wishlist_view")
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())

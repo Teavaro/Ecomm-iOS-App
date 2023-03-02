@@ -29,6 +29,7 @@ struct SettingsView: View {
                         }
                         else{
                             Button("Logout", action: {
+                                TrackUtils.click(value: "logout")
                                 self.showingConfirmationAlert.toggle()
                             })
                         }
@@ -42,6 +43,7 @@ struct SettingsView: View {
                     Section(){
                         Toggle("Stub Mode", isOn: $isStub)
                             .onTapGesture {
+                                TrackUtils.click(value: "stub_mode_\(!isStub)")
                                 clearData()
                                 UserDefaultsUtils.setStub(value: !isStub)
                                 showModal1.toggle()
@@ -50,6 +52,7 @@ struct SettingsView: View {
                     if (store.isCdpStarted) {
                         Section(){
                             Button("Send Notification", action: {
+                                TrackUtils.click(value: "send_notification")
                                 if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
                                     PushNotification().send(user: umid, message: "Swrve+App+Push+Notification")
                                 }
@@ -58,6 +61,7 @@ struct SettingsView: View {
                     }
                     Section(){
                         Button("Clear Data", action: {
+                            TrackUtils.click(value: "clear_data")
 //                            updatePermissions(om: false, nba: false, opt: false)
                             clearData()
                         })
@@ -72,6 +76,7 @@ struct SettingsView: View {
                         title: Text("Logout confirmation"),
                         message: Text("Do you want to proceed with logout?"),
                         primaryButton: .destructive(Text("Proceed"), action: {
+                            TrackUtils.click(value: "logout_confirm")
                             store.isLogin = false
                         }),
                         secondaryButton: .cancel(Text("Cancel"))
@@ -79,7 +84,7 @@ struct SettingsView: View {
                 }
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "settings")
+                TrackUtils.impression(value: "settings_view")
                 isStub = UserDefaultsUtils.isStub()
             })
             .sheet(isPresented: $showModal1, onDismiss: {
@@ -99,10 +104,11 @@ struct SettingsView: View {
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
         let permissions = PermissionsMap()
-        permissions.addPermission(key: "CS-TMI",accepted: om)
+        permissions.addPermission(key: "CS-OM",accepted: om)
         permissions.addPermission(key: "CS-OPT",accepted: opt)
         permissions.addPermission(key: "CS-NBA",accepted: nba)
-        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
+        permissions.addPermission(key: "CS-TPID",accepted: nba)
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
             UserDefaultsUtils.setPermissionsRequested(value: true)
         }, errorCallback: {_ in })
     }

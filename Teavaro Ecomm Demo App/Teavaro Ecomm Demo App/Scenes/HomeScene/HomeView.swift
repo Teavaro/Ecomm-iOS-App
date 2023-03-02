@@ -48,6 +48,7 @@ struct HomeView: View {
             }
         }
         .onChange(of: scenePhase) { newPhase in
+            TrackUtils.lifeCycle(phase: newPhase)
             if newPhase == .active {
                 if let section = AppState.shared.section{
                     if(section == "store"){
@@ -55,10 +56,6 @@ struct HomeView: View {
                     }
                     AppState.shared.section = nil
                 }
-            } else if newPhase == .inactive {
-                
-            } else if newPhase == .background {
-                
             }
         }
         .onOpenURL { url in

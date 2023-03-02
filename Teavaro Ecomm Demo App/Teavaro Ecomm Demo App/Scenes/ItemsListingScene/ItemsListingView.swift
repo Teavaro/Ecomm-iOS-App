@@ -29,7 +29,7 @@ struct ItemsListingView: View{
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "shop")
+                TrackUtils.impression(value: "shop_view")
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())

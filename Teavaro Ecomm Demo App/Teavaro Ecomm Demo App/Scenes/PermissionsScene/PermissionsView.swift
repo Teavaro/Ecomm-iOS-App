@@ -14,6 +14,7 @@ struct PermissionsView: View {
     @EnvironmentObject var store: Store
     @State private var om: Bool = false
     @State private var nba: Bool = false
+    @State private var tpid: Bool = false
     @State private var opt: Bool = false
     @Environment(\.dismiss) private var dismiss
     
@@ -40,12 +41,13 @@ struct PermissionsView: View {
         .padding(.top, 25)
     }
     
-    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
+    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
         let permissions = PermissionsMap()
-        permissions.addPermission(key: "CS-TMI",accepted: om)
+        permissions.addPermission(key: "CS-OM",accepted: om)
         permissions.addPermission(key: "CS-OPT",accepted: opt)
         permissions.addPermission(key: "CS-NBA",accepted: nba)
-        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: {_ in
+        permissions.addPermission(key: "CS-TPID",accepted: tpid)
+        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
             UserDefaultsUtils.setPermissionsRequested(value: true)
         }, errorCallback: {_ in })
     }
@@ -65,21 +67,21 @@ struct PermissionsView: View {
             Toggle("This enables us to use a mobile network token to collect behavioural data for analytics and personalisation.", isOn: $nba)
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "rejectPermissions")
-                    updatePermissions(om: false, nba: false, opt: false)
+                    TrackUtils.click(value: "reject_permissions")
+                    updatePermissions(om: false, nba: false, opt: false, tpid: false)
                     try? FunnelConnectSDK.shared.trustPid().rejectConsent()
                     dismiss()
                 })
                 insertButton(title: "Accept All", color: .green, action: {
-                    try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "acceptPermissions")
-                    updatePermissions(om: true, nba: true, opt: true)
-                    startTrustPid()
+                    TrackUtils.click(value: "accept_permissions")
+                    updatePermissions(om: true, nba: true, opt: true, tpid: true)
+//                    startTrustPid()
                     dismiss()
                 })
             }
             insertButton(title: "Save settings", color: Color(UIColor.lightGray), action: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "savePermissions")
-                updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
+                TrackUtils.click(value: "save_permissions")
+                updatePermissions(om: self.om, nba: self.nba, opt: self.opt, tpid: self.tpid)
                 if(self.nba) {
                     startTrustPid()
                 }
@@ -95,11 +97,12 @@ struct PermissionsView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
             if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
-                self.om = permissions.getPermission(key: "CS-TMI")
+                self.om = permissions.getPermission(key: "CS-OM")
                 self.opt = permissions.getPermission(key: "CS-OPT")
                 self.nba = permissions.getPermission(key: "CS-NBA")
+                self.tpid = permissions.getPermission(key: "CS-TPID")
             }
-            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "permissions")
+            TrackUtils.impression(value: "permissions_view")
         })
     }
 }

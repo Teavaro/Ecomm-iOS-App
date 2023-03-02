@@ -77,7 +77,7 @@ struct LoginView: View {
                     Button("Ok", role: .cancel) { }
         }
         .onAppear(perform: {
-            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "login")
+            TrackUtils.impression(value: "login_view")
         })
     }
 }
