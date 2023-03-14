@@ -14,7 +14,6 @@ import Combine
 struct AngroView: View {
     
     @EnvironmentObject var store: Store
-    @Binding var tabSelection: Int
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
@@ -44,7 +43,7 @@ struct AngroView: View {
                 .foregroundColor(.white)
             insertButton(title: "Explore Fresh", action: {
                 TrackUtils.click(value: "explore_fresh")
-                tabSelection = 2
+                store.tabSelection = 2
             })
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 400, maxHeight: 400, alignment: .center)
@@ -60,8 +59,8 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-                    CeltraWebView(htmlContent: store.getBanner())
-                        .frame(height: 70)
+                    CeltraWebView(store: store)
+                        .frame(height: 120)
                     
                     Text("Best selling items:")
                         .font(.title)
@@ -139,10 +138,10 @@ struct ModalView: View {
     }
 }
 
-struct AngroView_Previews: PreviewProvider {
-    static var previews: some View {
-        AngroView(tabSelection: .constant(1))
-    }
-}
+//struct AngroView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AngroView(tabSelection: .constant(1))
+//    }
+//}
 
 

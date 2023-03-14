@@ -10,17 +10,14 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var store: Store
-    @State var tabSelection = 1
-    @State var showAbandonedCarts = false
-    @State var abandonedCartId: Int = 0
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack(alignment: .leading) {
 //            Image(uiImage: UIImage(imageLiteralResourceName: "logo-angro"))
 //                .padding()
-            TabView(selection: $tabSelection) {
-                AngroView(tabSelection: $tabSelection)
+            TabView(selection: $store.tabSelection) {
+                AngroView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
@@ -52,7 +49,7 @@ struct HomeView: View {
             if newPhase == .active {
                 if let section = AppState.shared.section{
                     if(section == "store"){
-                        tabSelection = 2
+                        store.tabSelection = 2
                     }
                     AppState.shared.section = nil
                 }
@@ -64,15 +61,15 @@ struct HomeView: View {
             }
             if let parameter = components.queryItems?.first{
                 if(components.host == "showAbandonedCart" && parameter.name == "id" && parameter.value != nil){
-                    abandonedCartId = Int(parameter.value!) ?? 0
-                    showAbandonedCarts = true
+                    store.abandonedCartId = Int(parameter.value!) ?? 0
+                    store.showAbandonedCarts = true
                 }
             }
         }
-        .sheet(isPresented: $showAbandonedCarts, onDismiss: {
-            print(showAbandonedCarts)
+        .sheet(isPresented: $store.showAbandonedCarts, onDismiss: {
+            print(store.showAbandonedCarts)
         }) {
-            ModalAbandonedCarts(showAbandonedCarts: $showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: abandonedCartId))
+            ModalAbandonedCarts(showAbandonedCarts: $store.showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: store.abandonedCartId))
         }
     }
         

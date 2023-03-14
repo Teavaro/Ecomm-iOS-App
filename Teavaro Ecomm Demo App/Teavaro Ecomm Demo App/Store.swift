@@ -16,6 +16,10 @@ class Store: ObservableObject {
     @Published var isLogin = false
     @Published var isCdpStarted = false
     @Published var showModal = false
+    @Published var tabSelection: Int = 1
+    @Published var itemSelected: Int16? = -1
+    @Published var showAbandonedCarts = false
+    @Published var abandonedCartId: Int = 0
     let cartId: Int16 = 12
     var infoResponse = """
     {}
@@ -97,33 +101,33 @@ class Store: ObservableObject {
             for (key, value) in obj!.attributes {
                 text += "&amp;" + key + "=" + value
             }
+            text += "&amp;" + "item_id" + "=" + "0"
         }
-        
 //        print("iran:infoResponse", infoResponse)
 //        print("iran:attr", text)
-        var htmlContent = """
+        let htmlContent = """
             <!DOCTYPE html>
                <html>
                <body>
-                <div class="celtra-ad-v3">
-                    <img src="data:image/png,celtra" style="display: none" onerror="
-                        (function(img) {
-                            var params = {'clickUrl':'','widthBreakpoint':'','expandDirection':'undefined','preferredClickThroughWindow':'new','clickEvent':'advertiser','externalAdServer':'Custom','tagVersion':'html-standard-7'};
-                            var req = document.createElement('script');
-                            req.id = params.scriptId = 'celtra-script-' + (window.celtraScriptIndex = (window.celtraScriptIndex||0)+1);
-                            params.clientTimestamp = new Date/1000;
-                            params.clientTimeZoneOffsetInMinutes = new Date().getTimezoneOffset();
-                            params.hostPageLoadId=window.celtraHostPageLoadId=window.celtraHostPageLoadId||(Math.random()+'').slice(2);
-                            var qs = '';
-                            for (var k in params) {
-                                qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
-                            }
-                            var src = 'https://ads.celtra.com/67444e1d/web.js?' + qs + '\(text)';
-                            req.src = src;
-                            img.parentNode.insertBefore(req, img.nextSibling);
-                        })(this);
-                    "/>
-                </div>
+                    <div class="celtra-ad-v3">
+                        <img src="data:image/png,celtra" style="display: none" onerror="
+                            (function(img) {
+                                var params = {'clickUrl':'','widthBreakpoint':'','expandDirection':'undefined','preferredClickThroughWindow':'new','clickEvent':'advertiser','externalAdServer':'Custom','tagVersion':'html-standard-7'};
+                                var req = document.createElement('script');
+                                req.id = params.scriptId = 'celtra-script-' + (window.celtraScriptIndex = (window.celtraScriptIndex||0)+1);
+                                params.clientTimestamp = new Date/1000;
+                                params.clientTimeZoneOffsetInMinutes = new Date().getTimezoneOffset();
+                                params.hostPageLoadId=window.celtraHostPageLoadId=window.celtraHostPageLoadId||(Math.random()+'').slice(2);
+                                var qs = '';
+                                for (var k in params) {
+                                    qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+                                }
+                                var src = 'https://ads.celtra.com/fa87bccb/web.js?' + qs + '\(text)';
+                                req.src = src;
+                                img.parentNode.insertBefore(req, img.nextSibling);
+                            })(this);
+                        "/>
+                    </div>
                </body>
                </html>
             """
@@ -150,5 +154,45 @@ class Store: ObservableObject {
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
+    }
+    
+    func processCelraAction(celtraResponse: String){
+        let decoder = JSONDecoder()
+        var itemView = false, abCartView = false, shopView = false
+        var obj: CeltraResponse? = nil
+        do {
+            if let celtraData = celtraResponse.data(using: .utf8){
+                obj = try decoder.decode(CeltraResponse.self, from: celtraData)
+            }
+        } catch {
+            print("readingAttrFromCeltraResponse:error:\(error)")
+        }
+        if obj != nil{
+            for (key, value) in obj!.attributes {
+                if(key == "impression"){
+                    if(value == "ItemView"){
+                        itemView = true
+                    }
+                    else if(value == "ShopView"){
+                        shopView = true
+                    }
+                    else if(value == "AbCartView"){
+                        abCartView = true
+                    }
+                }
+                if(key == "item_id"){
+                    itemSelected = Int16(value) ?? -1
+                }
+                if(key == "abCart_id"){
+                    abandonedCartId = Int(value) ?? -1
+                }
+            }
+            if(itemView || shopView){
+                tabSelection = 2
+            }
+            else if(abCartView){
+                showAbandonedCarts = true
+            }
+        }
     }
 }
