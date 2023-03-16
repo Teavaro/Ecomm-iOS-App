@@ -101,10 +101,13 @@ class Store: ObservableObject {
             for (key, value) in obj!.attributes {
                 text += "&amp;" + key + "=" + value
             }
-            text += "&amp;" + "item_id" + "=" + "0"
         }
+        if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
+            text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
+        }
+        text += "&amp;" + "impression" + "=" + "offer"
 //        print("iran:infoResponse", infoResponse)
-//        print("iran:attr", text)
+        print("iran:attr", text)
         let htmlContent = """
             <!DOCTYPE html>
                <html>
@@ -134,6 +137,14 @@ class Store: ObservableObject {
         return htmlContent
     }
     
+    func clearData(){
+        isFunnelConnectStarted = false
+        DataManager.shared.clearCart()
+        DataManager.shared.clearData()
+        DataManager.shared.clearAbandonedCarts()
+        initializeData()
+    }
+    
     func initializeData(){
 //        DataManager.shared.clearData()
 //        DataManager.shared.clearAbandonedCarts()
@@ -141,14 +152,17 @@ class Store: ObservableObject {
 //        print("\(listItems.count) Items ferched")
         
         if(listItems.isEmpty){
-            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese", desc: description,price: 60.00, picture: "crinklys", isOffer: true)
-            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 54.00, picture: "pork", isOffer: true, isInStock: false)
-            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 6.00, picture: "cauliflower")
-            DataManager.shared.addItem(id: 3, title: "Morrisons Creamed Rice Pudding", desc: description, price: 44.00, picture: "paprika")
-            DataManager.shared.addItem(id: 4, title: "Fresh For The Bold Ground Amazon", desc: description, price: 12.00, picture: "burst")
-            DataManager.shared.addItem(id: 5, title: "Frito-Lay Doritos & Cheetos Mix", desc: description, price: 20.00, picture: "watermelon")
-            DataManager.shared.addItem(id: 6, title: "Green Mountain Coffee Roast", desc: description, price: 20.00, picture: "grapes")
-            DataManager.shared.addItem(id: 7, title: "Nature’s Bakery Whole Wheat Bars", desc: description, price: 50.00, picture: "mixed")
+            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
+            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
+            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
+            DataManager.shared.addItem(id: 3, title: "Morrisons Smoked Paprika", desc: description, price: 4.60, picture: "paprika")
+            DataManager.shared.addItem(id: 4, title: "Jaffa Tropical Flavour Burst Seedless", desc: description, price: 2.50, picture: "burst")
+            DataManager.shared.addItem(id: 5, title: "Pams Chopped Watermelon", desc: description, price: 3.99, picture: "watermelon")
+            DataManager.shared.addItem(id: 6, title: "Woolworths Food Flavourburst Seedless Grapes", desc: description, price: 2.00, picture: "grapes")
+            DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
+            DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
+            DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
+            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370 g", desc: description, price: 3.99, picture: "tomato")
             listItems = DataManager.shared.getItems()
         }
         listWish = DataManager.shared.getWishItems()
@@ -183,7 +197,7 @@ class Store: ObservableObject {
                 if(key == "item_id"){
                     itemSelected = Int16(value) ?? -1
                 }
-                if(key == "abCart_id"){
+                if(key == "ab_cart_id"){
                     abandonedCartId = Int(value) ?? -1
                 }
             }

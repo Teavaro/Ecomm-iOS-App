@@ -51,6 +51,9 @@ struct HomeView: View {
                     if(section == "store"){
                         store.tabSelection = 2
                     }
+                    if(section == "store"){
+                        store.tabSelection = 2
+                    }
                     AppState.shared.section = nil
                 }
             }

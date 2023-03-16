@@ -97,7 +97,7 @@ struct SettingsView: View {
     }
     
     fileprivate func clearData(){
-        store.isFunnelConnectStarted = false
+        store.clearData()
         try? FunnelConnectSDK.shared.clearData()
         try? FunnelConnectSDK.shared.clearCookies()
     }
