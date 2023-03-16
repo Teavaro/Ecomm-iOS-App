@@ -14,7 +14,6 @@ import Combine
 struct AngroView: View {
     
     @EnvironmentObject var store: Store
-    @Binding var tabSelection: Int
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
@@ -43,8 +42,8 @@ struct AngroView: View {
                 .bold()
                 .foregroundColor(.white)
             insertButton(title: "Explore Fresh", action: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "exploreFresh")
-                tabSelection = 2
+                TrackUtils.click(value: "explore_fresh")
+                store.tabSelection = 2
             })
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 400, maxHeight: 400, alignment: .center)
@@ -60,8 +59,8 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-                    CeltraWebView(htmlContent: store.getBanner())
-                        .frame(height: 70)
+                    CeltraWebView(store: store)
+                        .frame(height: 120)
                     
                     Text("Best selling items:")
                         .font(.title)
@@ -90,14 +89,14 @@ struct AngroView: View {
                             if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
                                 if(isConsentAccepted){
                                     try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-                                        store.isFunnelConnectStarted = true
+//                                        store.isFunnelConnectStarted = true
                                     }, errorCallback: {_ in
                                         
                                     })
                                 }
                             }
                             print("excecuting FunnelConnectSDK.cdp.startService()")
-                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "APP_CS", notificationsVersion: 4, dataCallback: { data in
+                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
                                 if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
                                     store.isCdpStarted.toggle()
                                     store.infoResponse = data
@@ -116,7 +115,7 @@ struct AngroView: View {
                         
                     }
                 }
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "home")
+                TrackUtils.impression(value: "home_view")
             })
         }
         .sheet(isPresented: $store.showModal, onDismiss: {
@@ -124,8 +123,8 @@ struct AngroView: View {
         }) {
             ModalView(showModal: $store.showModal)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-        
 }
 
 struct ModalView: View {
@@ -139,10 +138,10 @@ struct ModalView: View {
     }
 }
 
-struct AngroView_Previews: PreviewProvider {
-    static var previews: some View {
-        AngroView(tabSelection: .constant(1))
-    }
-}
+//struct AngroView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AngroView(tabSelection: .constant(1))
+//    }
+//}
 
 

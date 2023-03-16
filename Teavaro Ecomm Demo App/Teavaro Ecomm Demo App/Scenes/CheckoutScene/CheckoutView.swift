@@ -20,6 +20,7 @@ struct CheckoutView: View {
     @State var loyaltyNumber = ""
     @State var tipAmount = 15
     @State var showingPaymentConfirmationAlert = false
+    @State var showingClearConfirmationAlert = false
     @State var showingPaymentAlert = false
     
     var totalPrice: String {
@@ -46,7 +47,6 @@ struct CheckoutView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                
                 List {
                     ForEach(store.listCart) { item in
                         NavigationLink(destination: ItemDetail(item: item, allowAddWish: false, allowAddCart: false)) {
@@ -54,7 +54,7 @@ struct CheckoutView: View {
                         }
                     }
                     .onDelete{ offsets in
-                        try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "removeFromCart")
+                        TrackUtils.click(value: "remove_from_cart")
                         store.removeItemFromCart(offsets: offsets)
                     }
                     if store.listCart.count > 0 {
@@ -66,36 +66,59 @@ struct CheckoutView: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                         }
                         insertButton(title: "Proceed to checkout", action: {
-                            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Button", value: "proceedToCheckout")
+                            TrackUtils.click(value: "proceed_to_checkout")
                             showingPaymentConfirmationAlert.toggle()
                         })
+                        .alert(isPresented: $showingPaymentConfirmationAlert) {
+                            Alert(
+                                title: Text("Checkout confirmation"),
+                                message: Text("Do you want to proceed with checkout?"),
+                                primaryButton: .destructive(Text("Proceed"), action: {
+                                    TrackUtils.click(value: "proceed_to_checkout_confirm")
+                                    store.removeAllCartItems()
+                                }),
+                                secondaryButton: .cancel(Text("Cancel"), action: {
+                                    TrackUtils.click(value: "proceed_to_checkout_cancel")
+                                })
+                            )
+                        }
+                        insertButton(title: "Clear Cart", action: {
+                            TrackUtils.click(value: "clear_cart")
+                            showingClearConfirmationAlert.toggle()
+                        })
+                        .alert(isPresented: $showingClearConfirmationAlert) {
+                            Alert(
+                                title: Text("Clear confirmation"),
+                                message: Text("Do you want to clear the cart?"),
+                                primaryButton: .destructive(Text("Yes"), action: {
+                                    let idCart = DataManager.shared.addAbandonedCart(items: store.listCart)
+                                    let events = [TrackUtils.CLICK: "clear_cart_confirm", TrackUtils.ABANDONED_CART_ID: String(idCart)]
+                                    TrackUtils.events(events: events)
+                                    store.removeAllCartItems()
+                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?id=\(idCart)"
+                                }),
+                                secondaryButton: .cancel(Text("No"), action: {
+                                    TrackUtils.click(value: "clear_cart_cancel")
+                                })
+                            )
+                        }
                     }
                     else{
                         Text("Your cart is currently empty.")
                     }
                 }
-                
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Cart"))
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
                 .toolbar {
                     EditButton()
                 }
-                .alert(isPresented: $showingPaymentConfirmationAlert) {
-                    Alert(
-                        title: Text("Checkout confirmation"),
-                        message: Text("Do you want to proceed with checkout?"),
-                        primaryButton: .destructive(Text("Proceed"), action: {
-                            store.removeAllCartItems()
-                        }),
-                        secondaryButton: .cancel(Text("Cancel"))
-                    )
-                }
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "cart")
+                TrackUtils.impression(value: "cart_view")
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -15,11 +15,12 @@
 		00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */; };
 		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
 		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
+		0019CA2E299B489600A7D771 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2D299B489600A7D771 /* DataManager.swift */; };
 		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
 		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		002A747F29BBDD67009F5248 /* CeltraResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A747E29BBDD67009F5248 /* CeltraResponse.swift */; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
-		0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCC1289DB21400317DDD /* ShopItem.swift */; };
 		0073235A29102F56003D15D9 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; };
 		0073235B29102F56003D15D9 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0073235C29102F56003D15D9 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235729102F56003D15D9 /* SwrveSDK.xcframework */; };
@@ -30,8 +31,15 @@
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
+		00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
+		00A4C4B329A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */; };
+		00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */; };
+		00A4C4B529A6A82D00B2B334 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */; };
+		00A4C4BA29A7F6DA00B2B334 /* ACItemsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */; };
+		00A4C4BE29B0EC5F00B2B334 /* TrackUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */; };
 		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
+		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
@@ -82,10 +90,11 @@
 		00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		0019CA2D299B489600A7D771 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
+		002A747E29BBDD67009F5248 /* CeltraResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraResponse.swift; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		0065CCC1289DB21400317DDD /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 		0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
 		0073235729102F56003D15D9 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDK.xcframework"; sourceTree = "<group>"; };
 		0073235829102F56003D15D9 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/SDWebImage.xcframework"; sourceTree = "<group>"; };
@@ -94,9 +103,16 @@
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
+		00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACItemsListingView.swift; sourceTree = "<group>"; };
+		00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackUtils.swift; sourceTree = "<group>"; };
 		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
 		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		00D547FD29BA5D3500E92B88 /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mraid.js; path = "../../../../../Downloads/1030a67464e061568a5b-b492c9c6a631adb6e6b13f4bf8fcb162825d4c02/mraid.js"; sourceTree = "<group>"; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
@@ -167,6 +183,34 @@
 				0065CCBD289DAD8000317DDD /* AngroView.swift */,
 			);
 			path = AngroScene;
+			sourceTree = "<group>";
+		};
+		00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */ = {
+			isa = PBXGroup;
+			children = (
+				00A4C4B929A7F6DA00B2B334 /* ACItemsListingView.swift */,
+			);
+			path = AbandonedCartsScene;
+			sourceTree = "<group>";
+		};
+		00A4C4BB29B0EBC500B2B334 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				008513D6291021DD006898F7 /* UserDefaultsUtils.swift */,
+				00184F2C2943C32C0033EF94 /* HttpRequest.swift */,
+				00184F2E2943C7380033EF94 /* PushNotification.swift */,
+				00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		00A4C4BC29B0EBF500B2B334 /* dataClases */ = {
+			isa = PBXGroup;
+			children = (
+				00ABB351297B29D3001F7092 /* InfoResponse.swift */,
+				002A747E29BBDD67009F5248 /* CeltraResponse.swift */,
+			);
+			path = dataClases;
 			sourceTree = "<group>";
 		};
 		00CDFF2D28C048450096810C /* WishListScene */ = {
@@ -255,6 +299,7 @@
 		C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */ = {
 			isa = PBXGroup;
 			children = (
+				00A4C4BB29B0EBC500B2B334 /* utils */,
 				00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */,
 				C9404778286DF8A100C1DCAB /* CustomViews */,
 				C9FE77CC2864EF7B006DDD74 /* DI */,
@@ -263,18 +308,13 @@
 				C9FE77BA28637081006DDD74 /* Resources */,
 				C9FE77B428636C61006DDD74 /* Scenes */,
 				C9FE779728622C3E006DDD74 /* AppMain.swift */,
-				008513D6291021DD006898F7 /* UserDefaultsUtils.swift */,
 				00183CDD28B6A2D8000E2F03 /* NavigationBarModifier.swift */,
 				C9FE77A028622C3F006DDD74 /* Persistence.swift */,
 				C9FE779D28622C3F006DDD74 /* Preview Content */,
 				C9FE77AA286338C2006DDD74 /* StaticData.swift */,
 				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
 				0065CCBF289DB09C00317DDD /* Store.swift */,
-				0065CCC1289DB21400317DDD /* ShopItem.swift */,
-				00184F2C2943C32C0033EF94 /* HttpRequest.swift */,
-				00184F2E2943C7380033EF94 /* PushNotification.swift */,
 				00ABB34F297AF43C001F7092 /* CeltraWebView.swift */,
-				00ABB351297B29D3001F7092 /* InfoResponse.swift */,
 			);
 			path = "Teavaro Ecomm Demo App";
 			sourceTree = "<group>";
@@ -290,6 +330,7 @@
 		C9FE77B428636C61006DDD74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */,
 				00CDFF2D28C048450096810C /* WishListScene */,
 				00183CD828B56124000E2F03 /* PermissionsScene */,
 				00183CD328B5338C000E2F03 /* LoginScene */,
@@ -334,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				C9FE779B28622C3F006DDD74 /* Assets.xcassets */,
+				00D547FD29BA5D3500E92B88 /* mraid.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -341,6 +383,7 @@
 		C9FE77BB2863709B006DDD74 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				00A4C4BC29B0EBF500B2B334 /* dataClases */,
 				C9FE77BC286370A3006DDD74 /* CoreData */,
 			);
 			path = Data;
@@ -349,7 +392,12 @@
 		C9FE77BC286370A3006DDD74 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */,
+				00A4C4AF29A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift */,
+				00A4C4B029A6A82D00B2B334 /* Item+CoreDataClass.swift */,
+				00A4C4B129A6A82D00B2B334 /* Item+CoreDataProperties.swift */,
 				C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */,
+				0019CA2D299B489600A7D771 /* DataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -436,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D547FE29BA5D3500E92B88 /* mraid.js in Resources */,
 				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
 				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
 				008513D529102135006898F7 /* GoogleService-Info.plist in Resources */,
@@ -449,12 +498,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
 				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
 				C9FE77AF286347DA006DDD74 /* ItemDetail.swift in Sources */,
+				00A4C4BE29B0EC5F00B2B334 /* TrackUtils.swift in Sources */,
 				C9FE77BE286373B8006DDD74 /* CheckoutView.swift in Sources */,
 				00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */,
 				00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */,
@@ -464,19 +515,24 @@
 				009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */,
 				00183CDE28B6A2D8000E2F03 /* NavigationBarModifier.swift in Sources */,
 				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
-				0065CCC2289DB21400317DDD /* ShopItem.swift in Sources */,
+				002A747F29BBDD67009F5248 /* CeltraResponse.swift in Sources */,
 				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
 				C9FE77A428622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld in Sources */,
+				00A4C4B329A6A82D00B2B334 /* AbandonedCarts+CoreDataProperties.swift in Sources */,
 				0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */,
+				00A4C4B529A6A82D00B2B334 /* Item+CoreDataProperties.swift in Sources */,
 				00183CD228B52984000E2F03 /* SettingsView.swift in Sources */,
 				C9FE77AD28633D74006DDD74 /* ItemRow.swift in Sources */,
+				0019CA2E299B489600A7D771 /* DataManager.swift in Sources */,
 				C9404780286E085500C1DCAB /* CustomSecureTextField.swift in Sources */,
 				C9FE77C32864EE8F006DDD74 /* ViewModelFactory.swift in Sources */,
+				00A4C4B429A6A82D00B2B334 /* Item+CoreDataClass.swift in Sources */,
 				C9FE779A28622C3E006DDD74 /* ItemsListingView.swift in Sources */,
+				00A4C4BA29A7F6DA00B2B334 /* ACItemsListingView.swift in Sources */,
 				C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */,
 				0092251228CF893200125041 /* Extensions.swift in Sources */,
 				008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */,
@@ -527,6 +583,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -587,6 +644,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -615,7 +673,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -658,7 +716,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;

@@ -56,7 +56,7 @@ struct LoginView: View {
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
                     store.isLogin = true
-                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "slsc", userId: loginId.hash256), dataCallback:
+                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "hemail", userId: loginId.hash256), dataCallback:
                         { data in
                             store.infoResponse = data
                         }, errorCallback: { _ in
@@ -77,7 +77,7 @@ struct LoginView: View {
                     Button("Ok", role: .cancel) { }
         }
         .onAppear(perform: {
-//            try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "login")
+            TrackUtils.impression(value: "login_view")
         })
     }
 }

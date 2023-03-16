@@ -9,15 +9,15 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var tabSelection = 1
+    @EnvironmentObject var store: Store
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack(alignment: .leading) {
 //            Image(uiImage: UIImage(imageLiteralResourceName: "logo-angro"))
 //                .padding()
-            TabView(selection: $tabSelection) {
-                AngroView(tabSelection: $tabSelection)
+            TabView(selection: $store.tabSelection) {
+                AngroView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
@@ -45,21 +45,49 @@ struct HomeView: View {
             }
         }
         .onChange(of: scenePhase) { newPhase in
+            TrackUtils.lifeCycle(phase: newPhase)
             if newPhase == .active {
                 if let section = AppState.shared.section{
                     if(section == "store"){
-                        tabSelection = 2
+                        store.tabSelection = 2
+                    }
+                    if(section == "store"){
+                        store.tabSelection = 2
                     }
                     AppState.shared.section = nil
                 }
-            } else if newPhase == .inactive {
-                
-            } else if newPhase == .background {
-                
             }
+        }
+        .onOpenURL { url in
+            guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                return
+            }
+            if let parameter = components.queryItems?.first{
+                if(components.host == "showAbandonedCart" && parameter.name == "id" && parameter.value != nil){
+                    store.abandonedCartId = Int(parameter.value!) ?? 0
+                    store.showAbandonedCarts = true
+                }
+            }
+        }
+        .sheet(isPresented: $store.showAbandonedCarts, onDismiss: {
+            print(store.showAbandonedCarts)
+        }) {
+            ModalAbandonedCarts(showAbandonedCarts: $store.showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: store.abandonedCartId))
         }
     }
         
+}
+
+struct ModalAbandonedCarts: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showAbandonedCarts: Bool
+    var listItems: [Item]
+
+    var body: some View {
+        VStack {
+            ACItemsListingView(listItems: listItems)
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {

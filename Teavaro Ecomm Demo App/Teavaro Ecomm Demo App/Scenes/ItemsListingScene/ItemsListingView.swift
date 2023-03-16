@@ -16,10 +16,9 @@ struct ItemsListingView: View{
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                
                 List {
                     ForEach(store.listItems) { item in
-                        NavigationLink(destination: ItemDetail(item: item)) {
+                        NavigationLink(destination: ItemDetail(item: item), tag: item.id, selection: $store.itemSelected) {
                             ItemRow(item: item)
                         }
                     }
@@ -29,15 +28,16 @@ struct ItemsListingView: View{
                 .navigationBarColor(backgroundColor: .white, titleColor: .black)
             }
             .onAppear(perform: {
-                try? FunnelConnectSDK.shared.cdp().logEvent(key: "Navigation", value: "shop")
+                TrackUtils.impression(value: "shop_view")
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemsListingView()
-                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ItemsListingView(nil)
+//                    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//    }
+//}

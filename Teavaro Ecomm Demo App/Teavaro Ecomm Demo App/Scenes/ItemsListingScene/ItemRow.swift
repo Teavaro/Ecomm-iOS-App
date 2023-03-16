@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ItemRow : View {
     
-    let item: ShopItem
+    let item: Item
 
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(imageLiteralResourceName: item.picture))
+            Image(uiImage: UIImage(imageLiteralResourceName: item.picture ?? ""))
                 .resizable()
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
             VStack(alignment: .leading) {
-                Text(item.title)
+                Text(item.title ?? "")
                     .bold()
                 Text("Price " + "$\(item.price)").padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             }
