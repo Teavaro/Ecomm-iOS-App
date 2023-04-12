@@ -36,7 +36,6 @@ struct LoginView: View {
             Text("*")
                 .foregroundColor(.orange)
         }
-        .padding(.top, 25)
     }
     
     var body: some View {
@@ -47,6 +46,7 @@ struct LoginView: View {
                 .frame(height: 35)
                 .padding(.top, 10)
             insertText(text: "Password")
+                .padding(.top, 25)
             TextField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .frame(height: 35)

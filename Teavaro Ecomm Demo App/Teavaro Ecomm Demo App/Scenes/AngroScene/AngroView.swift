@@ -83,15 +83,16 @@ struct AngroView: View {
             }
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
-                    FunnelConnectSDK.shared.didInitializeWithResult {
+                    print("excecuting didInitializeWithResult")
+                    FunnelConnectSDK.shared.didInitializeWithResult( success: {
                         DispatchQueue.main.async {
                             print("excecuting FunnelConnectSDK.trustpid.startService()")
                             if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
                                 if(isConsentAccepted){
                                     try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-//                                        store.isFunnelConnectStarted = true
+
                                     }, errorCallback: {_ in
-                                        
+                                        print("error FunnelConnectSDK.trustpid.startService()")
                                     })
                                 }
                             }
@@ -108,12 +109,12 @@ struct AngroView: View {
                                     store.isFunnelConnectStarted = true
                                 }
                             }, errorCallback: {_ in
-                                
+                                print("error FunnelConnectSDK.cdp.startService()")
                             })
                         }
-                    } failure: {_ in
-                        
-                    }
+                    }, failure: {_ in
+                        print("error FunnelConnectSDK.shared.didInitializeWithResult")
+                    })
                 }
                 TrackUtils.impression(value: "home_view")
             })

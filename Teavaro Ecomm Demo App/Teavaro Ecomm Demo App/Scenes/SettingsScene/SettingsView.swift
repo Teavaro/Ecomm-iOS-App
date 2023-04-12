@@ -24,7 +24,6 @@ struct SettingsView: View {
                         if(!store.isLogin){
                             NavigationLink(destination: LoginView()) {
                                 Text("Login")
-                                    .bold()
                             }
                         }
                         else{
@@ -37,7 +36,6 @@ struct SettingsView: View {
                     Section(){
                         NavigationLink(destination: PermissionsView()) {
                             Text("Consent Management")
-                                .bold()
                         }
                     }
                     Section(){
@@ -49,16 +47,11 @@ struct SettingsView: View {
                                 showModal1.toggle()
                             }
                     }
-                    if (store.isCdpStarted) {
-                        Section(){
-                            Button("Send Notification", action: {
-                                TrackUtils.click(value: "send_notification")
-                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
-                                    PushNotification().send(user: umid, message: "Swrve+App+Push+Notification")
-                                }
-                            })
+//                    if (store.isCdpStarted) {
+                        NavigationLink(destination: NotificationsView()) {
+                            Text("Send Notifications")
                         }
-                    }
+//                    }
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
