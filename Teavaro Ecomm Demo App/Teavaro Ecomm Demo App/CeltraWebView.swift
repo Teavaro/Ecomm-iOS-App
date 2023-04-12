@@ -38,23 +38,20 @@ struct CeltraWebView: UIViewRepresentable {
     }
 
     func makeUIView(context: Context) -> WKWebView {
-        let coordinator = makeCoordinator()
-
         let userContentController = WKUserContentController()
+        let coordinator = makeCoordinator()
         userContentController.add(coordinator, name: "bridge")
-//
+
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = userContentController
-        
+
         let wkWebView = WKWebView(frame: .zero, configuration: configuration)
         wkWebView.navigationDelegate = coordinator
         return wkWebView
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {
-        DispatchQueue.main.async {
-            webView.loadHTMLString(store.getBanner(), baseURL: nil)
-        }
+        webView.loadHTMLString(store.getBanner(), baseURL: nil)
     }
 }
 

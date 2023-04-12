@@ -62,12 +62,7 @@ struct HomeView: View {
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 return
             }
-            if let parameter = components.queryItems?.first{
-                if(components.host == "showAbandonedCart" && parameter.name == "id" && parameter.value != nil){
-                    store.abandonedCartId = Int(parameter.value!) ?? 0
-                    store.showAbandonedCarts = true
-                }
-            }
+            store.handleDeepLink(components: components)
         }
         .sheet(isPresented: $store.showAbandonedCarts, onDismiss: {
             print(store.showAbandonedCarts)

@@ -95,7 +95,7 @@ struct CheckoutView: View {
                                     let events = [TrackUtils.CLICK: "clear_cart_confirm", TrackUtils.ABANDONED_CART_ID: String(idCart)]
                                     TrackUtils.events(events: events)
                                     store.removeAllCartItems()
-                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?id=\(idCart)"
+                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(idCart)"
                                 }),
                                 secondaryButton: .cancel(Text("No"), action: {
                                     TrackUtils.click(value: "clear_cart_cancel")
