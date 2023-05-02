@@ -47,7 +47,7 @@ struct LoginView: View {
                 .padding(.top, 10)
             insertText(text: "Password")
                 .padding(.top, 25)
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .frame(height: 35)
                 .padding(.top, 10)
@@ -55,10 +55,11 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    store.isLogin = true
                     try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "hemail", userId: loginId.hash256), dataCallback:
                         { data in
                             store.infoResponse = data
+                            store.isLogin = true
+                            UserDefaultsUtils.setLogin(value: true)
                         }, errorCallback: { _ in
                             
                         })

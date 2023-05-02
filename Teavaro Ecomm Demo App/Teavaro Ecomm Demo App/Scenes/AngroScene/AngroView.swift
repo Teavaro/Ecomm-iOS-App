@@ -86,16 +86,13 @@ struct AngroView: View {
                     print("excecuting didInitializeWithResult")
                     FunnelConnectSDK.shared.didInitializeWithResult( success: {
                         DispatchQueue.main.async {
-                            print("excecuting FunnelConnectSDK.trustpid.startService()")
-                            if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
-                                if(isConsentAccepted){
-                                    try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-
-                                    }, errorCallback: {_ in
-                                        print("error FunnelConnectSDK.trustpid.startService()")
-                                    })
-                                }
-                            }
+//                            print("excecuting FunnelConnectSDK.trustpid.startService()")
+//                            if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
+//                                if(isConsentAccepted){
+//                                    let isStub = UserDefaultsUtils.isStub()
+//                                    try? FunnelConnectSDK.shared.trustPid().startService(isStub: isStub)
+//                                }
+//                            }
                             print("excecuting FunnelConnectSDK.cdp.startService()")
                             try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
                                 if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {

@@ -29,6 +29,7 @@ struct SettingsView: View {
                         else{
                             Button("Logout", action: {
                                 TrackUtils.click(value: "logout")
+                                UserDefaultsUtils.setLogin(value: false)
                                 self.showingConfirmationAlert.toggle()
                             })
                         }
