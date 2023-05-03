@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FunnelConnectSDK
 
 class Store: ObservableObject {
     @Published var listItems: [Item] = []
@@ -87,6 +88,7 @@ class Store: ObservableObject {
     
     func getBanner() -> String{
         var text = ""
+        var userId = "none"
         var obj: InfoResponse? = nil
         do {
             let decoder = JSONDecoder()
@@ -105,7 +107,11 @@ class Store: ObservableObject {
         if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
             text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
         }
-        text += "&amp;" + "impression" + "=" + "offer"
+        if let user_id = try? FunnelConnectSDK.shared.cdp().getUserId(){
+            text += "&amp;" + "rp.user.userId" + "=\(user_id)"
+        }
+        text += "&amp;device=ios"
+        text += "&amp;impression=offer"
 //        print("iran:infoResponse", infoResponse)
         print("iran:attr", text)
         let htmlContent = """
@@ -162,17 +168,19 @@ class Store: ObservableObject {
             DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
             DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
             DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
-            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370 g", desc: description, price: 3.99, picture: "tomato")
+            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370g", desc: description, price: 3.99, picture: "tomato")
             listItems = DataManager.shared.getItems()
         }
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
+        isLogin = UserDefaultsUtils.isLogin()
     }
     
     func processCelraAction(celtraResponse: String){
         let decoder = JSONDecoder()
-        var itemView = false, abCartView = false, shopView = false
+        var itemView = false, abCartView = false, shopView = false, goToWeb = false
+        var url = ""
         var obj: CeltraResponse? = nil
         do {
             if let celtraData = celtraResponse.data(using: .utf8){
@@ -193,12 +201,18 @@ class Store: ObservableObject {
                     else if(value == "AbCartView"){
                         abCartView = true
                     }
+                    else if(value == "WebIdent"){
+                        goToWeb = true
+                    }
                 }
                 if(key == "item_id"){
                     itemSelected = Int16(value) ?? -1
                 }
                 if(key == "ab_cart_id"){
-                    abandonedCartId = Int(value) ?? -1
+                    abandonedCartId = Int(value) ?? getAbCartId()
+                }
+                if(key == "ident_url"){
+                    url = value
                 }
             }
             if(itemView || shopView){
@@ -206,6 +220,39 @@ class Store: ObservableObject {
             }
             else if(abCartView){
                 showAbandonedCarts = true
+            }
+            if(goToWeb && url != ""){
+                if let webUrl = URL(string: url), UIApplication.shared.canOpenURL(webUrl) {
+                   if #available(iOS 10.0, *) {
+                      UIApplication.shared.open(webUrl, options: [:], completionHandler: nil)
+                   } else {
+                      UIApplication.shared.openURL(webUrl)
+                   }
+                }
+            }
+        }
+    }
+    
+    func getAbCartId() -> Int{
+        if let last = DataManager.shared.getAbandonedCarts().last{
+            return last.id
+        }
+        return -1
+    }
+    
+    func handleDeepLink(components: URLComponents){
+        if let parameter = components.queryItems?.first{
+//            print("iraniran:itemdescription", parameter.name + ", \(parameter.value)")
+            if(components.host == "showAbandonedCart" && parameter.name == "ab_cart_id" && parameter.value != nil){
+                abandonedCartId = Int(parameter.value!) ?? getAbCartId()
+                showAbandonedCarts = true
+            }
+            if(components.host == "showSection" && parameter.name == "impression" && parameter.value == "ShopView"){
+                tabSelection = 2
+            }
+            if(components.host == "itemdescription" && parameter.name == "item_id" && parameter.value != nil){
+                itemSelected = Int16(parameter.value ?? "-1")!
+                tabSelection = 2
             }
         }
     }

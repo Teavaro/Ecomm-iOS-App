@@ -83,7 +83,7 @@ struct PermissionsView: View {
                 TrackUtils.click(value: "save_permissions")
                 updatePermissions(om: self.om, nba: self.nba, opt: self.opt, tpid: self.tpid)
                 if(self.nba) {
-                    startTrustPid()
+//                    startTrustPid()
                 }
                 else{
                     try? FunnelConnectSDK.shared.trustPid().rejectConsent()
