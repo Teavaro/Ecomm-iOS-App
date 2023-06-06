@@ -1,0 +1,30 @@
+PODS:
+  - SDWebImage (5.15.8):
+    - SDWebImage/Core (= 5.15.8)
+  - SDWebImage/Core (5.15.8)
+  - SwrveGeoSDK (5.0.1)
+  - SwrveSDK (8.6.0):
+    - SDWebImage (~> 5.0)
+    - SwrveSDKCommon (= 8.6.0)
+  - SwrveSDKCommon (8.6.0)
+
+DEPENDENCIES:
+  - SwrveGeoSDK
+  - SwrveSDK
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SwrveGeoSDK
+    - SwrveSDK
+    - SwrveSDKCommon
+
+SPEC CHECKSUMS:
+  SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
+  SwrveGeoSDK: d859ce71aa7f4f3ecb51f85fcf78521991ba6f99
+  SwrveSDK: ed712c68df0975b16769b6f4c75f8778f8be359c
+  SwrveSDKCommon: 0fe0ae7a5f70389234ccf07e614028e02e06bb32
+
+PODFILE CHECKSUM: 52ac475409133c8fb77d612dbc3043cd7b5a3ea4
+
+COCOAPODS: 1.12.1

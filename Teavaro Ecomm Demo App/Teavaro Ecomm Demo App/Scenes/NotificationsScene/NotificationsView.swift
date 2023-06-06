@@ -18,6 +18,16 @@ struct NotificationsView: View {
         VStack(alignment: .leading) {
             List {
                 Section(){
+                    Button("Ident Click's campaign", action: {
+                        TrackUtils.click(value: "send_ident_click_notification")
+                        if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
+                            if let userId = try? FunnelConnectSDK.shared.cdp().getUserId(){
+                                PushNotification().sendIdentClick(user: umid, userId: userId)
+                            }
+                        }
+                    })
+                }
+                Section(){
                     Button("Abandoned Cart's campaign", action: {
                         TrackUtils.click(value: "send_ac_notification")
                         if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){

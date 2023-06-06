@@ -9,6 +9,8 @@ import UIKit
 import SwiftUI
 import CryptoKit
 import CommonCrypto
+//import Pulse
+//import PulseUI
 
 extension String {
     
@@ -37,3 +39,43 @@ extension String {
         }
     }
 }
+
+extension UIViewController {
+    
+    func showToast(message: String, seconds: Double) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor.black
+        alert.view.alpha = 0.6
+        alert.view.layer.cornerRadius = 25
+        self.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            alert.dismiss(animated: true)
+        }
+    }
+    
+//    open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+//        if motion == .motionShake {
+//            if #available(iOS 13.0, *) {
+//                let loggerView = UIHostingController(rootView: MainView())
+//                UIApplication.shared.topViewController()?.present(loggerView, animated: true)
+//            }
+//        }
+//    }
+}
+
+//extension UIApplication {
+//    func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+//        if let navigationController = controller as? UINavigationController {
+//            return topViewController(controller: navigationController.visibleViewController)
+//        }
+//        if let tabController = controller as? UITabBarController {
+//            if let selected = tabController.selectedViewController {
+//                return topViewController(controller: selected)
+//            }
+//        }
+//        if let presented = controller?.presentedViewController {
+//            return topViewController(controller: presented)
+//        }
+//        return controller
+//    }
+//}

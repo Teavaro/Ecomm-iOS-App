@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import FunnelConnectSDK
 import SwrveSDK
+import SwrveGeoSDK
 import Combine
 
 struct AngroView: View {
@@ -101,13 +102,15 @@ struct AngroView: View {
                                     if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
                                         store.showModal.toggle()
                                     }
-                                    print("excecuting SwrveSDK.start(withUserId: \(umid)")
+                                    print("excecuting SwrveSDK.start(withUserId: \(umid))")
                                     SwrveSDK.start(withUserId: umid)
                                     store.isFunnelConnectStarted = true
                                 }
                             }, errorCallback: {_ in
                                 print("error FunnelConnectSDK.cdp.startService()")
                             })
+                            print("excecuting SwrveGeoSDK.start()")
+                            SwrveGeoSDK.start()
                         }
                     }, failure: {_ in
                         print("error FunnelConnectSDK.shared.didInitializeWithResult")

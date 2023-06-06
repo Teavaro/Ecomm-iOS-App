@@ -48,11 +48,23 @@ struct SettingsView: View {
                                 showModal1.toggle()
                             }
                     }
+                    Section(){
 //                    if (store.isCdpStarted) {
                         NavigationLink(destination: NotificationsView()) {
                             Text("Send Notifications")
                         }
 //                    }
+                    }
+                    Section(){
+                        NavigationLink(destination: ShareLinksView()) {
+                            Text("Share Links")
+                        }
+                    }
+                    Section(){
+                        NavigationLink(destination: IDsView()) {
+                            Text("IDs")
+                        }
+                    }
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")

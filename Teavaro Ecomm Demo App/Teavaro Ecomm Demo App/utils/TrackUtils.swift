@@ -14,6 +14,7 @@ class TrackUtils {
     static let IMPRESSION = "impression"
     static let CLICK = "click"
     static let ABANDONED_CART_ID = "abandoned_cart_id"
+    static let GEO_PLACE = "geo_place"
     
     static func impression(value: String){
         try? FunnelConnectSDK.shared.cdp().logEvent(key: IMPRESSION, value: value)
@@ -25,6 +26,10 @@ class TrackUtils {
     
     static func events(events: [String: String]){
         try? FunnelConnectSDK.shared.cdp().logEvents(events: events)
+    }
+    
+    static func geoPlace(value: String){
+        try? FunnelConnectSDK.shared.cdp().logEvent(key: GEO_PLACE, value: value)
     }
     
     static func lifeCycle(phase: ScenePhase){

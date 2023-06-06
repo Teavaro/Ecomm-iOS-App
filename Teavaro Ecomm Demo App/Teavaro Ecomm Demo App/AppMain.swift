@@ -8,6 +8,10 @@
 import SwiftUI
 import FunnelConnectSDK
 import SwrveSDK
+import SwrveGeoSDK
+//import Logging
+//import Pulse
+//import PulseUI
 
 @main
 struct AppMain: App {
@@ -29,7 +33,7 @@ struct AppMain: App {
             
         }
     
-    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate, UNUserNotificationCenterDelegate{
+    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate, UNUserNotificationCenterDelegate, SwrveGeofenceTransitionDelegate{
         let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
@@ -37,6 +41,8 @@ struct AppMain: App {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
             print("excecuting FunnelConnectSDK.initialize()")
+            
+//            self.initHttpRequestsMonitor()
             
             let center = UNUserNotificationCenter.current()
             center.delegate = self
@@ -66,6 +72,11 @@ struct AppMain: App {
                     apiKey: "FiIpd4eZ8CtQ6carAAx9",
                     config: config)
                 print("end SwrveSDK.sharedInstance()")
+                print("")
+                let geoConfig = SwrveGeoConfig()
+                geoConfig.swrveGeofenceTransitionDelegate = self
+                SwrveGeoSDK.initWith(geoConfig)
+                
             }
           return true
         }
@@ -95,6 +106,17 @@ struct AppMain: App {
         func willPresent(_ notification: UNNotification, withCompletionHandler completionHandler: ((UNNotificationPresentationOptions) -> Void)) {
             completionHandler([.banner, .list, .sound])
         }
+        
+        func triggered(_ name: String, transition: String, at location: CLLocation, customProperties: String?) {
+            TrackUtils.geoPlace(value: name)
+        }
+        
+//        private func initHttpRequestsMonitor() {
+//            if #available(iOS 13.0, *) {
+//                LoggingSystem.bootstrap(PersistentLogHandler.init)
+//                URLSessionProxyDelegate.enableAutomaticRegistration()
+//            }
+//        }
       }
     
 }

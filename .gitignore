@@ -91,3 +91,467 @@ iOSInjectionProject/
 Teavaro Ecomm Demo App/Teavaro Ecomm Demo App/celtraExample.js
 Teavaro Ecomm Demo App/Teavaro Ecomm Demo App/Resources/Assets.xcassets/mraid.dataset/mraid.js
 Teavaro Ecomm Demo App/Teavaro Ecomm Demo App/Resources/Assets.xcassets/mraid.dataset/Contents.json
+Teavaro Ecomm Demo App/Pods/.DS_Store
+Teavaro Ecomm Demo App/Pods/Manifest.lock
+Teavaro Ecomm Demo App/Pods/Headers/.DS_Store
+Teavaro Ecomm Demo App/Pods/Headers/Private/SwrveGeoSDK/SwrveGeo.h
+Teavaro Ecomm Demo App/Pods/Headers/Private/SwrveGeoSDK/SwrveGeoConfig.h
+Teavaro Ecomm Demo App/Pods/Headers/Private/SwrveGeoSDK/SwrveGeoCustomFilterDelegate.h
+Teavaro Ecomm Demo App/Pods/Headers/Private/SwrveGeoSDK/SwrveGeofenceTransitionDelegate.h
+Teavaro Ecomm Demo App/Pods/Headers/Private/SwrveGeoSDK/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/Headers/Public/.DS_Store
+Teavaro Ecomm Demo App/Pods/Headers/Public/SwrveGeoSDK/SwrveGeo.h
+Teavaro Ecomm Demo App/Pods/Headers/Public/SwrveGeoSDK/SwrveGeoConfig.h
+Teavaro Ecomm Demo App/Pods/Headers/Public/SwrveGeoSDK/SwrveGeoCustomFilterDelegate.h
+Teavaro Ecomm Demo App/Pods/Headers/Public/SwrveGeoSDK/SwrveGeofenceTransitionDelegate.h
+Teavaro Ecomm Demo App/Pods/Headers/Public/SwrveGeoSDK/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/Pods.xcodeproj/project.pbxproj
+Teavaro Ecomm Demo App/Pods/SDWebImage/.DS_Store
+Teavaro Ecomm Demo App/Pods/SDWebImage/LICENSE
+Teavaro Ecomm Demo App/Pods/SDWebImage/README.md
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImagePlayer.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImagePlayer.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDCallbackQueue.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDCallbackQueue.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDGraphicsImageRenderer.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDGraphicsImageRenderer.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageAWebPCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageAWebPCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageFrame.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageFrame.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageLoader.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageLoader.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderDecryptor.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderDecryptor.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderResponseModifier.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderResponseModifier.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageError.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageError.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageOperation.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageOperation.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+ExtendedCacheData.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+ExtendedCacheData.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/NSBezierPath+SDRoundedCorners.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/NSBezierPath+SDRoundedCorners.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDAssociatedObject.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDAssociatedObject.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDDeviceHelper.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDDeviceHelper.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDDisplayLink.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDDisplayLink.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDFileAttributeHelper.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDFileAttributeHelper.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDImageIOAnimatedCoderInternal.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDmetamacros.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/SDWebImageTransitionInternal.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/UIColor+SDHexString.h
+Teavaro Ecomm Demo App/Pods/SDWebImage/SDWebImage/Private/UIColor+SDHexString.m
+Teavaro Ecomm Demo App/Pods/SDWebImage/WebImage/SDWebImage.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/LICENSE
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeo.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoCustomFilterDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeofenceTransitionDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/Info.plist
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/BCSymbolMaps/6D984CF2-F1C1-3ED6-A4D9-3AE45FBF598A.bcsymbolmap
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/BCSymbolMaps/E79FD1BF-8899-366D-954F-B6044BC9CC1A.bcsymbolmap
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Info.plist
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Headers/SwrveGeo.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Headers/SwrveGeoConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Headers/SwrveGeoCustomFilterDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Headers/SwrveGeofenceTransitionDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Headers/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/Modules/module.modulemap
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.omo
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_armv7/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Info.plist
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeo.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeoConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeoCustomFilterDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeofenceTransitionDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/Modules/module.modulemap
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.omo
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK.mom
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist
+Teavaro Ecomm Demo App/Pods/SwrveGeoSDK/SwrveGeoSDK.xcframework/ios-arm64_i386_x86_64-simulator/SwrveGeoSDK.framework/_CodeSignature/CodeResources
+Teavaro Ecomm Demo App/Pods/SwrveSDK/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDK/README.md
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveBaseConversation.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveBaseConversation.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentHTML.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentHTML.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentImage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentImage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentItem.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentItem.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentSpacer.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentSpacer.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentStarRating.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentStarRating.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentStarRatingView.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentStarRatingView.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentVideo.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveContentVideo.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationAtom.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationAtom.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationAtomFactory.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationAtomFactory.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationButton.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationButton.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationContainerViewController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationContainerViewController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationEvents.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationEvents.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationItemViewController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationItemViewController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationPane.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationPane.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationResource.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationResource.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationResourceManagement.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationResourceManagement.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationsNavigationController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationsNavigationController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationStyler.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationStyler.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationUIButton.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveConversationUIButton.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveInputItem.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveInputItem.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveInputMultiValue.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveInputMultiValue.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveMessageEventHandler.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveSetup.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveUITableViewCell.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/SwrveUITableViewCell.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/Categories/UINavigationController+KeyboardResponderFix.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Conversation/Categories/UINavigationController+KeyboardResponderFix.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/VGConversationKitResources-Info.plist
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/Contents.json
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/close_button.imageset/close_button.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/close_button.imageset/close_button@2x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/close_button.imageset/close_button@3x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/close_button.imageset/Contents.json
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_empty.imageset/Contents.json
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_empty.imageset/star-empty.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_empty.imageset/star-empty@2x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_empty.imageset/star-empty@3x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_full.imageset/Contents.json
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_full.imageset/star-full.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_full.imageset/star-full@2x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveConversationSDK/Resources/SwrveAssets.xcassets/star_full.imageset/star-full@3x.png
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/LICENSE
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Swrve.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Swrve.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Swrve+Private.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveConfig.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveDeeplinkDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveDeeplinkManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveDeeplinkManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveDeviceProperties.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveDeviceProperties.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEmpty.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEmpty.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEventQueueItem.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEventQueueItem.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEventsManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveEventsManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveIAPRewards.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveIAPRewards.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveMigrationsManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveMigrationsManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveProfileManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveProfileManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveProtocol.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveReceiptProvider.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveReceiptProvider.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveResourceManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveResourceManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveSDK.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveSDK.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveTextUtils.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/SwrveTextUtils.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Conversation/SwrveConversation.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Conversation/SwrveConversation.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Conversation/SwrveConversationCampaign.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Conversation/SwrveConversationCampaign.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveBaseMessage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveBaseMessage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButton.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButton.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButtonTheme.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButtonTheme.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButtonThemeState.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveButtonThemeState.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCalibration.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCalibration.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaign.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaign.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaign+Private.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaignState.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaignState.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveCampaignStatus.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedCampaign.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedCampaign.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedMessage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedMessage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedMessageConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveEmbeddedMessageConfig.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveImage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveImage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveInAppCampaign.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveInAppCampaign.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveInAppMessageConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveInAppMessageConfig.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveInterfaceOrientation.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageCenterDetails.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageCenterDetails.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageController+Private.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageFocus.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageFocus.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageFormat.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageFormat.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessagePage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessagePage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessagePageViewController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessagePageViewController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageUIView.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageUIView.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageViewController.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveMessageViewController.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTextImageView.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTextImageView.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTextViewStyle.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTextViewStyle.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveThemedUIButton.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveThemedUIButton.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTrigger.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTrigger.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTriggerCondition.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveTriggerCondition.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveUIButton.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveUIButton.m
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveUITextView.h
+Teavaro Ecomm Demo App/Pods/SwrveSDK/SwrveSDK/SDK/Messaging/SwrveUITextView.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/README.md
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/.DS_Store
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/LICENSE
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveAssetsManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveAssetsManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCampaignDelivery.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCampaignDelivery.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCampaignInfluence.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCampaignInfluence.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCommon.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveCommon.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveEvents.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveEvents.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveLocalStorage.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveLocalStorage.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveLogger.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveLogger.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationConstants.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationConstants.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationOptions.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveNotificationOptions.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQA.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQA.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQACampaignInfo.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQACampaignInfo.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQAEventsQueueManager.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQAEventsQueueManager.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQAImagePersonalizationInfo.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveQAImagePersonalizationInfo.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveRESTClient.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveRESTClient.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveSEConfig.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveSEConfig.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveSessionDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveSignatureProtectedFile.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveSignatureProtectedFile.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveUser.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveUser.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveUtils.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/SwrveUtils.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/TextTemplating.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/TextTemplating.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Permissions/SwrveInAppCapabilitiesDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Permissions/SwrvePermissions.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Permissions/SwrvePermissions.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Permissions/SwrvePermissionsDelegate.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Permissions/SwrvePermissionState.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Push/SwrvePush.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Push/SwrvePush.m
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Push/SwrveSwizzleHelper.h
+Teavaro Ecomm Demo App/Pods/SwrveSDKCommon/SwrveSDKCommon/Common/Push/SwrveSwizzleHelper.m
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-acknowledgements.markdown
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-acknowledgements.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-dummy.m
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-Debug-input-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-Debug-output-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-Release-input-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-Release-output-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks.sh
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-Info.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-umbrella.h
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.debug.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.modulemap
+Teavaro Ecomm Demo App/Pods/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.release.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage-prefix.pch
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage-umbrella.h
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage.debug.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage.modulemap
+Teavaro Ecomm Demo App/Pods/Target Support Files/SDWebImage/SDWebImage.release.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveGeoSDK/SwrveGeoSDK-xcframeworks-input-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveGeoSDK/SwrveGeoSDK-xcframeworks-output-files.xcfilelist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveGeoSDK/SwrveGeoSDK-xcframeworks.sh
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveGeoSDK/SwrveGeoSDK.debug.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveGeoSDK/SwrveGeoSDK.release.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/ResourceBundle-SwrveConversationSDK-SwrveSDK-Info.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK-dummy.m
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK-Info.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK-prefix.pch
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK-umbrella.h
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK.debug.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK.modulemap
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDK/SwrveSDK.release.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon-dummy.m
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon-Info.plist
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon-prefix.pch
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon-umbrella.h
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon.debug.xcconfig
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon.modulemap
+Teavaro Ecomm Demo App/Pods/Target Support Files/SwrveSDKCommon/SwrveSDKCommon.release.xcconfig
