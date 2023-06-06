@@ -7,6 +7,7 @@ target 'Ecomm-iOS-App' do
 
 pod 'SwrveSDK'
 pod 'SwrveGeoSDK'
+pod 'utiqSDK'
 
   # Pods for Ecomm-iOS-App
 

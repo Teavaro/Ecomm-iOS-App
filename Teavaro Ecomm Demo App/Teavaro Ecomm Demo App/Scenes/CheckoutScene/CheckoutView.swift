@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 
 let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
 let tipAmounts = [10, 15, 20, 25, 0]

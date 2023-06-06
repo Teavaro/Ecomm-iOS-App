@@ -24,8 +24,6 @@
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
 		008725182A12B14F00263267 /* ShareLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008725172A12B14F00263267 /* ShareLinksView.swift */; };
 		0087251B2A12B63200263267 /* IDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087251A2A12B63200263267 /* IDsView.swift */; };
-		008B884E2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008B884D2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework */; };
-		008B884F2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 008B884D2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
 		00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
@@ -38,6 +36,8 @@
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
 		00AEA9DA2A2F652E00794528 /* Pods-Ecomm-iOS-App in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */; };
 		00AEA9DB2A2F652E00794528 /* Pods-Ecomm-iOS-App in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DD2A2F83B900794528 /* Pulse */; };
+		00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DF2A2F83B900794528 /* PulseUI */; };
 		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
@@ -109,7 +109,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				00AEA9DB2A2F652E00794528 /* Pods-Ecomm-iOS-App in Embed Frameworks */,
-				008B884F2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +134,6 @@
 		008725172A12B14F00263267 /* ShareLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinksView.swift; sourceTree = "<group>"; };
 		0087251A2A12B63200263267 /* IDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDsView.swift; sourceTree = "<group>"; };
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
-		008B884D2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
 		00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbandonedCarts+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -150,6 +148,7 @@
 		00AEA9C72A2F651600794528 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00D547FD29BA5D3500E92B88 /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mraid.js; path = "../../../../../Downloads/1030a67464e061568a5b-b492c9c6a631adb6e6b13f4bf8fcb162825d4c02/mraid.js"; sourceTree = "<group>"; };
+		10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ecomm_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.debug.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.debug.xcconfig"; sourceTree = "<group>"; };
 		C01BD2BE3469A12F78203EDA /* Pods-Ecomm-iOS-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.release.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.release.xcconfig"; sourceTree = "<group>"; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
@@ -182,8 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */,
 				00AEA9DA2A2F652E00794528 /* Pods-Ecomm-iOS-App in Frameworks */,
-				008B884E2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */,
+				00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
 				00AEA9D32A2F651600794528 /* SDWebImage */,
 				00AEA9D52A2F651600794528 /* SwrveSDK */,
-				00AEA9D72A2F651600794528 /* SwrveConversationSDK.bundle */,
+				00AEA9D72A2F651600794528 /* SwrveSDK-SwrveConversationSDK */,
 				00AEA9D92A2F651600794528 /* SwrveSDKCommon */,
 			);
 			name = Products;
@@ -306,7 +306,7 @@
 			children = (
 				00AEA9C72A2F651600794528 /* Pods.xcodeproj */,
 				00AEA9C62A2F650300794528 /* Pods */,
-				008B884D2A265001004ADBD5 /* FunnelConnectSDK-0.1.28.xcframework */,
+				10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -526,6 +526,8 @@
 			);
 			name = "Ecomm-iOS-App";
 			packageProductDependencies = (
+				00AEA9DD2A2F83B900794528 /* Pulse */,
+				00AEA9DF2A2F83B900794528 /* PulseUI */,
 			);
 			productName = "Teavaro Ecomm Demo App";
 			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
@@ -556,6 +558,7 @@
 			);
 			mainGroup = C9FE778B28622C3E006DDD74;
 			packageReferences = (
+				00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */,
 			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
@@ -597,9 +600,10 @@
 			remoteRef = 00AEA9D42A2F651600794528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		00AEA9D72A2F651600794528 /* SwrveConversationSDK.bundle */ = {
+		00AEA9D72A2F651600794528 /* SwrveSDK-SwrveConversationSDK */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
+			name = "SwrveSDK-SwrveConversationSDK";
 			path = SwrveConversationSDK.bundle;
 			remoteRef = 00AEA9D62A2F651600794528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -764,7 +768,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -827,7 +831,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -957,6 +961,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00AEA9DD2A2F83B900794528 /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		00AEA9DF2A2F83B900794528 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */ = {

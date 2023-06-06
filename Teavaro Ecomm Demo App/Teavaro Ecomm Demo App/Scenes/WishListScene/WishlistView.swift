@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 
 struct WishlistView: View {
     

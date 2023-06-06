@@ -7,7 +7,8 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 import SwrveSDK
 import SwrveGeoSDK
 import Combine
@@ -85,30 +86,30 @@ struct AngroView: View {
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
                     print("excecuting didInitializeWithResult")
-                    FunnelConnectSDK.shared.didInitializeWithResult( success: {
+                    UTIQ.shared.didInitializeWithResult( success: {
                         DispatchQueue.main.async {
-//                            print("excecuting FunnelConnectSDK.trustpid.startService()")
-//                            if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
-//                                if(isConsentAccepted){
-//                                    let isStub = UserDefaultsUtils.isStub()
-//                                    try? FunnelConnectSDK.shared.trustPid().startService(isStub: isStub)
-//                                }
-//                            }
-                            print("excecuting FunnelConnectSDK.cdp.startService()")
-                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
-                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
-                                    store.isCdpStarted.toggle()
-                                    store.infoResponse = data
-                                    if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
-                                        store.showModal.toggle()
-                                    }
-                                    print("excecuting SwrveSDK.start(withUserId: \(umid))")
-                                    SwrveSDK.start(withUserId: umid)
-                                    store.isFunnelConnectStarted = true
+                            print("excecuting FunnelConnectSDK.trustpid.startService()")
+                            if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
+                                if(isConsentAccepted){
+                                    let isStub = UserDefaultsUtils.isStub()
+                                    try? UTIQ.shared.startService(isStub: isStub)
                                 }
-                            }, errorCallback: {_ in
-                                print("error FunnelConnectSDK.cdp.startService()")
-                            })
+                            }
+//                            print("excecuting FunnelConnectSDK.cdp.startService()")
+//                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
+//                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
+//                                    store.isCdpStarted.toggle()
+//                                    store.infoResponse = data
+//                                    if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
+//                                        store.showModal.toggle()
+//                                    }
+//                                    print("excecuting SwrveSDK.start(withUserId: \(umid))")
+//                                    SwrveSDK.start(withUserId: umid)
+//                                    store.isFunnelConnectStarted = true
+//                                }
+//                            }, errorCallback: {_ in
+//                                print("error FunnelConnectSDK.cdp.startService()")
+//                            })
                             print("excecuting SwrveGeoSDK.start()")
                             SwrveGeoSDK.start()
                         }

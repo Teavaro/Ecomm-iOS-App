@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 import SwrveSDK
 import SwrveGeoSDK
 //import Logging
-//import Pulse
-//import PulseUI
+import Pulse
+import PulseUI
 
 @main
 struct AppMain: App {
@@ -55,7 +56,8 @@ struct AppMain: App {
                 }
             }
             
-            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
+            UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
+//            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
@@ -111,12 +113,12 @@ struct AppMain: App {
             TrackUtils.geoPlace(value: name)
         }
         
-//        private func initHttpRequestsMonitor() {
-//            if #available(iOS 13.0, *) {
+        private func initHttpRequestsMonitor() {
+            if #available(iOS 13.0, *) {
 //                LoggingSystem.bootstrap(PersistentLogHandler.init)
-//                URLSessionProxyDelegate.enableAutomaticRegistration()
-//            }
-//        }
+                URLSessionProxyDelegate.enableAutomaticRegistration()
+            }
+        }
       }
     
 }

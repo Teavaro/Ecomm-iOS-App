@@ -7,7 +7,8 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 
 struct ShareLinksView: View {
     
@@ -20,10 +21,10 @@ struct ShareLinksView: View {
                 Section(){
                     Button("Click Idend link", action: {
                         TrackUtils.click(value: "share_ident_click_link")
-                        if let userId = try? FunnelConnectSDK.shared.cdp().getUserId(){
-                            let link = "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?hemail=\(userId)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
-                            openShareDialog(subject: "Click Idend link", link: link)
-                        }
+//                        if let userId = try? FunnelConnectSDK.shared.cdp().getUserId(){
+//                            let link = "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?hemail=\(userId)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+//                            openShareDialog(subject: "Click Idend link", link: link)
+//                        }
                     })
                 }
                 Section(){

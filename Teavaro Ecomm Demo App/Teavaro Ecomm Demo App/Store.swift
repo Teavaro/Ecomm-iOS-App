@@ -7,7 +7,8 @@
 
 import Foundation
 import SwiftUI
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 
 class Store: ObservableObject {
     @Published var listItems: [Item] = []
@@ -107,9 +108,9 @@ class Store: ObservableObject {
         if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
             text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
         }
-        if let user_id = try? FunnelConnectSDK.shared.cdp().getUserId(){
-            text += "&amp;" + "rp.user.userId" + "=\(user_id)"
-        }
+//        if let user_id = try? FunnelConnectSDK.shared.cdp().getUserId(){
+//            text += "&amp;" + "rp.user.userId" + "=\(user_id)"
+//        }
         text += "&amp;device=ios"
         text += "&amp;impression=offer"
 //        print("iran:infoResponse", infoResponse)

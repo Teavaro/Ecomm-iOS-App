@@ -7,7 +7,8 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
+//import FunnelConnectSDK
+import utiqSDK
 
 struct ACItemsListingView: View{
     
