@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 import SwrveSDK
 import SwrveGeoSDK
@@ -57,7 +57,7 @@ struct AppMain: App {
             }
             
             UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
-//            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
+            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()

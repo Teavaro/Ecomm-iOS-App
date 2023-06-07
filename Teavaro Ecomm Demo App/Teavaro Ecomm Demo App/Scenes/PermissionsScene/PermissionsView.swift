@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 
 struct PermissionsView: View {
@@ -43,14 +43,15 @@ struct PermissionsView: View {
     }
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
-//        let permissions = PermissionsMap()
-//        permissions.addPermission(key: "CS-OM",accepted: om)
-//        permissions.addPermission(key: "CS-OPT",accepted: opt)
-//        permissions.addPermission(key: "CS-NBA",accepted: nba)
-//        permissions.addPermission(key: "CS-TPID",accepted: tpid)
-//        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-//            UserDefaultsUtils.setPermissionsRequested(value: true)
-//        }, errorCallback: {_ in })
+        print("excecuting updatePermissions")
+        let permissions = PermissionsMap()
+        permissions.addPermission(key: "CS-OM",accepted: om)
+        permissions.addPermission(key: "CS-OPT",accepted: opt)
+        permissions.addPermission(key: "CS-NBA",accepted: nba)
+        permissions.addPermission(key: "CS-TPID",accepted: tpid)
+        FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
+            UserDefaultsUtils.setPermissionsRequested(value: true)
+        }, errorCallback: {_ in })
     }
     
     var body: some View {
@@ -76,7 +77,7 @@ struct PermissionsView: View {
                 insertButton(title: "Accept All", color: .green, action: {
                     TrackUtils.click(value: "accept_permissions")
                     updatePermissions(om: true, nba: true, opt: true, tpid: true)
-                    startTrustPid()
+//                    startTrustPid()
                     dismiss()
                 })
             }
@@ -97,12 +98,12 @@ struct PermissionsView: View {
         .navigationTitle("Permissions")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-//            if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(){
-//                self.om = permissions.getPermission(key: "CS-OM")
-//                self.opt = permissions.getPermission(key: "CS-OPT")
-//                self.nba = permissions.getPermission(key: "CS-NBA")
-//                self.tpid = permissions.getPermission(key: "CS-TPID")
-//            }
+            if let permissions = try? FunnelConnectSDK.shared.getPermissions(){
+                self.om = permissions.getPermission(key: "CS-OM")
+                self.opt = permissions.getPermission(key: "CS-OPT")
+                self.nba = permissions.getPermission(key: "CS-NBA")
+                self.tpid = permissions.getPermission(key: "CS-TPID")
+            }
             TrackUtils.impression(value: "permissions_view")
         })
     }

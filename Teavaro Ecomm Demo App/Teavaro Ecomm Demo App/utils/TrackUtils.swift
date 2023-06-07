@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 import SwiftUI
 
@@ -18,22 +18,27 @@ class TrackUtils {
     static let GEO_PLACE = "geo_place"
     
     static func impression(value: String){
-//        try? FunnelConnectSDK.shared.cdp().logEvent(key: IMPRESSION, value: value)
+        print("logEvent impression")
+        try? FunnelConnectSDK.shared.logEvent(key: IMPRESSION, value: value)
     }
     
     static func click(value: String){
-//        try? FunnelConnectSDK.shared.cdp().logEvent(key: CLICK, value: value)
+        print("logEvent click")
+        try? FunnelConnectSDK.shared.logEvent(key: CLICK, value: value)
     }
     
     static func events(events: [String: String]){
-//        try? FunnelConnectSDK.shared.cdp().logEvents(events: events)
+        print("logEvent events")
+        try? FunnelConnectSDK.shared.logEvents(events: events)
     }
     
     static func geoPlace(value: String){
-//        try? FunnelConnectSDK.shared.cdp().logEvent(key: GEO_PLACE, value: value)
+        print("logEvent geoPlace")
+        try? FunnelConnectSDK.shared.logEvent(key: GEO_PLACE, value: value)
     }
     
     static func lifeCycle(phase: ScenePhase){
+        print("logEvent lifeCycle")
         if phase == .active {
             impression(value: "active_scene")
         } else if phase == .inactive {
