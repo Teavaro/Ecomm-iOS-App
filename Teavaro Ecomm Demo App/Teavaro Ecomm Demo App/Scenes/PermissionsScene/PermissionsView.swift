@@ -77,7 +77,7 @@ struct PermissionsView: View {
                 insertButton(title: "Accept All", color: .green, action: {
                     TrackUtils.click(value: "accept_permissions")
                     updatePermissions(om: true, nba: true, opt: true, tpid: true)
-//                    startTrustPid()
+                    startTrustPid()
                     dismiss()
                 })
             }

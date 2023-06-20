@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 
 struct IDsView: View {
@@ -21,17 +21,22 @@ struct IDsView: View {
                 Section{
                     Text("UserId:")
                         .bold()
-//                    Text(try! FunnelConnectSDK.shared.cdp().getUserId() ?? "")
+                    Text(try! FunnelConnectSDK.shared.getUserId() ?? "")
                 }
                 Section{
                     Text("Umid:")
                         .bold()
-//                    Text(try! FunnelConnectSDK.shared.cdp().getUmid() ?? "")
+                    Text(try! FunnelConnectSDK.shared.getUMID() ?? "")
                 }
                 Section{
-                    Text("Mtid:")
+                    Text("Atid:")
                         .bold()
-                    Text("")
+                    Text(store.atid ?? "")
+                }
+                Section{
+                    Text("Mtid")
+                        .bold()
+                    Text(store.mtid ?? "")
                 }
             }
         }

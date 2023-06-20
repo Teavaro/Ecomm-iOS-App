@@ -8,6 +8,24 @@
         "revision" : "e8bc65bd43d1f32aef533e723f2d324830431120",
         "version" : "3.7.3"
       }
+    },
+    {
+      "identity" : "pulseloghandler",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/PulseLogHandler.git",
+      "state" : {
+        "revision" : "3ca42eada318ad8ed9c3246f5e32c19413dae3ce",
+        "version" : "3.2.0"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "32e8d724467f8fe623624570367e3d50c5638e46",
+        "version" : "1.5.2"
+      }
     }
   ],
   "version" : 2

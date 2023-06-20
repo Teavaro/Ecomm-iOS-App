@@ -17,6 +17,7 @@ class UserDefaultsUtils {
     private static let userDefaults = UserDefaults.standard
     private static let IS_STUB = "IS_STUB"
     private static let IS_LOGIN = "IS_LOGIN"
+    private static let MTID = "MTID"
     
     static func isCdpConsentAccepted() -> Bool {
         return self.userDefaults.bool(forKey: CDP_CONSENT)

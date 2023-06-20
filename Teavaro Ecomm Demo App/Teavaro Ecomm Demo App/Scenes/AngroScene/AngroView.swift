@@ -18,6 +18,7 @@ struct AngroView: View {
     @EnvironmentObject var store: Store
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    var coordinator: Coordinator
     
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -61,7 +62,7 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-                    CeltraWebView(store: store)
+                    CeltraWebView(banner: store.getBanner(), coordinator: coordinator)
                         .frame(height: 120)
                     
                     Text("Best selling items:")
@@ -85,16 +86,9 @@ struct AngroView: View {
             }
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
-                    print("excecuting didInitializeWithResult")
-                    FunnelConnectSDK.shared.didInitializeWithResult( success: {
-                        DispatchQueue.main.async {
-                            print("excecuting FunnelConnectSDK.trustpid.startService()")
-                            if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
-                                if(isConsentAccepted){
-                                    let isStub = UserDefaultsUtils.isStub()
-                                    try? UTIQ.shared.startService(isStub: isStub)
-                                }
-                            }
+                    DispatchQueue.main.async {
+                        print("excecuting FunnelConnectSDK.shared.didInitializeWithResult")
+                        FunnelConnectSDK.shared.didInitializeWithResult( success: {
                             print("excecuting FunnelConnectSDK.cdp.startService()")
                             FunnelConnectSDK.shared.startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
                                 if let umid = try? FunnelConnectSDK.shared.getUMID() {
@@ -105,17 +99,35 @@ struct AngroView: View {
                                     }
                                     print("excecuting SwrveSDK.start(withUserId: \(umid))")
                                     SwrveSDK.start(withUserId: umid)
+                                    print("excecuting SwrveGeoSDK.start()")
+                                    SwrveGeoSDK.start()
                                     store.isFunnelConnectStarted = true
                                 }
                             }, errorCallback: {_ in
                                 print("error FunnelConnectSDK.cdp.startService()")
                             })
-                            print("excecuting SwrveGeoSDK.start()")
-                            SwrveGeoSDK.start()
-                        }
-                    }, failure: {_ in
-                        print("error FunnelConnectSDK.shared.didInitializeWithResult")
-                    })
+                        }, failure: {_ in
+                            print("error FunnelConnectSDK.shared.didInitializeWithResult")
+                        })
+                        print("excecuting UTIQ.shared.didInitializeWithResult")
+                        UTIQ.shared.didInitializeWithResult(success: {
+                            print("excecuting UTIQ.shared.startService()")
+                            if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
+                                if(isConsentAccepted){
+                                    let isStub = UserDefaultsUtils.isStub()
+                                    UTIQ.shared.startService(isStub: isStub, dataCallback: {data in
+                                        store.mtid = data.mtid
+                                        TrackUtils.mtid = data.mtid
+                                        store.atid = data.atid
+                                    },errorCallback: {error in
+
+                                    })
+                                }
+                            }
+                        }, failure: { _ in
+                            print("error UTIQ.shared.startService()")
+                        })
+                    }
                 }
                 TrackUtils.impression(value: "home_view")
             })

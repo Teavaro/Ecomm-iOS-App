@@ -10,9 +10,10 @@ import funnelConnectSDK
 import utiqSDK
 import SwrveSDK
 import SwrveGeoSDK
-//import Logging
 import Pulse
 import PulseUI
+import PulseLogHandler
+import Logging
 
 @main
 struct AppMain: App {
@@ -41,9 +42,9 @@ struct AppMain: App {
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
-            print("excecuting FunnelConnectSDK.initialize()")
             
-//            self.initHttpRequestsMonitor()
+            
+            self.initHttpRequestsMonitor()
             
             let center = UNUserNotificationCenter.current()
             center.delegate = self
@@ -56,8 +57,11 @@ struct AppMain: App {
                 }
             }
             
-            UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
+            
+            print("excecuting FunnelConnectSDK.initialize()")
             FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
+            print("excecuting UTIQ.initialize()")
+            UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
@@ -66,9 +70,7 @@ struct AppMain: App {
                 config.initMode = SWRVE_INIT_MODE_MANAGED
                 config.pushNotificationEvents = Set(["full_permission_button_clicked"])
                 config.provisionalPushNotificationEvents = Set(["Swrve.session.start"])
-                if #available(iOS 10.0, *) {
-                    config.notificationCategories = self.produceUNNotificationCategory() as! Set<UNNotificationCategory>
-                }
+                config.notificationCategories = self.produceUNNotificationCategory() as! Set<UNNotificationCategory>
                 print("excecuting SwrveSDK.sharedInstance()")
                 SwrveSDK.sharedInstance(withAppID: 32153,
                     apiKey: "FiIpd4eZ8CtQ6carAAx9",
@@ -83,7 +85,6 @@ struct AppMain: App {
           return true
         }
         
-        @available(iOS 10.0, *)
         func produceUNNotificationCategory() -> NSSet {
 
             let fgAction = UNNotificationAction(identifier: NotificationActionOneIdentifier, title: "Foreground", options: [UNNotificationActionOptions.foreground])
@@ -95,7 +96,6 @@ struct AppMain: App {
             return NSSet(array:[exampleCategory])
         }
         
-        @available(iOS 10.0, *)
         func didReceive(_ response: UNNotificationResponse, withCompletionHandler completionHandler: (() -> Void)) {
             let userInfo = response.notification.request.content.userInfo
             if let infoNotification = userInfo["New Group 1"]{
@@ -104,7 +104,6 @@ struct AppMain: App {
             completionHandler()
         }
         
-        @available(iOS 10.0, *)
         func willPresent(_ notification: UNNotification, withCompletionHandler completionHandler: ((UNNotificationPresentationOptions) -> Void)) {
             completionHandler([.banner, .list, .sound])
         }
@@ -114,10 +113,8 @@ struct AppMain: App {
         }
         
         private func initHttpRequestsMonitor() {
-            if #available(iOS 13.0, *) {
-//                LoggingSystem.bootstrap(PersistentLogHandler.init)
-                URLSessionProxyDelegate.enableAutomaticRegistration()
-            }
+            LoggingSystem.bootstrap(PersistentLogHandler.init)
+            URLSessionProxyDelegate.enableAutomaticRegistration()
         }
       }
     

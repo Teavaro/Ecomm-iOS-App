@@ -7,8 +7,7 @@
 
 import Foundation
 import SwiftUI
-//import FunnelConnectSDK
-import utiqSDK
+import funnelConnectSDK
 
 class Store: ObservableObject {
     @Published var listItems: [Item] = []
@@ -29,6 +28,8 @@ class Store: ObservableObject {
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
+    var atid: String? = nil
+    var mtid: String? = nil
 
     init() {
         initializeData()
@@ -88,6 +89,7 @@ class Store: ObservableObject {
     }
     
     func getBanner() -> String{
+        print("getBanner()")
         var text = ""
         var userId = "none"
         var obj: InfoResponse? = nil
@@ -108,9 +110,11 @@ class Store: ObservableObject {
         if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
             text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
         }
-//        if let user_id = try? FunnelConnectSDK.shared.cdp().getUserId(){
-//            text += "&amp;" + "rp.user.userId" + "=\(user_id)"
-//        }
+        if(FunnelConnectSDK.shared.isInitialize()){
+            if let user_id = try? FunnelConnectSDK.shared.getUserId(){
+                text += "&amp;" + "rp.user.userId" + "=\(user_id)"
+            }
+        }
         text += "&amp;device=ios"
         text += "&amp;impression=offer"
 //        print("iran:infoResponse", infoResponse)

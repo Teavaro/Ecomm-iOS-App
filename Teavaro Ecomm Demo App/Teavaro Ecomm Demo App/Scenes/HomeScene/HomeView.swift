@@ -17,7 +17,7 @@ struct HomeView: View {
 //            Image(uiImage: UIImage(imageLiteralResourceName: "logo-angro"))
 //                .padding()
             TabView(selection: $store.tabSelection) {
-                AngroView()
+                AngroView(coordinator: Coordinator(store: store))
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }

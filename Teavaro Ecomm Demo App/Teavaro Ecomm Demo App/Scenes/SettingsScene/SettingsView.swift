@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 
 struct SettingsView: View {
@@ -69,7 +69,7 @@ struct SettingsView: View {
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
-//                            updatePermissions(om: false, nba: false, opt: false)
+                            updatePermissions(om: false, nba: false, opt: false)
                             clearData()
                         })
                     }
@@ -105,19 +105,19 @@ struct SettingsView: View {
     
     fileprivate func clearData(){
         store.clearData()
-//        try? FunnelConnectSDK.shared.clearData()
-//        try? FunnelConnectSDK.shared.clearCookies()
+        try? FunnelConnectSDK.shared.clearData()
+        try? FunnelConnectSDK.shared.clearCookies()
     }
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
-//        let permissions = PermissionsMap()
-//        permissions.addPermission(key: "CS-OM",accepted: om)
-//        permissions.addPermission(key: "CS-OPT",accepted: opt)
-//        permissions.addPermission(key: "CS-NBA",accepted: nba)
-//        permissions.addPermission(key: "CS-TPID",accepted: nba)
-//        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-//            UserDefaultsUtils.setPermissionsRequested(value: true)
-//        }, errorCallback: {_ in })
+        let permissions = PermissionsMap()
+        permissions.addPermission(key: "CS-OM",accepted: om)
+        permissions.addPermission(key: "CS-OPT",accepted: opt)
+        permissions.addPermission(key: "CS-NBA",accepted: nba)
+        permissions.addPermission(key: "CS-TPID",accepted: nba)
+        FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
+            UserDefaultsUtils.setPermissionsRequested(value: true)
+        }, errorCallback: {_ in })
     }
 }
 

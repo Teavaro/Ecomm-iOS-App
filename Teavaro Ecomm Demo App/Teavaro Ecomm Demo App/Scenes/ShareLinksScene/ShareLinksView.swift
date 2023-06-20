@@ -7,13 +7,14 @@
 
 import SwiftUI
 import CoreData
-//import FunnelConnectSDK
+import funnelConnectSDK
 import utiqSDK
 
 struct ShareLinksView: View {
     
     @EnvironmentObject var store: Store
     @Environment(\.dismiss) private var dismiss
+    @State var shareText: ShareText?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,17 +22,17 @@ struct ShareLinksView: View {
                 Section(){
                     Button("Click Idend link", action: {
                         TrackUtils.click(value: "share_ident_click_link")
-//                        if let userId = try? FunnelConnectSDK.shared.cdp().getUserId(){
-//                            let link = "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?hemail=\(userId)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
-//                            openShareDialog(subject: "Click Idend link", link: link)
-//                        }
+                        if let userId = try? FunnelConnectSDK.shared.getUserId(){
+                            let link = "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?hemail=\(userId)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+                            shareText = ShareText(text: link)
+                        }
                     })
                 }
                 Section(){
                     Button("Abandoned Cart link", action: {
                         TrackUtils.click(value: "share_ac_link")
                         let link = "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(store.getAbCartId())"
-                        openShareDialog(subject: "Abandoned Cart link", link: link)
+                        shareText = ShareText(text: link)
                     })
                 }
             }
@@ -43,18 +44,21 @@ struct ShareLinksView: View {
         .onAppear(perform: {
             TrackUtils.impression(value: "share_links_view")
         })
+        .sheet(item: $shareText) { shareText in
+            ActivityView(text: shareText.text)
+        }
     }
     
-    func openShareDialog(subject: String, link: String){
-        let mailTo = ""
-        if let urlString = "mailto:\(mailTo)?subject=\(subject)&body=\(link)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-           let url = URL(string: urlString) {
-            UIApplication.shared.open(url, completionHandler: nil)
-        }
-        else {
-            print("Error")
-        }
-    }
+//    func openShareDialog(subject: String, link: String){
+//        let mailTo = ""
+//        if let urlString = "mailto:\(mailTo)?subject=\(subject)&body=\(link)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+//           let url = URL(string: urlString) {
+//            UIApplication.shared.open(url, completionHandler: nil)
+//        }
+//        else {
+//            print("Error")
+//        }
+//    }
 }
 
 
@@ -62,4 +66,19 @@ struct ShareLinksView_Previews: PreviewProvider {
     static var previews: some View {
         ShareLinksView()
     }
+}
+
+struct ActivityView: UIViewControllerRepresentable {
+    let text: String
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: [text], applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>) {}
+}
+
+struct ShareText: Identifiable {
+    let id = UUID()
+    let text: String
 }

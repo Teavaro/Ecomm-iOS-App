@@ -7,8 +7,7 @@
 
 import SwiftUI
 import CoreData
-//import FunnelConnectSDK
-import utiqSDK
+import funnelConnectSDK
 
 struct LoginView: View {
     
@@ -56,14 +55,14 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-//                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "hemail", userId: loginId.hash256), dataCallback:
-//                        { data in
-//                            store.infoResponse = data
-//                            store.isLogin = true
-//                            UserDefaultsUtils.setLogin(value: true)
-//                        }, errorCallback: { _ in
-//                            
-//                        })
+                    FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "hemail", userId: loginId.hash256), dataCallback:
+                        { data in
+                            store.infoResponse = data
+                            store.isLogin = true
+                            UserDefaultsUtils.setLogin(value: true)
+                        }, errorCallback: { _ in
+                            
+                        })
                     dismiss()
                 }
                 else{
