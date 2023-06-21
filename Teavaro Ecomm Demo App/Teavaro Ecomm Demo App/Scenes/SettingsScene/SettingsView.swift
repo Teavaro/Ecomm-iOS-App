@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 import funnelConnectSDK
 import utiqSDK
+import Pulse
+import PulseUI
 
 struct SettingsView: View {
     
@@ -65,6 +67,12 @@ struct SettingsView: View {
                         NavigationLink(destination: IDsView()) {
                             Text("IDs")
                         }
+                    }
+                    Section(){
+                        Button("Network logs", action: {
+                            let loggerView = UIHostingController(rootView: ConsoleView())
+                            UIApplication.shared.topViewController()?.present(loggerView, animated: true)
+                        })
                     }
                     Section(){
                         Button("Clear Data", action: {

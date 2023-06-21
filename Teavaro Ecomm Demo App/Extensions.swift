@@ -55,16 +55,24 @@ extension UIViewController {
     
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            if #available(iOS 13.0, *) {
-                let loggerView = UIHostingController(rootView: MainView())
-                UIApplication.shared.topViewController()?.present(loggerView, animated: true)
-            }
+            let loggerView = UIHostingController(rootView: ConsoleView())
+            UIApplication.shared.topViewController()?.present(loggerView, animated: true)
         }
     }
 }
 
+extension UIWindow {
+    static var key: UIWindow? {
+        return UIApplication
+            .shared
+            .connectedScenes
+            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .last { $0.isKeyWindow }
+    }
+}
+
 extension UIApplication {
-    func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    func topViewController(controller: UIViewController? = UIWindow.key?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {
             return topViewController(controller: navigationController.visibleViewController)
         }

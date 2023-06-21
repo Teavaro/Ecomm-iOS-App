@@ -18,6 +18,7 @@ class UserDefaultsUtils {
     private static let IS_STUB = "IS_STUB"
     private static let IS_LOGIN = "IS_LOGIN"
     private static let MTID = "MTID"
+    private static let USER_NAME = "USER_NAME"
     
     static func isCdpConsentAccepted() -> Bool {
         return self.userDefaults.bool(forKey: CDP_CONSENT)
@@ -77,5 +78,13 @@ class UserDefaultsUtils {
     
     static func setLogin(value: Bool) {
         self.userDefaults.set(value, forKey: IS_LOGIN)
+    }
+    
+    static func getUserName() -> String? {
+        return self.userDefaults.string(forKey: USER_NAME)
+    }
+    
+    static func setUserName(value: String) {
+        self.userDefaults.set(value, forKey: USER_NAME)
     }
 }

@@ -42,8 +42,6 @@ struct AppMain: App {
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
-            
-            
             self.initHttpRequestsMonitor()
             
             let center = UNUserNotificationCenter.current()

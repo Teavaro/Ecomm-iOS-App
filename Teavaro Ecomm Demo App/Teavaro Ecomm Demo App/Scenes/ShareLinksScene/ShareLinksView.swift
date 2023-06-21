@@ -22,8 +22,7 @@ struct ShareLinksView: View {
                 Section(){
                     Button("Click Idend link", action: {
                         TrackUtils.click(value: "share_ident_click_link")
-                        if let userId = try? FunnelConnectSDK.shared.getUserId(){
-                            let link = "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?hemail=\(userId)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+                        if let link = store.getClickIdentLink(){
                             shareText = ShareText(text: link)
                         }
                     })
@@ -31,8 +30,9 @@ struct ShareLinksView: View {
                 Section(){
                     Button("Abandoned Cart link", action: {
                         TrackUtils.click(value: "share_ac_link")
-                        let link = "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(store.getAbCartId())"
-                        shareText = ShareText(text: link)
+                        if let link = store.getAbCartLink(){
+                            shareText = ShareText(text: link)
+                        }
                     })
                 }
             }

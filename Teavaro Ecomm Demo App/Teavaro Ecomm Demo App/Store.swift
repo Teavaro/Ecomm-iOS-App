@@ -110,11 +110,12 @@ class Store: ObservableObject {
         if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
             text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
         }
-        if(FunnelConnectSDK.shared.isInitialize()){
-            if let user_id = try? FunnelConnectSDK.shared.getUserId(){
-                text += "&amp;" + "rp.user.userId" + "=\(user_id)"
-            }
+       
+        if let userName = UserDefaultsUtils.getUserName(){
+//            text += "&amp;" + "rp.user.userId" + "=\(userName)"
+            text += "&amp;" + "rp.user.userId" + "=\(userName)"
         }
+        
         text += "&amp;device=ios"
         text += "&amp;impression=offer"
 //        print("iran:infoResponse", infoResponse)
@@ -260,5 +261,19 @@ class Store: ObservableObject {
                 tabSelection = 2
             }
         }
+    }
+    
+    func getClickIdentLink() -> String?{
+        if let userName = UserDefaultsUtils.getUserName(){
+            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?enemail=\(userName)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+        }
+        return nil
+    }
+    
+    func getAbCartLink() -> String?{
+        if let abCartId = DataManager.shared.getAbandonedCarts().last?.id{
+            return "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(abCartId)"
+        }
+        return nil
     }
 }

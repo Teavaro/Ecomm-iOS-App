@@ -60,6 +60,7 @@ struct LoginView: View {
                             store.infoResponse = data
                             store.isLogin = true
                             UserDefaultsUtils.setLogin(value: true)
+                            UserDefaultsUtils.setUserName(value: loginId)
                         }, errorCallback: { _ in
                             
                         })
