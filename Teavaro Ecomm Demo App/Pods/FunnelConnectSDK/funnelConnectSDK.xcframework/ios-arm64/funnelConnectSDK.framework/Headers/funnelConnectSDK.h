@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class FCSDKBasePermissionsMap, FCSDKFCOptions, FCSDKFCUserCompanion, FCSDKFCUser, NSError, FCSDKFunnelConnectSDK, FCSDKPermissionsMap, FCSDKKotlinThrowable, FCSDKKotlinArray<T>, FCSDKKotlinx_serialization_coreSerializersModule, FCSDKKotlinx_serialization_coreSerialKind, FCSDKKotlinNothing;
+@class FCSDKBasePermissions, NSDictionary, FCSDKFCOptions, FCSDKFCUserCompanion, FCSDKFCUser, NSError, FCSDKFunnelConnectSDK, FCSDKPermissions, FCSDKKotlinThrowable, FCSDKKotlinArray<T>, FCSDKKotlinx_serialization_coreSerializersModule, FCSDKKotlinx_serialization_coreSerialKind, FCSDKKotlinNothing;
 
 @protocol FCSDKKotlinx_serialization_coreKSerializer, FCSDKCoreSDKMainClassUtils, FCSDKKotlinx_serialization_coreEncoder, FCSDKKotlinx_serialization_coreSerialDescriptor, FCSDKKotlinx_serialization_coreSerializationStrategy, FCSDKKotlinx_serialization_coreDecoder, FCSDKKotlinx_serialization_coreDeserializationStrategy, FCSDKKotlinx_serialization_coreCompositeEncoder, FCSDKKotlinAnnotation, FCSDKKotlinx_serialization_coreCompositeDecoder, FCSDKKotlinIterator, FCSDKKotlinx_serialization_coreSerializersModuleCollector, FCSDKKotlinKClass, FCSDKKotlinKDeclarationContainer, FCSDKKotlinKAnnotatedElement, FCSDKKotlinKClassifier;
 
@@ -144,8 +144,8 @@ __attribute__((swift_name("KotlinBoolean")))
 + (instancetype)numberWithBool:(BOOL)value;
 @end
 
-__attribute__((swift_name("BasePermissionsMap")))
-@interface FCSDKBasePermissionsMap : FCSDKBase
+__attribute__((swift_name("BasePermissions")))
+@interface FCSDKBasePermissions : FCSDKBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithKey:(NSString *)key accepted:(BOOL)accepted __attribute__((swift_name("init(key:accepted:)"))) __attribute__((objc_designated_initializer));
@@ -159,11 +159,12 @@ __attribute__((swift_name("BasePermissionsMap")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("PermissionsMap")))
-@interface FCSDKPermissionsMap : FCSDKBasePermissionsMap
+__attribute__((swift_name("Permissions")))
+@interface FCSDKPermissions : FCSDKBasePermissions
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (instancetype)initWithKey:(NSString *)key accepted:(BOOL)accepted __attribute__((swift_name("init(key:accepted:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+- (NSDictionary *)asDictionary __attribute__((swift_name("asDictionary()")));
 - (NSArray<NSString *> *)getAllKeys __attribute__((swift_name("getAllKeys()")));
 @end
 
@@ -249,7 +250,7 @@ __attribute__((swift_name("FunnelConnectSDK")))
  * @note This method converts instances of Exception to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (FCSDKPermissionsMap * _Nullable)getPermissionsAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("getPermissions()")));
+- (FCSDKPermissions * _Nullable)getPermissionsAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("getPermissions()")));
 
 /**
  * @note This method converts instances of Exception to errors.
@@ -314,7 +315,7 @@ __attribute__((swift_name("FunnelConnectSDK")))
 */
 - (BOOL)startServiceNotificationsName:(NSString *)notificationsName notificationsVersion:(int32_t)notificationsVersion error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("startService(notificationsName:notificationsVersion:)")));
 - (void)startServiceNotificationsName:(NSString *)notificationsName notificationsVersion:(int32_t)notificationsVersion dataCallback:(void (^)(NSString *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(notificationsName:notificationsVersion:dataCallback:errorCallback:)")));
-- (void)updatePermissionsPermissions:(FCSDKPermissionsMap *)permissions notificationsName:(NSString *)notificationsName notificationsVersion:(int32_t)notificationsVersion dataCallback:(void (^)(NSString *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("updatePermissions(permissions:notificationsName:notificationsVersion:dataCallback:errorCallback:)")));
+- (void)updatePermissionsPermissions:(FCSDKPermissions *)permissions notificationsName:(NSString *)notificationsName notificationsVersion:(int32_t)notificationsVersion dataCallback:(void (^)(NSString *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("updatePermissions(permissions:notificationsName:notificationsVersion:dataCallback:errorCallback:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))

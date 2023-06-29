@@ -44,7 +44,7 @@ struct PermissionsView: View {
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
         print("excecuting updatePermissions")
-        let permissions = PermissionsMap()
+        let permissions = Permissions()
         permissions.addPermission(key: "CS-OM",accepted: om)
         permissions.addPermission(key: "CS-OPT",accepted: opt)
         permissions.addPermission(key: "CS-NBA",accepted: nba)

@@ -103,11 +103,13 @@ struct AngroView: View {
                                     SwrveGeoSDK.start()
                                     store.isFunnelConnectStarted = true
                                 }
-                            }, errorCallback: {_ in
+                            }, errorCallback: {error in
                                 print("error FunnelConnectSDK.cdp.startService()")
+                                print("error: \(error)")
                             })
-                        }, failure: {_ in
+                        }, failure: {error in
                             print("error FunnelConnectSDK.shared.didInitializeWithResult")
+                            print("error: \(error)")
                         })
                         print("excecuting UTIQ.shared.didInitializeWithResult")
                         UTIQ.shared.didInitializeWithResult(success: {
@@ -120,12 +122,14 @@ struct AngroView: View {
                                         TrackUtils.mtid = data.mtid
                                         store.atid = data.atid
                                     },errorCallback: {error in
-
+                                        print("error UTIQ.shared.startService")
+                                        print("error: \(error)")
                                     })
                                 }
                             }
-                        }, failure: { _ in
-                            print("error UTIQ.shared.startService()")
+                        }, failure: { error in
+                            print("error UTIQ.shared.didInitializeWithResult")
+                            print("error: \(error)")
                         })
                     }
                 }

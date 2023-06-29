@@ -20,20 +20,30 @@ struct ShareLinksView: View {
         VStack(alignment: .leading) {
             List {
                 Section(){
-                    Button("Click Idend link", action: {
-                        TrackUtils.click(value: "share_ident_click_link")
-                        if let link = store.getClickIdentLink(){
-                            shareText = ShareText(text: link)
+                    if let link = store.getClickIdentLink(){
+                        if #available(iOS 16.0, *) {
+                            ShareLink("Click Idend link", item: URL(string: link)!)
                         }
-                    })
+                         else {
+                            Button("Click Idend link", action: {
+                                TrackUtils.click(value: "share_ident_click_link")
+                                shareText = ShareText(text: link)
+                            })
+                        }
+                    }
                 }
                 Section(){
-                    Button("Abandoned Cart link", action: {
-                        TrackUtils.click(value: "share_ac_link")
-                        if let link = store.getAbCartLink(){
-                            shareText = ShareText(text: link)
+                    if let link = store.getAbCartLink(){
+                        if #available(iOS 16.0, *) {
+                            ShareLink("Abandoned Cart link", item: URL(string: link)!)
                         }
-                    })
+                         else {
+                            Button("Abandoned Cart link", action: {
+                                TrackUtils.click(value: "share_ac_link")
+                                shareText = ShareText(text: link)
+                            })
+                        }
+                    }
                 }
             }
         }
