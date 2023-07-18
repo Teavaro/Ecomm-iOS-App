@@ -23,14 +23,15 @@
 UTIQ-iOS-SDK SDK reduces the time and the overhead required to integrate with UTIQ APIs and provides direct access to UTIQ services.
 
 ## Installation and integration:
-For installation and integration please check the SDK [documentation](https://docs.utiq.com/documentation/).
+For installation and integration please check the SDK [documentation](https://docs.utiq.com/).
 
 
 ## Support and bug reporting:
-- If you want to report a bug or you have any suggestions or a question, please create a new issue on this **[GitHub repository](https://github.com/Utiq-tech/UTIQ-iOS-SDK-Tracker/issues/new)**.
-- You can also check if there is a similar issue to yours that has been solved before **[here](https://github.com/Utiq-tech/UTIQ-Mobile-SDK-Tracker/issues)**.
-- [Send us an email](mailto:clientsdks@teavaro.com  "Email us")
+
+- If you want to report a bug or you have any suggestions or a question, please create a new issue on this **[GitHub repository](https://github.com/Utiq-tech/UTIQ-iOS-SDK/issues/new)**.
+- You can also check if there is a similar issue to yours that has been solved before **[here](https://github.com/Utiq-tech/UTIQ-iOS-SDK/issues?q=)**.
+- [Send us an email](mailto:support@utiq.com  "Email us")
 
 ## License:
-**UTIQ-iOS SDK** is released under **UTIQ Ltd. [license](https://github.com/Utiq-tech/UTIQ-iOS-SDK/blob/main/LICENSE)**.
+**UTIQ-iOS SDK** is released under **Utiq SA/NV. [license](https://github.com/Utiq-tech/UTIQ-iOS-SDK/blob/main/LICENSE)**.
 

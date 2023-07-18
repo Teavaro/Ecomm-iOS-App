@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class NSError, USDKUTIQ, USDKUTIQOptions, USDKIdcData, USDKIdcDataCompanion, USDKKotlinThrowable, USDKKotlinArray<T>, USDKKotlinx_serialization_coreSerializersModule, USDKKotlinx_serialization_coreSerialKind, USDKKotlinNothing;
+@class USDKIdcDataCompanion, USDKIdcData, USDKUTIQOptions, NSError, USDKUTIQ, USDKKotlinThrowable, USDKKotlinArray<T>, USDKKotlinx_serialization_coreSerializersModule, USDKKotlinx_serialization_coreSerialKind, USDKKotlinNothing;
 
-@protocol USDKCoreSDKMainClassUtils, USDKKotlinx_serialization_coreKSerializer, USDKKotlinx_serialization_coreEncoder, USDKKotlinx_serialization_coreSerialDescriptor, USDKKotlinx_serialization_coreSerializationStrategy, USDKKotlinx_serialization_coreDecoder, USDKKotlinx_serialization_coreDeserializationStrategy, USDKKotlinIterator, USDKKotlinx_serialization_coreCompositeEncoder, USDKKotlinAnnotation, USDKKotlinx_serialization_coreCompositeDecoder, USDKKotlinx_serialization_coreSerializersModuleCollector, USDKKotlinKClass, USDKKotlinKDeclarationContainer, USDKKotlinKAnnotatedElement, USDKKotlinKClassifier;
+@protocol USDKKotlinx_serialization_coreKSerializer, USDKCoreSDKMainClassUtils, USDKKotlinx_serialization_coreEncoder, USDKKotlinx_serialization_coreSerialDescriptor, USDKKotlinx_serialization_coreSerializationStrategy, USDKKotlinx_serialization_coreDecoder, USDKKotlinx_serialization_coreDeserializationStrategy, USDKKotlinx_serialization_coreCompositeEncoder, USDKKotlinAnnotation, USDKKotlinx_serialization_coreCompositeDecoder, USDKKotlinIterator, USDKKotlinx_serialization_coreSerializersModuleCollector, USDKKotlinKClass, USDKKotlinKDeclarationContainer, USDKKotlinKAnnotatedElement, USDKKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -144,6 +144,45 @@ __attribute__((swift_name("KotlinBoolean")))
 + (instancetype)numberWithBool:(BOOL)value;
 @end
 
+
+/**
+ * @note annotations
+ *   kotlinx.serialization.Serializable
+*/
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IdcData")))
+@interface USDKIdcData : USDKBase
+- (instancetype)initWithMtid:(NSString * _Nullable)mtid atid:(NSString * _Nullable)atid __attribute__((swift_name("init(mtid:atid:)"))) __attribute__((objc_designated_initializer));
+@property (class, readonly, getter=companion) USDKIdcDataCompanion *companion __attribute__((swift_name("companion")));
+- (USDKIdcData *)doCopyMtid:(NSString * _Nullable)mtid atid:(NSString * _Nullable)atid __attribute__((swift_name("doCopy(mtid:atid:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString * _Nullable atid __attribute__((swift_name("atid")));
+@property (readonly) NSString * _Nullable mtid __attribute__((swift_name("mtid")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("IdcData.Companion")))
+@interface USDKIdcDataCompanion : USDKBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) USDKIdcDataCompanion *shared __attribute__((swift_name("shared")));
+- (id<USDKKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UTIQOptions")))
+@interface USDKUTIQOptions : USDKBase
+- (instancetype)initWithEnableLogging:(BOOL)enableLogging __attribute__((swift_name("init(enableLogging:)"))) __attribute__((objc_designated_initializer));
+- (USDKUTIQOptions *)doCopyEnableLogging:(BOOL)enableLogging __attribute__((swift_name("doCopy(enableLogging:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL enableLogging __attribute__((swift_name("enableLogging")));
+@end
+
 __attribute__((swift_name("CoreSDKMainClassUtils")))
 @protocol USDKCoreSDKMainClassUtils
 @required
@@ -188,6 +227,12 @@ __attribute__((swift_name("UTIQ")))
 */
 - (BOOL)clearDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("clearData()")));
 - (void)didInitializeWithResultSuccess:(void (^)(void))success failure:(void (^)(NSError *))failure __attribute__((swift_name("didInitializeWithResult(success:failure:)")));
+
+/**
+ * @note This method converts instances of Exception to errors.
+ * Other uncaught Kotlin exceptions are fatal.
+*/
+- (BOOL)idConnectDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("idConnectData()")));
 - (void)initializeSdkToken:(NSString *)sdkToken __attribute__((swift_name("initialize(sdkToken:)")));
 - (void)initializeSdkToken:(NSString *)sdkToken options:(USDKUTIQOptions *)options __attribute__((swift_name("initialize(sdkToken:options:)")));
 
@@ -220,43 +265,23 @@ __attribute__((swift_name("UTIQ")))
 - (void)startServiceIsStub:(BOOL)isStub dataCallback:(void (^)(USDKIdcData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(isStub:dataCallback:errorCallback:)")));
 @end
 
-
-/**
- * @note annotations
- *   kotlinx.serialization.Serializable
-*/
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IdcData")))
-@interface USDKIdcData : USDKBase
-- (instancetype)initWithMtid:(NSString * _Nullable)mtid atid:(NSString * _Nullable)atid __attribute__((swift_name("init(mtid:atid:)"))) __attribute__((objc_designated_initializer));
-@property (class, readonly, getter=companion) USDKIdcDataCompanion *companion __attribute__((swift_name("companion")));
-- (USDKIdcData *)doCopyMtid:(NSString * _Nullable)mtid atid:(NSString * _Nullable)atid __attribute__((swift_name("doCopy(mtid:atid:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString * _Nullable atid __attribute__((swift_name("atid")));
-@property (readonly) NSString * _Nullable mtid __attribute__((swift_name("mtid")));
+__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
+@protocol USDKKotlinx_serialization_coreSerializationStrategy
+@required
+- (void)serializeEncoder:(id<USDKKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
+@property (readonly) id<USDKKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IdcData.Companion")))
-@interface USDKIdcDataCompanion : USDKBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) USDKIdcDataCompanion *shared __attribute__((swift_name("shared")));
-- (id<USDKKotlinx_serialization_coreKSerializer>)serializer __attribute__((swift_name("serializer()")));
+__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
+@protocol USDKKotlinx_serialization_coreDeserializationStrategy
+@required
+- (id _Nullable)deserializeDecoder:(id<USDKKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
+@property (readonly) id<USDKKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
 @end
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UTIQOptions")))
-@interface USDKUTIQOptions : USDKBase
-- (instancetype)initWithEnableLogging:(BOOL)enableLogging __attribute__((swift_name("init(enableLogging:)"))) __attribute__((objc_designated_initializer));
-- (USDKUTIQOptions *)doCopyEnableLogging:(BOOL)enableLogging __attribute__((swift_name("doCopy(enableLogging:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) BOOL enableLogging __attribute__((swift_name("enableLogging")));
+__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
+@protocol USDKKotlinx_serialization_coreKSerializer <USDKKotlinx_serialization_coreSerializationStrategy, USDKKotlinx_serialization_coreDeserializationStrategy>
+@required
 @end
 
 __attribute__((swift_name("KotlinThrowable")))
@@ -281,37 +306,6 @@ __attribute__((swift_name("KotlinException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(USDKKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(USDKKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))
-@protocol USDKKotlinx_serialization_coreSerializationStrategy
-@required
-- (void)serializeEncoder:(id<USDKKotlinx_serialization_coreEncoder>)encoder value:(id _Nullable)value __attribute__((swift_name("serialize(encoder:value:)")));
-@property (readonly) id<USDKKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreDeserializationStrategy")))
-@protocol USDKKotlinx_serialization_coreDeserializationStrategy
-@required
-- (id _Nullable)deserializeDecoder:(id<USDKKotlinx_serialization_coreDecoder>)decoder __attribute__((swift_name("deserialize(decoder:)")));
-@property (readonly) id<USDKKotlinx_serialization_coreSerialDescriptor> descriptor __attribute__((swift_name("descriptor")));
-@end
-
-__attribute__((swift_name("Kotlinx_serialization_coreKSerializer")))
-@protocol USDKKotlinx_serialization_coreKSerializer <USDKKotlinx_serialization_coreSerializationStrategy, USDKKotlinx_serialization_coreDeserializationStrategy>
-@required
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinArray")))
-@interface USDKKotlinArray<T> : USDKBase
-+ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(USDKInt *))init __attribute__((swift_name("init(size:init:)")));
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (id<USDKKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreEncoder")))
@@ -455,11 +449,16 @@ __attribute__((swift_name("Kotlinx_serialization_coreDecoder")))
 @property (readonly) USDKKotlinx_serialization_coreSerializersModule *serializersModule __attribute__((swift_name("serializersModule")));
 @end
 
-__attribute__((swift_name("KotlinIterator")))
-@protocol USDKKotlinIterator
-@required
-- (BOOL)hasNext __attribute__((swift_name("hasNext()")));
-- (id _Nullable)next __attribute__((swift_name("next()")));
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinArray")))
+@interface USDKKotlinArray<T> : USDKBase
++ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(USDKInt *))init __attribute__((swift_name("init(size:init:)")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (id<USDKKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreCompositeEncoder")))
@@ -571,6 +570,13 @@ __attribute__((swift_name("Kotlinx_serialization_coreCompositeDecoder")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinNothing")))
 @interface USDKKotlinNothing : USDKBase
+@end
+
+__attribute__((swift_name("KotlinIterator")))
+@protocol USDKKotlinIterator
+@required
+- (BOOL)hasNext __attribute__((swift_name("hasNext()")));
+- (id _Nullable)next __attribute__((swift_name("next()")));
 @end
 
 
