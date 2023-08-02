@@ -9,8 +9,6 @@ import SwiftUI
 import CoreData
 import utiqSDK
 import funnelConnectSDK
-import SwrveSDK
-import SwrveGeoSDK
 import Combine
 
 struct AngroView: View {
@@ -90,23 +88,11 @@ struct AngroView: View {
                         print("excecuting FunnelConnectSDK.shared.didInitializeWithResult")
                         FunnelConnectSDK.shared.didInitializeWithResult( success: {
                             print("excecuting FunnelConnectSDK.cdp.startService()")
-                            FunnelConnectSDK.shared.startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
-                                if let umid = try? FunnelConnectSDK.shared.getUMID() {
-                                    store.isCdpStarted.toggle()
-                                    store.infoResponse = data
-                                    if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.isEmpty() {
-                                        store.showModal.toggle()
-                                    }
-                                    print("excecuting SwrveSDK.start(withUserId: \(umid))")
-                                    SwrveSDK.start(withUserId: umid)
-                                    print("excecuting SwrveGeoSDK.start()")
-                                    SwrveGeoSDK.start()
-                                    store.isFunnelConnectStarted = true
+                            store.fcStartService(){
+                                if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.isEmpty() {
+                                    store.showModal.toggle()
                                 }
-                            }, errorCallback: {error in
-                                print("error FunnelConnectSDK.cdp.startService()")
-                                print("error: \(error)")
-                            })
+                            }
                         }, failure: {error in
                             print("error FunnelConnectSDK.shared.didInitializeWithResult")
                             print("error: \(error)")
@@ -114,19 +100,7 @@ struct AngroView: View {
                         print("excecuting UTIQ.shared.didInitializeWithResult")
                         UTIQ.shared.didInitializeWithResult(success: {
                             print("excecuting UTIQ.shared.startService()")
-                            if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
-                                if(isConsentAccepted){
-                                    let isStub = UserDefaultsUtils.isStub()
-                                    UTIQ.shared.startService(isStub: isStub, dataCallback: {data in
-                                        store.mtid = data.mtid
-                                        TrackUtils.mtid = data.mtid
-                                        store.atid = data.atid
-                                    },errorCallback: {error in
-                                        print("error UTIQ.shared.startService")
-                                        print("error: \(error)")
-                                    })
-                                }
-                            }
+                            store.utiqStartService()
                         }, failure: { error in
                             print("error UTIQ.shared.didInitializeWithResult")
                             print("error: \(error)")

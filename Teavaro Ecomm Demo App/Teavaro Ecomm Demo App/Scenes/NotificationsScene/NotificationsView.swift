@@ -22,8 +22,8 @@ struct NotificationsView: View {
                     Button("Ident Click's campaign", action: {
                         TrackUtils.click(value: "send_ident_click_notification")
                         umidAndAction(action: { umid in
-                            if let userId = try? FunnelConnectSDK.shared.getUserId(){
-                                PushNotification().sendIdentClick(user: umid, userId: userId)
+                            if let userName = UserDefaultsUtils.getUserId(){
+                                PushNotification().sendIdentClick(user: umid, userId: userName, userType: store.userType)
                             }
                         })
                     })

@@ -21,12 +21,12 @@ struct IDsView: View {
                 Section{
                     Text("UserId:")
                         .bold()
-                    Text(try! FunnelConnectSDK.shared.getUserId() ?? "")
+                    Text(store.userId ?? "")
                 }
                 Section{
                     Text("Umid:")
                         .bold()
-                    Text(try! FunnelConnectSDK.shared.getUMID() ?? "")
+                    Text(store.umid ?? "")
                 }
                 Section{
                     Text("Atid:")

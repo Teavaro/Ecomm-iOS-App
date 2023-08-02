@@ -261,8 +261,8 @@ __attribute__((swift_name("UTIQ")))
  * @note This method converts instances of Exception to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (BOOL)startServiceIsStub:(BOOL)isStub error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("startService(isStub:)")));
-- (void)startServiceIsStub:(BOOL)isStub dataCallback:(void (^)(USDKIdcData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(isStub:dataCallback:errorCallback:)")));
+- (BOOL)startServiceStubToken:(NSString *)stubToken error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("startService(stubToken:)")));
+- (void)startServiceStubToken:(NSString *)stubToken dataCallback:(void (^)(USDKIdcData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(stubToken:dataCallback:errorCallback:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))

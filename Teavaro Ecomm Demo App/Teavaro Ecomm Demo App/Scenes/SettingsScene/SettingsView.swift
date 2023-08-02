@@ -17,7 +17,6 @@ struct SettingsView: View {
     @EnvironmentObject var store: Store
     @State var showingConfirmationAlert = false
     @State private var showModal1 = false
-    @State private var isStub: Bool = false
     
     var body: some View {
         NavigationView {
@@ -43,11 +42,15 @@ struct SettingsView: View {
                         }
                     }
                     Section(){
-                        Toggle("Stub Mode", isOn: $isStub)
+                        Toggle("Stub Mode", isOn: $store.isStub)
                             .onTapGesture {
-                                TrackUtils.click(value: "stub_mode_\(!isStub)")
-                                clearData()
-                                UserDefaultsUtils.setStub(value: !isStub)
+                                TrackUtils.click(value: "stub_mode_\(!store.isStub)")
+                                store.clearData()
+                                var token = ""
+                                if(!store.isStub){
+                                    token = "523393b9b7aa92a534db512af83084506d89e965b95c36f982200e76afcb82cb"
+                                }
+                                UserDefaultsUtils.setStubToken(value: token)
                                 showModal1.toggle()
                             }
                     }
@@ -77,8 +80,8 @@ struct SettingsView: View {
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
-                            updatePermissions(om: false, nba: false, opt: false)
-                            clearData()
+//                            updatePermissions(om: false, nba: false, opt: false)
+                            store.clearData()
                         })
                     }
                 }
@@ -100,7 +103,6 @@ struct SettingsView: View {
             }
             .onAppear(perform: {
                 TrackUtils.impression(value: "settings_view")
-                isStub = UserDefaultsUtils.isStub()
             })
             .sheet(isPresented: $showModal1, onDismiss: {
                 print(self.showModal1)
@@ -109,12 +111,6 @@ struct SettingsView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-    
-    fileprivate func clearData(){
-        store.clearData()
-        try? FunnelConnectSDK.shared.clearData()
-        try? FunnelConnectSDK.shared.clearCookies()
     }
     
     fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {

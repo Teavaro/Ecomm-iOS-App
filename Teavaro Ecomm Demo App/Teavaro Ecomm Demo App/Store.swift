@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 import funnelConnectSDK
+import utiqSDK
+import SwrveSDK
+import SwrveGeoSDK
 
 class Store: ObservableObject {
     @Published var listItems: [Item] = []
@@ -21,6 +24,13 @@ class Store: ObservableObject {
     @Published var itemSelected: Int16? = -1
     @Published var showAbandonedCarts = false
     @Published var abandonedCartId: Int = 0
+    @Published var atid: String? = nil
+    @Published var mtid: String? = nil
+    @Published var umid: String? = nil
+    @Published var userId: String? = nil
+    @Published var isStub: Bool = false
+    let userType = "enemail"
+
     let cartId: Int16 = 12
     var infoResponse = """
     {}
@@ -28,9 +38,7 @@ class Store: ObservableObject {
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
-    var atid: String? = nil
-    var mtid: String? = nil
-
+    
     init() {
         initializeData()
     }
@@ -91,7 +99,6 @@ class Store: ObservableObject {
     func getBanner() -> String{
         print("getBanner()")
         var text = ""
-        var userId = "none"
         var obj: InfoResponse? = nil
         do {
             let decoder = JSONDecoder()
@@ -111,15 +118,17 @@ class Store: ObservableObject {
             text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
         }
        
-        if let userName = UserDefaultsUtils.getUserName(){
+        if let userId = UserDefaultsUtils.getUserId(){
 //            text += "&amp;" + "rp.user.userId" + "=\(userName)"
-            text += "&amp;" + "rp.user.userId" + "=\(userName)"
+            text += "&amp;" + "rp.user.userId" + "=\(userId)"
+            text += "&amp;" + "userType" + "=\(userType)"
         }
         
         text += "&amp;device=ios"
         text += "&amp;impression=offer"
 //        print("iran:infoResponse", infoResponse)
         print("iran:attr", text)
+//        https://funnelconnect.brand-demo.com/op/brand-demo-web-celtra/ad
         let htmlContent = """
             <!DOCTYPE html>
                <html>
@@ -151,9 +160,22 @@ class Store: ObservableObject {
     
     func clearData(){
         isFunnelConnectStarted = false
+        isLogin = false
+        isStub = false
+        umid = ""
+        atid = ""
+        mtid = ""
+        userId = ""
+        infoResponse = ""
+        abandonedCartId = 0
         DataManager.shared.clearCart()
         DataManager.shared.clearData()
         DataManager.shared.clearAbandonedCarts()
+        UserDefaultsUtils.clear()
+        try? UTIQ.shared.clearData()
+        try? UTIQ.shared.clearCookies()
+        try? FunnelConnectSDK.shared.clearData()
+        try? FunnelConnectSDK.shared.clearCookies()
         initializeData()
     }
     
@@ -180,7 +202,7 @@ class Store: ObservableObject {
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
-        isLogin = UserDefaultsUtils.isLogin()
+        isStub = UserDefaultsUtils.getStubToken() != ""
     }
     
     func processCelraAction(celtraResponse: String){
@@ -264,8 +286,8 @@ class Store: ObservableObject {
     }
     
     func getClickIdentLink() -> String?{
-        if let userName = UserDefaultsUtils.getUserName(){
-            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?enemail=\(userName)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+        if let userName = UserDefaultsUtils.getUserId(){
+            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?\(userType)=\(userName)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
         }
         return nil
     }
@@ -275,5 +297,41 @@ class Store: ObservableObject {
             return "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(abCartId)"
         }
         return nil
+    }
+    
+    func utiqStartService(){
+        if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
+            if(isConsentAccepted){
+                let stubToken = UserDefaultsUtils.getStubToken()
+                UTIQ.shared.startService(stubToken: stubToken, dataCallback: {data in
+                    self.mtid = data.mtid
+                    TrackUtils.mtid = data.mtid
+                    self.atid = data.atid
+                },errorCallback: {error in
+                    print("error UTIQ.shared.startService")
+                    print("error: \(error)")
+                })
+            }
+        }
+    }
+    
+    func fcStartService(action: @escaping() -> Void){
+        FunnelConnectSDK.shared.startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
+            if let umid = try? FunnelConnectSDK.shared.getUMID() {
+                self.isCdpStarted.toggle()
+                self.umid = umid
+                self.infoResponse = data
+                print("excecuting SwrveSDK.start(withUserId: \(umid))")
+                SwrveSDK.start(withUserId: umid)
+                print("excecuting SwrveGeoSDK.start()")
+                SwrveGeoSDK.start()
+                self.isFunnelConnectStarted = true
+                self.userId = UserDefaultsUtils.getUserId()
+                action()
+            }
+        }, errorCallback: {error in
+            print("error FunnelConnectSDK.cdp.startService()")
+            print("error: \(error)")
+        })
     }
 }

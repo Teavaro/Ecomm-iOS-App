@@ -19,6 +19,7 @@ class UserDefaultsUtils {
     private static let IS_LOGIN = "IS_LOGIN"
     private static let MTID = "MTID"
     private static let USER_NAME = "USER_NAME"
+    private static let USER_ID = "USER_ID"
     
     static func isCdpConsentAccepted() -> Bool {
         return self.userDefaults.bool(forKey: CDP_CONSENT)
@@ -64,11 +65,11 @@ class UserDefaultsUtils {
         self.userDefaults.set(value, forKey: PERMISSIONS_REQUESTED)
     }
     
-    static func isStub() -> Bool {
-        return self.userDefaults.bool(forKey: IS_STUB)
+    static func getStubToken() -> String {
+        return self.userDefaults.string(forKey: IS_STUB) ?? ""
     }
     
-    static func setStub(value: Bool) {
+    static func setStubToken(value: String) {
         self.userDefaults.set(value, forKey: IS_STUB)
     }
     
@@ -86,5 +87,21 @@ class UserDefaultsUtils {
     
     static func setUserName(value: String) {
         self.userDefaults.set(value, forKey: USER_NAME)
+    }
+    
+    static func getUserId() -> String? {
+        return self.userDefaults.string(forKey: USER_ID)
+    }
+    
+    static func setUserId(value: String) {
+        self.userDefaults.set(value, forKey: USER_ID)
+    }
+    
+    static func clear(){
+        setLogin(value: false)
+        setUserId(value: "")
+        setUserName(value: "")
+        setStubToken(value: "")
+        setPermissionsRequested(value: false)
     }
 }

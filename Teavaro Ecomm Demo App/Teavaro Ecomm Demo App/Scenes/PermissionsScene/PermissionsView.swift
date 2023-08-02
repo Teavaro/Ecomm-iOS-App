@@ -42,18 +42,6 @@ struct PermissionsView: View {
         .padding(.top, 25)
     }
     
-    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
-        print("excecuting updatePermissions")
-        let permissions = Permissions()
-        permissions.addPermission(key: "CS-OM",accepted: om)
-        permissions.addPermission(key: "CS-OPT",accepted: opt)
-        permissions.addPermission(key: "CS-NBA",accepted: nba)
-        permissions.addPermission(key: "CS-TPID",accepted: tpid)
-        FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-            UserDefaultsUtils.setPermissionsRequested(value: true)
-        }, errorCallback: {_ in })
-    }
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Analytics Tracking:")
@@ -70,6 +58,7 @@ struct PermissionsView: View {
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
                     TrackUtils.click(value: "reject_permissions")
+                    store.clearData()
                     updatePermissions(om: false, nba: false, opt: false, tpid: false)
                     try? UTIQ.shared.rejectConsent()
                     dismiss()
@@ -107,12 +96,33 @@ struct PermissionsView: View {
             TrackUtils.impression(value: "permissions_view")
         })
     }
-}
-
-func startTrustPid(){
-    try? UTIQ.shared.acceptConsent()
-    let isStub = UserDefaultsUtils.isStub()
-    try? UTIQ.shared.startService(isStub: isStub)
+    
+    func startTrustPid(){
+        try? UTIQ.shared.acceptConsent()
+        store.utiqStartService()
+    }
+    
+    func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
+        let action = {
+            print("excecuting updatePermissions")
+            let permissions = Permissions()
+            permissions.addPermission(key: "CS-OM",accepted: om)
+            permissions.addPermission(key: "CS-OPT",accepted: opt)
+            permissions.addPermission(key: "CS-NBA",accepted: nba)
+            permissions.addPermission(key: "CS-TPID",accepted: tpid)
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
+                UserDefaultsUtils.setPermissionsRequested(value: true)
+            }, errorCallback: {_ in })
+        }
+        if(store.isFunnelConnectStarted){
+            action()
+        }
+        else{
+            store.fcStartService(){
+                action()
+            }
+        }
+    }
 }
 
 struct Permissions_Previews: PreviewProvider {

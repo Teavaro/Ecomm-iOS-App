@@ -59,10 +59,11 @@ class PushNotification {
         send(url: url, params: "push_key=\(acKeyCampaign)&user=\(user)&data_template=\(data)")
     }
     
-    func sendIdentClick(user: String, userId: String){
+    func sendIdentClick(user: String, userId: String, userType: String){
         let data = """
         {"userr_id":"\(userId)"}
         """
+//        {"userr_id":"\(userId)",user_name":"\(userType)"}
         send(url: url, params: "push_key=\(identClickKeyCampaign)&user=\(user)&data_template=\(data)")
     }
 }

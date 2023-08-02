@@ -18,7 +18,7 @@ class HttpRequest {
                 request.httpBody = params.data(using: String.Encoding.utf8)
                 let session = URLSession.shared
                 session.dataTask(with: request) { (data, response, error) in
-//                    
+//                    print("response: \(response), error: \(error)")
                 }.resume()
             }
         }

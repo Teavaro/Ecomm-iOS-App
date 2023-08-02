@@ -55,7 +55,6 @@ struct AppMain: App {
                 }
             }
             
-            
             print("excecuting FunnelConnectSDK.initialize()")
             FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
             print("excecuting UTIQ.initialize()")

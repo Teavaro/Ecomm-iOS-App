@@ -37,15 +37,15 @@ class TrackUtils {
     }
     
     static func logEvent(key: String, value: String){
-        if(FunnelConnectSDK.shared.isInitialize()){
-            if(mtid != nil){
-                let eventsMap = [key: value, "mtid": mtid!]
-                events(events: eventsMap)
-            }
-            else {
-                try? FunnelConnectSDK.shared.logEvent(key: key, value: value)
-            }
-        }
+//        if(FunnelConnectSDK.shared.isInitialize()){
+//            if(mtid != nil){
+//                let eventsMap = [key: value, "mtid": mtid!]
+//                events(events: eventsMap)
+//            }
+//            else {
+//                try? FunnelConnectSDK.shared.logEvent(key: key, value: value)
+//            }
+//        }
     }
     
     static func lifeCycle(phase: ScenePhase){
