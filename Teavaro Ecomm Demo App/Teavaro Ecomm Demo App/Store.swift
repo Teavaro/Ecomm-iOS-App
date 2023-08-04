@@ -146,7 +146,7 @@ class Store: ObservableObject {
                                 for (var k in params) {
                                     qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
                                 }
-                                var src = 'https://ads.celtra.com/fa87bccb/web.js?' + qs + '\(text)';
+                                var src = 'https://funnelconnect.brand-demo.com/op/brand-demo-app-celtra/ad?' + qs + '\(text)';
                                 req.src = src;
                                 img.parentNode.insertBefore(req, img.nextSibling);
                             })(this);
@@ -203,6 +203,7 @@ class Store: ObservableObject {
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
         isStub = UserDefaultsUtils.getStubToken() != ""
+        isLogin = UserDefaultsUtils.isLogin()
     }
     
     func processCelraAction(celtraResponse: String){
@@ -243,11 +244,14 @@ class Store: ObservableObject {
                     url = value
                 }
             }
+            if(abCartView && abandonedCartId != 0){
+                showAbandonedCarts = true
+            }
+            else{
+                shopView = true
+            }
             if(itemView || shopView){
                 tabSelection = 2
-            }
-            else if(abCartView){
-                showAbandonedCarts = true
             }
             if(goToWeb && url != ""){
                 if let webUrl = URL(string: url), UIApplication.shared.canOpenURL(webUrl) {
