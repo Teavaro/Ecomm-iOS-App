@@ -55,9 +55,9 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    let userId = loginId.hash256
-                    FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
-                        { data in
+                    if let userId = loginId.aes256{
+                        FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
+                                                            { data in
                             store.infoResponse = data
                             store.umid = try? FunnelConnectSDK.shared.getUMID()
                             store.userId = userId
@@ -68,7 +68,8 @@ struct LoginView: View {
                         }, errorCallback: { _ in
                             
                         })
-                    dismiss()
+                        dismiss()
+                    }
                 }
                 else{
                     self.showingEmptyFieldsAlert.toggle()

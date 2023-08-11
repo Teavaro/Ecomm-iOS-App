@@ -204,6 +204,7 @@ class Store: ObservableObject {
         listOffer = DataManager.shared.getOfferItems()
         isStub = UserDefaultsUtils.getStubToken() != ""
         isLogin = UserDefaultsUtils.isLogin()
+        userId = UserDefaultsUtils.getUserId()
     }
     
     func processCelraAction(celtraResponse: String){
@@ -330,7 +331,6 @@ class Store: ObservableObject {
                 print("excecuting SwrveGeoSDK.start()")
                 SwrveGeoSDK.start()
                 self.isFunnelConnectStarted = true
-                self.userId = UserDefaultsUtils.getUserId()
                 action()
             }
         }, errorCallback: {error in

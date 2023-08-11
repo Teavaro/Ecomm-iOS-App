@@ -31,7 +31,6 @@ struct SettingsView: View {
                         else{
                             Button("Logout", action: {
                                 TrackUtils.click(value: "logout")
-                                UserDefaultsUtils.setLogin(value: false)
                                 self.showingConfirmationAlert.toggle()
                             })
                         }
@@ -95,7 +94,9 @@ struct SettingsView: View {
                         message: Text("Do you want to proceed with logout?"),
                         primaryButton: .destructive(Text("Proceed"), action: {
                             TrackUtils.click(value: "logout_confirm")
+                            UserDefaultsUtils.setLogin(value: false)
                             store.isLogin = false
+                            store.userId = nil
                         }),
                         secondaryButton: .cancel(Text("Cancel"))
                     )

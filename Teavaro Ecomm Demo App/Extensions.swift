@@ -38,6 +38,42 @@ extension String {
             return digest.makeIterator().compactMap { String(format: "%02x", $0) }.joined()
         }
     }
+    
+    var aes256: String?{
+        let rawKey: [UInt8] = [46, 155, 23, 102, 200, 192, 144, 11, 98, 39, 145, 33, 154, 19, 173, 164, 24, 89, 240, 90, 7, 12, 148, 147, 133, 245, 237, 206, 177, 56, 5, 130]
+        let ivData: [UInt8] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        var encryptedData: [UInt8]
+        let data: [UInt8] = Array(self.utf8)
+        encryptedData = testCrypt(data:data,   keyData:rawKey, ivData:ivData, operation:kCCEncrypt)!
+        return NSData(bytes:encryptedData, length:encryptedData.count).base64EncodedString().base64Url
+    }
+    
+    var base64Url: String?{
+        return self.replacingOccurrences(of: "+", with: "-").replacingOccurrences(of: "/", with: "_")
+    }
+}
+
+func testCrypt(data:[UInt8], keyData:[UInt8], ivData:[UInt8], operation:Int) -> [UInt8]? {
+    let cryptLength  = size_t(data.count+kCCBlockSizeAES128)
+    var cryptData    = [UInt8](repeating:0, count:cryptLength)
+    let keyLength             = size_t(kCCKeySizeAES256)
+    let algoritm: CCAlgorithm = UInt32(kCCAlgorithmAES128)
+    let options:  CCOptions   = UInt32(kCCOptionPKCS7Padding)
+    var numBytesEncrypted :size_t = 0
+    let cryptStatus = CCCrypt(CCOperation(operation),
+                              algoritm,
+                              options,
+                              keyData, keyLength,
+                              ivData,
+                              data, data.count,
+                              &cryptData, cryptLength,
+                              &numBytesEncrypted)
+    if UInt32(cryptStatus) == UInt32(kCCSuccess) {
+        cryptData.removeSubrange(numBytesEncrypted..<cryptData.count)
+    } else {
+        print("Error: \(cryptStatus)")
+    }
+    return cryptData;
 }
 
 extension UIViewController {
