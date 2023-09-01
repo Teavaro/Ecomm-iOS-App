@@ -215,6 +215,21 @@ class DataManager {
         })
     }
     
+    func getItem(itemId: Int16) -> Item?{
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %i", itemId)
+        var fetchedItems: [Item] = []
+        do {
+            fetchedItems = try persistentContainer.viewContext.fetch(request)
+            if let item = fetchedItems.first{
+                return item
+            }
+        } catch let error {
+          print("Error fetching items \(error)")
+        }
+        return nil
+    }
+    
     func getUniqueId() -> Int{
         let uniqueId = Int(String(UUID().hashValue).prefix(5)) ?? 0
         if(uniqueId < 0){

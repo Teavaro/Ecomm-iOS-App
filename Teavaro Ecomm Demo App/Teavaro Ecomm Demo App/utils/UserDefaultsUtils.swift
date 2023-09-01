@@ -103,5 +103,6 @@ class UserDefaultsUtils {
         setUserName(value: "")
         setStubToken(value: "")
         setPermissionsRequested(value: false)
+        setCdpNba(nba: false)
     }
 }

@@ -13,10 +13,9 @@ import utiqSDK
 struct PermissionsView: View {
     
     @EnvironmentObject var store: Store
-    @State private var om: Bool = false
-    @State private var nba: Bool = false
-    @State private var tpid: Bool = false
-    @State private var opt: Bool = false
+    @State private var om: Bool = true
+    @State private var opt: Bool = true
+    @State private var nba: Bool = true
     @Environment(\.dismiss) private var dismiss
     
     fileprivate func insertButton(title: String, color: Color, action: @escaping() -> Void) -> some View {
@@ -44,36 +43,39 @@ struct PermissionsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Analytics Tracking:")
+            Text("Analytics Cookies:")
                 .foregroundColor(.gray)
-            Toggle("Used for reporting and optimisation.", isOn: $om)
-            Text("Personalisation:")
-                .foregroundColor(.gray)
-                .padding(.top, 30)
-            Toggle("Used to deliver personalised experiences.", isOn: $opt)
-            Text("Network Token:")
+            Toggle("Enhance your experience. Our cookies improve our website by analyzing visitor behavior, such as page duration and return frequency.", isOn: $om)
+                .font(.system(size: 13))
+            Text("Marketing and Social Network:")
                 .foregroundColor(.gray)
                 .padding(.top, 30)
-            Toggle("This enables us to use a mobile network token to collect behavioural data for analytics and personalisation.", isOn: $nba)
+            Toggle("Enhance your browsing experience. Our cookies evaluate your behavior and present relevant offers. They also enable valuable insights for advertisers and publishers. We share this information with trusted analytics, marketing, and social media partners. If you're logged in to a social network, your user profile may be enriched with your surfing behavior.", isOn: $opt)
+                .font(.system(size: 13))
+            Text("Personal Offers:")
+                .foregroundColor(.gray)
+                .padding(.top, 30)
+            Toggle("Seamless personalization across devices. Our cookie-based identification assigns your profile to all recognized devices, ensuring consistent settings and personalized offers. Your surfing behavior is not utilized for this purpose. Registering for our newsletter allows us to identify you and link it to your profile.", isOn: $nba)
+                .font(.system(size: 13))
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
                     TrackUtils.click(value: "reject_permissions")
                     store.clearData()
-                    updatePermissions(om: false, nba: false, opt: false, tpid: false)
+                    store.updatePermissions(om: false, nba: false, opt: false)
                     try? UTIQ.shared.rejectConsent()
                     dismiss()
                 })
                 insertButton(title: "Accept All", color: .green, action: {
                     TrackUtils.click(value: "accept_permissions")
-                    updatePermissions(om: true, nba: true, opt: true, tpid: true)
+                    store.updatePermissions(om: true, nba: true, opt: true)
                     startTrustPid()
                     dismiss()
                 })
             }
             insertButton(title: "Save settings", color: Color(UIColor.lightGray), action: {
                 TrackUtils.click(value: "save_permissions")
-                updatePermissions(om: self.om, nba: self.nba, opt: self.opt, tpid: self.tpid)
-                if(self.nba) {
+                store.updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
+                if(self.om || self.opt || self.nba) {
                     startTrustPid()
                 }
                 else{
@@ -81,47 +83,23 @@ struct PermissionsView: View {
                 }
                 dismiss()
             })
-            Spacer()
         }
         .padding(30)
         .navigationTitle("Permissions")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            if let permissions = try? FunnelConnectSDK.shared.getPermissions(){
-                self.om = permissions.getPermission(key: "CS-OM")
-                self.opt = permissions.getPermission(key: "CS-OPT")
-                self.nba = permissions.getPermission(key: "CS-NBA")
-                self.tpid = permissions.getPermission(key: "CS-TPID")
+            if let permissions = try? FunnelConnectSDK.shared.getPermissions(), !permissions.isEmpty(){
+                self.om = permissions.getPermission(key: store.keyOm)
+                self.opt = permissions.getPermission(key: store.keyOpt)
+                self.nba = permissions.getPermission(key: store.keyNba)
             }
             TrackUtils.impression(value: "permissions_view")
         })
     }
     
     func startTrustPid(){
-        try? UTIQ.shared.acceptConsent()
-        store.utiqStartService()
-    }
-    
-    func updatePermissions(om: Bool, nba: Bool, opt: Bool, tpid: Bool) {
-        let action = {
-            print("excecuting updatePermissions")
-            let permissions = Permissions()
-            permissions.addPermission(key: "CS-OM",accepted: om)
-            permissions.addPermission(key: "CS-OPT",accepted: opt)
-            permissions.addPermission(key: "CS-NBA",accepted: nba)
-            permissions.addPermission(key: "CS-TPID",accepted: tpid)
-            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-                UserDefaultsUtils.setPermissionsRequested(value: true)
-            }, errorCallback: {_ in })
-        }
-        if(store.isFunnelConnectStarted){
-            action()
-        }
-        else{
-            store.fcStartService(){
-                action()
-            }
-        }
+//        try? UTIQ.shared.acceptConsent()
+//        store.utiqStartService()
     }
 }
 

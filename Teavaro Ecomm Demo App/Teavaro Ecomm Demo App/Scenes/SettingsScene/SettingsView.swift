@@ -79,7 +79,7 @@ struct SettingsView: View {
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
-//                            updatePermissions(om: false, nba: false, opt: false)
+//                            store.updatePermissions(om: false, nba: false, opt: false, utiq: false)
                             store.clearData()
                         })
                     }
@@ -112,17 +112,6 @@ struct SettingsView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-    
-    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
-        let permissions = Permissions()
-        permissions.addPermission(key: "CS-OM",accepted: om)
-        permissions.addPermission(key: "CS-OPT",accepted: opt)
-        permissions.addPermission(key: "CS-NBA",accepted: nba)
-        permissions.addPermission(key: "CS-TPID",accepted: nba)
-        FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-            UserDefaultsUtils.setPermissionsRequested(value: true)
-        }, errorCallback: {_ in })
     }
 }
 

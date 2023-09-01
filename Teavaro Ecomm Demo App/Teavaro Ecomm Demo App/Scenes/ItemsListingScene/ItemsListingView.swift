@@ -17,7 +17,7 @@ struct ItemsListingView: View{
             VStack(alignment: .leading) {
                 List {
                     ForEach(store.listItems) { item in
-                        NavigationLink(destination: ItemDetail(item: item), tag: item.id, selection: $store.itemSelected) {
+                        NavigationLink(destination: ItemDetail(item: item)) {
                             ItemRow(item: item)
                         }
                     }

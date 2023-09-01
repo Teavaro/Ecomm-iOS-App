@@ -90,7 +90,7 @@ struct AngroView: View {
                             print("excecuting FunnelConnectSDK.cdp.startService()")
                             store.fcStartService(){
                                 if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.isEmpty() {
-                                    store.showModal.toggle()
+                                    store.showCdpPermissions.toggle()
                                 }
                             }
                         }, failure: {error in
@@ -110,16 +110,16 @@ struct AngroView: View {
                 TrackUtils.impression(value: "home_view")
             })
         }
-        .sheet(isPresented: $store.showModal, onDismiss: {
-            print(store.showModal)
+        .sheet(isPresented: $store.showCdpPermissions, onDismiss: {
+            print(store.showCdpPermissions)
         }) {
-            ModalView(showModal: $store.showModal)
+            ModalPermissionsCdpView(showModal: $store.showCdpPermissions)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-struct ModalView: View {
+struct ModalPermissionsCdpView: View {
     @Environment(\.presentationMode) var presentation
     @Binding var showModal: Bool
 

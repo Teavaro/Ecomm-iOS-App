@@ -69,6 +69,13 @@ struct HomeView: View {
         }) {
             ModalAbandonedCarts(showAbandonedCarts: $store.showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: store.abandonedCartId))
         }
+        .sheet(isPresented: $store.showItem, onDismiss: {
+            print(store.showItem)
+        }) {
+            if let item = DataManager.shared.getItem(itemId: store.itemSelected){
+                ModalItem(showItem: $store.showItem, item: item)
+            }
+        }
     }
         
 }
@@ -81,6 +88,18 @@ struct ModalAbandonedCarts: View {
     var body: some View {
         VStack {
             ACItemsListingView(listItems: listItems)
+        }
+    }
+}
+
+struct ModalItem: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showItem: Bool
+    var item: Item
+
+    var body: some View {
+        VStack {
+            ItemDetail(item: item)
         }
     }
 }

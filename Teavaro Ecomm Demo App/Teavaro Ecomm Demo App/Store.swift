@@ -19,10 +19,11 @@ class Store: ObservableObject {
     @Published var listOffer: [Item] = []
     @Published var isLogin = false
     @Published var isCdpStarted = false
-    @Published var showModal = false
+    @Published var showCdpPermissions = false
     @Published var tabSelection: Int = 1
-    @Published var itemSelected: Int16? = -1
+    @Published var itemSelected: Int16 = -1
     @Published var showAbandonedCarts = false
+    @Published var showItem = false
     @Published var abandonedCartId: Int = 0
     @Published var atid: String? = nil
     @Published var mtid: String? = nil
@@ -38,6 +39,13 @@ class Store: ObservableObject {
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
+    let keyOm = "CS-OM"
+    let keyOpt = "CS-OPT"
+    let keyNba = "CS-NBA"
+    let keyUtiq = "CS-UTIQ"
+    let fcNotificationsName = "MAIN_CS"
+    let utiqNotificationsName = "MAIN_CS_UTIQ"
+    let notificationsVersion: Int32 = 1
     
     init() {
         initializeData()
@@ -99,36 +107,15 @@ class Store: ObservableObject {
     func getBanner() -> String{
         print("getBanner()")
         var text = ""
-        var obj: InfoResponse? = nil
-        do {
-            let decoder = JSONDecoder()
-            if let info = infoResponse.data(using: .utf8){
-                obj = try decoder.decode(InfoResponse.self, from: info)
-            }
-        } catch {
-            print("readingAttrFromInfoResponse:error:\(error)")
+        if(isNbaPermissionGranted()){
+            text = getBannerAttr()
+            text += "&amp;impression=offers"
         }
-        if obj != nil{
-//            print("iran:attributes",obj!.attributes)
-            for (key, value) in obj!.attributes {
-                text += "&amp;" + key + "=" + value
-            }
+        else{
+            text += "&amp;impression=default"
         }
-        if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
-            text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
-        }
-       
-        if let userId = UserDefaultsUtils.getUserId(){
-//            text += "&amp;" + "rp.user.userId" + "=\(userName)"
-            text += "&amp;" + "rp.user.userId" + "=\(userId)"
-            text += "&amp;" + "userType" + "=\(userType)"
-        }
-        
         text += "&amp;device=ios"
-        text += "&amp;impression=offer"
-//        print("iran:infoResponse", infoResponse)
         print("iran:attr", text)
-//        https://funnelconnect.brand-demo.com/op/brand-demo-web-celtra/ad
         let htmlContent = """
             <!DOCTYPE html>
                <html>
@@ -156,6 +143,35 @@ class Store: ObservableObject {
                </html>
             """
         return htmlContent
+    }
+    
+    func getBannerAttr() -> String{
+        var text = ""
+        var obj: InfoResponse? = nil
+        do {
+            let decoder = JSONDecoder()
+            if let info = infoResponse.data(using: .utf8){
+                obj = try decoder.decode(InfoResponse.self, from: info)
+            }
+        } catch {
+            print("readingAttrFromInfoResponse:error:\(error)")
+        }
+        if obj != nil{
+//            print("iran:attributes",obj!.attributes)
+            for (key, value) in obj!.attributes {
+                text += "&amp;" + key + "=" + value
+            }
+        }
+        if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
+            text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
+        }
+       
+        if let userId = UserDefaultsUtils.getUserId(){
+//            text += "&amp;" + "rp.user.userId" + "=\(userName)"
+            text += "&amp;" + "rp.user.userId" + "=\(userId)"
+            text += "&amp;" + "userType" + "=\(userType)"
+        }
+        return text
     }
     
     func clearData(){
@@ -186,17 +202,23 @@ class Store: ObservableObject {
 //        print("\(listItems.count) Items ferched")
         
         if(listItems.isEmpty){
-            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
-            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
-            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
-            DataManager.shared.addItem(id: 3, title: "Morrisons Smoked Paprika", desc: description, price: 4.60, picture: "paprika")
-            DataManager.shared.addItem(id: 4, title: "Jaffa Tropical Flavour Burst Seedless", desc: description, price: 2.50, picture: "burst")
-            DataManager.shared.addItem(id: 5, title: "Pams Chopped Watermelon", desc: description, price: 3.99, picture: "watermelon")
-            DataManager.shared.addItem(id: 6, title: "Woolworths Food Flavourburst Seedless Grapes", desc: description, price: 2.00, picture: "grapes")
-            DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
-            DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
-            DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
-            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370g", desc: description, price: 3.99, picture: "tomato")
+            DataManager.shared.addItem(id: 0, title: "RUF Porridge Apfel Zimt mit Vollkorn Haferflocken", desc: description,price: 1.69, picture: "porridge")
+            DataManager.shared.addItem(id: 1, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine", isOffer: true)
+            DataManager.shared.addItem(id: 2, title: "Hillshire Farm Lit'l Smokies Salchicha ahumada, 14 oz", desc: description,price: 5.31, picture: "hillshire", isOffer: true)
+            DataManager.shared.addItem(id: 3, title: "Good Soy Cookies", desc: description,price: 3.99, picture: "cookies")
+            DataManager.shared.addItem(id: 4, title: "Jack Link’s Teriyaki, Beef Jerky", desc: description,price: 6.60, picture: "teriyaki")
+            DataManager.shared.addItem(id: 5, title: "Absolute Organic Cashews ", desc: description,price: 20.00, picture: "cashews")
+//            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
+//            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
+//            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
+//            DataManager.shared.addItem(id: 3, title: "Morrisons Smoked Paprika", desc: description, price: 4.60, picture: "paprika")
+//            DataManager.shared.addItem(id: 4, title: "Jaffa Tropical Flavour Burst Seedless", desc: description, price: 2.50, picture: "burst")
+//            DataManager.shared.addItem(id: 5, title: "Pams Chopped Watermelon", desc: description, price: 3.99, picture: "watermelon")
+//            DataManager.shared.addItem(id: 6, title: "Woolworths Food Flavourburst Seedless Grapes", desc: description, price: 2.00, picture: "grapes")
+//            DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
+//            DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
+//            DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
+//            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370g", desc: description, price: 3.99, picture: "tomato")
             listItems = DataManager.shared.getItems()
         }
         listWish = DataManager.shared.getWishItems()
@@ -248,11 +270,11 @@ class Store: ObservableObject {
             if(abCartView && abandonedCartId != 0){
                 showAbandonedCarts = true
             }
-            else{
-                shopView = true
-            }
-            if(itemView || shopView){
+            if(shopView){
                 tabSelection = 2
+            }
+            if(itemView){
+                showItem = true
             }
             if(goToWeb && url != ""){
                 if let webUrl = URL(string: url), UIApplication.shared.canOpenURL(webUrl) {
@@ -321,7 +343,7 @@ class Store: ObservableObject {
     }
     
     func fcStartService(action: @escaping() -> Void){
-        FunnelConnectSDK.shared.startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
+        FunnelConnectSDK.shared.startService(notificationsName: self.fcNotificationsName, notificationsVersion: 1, dataCallback: { data in
             if let umid = try? FunnelConnectSDK.shared.getUMID() {
                 self.isCdpStarted.toggle()
                 self.umid = umid
@@ -337,5 +359,34 @@ class Store: ObservableObject {
             print("error FunnelConnectSDK.cdp.startService()")
             print("error: \(error)")
         })
+    }
+    
+    func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
+        let action = {
+            print("excecuting updatePermissions")
+            let permissions = Permissions()
+            permissions.addPermission(key: self.keyNba,accepted: nba)
+            permissions.addPermission(key: self.keyOm,accepted: om)
+            permissions.addPermission(key: self.keyOpt,accepted: opt)
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {_ in
+                UserDefaultsUtils.setPermissionsRequested(value: true)
+                UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted()) 
+            }, errorCallback: {_ in })
+        }
+        if(self.isFunnelConnectStarted){
+            action()
+        }
+        else{
+            self.fcStartService(){
+                action()
+            }
+        }
+    }
+    
+    func isNbaPermissionGranted() -> Bool{
+        if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.getPermission(key: keyNba){
+                return true
+        }
+        return false
     }
 }
