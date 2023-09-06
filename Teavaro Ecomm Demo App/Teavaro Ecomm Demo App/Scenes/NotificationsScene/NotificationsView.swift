@@ -48,26 +48,10 @@ struct NotificationsView: View {
                     })
                 }
                 Section(){
-                    Button("Crilklys's campaign", action: {
-                        TrackUtils.click(value: "send_crilklys_notification")
+                    Button("Cashews's campaign", action: {
+                        TrackUtils.click(value: "send_cashews_notification")
                         umidAndAction(action: { umid in
-                            PushNotification().sendCrilklys(user: umid)
-                        })
-                    })
-                }
-                Section(){
-                    Button("Watermelon's campaign", action: {
-                        TrackUtils.click(value: "send_watermelon_notification")
-                        umidAndAction(action: { umid in
-                            PushNotification().sendWatermelon(user: umid)
-                        })
-                    })
-                }
-                Section(){
-                    Button("Paprika's campaign", action: {
-                        TrackUtils.click(value: "send_paprika_notification")
-                        umidAndAction(action: { umid in
-                            PushNotification().sendPaprika(user: umid)
+                            PushNotification().sendCashews(user: umid)
                         })
                     })
                 }

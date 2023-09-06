@@ -9,7 +9,6 @@ import Foundation
 
 class UserDefaultsUtils {
     
-    private static let CDP_CONSENT = "CDP_CONSENT"
     private static let CDP_OM = "CDP_OM"
     private static let CDP_OPT = "CDP_OPT"
     private static let CDP_NBA = "CDP_NBA"
@@ -20,18 +19,6 @@ class UserDefaultsUtils {
     private static let MTID = "MTID"
     private static let USER_NAME = "USER_NAME"
     private static let USER_ID = "USER_ID"
-    
-    static func isCdpConsentAccepted() -> Bool {
-        return self.userDefaults.bool(forKey: CDP_CONSENT)
-    }
-    
-    static func acceptCdpConsent() {
-        self.userDefaults.set(true, forKey: CDP_CONSENT)
-    }
-    
-    static func rejectCdpConsent() {
-        self.userDefaults.set(false, forKey: CDP_CONSENT)
-    }
     
     static func isCdpOm() -> Bool {
         return self.userDefaults.bool(forKey: CDP_OM)

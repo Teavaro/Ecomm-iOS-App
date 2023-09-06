@@ -55,20 +55,22 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    if let userId = loginId.aes256{
-                        FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
-                                                            { data in
-                            store.infoResponse = data
-                            store.umid = try? FunnelConnectSDK.shared.getUMID()
-                            store.userId = userId
-                            store.isLogin = true
-                            UserDefaultsUtils.setLogin(value: true)
-                            UserDefaultsUtils.setUserName(value: loginId)
-                            UserDefaultsUtils.setUserId(value: userId)
-                        }, errorCallback: { _ in
-                            
-                        })
-                        dismiss()
+                    if(FunnelConnectSDK.shared.isInitialize() && UserDefaultsUtils.isCdpNba()){
+                        if let userId = loginId.aes256{
+                            FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
+                                                                { data in
+                                store.infoResponse = data
+                                store.umid = try? FunnelConnectSDK.shared.getUMID()
+                                store.userId = userId
+                                store.isLogin = true
+                                UserDefaultsUtils.setLogin(value: true)
+                                UserDefaultsUtils.setUserName(value: loginId)
+                                UserDefaultsUtils.setUserId(value: userId)
+                            }, errorCallback: { _ in
+                                
+                            })
+                            dismiss()
+                        }
                     }
                 }
                 else{

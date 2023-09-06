@@ -85,7 +85,7 @@ struct PermissionsView: View {
             })
         }
         .padding(30)
-        .navigationTitle("Permissions")
+        .navigationTitle("CDP Consent")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
             if let permissions = try? FunnelConnectSDK.shared.getPermissions(), !permissions.isEmpty(){

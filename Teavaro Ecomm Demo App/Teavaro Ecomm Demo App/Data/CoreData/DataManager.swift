@@ -35,7 +35,7 @@ class DataManager {
     }
   }
     
-    func addItem(id: Int16, title: String, desc: String, price: Float, picture: String, isOffer: Bool = false, isInStock: Bool = false) {
+    func addItem(id: Int16, title: String, desc: String, price: Float, picture: String, data: String, isOffer: Bool = false, isInStock: Bool = false) {
         let entity = NSEntityDescription.entity(forEntityName: "Item", in: persistentContainer.viewContext)
         let item = Item(entity: entity!, insertInto: persistentContainer.viewContext)
         item.id = id
@@ -43,6 +43,7 @@ class DataManager {
         item.desc = desc
         item.price = price
         item.picture = picture
+        item.data = data
         item.isOffer = isOffer
         item.isInStock = isInStock
         item.countInCart = 0

@@ -13,17 +13,23 @@ import SwiftUI
 class TrackUtils {
     
     static var mtid: String? = nil
-    static let IMPRESSION = "impression"
-    static let CLICK = "click"
-    static let ABANDONED_CART_ID = "abandoned_cart_id"
-    static let GEO_PLACE = "geo_place"
+    static let EVENT_NAME = "event_name"
+    static let EVENT_DATA = "event_data"
     
     static func impression(value: String){
-        logEvent(key: IMPRESSION, value: value)
+        var eventsMap = [EVENT_NAME: "navigation", EVENT_DATA: value]
+        if(mtid != nil){
+            eventsMap["mtid"] = mtid!
+        }
+        events(events: eventsMap)
     }
     
     static func click(value: String){
-        logEvent(key: CLICK, value: value)
+        var eventsMap = [EVENT_NAME: "click", EVENT_DATA: value]
+        if(mtid != nil){
+            eventsMap["mtid"] = mtid!
+        }
+        events(events: eventsMap)
     }
     
     static func events(events: [String: String]){
@@ -33,7 +39,8 @@ class TrackUtils {
     }
     
     static func geoPlace(value: String){
-        logEvent(key: GEO_PLACE, value: value)
+        let eventsMap = [EVENT_NAME: "location", EVENT_DATA: value]
+        events(events: eventsMap)
     }
     
     static func logEvent(key: String, value: String){

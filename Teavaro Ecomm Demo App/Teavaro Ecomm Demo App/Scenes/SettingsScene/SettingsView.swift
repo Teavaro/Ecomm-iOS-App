@@ -37,7 +37,7 @@ struct SettingsView: View {
                     }
                     Section(){
                         NavigationLink(destination: PermissionsView()) {
-                            Text("Consent Management")
+                            Text("CDP Consent")
                         }
                     }
                     Section(){

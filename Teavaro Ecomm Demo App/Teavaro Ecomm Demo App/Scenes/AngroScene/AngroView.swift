@@ -125,6 +125,8 @@ struct ModalPermissionsCdpView: View {
 
     var body: some View {
         VStack {
+            Text("Consent to enable the Teavaro CDP service")
+                .font(.headline)
             PermissionsView()
         }
     }

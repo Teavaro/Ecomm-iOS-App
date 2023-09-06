@@ -105,7 +105,7 @@ class Store: ObservableObject {
     }
     
     func getBanner() -> String{
-        print("getBanner()")
+//        print("getBanner()")
         var text = ""
         if(isNbaPermissionGranted()){
             text = getBannerAttr()
@@ -115,7 +115,7 @@ class Store: ObservableObject {
             text += "&amp;impression=default"
         }
         text += "&amp;device=ios"
-        print("iran:attr", text)
+//        print("iran:attr", text)
         let htmlContent = """
             <!DOCTYPE html>
                <html>
@@ -202,12 +202,12 @@ class Store: ObservableObject {
 //        print("\(listItems.count) Items ferched")
         
         if(listItems.isEmpty){
-            DataManager.shared.addItem(id: 0, title: "RUF Porridge Apfel Zimt mit Vollkorn Haferflocken", desc: description,price: 1.69, picture: "porridge")
-            DataManager.shared.addItem(id: 1, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine", isOffer: true)
-            DataManager.shared.addItem(id: 2, title: "Hillshire Farm Lit'l Smokies Salchicha ahumada, 14 oz", desc: description,price: 5.31, picture: "hillshire", isOffer: true)
-            DataManager.shared.addItem(id: 3, title: "Good Soy Cookies", desc: description,price: 3.99, picture: "cookies")
-            DataManager.shared.addItem(id: 4, title: "Jack Link’s Teriyaki, Beef Jerky", desc: description,price: 6.60, picture: "teriyaki")
-            DataManager.shared.addItem(id: 5, title: "Absolute Organic Cashews ", desc: description,price: 20.00, picture: "cashews")
+            DataManager.shared.addItem(id: 0, title: "RUF Porridge Apfel Zimt mit Vollkorn Haferflocken", desc: description,price: 1.69, picture: "porridge", data: "/product/ruf-porridge-apfel-zimt-mit-vollkorn-haferflocken/")
+            DataManager.shared.addItem(id: 1, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine", data: "/product/marke-tsarine-caviar-50g/", isOffer: true)
+            DataManager.shared.addItem(id: 2, title: "Hillshire Farm Lit'l Smokies Salchicha ahumada, 14 oz", desc: description,price: 5.31, picture: "hillshire", data: "/product/hillshire-farm-litl-smokies-salchicha-ahumada-14-oz/", isOffer: true)
+            DataManager.shared.addItem(id: 3, title: "Good Soy Cookies", desc: description,price: 3.99, picture: "cookies", data: "/product/good-soy-cookies/")
+            DataManager.shared.addItem(id: 4, title: "Jack Link’s Teriyaki, Beef Jerky", desc: description,price: 6.60, picture: "teriyaki", data: "/product/save-on-jack-links-beef-jerky-teriyaki/")
+            DataManager.shared.addItem(id: 5, title: "Absolute Organic Cashews", desc: description,price: 20.00, picture: "cashews", data: "/product/healthy-snack-box-variety-pack-60-count/")
 //            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
 //            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
 //            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
@@ -231,7 +231,7 @@ class Store: ObservableObject {
     
     func processCelraAction(celtraResponse: String){
         let decoder = JSONDecoder()
-        var itemView = false, abCartView = false, shopView = false, goToWeb = false
+        var abCartView = false, goToWeb = false
         var url = ""
         var obj: CeltraResponse? = nil
         do {
@@ -244,11 +244,8 @@ class Store: ObservableObject {
         if obj != nil{
             for (key, value) in obj!.attributes {
                 if(key == "impression"){
-                    if(value == "ItemView"){
-                        itemView = true
-                    }
-                    else if(value == "ShopView"){
-                        shopView = true
+                    if(value == "ShopView"){
+                        tabSelection = 2
                     }
                     else if(value == "AbCartView"){
                         abCartView = true
@@ -258,7 +255,9 @@ class Store: ObservableObject {
                     }
                 }
                 if(key == "item_id"){
+                    tabSelection = 1
                     itemSelected = Int16(value) ?? -1
+                    showItem = true
                 }
                 if(key == "ab_cart_id"){
                     abandonedCartId = Int(value) ?? getAbCartId()
@@ -269,12 +268,6 @@ class Store: ObservableObject {
             }
             if(abCartView && abandonedCartId != 0){
                 showAbandonedCarts = true
-            }
-            if(shopView){
-                tabSelection = 2
-            }
-            if(itemView){
-                showItem = true
             }
             if(goToWeb && url != ""){
                 if let webUrl = URL(string: url), UIApplication.shared.canOpenURL(webUrl) {
@@ -307,7 +300,8 @@ class Store: ObservableObject {
             }
             if(components.host == "itemdescription" && parameter.name == "item_id" && parameter.value != nil){
                 itemSelected = Int16(parameter.value ?? "-1")!
-                tabSelection = 2
+                tabSelection = 1
+                showItem = true
             }
         }
     }
