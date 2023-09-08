@@ -38,6 +38,7 @@
 		00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DD2A2F83B900794528 /* Pulse */; };
 		00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DF2A2F83B900794528 /* PulseUI */; };
 		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
+		00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D625422AABABC7007B7C5F /* UTIQConsentView.swift */; };
 		00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBED312A3B3D6900C7E82D /* EmailHelper.swift */; };
 		4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
@@ -135,6 +136,7 @@
 		00AEA9C72A2F651600794528 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00D547FD29BA5D3500E92B88 /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mraid.js; path = "../../../../../Downloads/1030a67464e061568a5b-b492c9c6a631adb6e6b13f4bf8fcb162825d4c02/mraid.js"; sourceTree = "<group>"; };
+		00D625422AABABC7007B7C5F /* UTIQConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTIQConsentView.swift; sourceTree = "<group>"; };
 		00FBED312A3B3D6900C7E82D /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ecomm_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.debug.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				00183CD928B56140000E2F03 /* PermissionsView.swift */,
+				00D625422AABABC7007B7C5F /* UTIQConsentView.swift */,
 			);
 			path = PermissionsScene;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */,
 				0087251B2A12B63200263267 /* IDsView.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
+				00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,

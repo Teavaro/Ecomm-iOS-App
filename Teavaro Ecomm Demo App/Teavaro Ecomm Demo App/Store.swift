@@ -20,6 +20,7 @@ class Store: ObservableObject {
     @Published var isLogin = false
     @Published var isCdpStarted = false
     @Published var showCdpPermissions = false
+    @Published var showUtiqConsent = false
     @Published var tabSelection: Int = 1
     @Published var itemSelected: Int16 = -1
     @Published var showAbandonedCarts = false
@@ -365,6 +366,27 @@ class Store: ObservableObject {
             FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {_ in
                 UserDefaultsUtils.setPermissionsRequested(value: true)
                 UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted()) 
+            }, errorCallback: {_ in })
+        }
+        if(self.isFunnelConnectStarted){
+            action()
+        }
+        else{
+            self.fcStartService(){
+                action()
+            }
+        }
+    }
+    
+    func updateUtiqPermission(consent: Bool){
+        let action = {
+            let permissions = Permissions()
+            permissions.addPermission(key: self.keyUtiq,accepted: consent)
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.utiqNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {_ in
+                if UTIQ.shared.isInitialized(){
+                    try? UTIQ.shared.acceptConsent()
+                    self.utiqStartService()
+                }
             }, errorCallback: {_ in })
         }
         if(self.isFunnelConnectStarted){

@@ -89,8 +89,10 @@ struct AngroView: View {
                         FunnelConnectSDK.shared.didInitializeWithResult( success: {
                             print("excecuting FunnelConnectSDK.cdp.startService()")
                             store.fcStartService(){
-                                if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.isEmpty() {
-                                    store.showCdpPermissions.toggle()
+                                if let permissions = try? FunnelConnectSDK.shared.getPermissions() {
+                                    if permissions.isEmpty() {
+                                        store.showCdpPermissions.toggle()
+                                    }
                                 }
                             }
                         }, failure: {error in
@@ -115,6 +117,11 @@ struct AngroView: View {
         }) {
             ModalPermissionsCdpView(showModal: $store.showCdpPermissions)
         }
+        .sheet(isPresented: $store.showUtiqConsent, onDismiss: {
+            print(store.showUtiqConsent)
+        }) {
+            ModalUtiqView(showModal: $store.showUtiqConsent)
+        }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -125,9 +132,28 @@ struct ModalPermissionsCdpView: View {
 
     var body: some View {
         VStack {
+            Image("teavaro_icon")
+                .resizable()
+                .frame(width: 150, height: 50)
             Text("Consent to enable the Teavaro CDP service")
                 .font(.headline)
             PermissionsView()
+        }
+    }
+}
+
+struct ModalUtiqView: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showModal: Bool
+
+    var body: some View {
+        VStack {
+            Image("utiq_icon")
+                .resizable()
+                .frame(width: 120, height: 50)
+            Text("Consent to enable the UTIQ service")
+                .font(.headline)
+            UTIQConsentView()
         }
     }
 }

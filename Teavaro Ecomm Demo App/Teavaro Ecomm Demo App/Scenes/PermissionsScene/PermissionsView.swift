@@ -68,7 +68,7 @@ struct PermissionsView: View {
                 insertButton(title: "Accept All", color: .green, action: {
                     TrackUtils.click(value: "accept_permissions")
                     store.updatePermissions(om: true, nba: true, opt: true)
-                    startTrustPid()
+                    showUtiqConsent()
                     dismiss()
                 })
             }
@@ -76,7 +76,7 @@ struct PermissionsView: View {
                 TrackUtils.click(value: "save_permissions")
                 store.updatePermissions(om: self.om, nba: self.nba, opt: self.opt)
                 if(self.om || self.opt || self.nba) {
-                    startTrustPid()
+                    showUtiqConsent()
                 }
                 else{
                     try? UTIQ.shared.rejectConsent()
@@ -85,7 +85,7 @@ struct PermissionsView: View {
             })
         }
         .padding(30)
-        .navigationTitle("CDP Consent")
+        .navigationTitle("CDP and UTIQ Consent")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
             if let permissions = try? FunnelConnectSDK.shared.getPermissions(), !permissions.isEmpty(){
@@ -97,9 +97,10 @@ struct PermissionsView: View {
         })
     }
     
-    func startTrustPid(){
-//        try? UTIQ.shared.acceptConsent()
-//        store.utiqStartService()
+    func showUtiqConsent(){
+//        if(UTIQ.shared.isInitialized()){
+            store.showUtiqConsent = true
+//        }
     }
 }
 

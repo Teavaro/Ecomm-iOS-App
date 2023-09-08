@@ -37,7 +37,7 @@ struct SettingsView: View {
                     }
                     Section(){
                         NavigationLink(destination: PermissionsView()) {
-                            Text("CDP Consent")
+                            Text("CDP and UTIQ Consent")
                         }
                     }
                     Section(){
