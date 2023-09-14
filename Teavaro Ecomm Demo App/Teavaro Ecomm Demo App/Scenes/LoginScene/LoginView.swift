@@ -59,7 +59,7 @@ struct LoginView: View {
                         if let userId = loginId.aes256{
                             FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
                                                                 { data in
-                                store.infoResponse = data
+                                store.processInfoResponse(infoResponse: data)
                                 store.umid = try? FunnelConnectSDK.shared.getUMID()
                                 store.userId = userId
                                 store.isLogin = true

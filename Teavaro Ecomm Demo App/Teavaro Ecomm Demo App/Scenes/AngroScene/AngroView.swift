@@ -60,8 +60,10 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-                    CeltraWebView(banner: store.getBanner(), coordinator: coordinator)
-                        .frame(height: 120)
+                    if(store.showBanner){
+                        CeltraWebView(banner: store.banner, coordinator: coordinator)
+                            .frame(height: 180)
+                    }
                     
                     Text("Best selling items:")
                         .font(.title)
@@ -132,9 +134,7 @@ struct ModalPermissionsCdpView: View {
 
     var body: some View {
         VStack {
-            Image("teavaro_icon")
-                .resizable()
-                .frame(width: 150, height: 50)
+            Image("logo2")
             Text("Consent to enable the Teavaro CDP service")
                 .font(.headline)
             PermissionsView()

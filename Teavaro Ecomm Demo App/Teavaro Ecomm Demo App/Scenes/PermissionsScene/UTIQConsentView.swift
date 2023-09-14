@@ -13,7 +13,6 @@ import utiqSDK
 struct UTIQConsentView: View {
     
     @EnvironmentObject var store: Store
-    @State private var consent: Bool = true
     @Environment(\.dismiss) private var dismiss
     
     fileprivate func insertButton(title: String, color: Color, action: @escaping() -> Void) -> some View {
@@ -33,25 +32,31 @@ struct UTIQConsentView: View {
     fileprivate func insertText(text: String) -> some View  {
         return HStack {
             Text(text)
-            Text("*")
-                .foregroundColor(.orange)
+                .foregroundColor(.gray)
+                .padding(.top, 15)
+                .padding(.bottom, 2)
         }
-        .padding(.top, 25)
     }
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("Your consent will activate Utiq. Allowing this website to personalise your experience or use analysts whilst enabling your to retain control over your data. You can manage your Utiq choice and withdraw Utiq consent in consenthub accessible below.")
+            insertText(text: "Your movil operator:")
+            Text("Uses your IP address to check eligibility to use the service and create a random value, know as network signal.")
+            insertText(text: "UTIQ:")
+            Text("Crates a randomised version of the network signal, know as consentpass, used to manage the Utiq service and Utiq consents.")
+            insertText(text: "EcommDemoApp:")
+            Text("Recives only two Utiq marketing passes used to provide you with personalised consent and advertising or analytics.")
             VStack{
-                insertButton(title: "Allow UTIQ services", color: .green, action: {
+                insertButton(title: "Accept", color: .green, action: {
                     TrackUtils.click(value: "accept_utiq_consent")
-                    store.updateUtiqPermission(consent: consent)
+//                    store.updateUtiqPermission(consent: true)
+                    store.utiqStartService()
                     dismiss()
                 })
-                insertButton(title: "Deny UTIQ services", color: .gray, action: {
+                insertButton(title: "Reject", color: .gray, action: {
                     TrackUtils.click(value: "reject_utiq_consent")
-                    store.clearData()
-                    store.updatePermissions(om: false, nba: false, opt: false)
+//                    store.updateUtiqPermission(consent: false)
                     try? UTIQ.shared.rejectConsent()
                     dismiss()
                 })
@@ -61,9 +66,6 @@ struct UTIQConsentView: View {
         .navigationTitle("UTIQ Consent")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            if let permissions = try? FunnelConnectSDK.shared.getPermissions(), !permissions.isEmpty(){
-                self.consent = permissions.getPermission(key: store.keyUtiq)
-            }
             TrackUtils.impression(value: "permissions_view")
         })
     }

@@ -46,17 +46,17 @@ struct PermissionsView: View {
             Text("Analytics Cookies:")
                 .foregroundColor(.gray)
             Toggle("Enhance your experience. Our cookies improve our website by analyzing visitor behavior, such as page duration and return frequency.", isOn: $om)
-                .font(.system(size: 13))
+                .font(.system(size: 15))
             Text("Marketing and Social Network:")
                 .foregroundColor(.gray)
-                .padding(.top, 30)
+                .padding(.top, 15)
             Toggle("Enhance your browsing experience. Our cookies evaluate your behavior and present relevant offers. They also enable valuable insights for advertisers and publishers. We share this information with trusted analytics, marketing, and social media partners. If you're logged in to a social network, your user profile may be enriched with your surfing behavior.", isOn: $opt)
-                .font(.system(size: 13))
+                .font(.system(size: 15))
             Text("Personal Offers:")
                 .foregroundColor(.gray)
-                .padding(.top, 30)
+                .padding(.top, 15)
             Toggle("Seamless personalization across devices. Our cookie-based identification assigns your profile to all recognized devices, ensuring consistent settings and personalized offers. Your surfing behavior is not utilized for this purpose. Registering for our newsletter allows us to identify you and link it to your profile.", isOn: $nba)
-                .font(.system(size: 13))
+                .font(.system(size: 15))
             HStack{
                 insertButton(title: "Reject All", color: .gray, action: {
                     TrackUtils.click(value: "reject_permissions")
@@ -88,7 +88,7 @@ struct PermissionsView: View {
         .navigationTitle("CDP and UTIQ Consent")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            if let permissions = try? FunnelConnectSDK.shared.getPermissions(), !permissions.isEmpty(){
+            if let permissions = try? FunnelConnectSDK.shared.getPermissions(){
                 self.om = permissions.getPermission(key: store.keyOm)
                 self.opt = permissions.getPermission(key: store.keyOpt)
                 self.nba = permissions.getPermission(key: store.keyNba)

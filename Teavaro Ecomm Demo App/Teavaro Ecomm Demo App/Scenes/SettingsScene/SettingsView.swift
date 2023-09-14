@@ -17,6 +17,7 @@ struct SettingsView: View {
     @EnvironmentObject var store: Store
     @State var showingConfirmationAlert = false
     @State private var showModal1 = false
+    @State var showingDataClearedAlert: Bool = false
     
     var body: some View {
         NavigationView {
@@ -44,7 +45,7 @@ struct SettingsView: View {
                         Toggle("Stub Mode", isOn: $store.isStub)
                             .onTapGesture {
                                 TrackUtils.click(value: "stub_mode_\(!store.isStub)")
-                                store.clearData()
+                                store.clearUtiqData()
                                 var token = ""
                                 if(!store.isStub){
                                     token = "523393b9b7aa92a534db512af83084506d89e965b95c36f982200e76afcb82cb"
@@ -54,11 +55,9 @@ struct SettingsView: View {
                             }
                     }
                     Section(){
-//                    if (store.isCdpStarted) {
                         NavigationLink(destination: NotificationsView()) {
                             Text("Send Notifications")
                         }
-//                    }
                     }
                     Section(){
                         NavigationLink(destination: ShareLinksView()) {
@@ -79,7 +78,9 @@ struct SettingsView: View {
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
-//                            store.updatePermissions(om: false, nba: false, opt: false, utiq: false)
+                            showingDataClearedAlert.toggle()
+//                            store.updatePermissions(om: false, nba: false, opt: false)
+//                            store.updateUtiqPermission(consent: false)
                             store.clearData()
                         })
                     }
@@ -101,6 +102,9 @@ struct SettingsView: View {
                         secondaryButton: .cancel(Text("Cancel"))
                     )
                 }
+                .alert("Data cleared!", isPresented: $showingDataClearedAlert) {
+                            Button("Ok", role: .cancel) { }
+                }
             }
             .onAppear(perform: {
                 TrackUtils.impression(value: "settings_view")
@@ -108,21 +112,10 @@ struct SettingsView: View {
             .sheet(isPresented: $showModal1, onDismiss: {
                 print(self.showModal1)
             }) {
-                ModalView1(showModal1: self.$showModal1)
+                ModalUtiqView(showModal: self.$showModal1)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct ModalView1: View {
-    @Environment(\.presentationMode) var presentation
-    @Binding var showModal1: Bool
-
-    var body: some View {
-        VStack {
-            PermissionsView()
-        }
     }
 }
 

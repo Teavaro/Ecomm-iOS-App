@@ -31,12 +31,12 @@ class Store: ObservableObject {
     @Published var umid: String? = nil
     @Published var userId: String? = nil
     @Published var isStub: Bool = false
+    @Published var banner: String = ""
+    @Published var showBanner = false
+    
     let userType = "enemail"
 
     let cartId: Int16 = 12
-    var infoResponse = """
-    {}
-    """
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
@@ -45,7 +45,7 @@ class Store: ObservableObject {
     let keyNba = "CS-NBA"
     let keyUtiq = "CS-UTIQ"
     let fcNotificationsName = "MAIN_CS"
-    let utiqNotificationsName = "MAIN_CS_UTIQ"
+    let utiqNotificationsName = "UTIQ_CS"
     let notificationsVersion: Int32 = 1
     
     init() {
@@ -105,19 +105,23 @@ class Store: ObservableObject {
         listCart.removeAll()
     }
     
-    func getBanner() -> String{
-//        print("getBanner()")
-        var text = ""
-        if(isNbaPermissionGranted()){
-            text = getBannerAttr()
-            text += "&amp;impression=offers"
+    func processInfoResponse(infoResponse: String){
+        print("getBanner()")
+        var urlCeltra = ""
+        if isNbaPermissionGranted(){
+            if let attr = getBannerAttr(infoResponse: infoResponse){
+                urlCeltra = "\(createURL(attributes: attr)!)".replacingOccurrences(of: "&", with: "&amp;")
+            }
+            else{
+                urlCeltra = "\(createURL(attributes: "")!)?attributes=%7B%7D&amp;allowTracking=true"
+            }
         }
         else{
-            text += "&amp;impression=default"
+            urlCeltra = "\(createURL(attributes: "")!)?attributes=%7B%7D&amp;allowTracking=false"
         }
-        text += "&amp;device=ios"
-//        print("iran:attr", text)
-        let htmlContent = """
+        print("urlCeltra: \(urlCeltra)")
+        self.showBanner = true
+        self.banner = """
             <!DOCTYPE html>
                <html>
                <body>
@@ -134,7 +138,7 @@ class Store: ObservableObject {
                                 for (var k in params) {
                                     qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
                                 }
-                                var src = 'https://funnelconnect.brand-demo.com/op/brand-demo-app-celtra/ad?' + qs + '\(text)';
+                                var src = '\(urlCeltra)' + qs;
                                 req.src = src;
                                 img.parentNode.insertBefore(req, img.nextSibling);
                             })(this);
@@ -143,11 +147,23 @@ class Store: ObservableObject {
                </body>
                </html>
             """
-        return htmlContent
     }
     
-    func getBannerAttr() -> String{
-        var text = ""
+    func createURL(attributes: String) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "funnelconnect.brand-demo.com"
+        urlComponents.path = "/op/brand-demo-web-celtra/ad"
+        if(attributes != ""){
+            let attributesParam = URLQueryItem(name: "attributes", value: attributes)
+            let allowTrackingParam = URLQueryItem(name: "allowTracking", value: "true")
+            urlComponents.queryItems = [attributesParam, allowTrackingParam]
+        }
+        return urlComponents.url
+    }
+    
+    func getBannerAttr(infoResponse: String) -> String?{
+        var text: String? = nil
         var obj: InfoResponse? = nil
         do {
             let decoder = JSONDecoder()
@@ -157,20 +173,13 @@ class Store: ObservableObject {
         } catch {
             print("readingAttrFromInfoResponse:error:\(error)")
         }
-        if obj != nil{
-//            print("iran:attributes",obj!.attributes)
-            for (key, value) in obj!.attributes {
-                text += "&amp;" + key + "=" + value
-            }
-        }
-        if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
-            text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
-        }
-       
-        if let userId = UserDefaultsUtils.getUserId(){
-//            text += "&amp;" + "rp.user.userId" + "=\(userName)"
-            text += "&amp;" + "rp.user.userId" + "=\(userId)"
-            text += "&amp;" + "userType" + "=\(userType)"
+        if obj != nil, obj!.attributes.count > 0{
+//            for (key, value) in obj!.attributes {
+//                text += "&amp;" + key + "=" + value
+//            }
+            let attributes = "\(obj!.attributes)".replacingOccurrences(of: "[", with: "{").replacingOccurrences(of: "]", with: "}")
+            text = "\(attributes)"
+            print("attributes: \(text!)")
         }
         return text
     }
@@ -180,20 +189,27 @@ class Store: ObservableObject {
         isLogin = false
         isStub = false
         umid = ""
-        atid = ""
-        mtid = ""
         userId = ""
-        infoResponse = ""
+        processInfoResponse(infoResponse: """
+            {}
+"""
+        )
+        clearUtiqData()
         abandonedCartId = 0
         DataManager.shared.clearCart()
         DataManager.shared.clearData()
         DataManager.shared.clearAbandonedCarts()
         UserDefaultsUtils.clear()
-        try? UTIQ.shared.clearData()
-        try? UTIQ.shared.clearCookies()
         try? FunnelConnectSDK.shared.clearData()
         try? FunnelConnectSDK.shared.clearCookies()
         initializeData()
+    }
+    
+    func clearUtiqData(){
+        atid = ""
+        mtid = ""
+        try? UTIQ.shared.clearData()
+        try? UTIQ.shared.clearCookies()
     }
     
     func initializeData(){
@@ -342,7 +358,7 @@ class Store: ObservableObject {
             if let umid = try? FunnelConnectSDK.shared.getUMID() {
                 self.isCdpStarted.toggle()
                 self.umid = umid
-                self.infoResponse = data
+                self.processInfoResponse(infoResponse: data)
                 print("excecuting SwrveSDK.start(withUserId: \(umid))")
                 SwrveSDK.start(withUserId: umid)
                 print("excecuting SwrveGeoSDK.start()")
@@ -363,7 +379,8 @@ class Store: ObservableObject {
             permissions.addPermission(key: self.keyNba,accepted: nba)
             permissions.addPermission(key: self.keyOm,accepted: om)
             permissions.addPermission(key: self.keyOpt,accepted: opt)
-            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {_ in
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {data in
+                self.processInfoResponse(infoResponse: data)
                 UserDefaultsUtils.setPermissionsRequested(value: true)
                 UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted()) 
             }, errorCallback: {_ in })
@@ -382,11 +399,8 @@ class Store: ObservableObject {
         let action = {
             let permissions = Permissions()
             permissions.addPermission(key: self.keyUtiq,accepted: consent)
-            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.utiqNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {_ in
-                if UTIQ.shared.isInitialized(){
-                    try? UTIQ.shared.acceptConsent()
-                    self.utiqStartService()
-                }
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.utiqNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {data in
+                self.processInfoResponse(infoResponse: data)
             }, errorCallback: {_ in })
         }
         if(self.isFunnelConnectStarted){
