@@ -42,7 +42,7 @@ struct AppMain: App {
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             
-            self.initHttpRequestsMonitor()
+           self.initHttpRequestsMonitor()
             
             let center = UNUserNotificationCenter.current()
             center.delegate = self
@@ -57,8 +57,11 @@ struct AppMain: App {
             
             print("excecuting FunnelConnectSDK.initialize()")
             FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
-            print("excecuting UTIQ.initialize()")
-            UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  UTIQOptions(enableLogging: true))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                print("excecuting UTIQ.initialize()")
+                UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
+//                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  UTIQOptions(enableLogging: true))
+            }
             
             DispatchQueue.main.async {
                 let config = SwrveConfig()
@@ -105,16 +108,15 @@ struct AppMain: App {
             completionHandler([.banner, .list, .sound])
         }
         
-        func triggered(_ name: String, transition: String, at location: CLLocation, customProperties: String?) {
-            TrackUtils.geoPlace(value: name)
-        }
+//        func triggered(_ name: String, transition: String, at location: CLLocation, customProperties: String?) {
+//            TrackUtils.geoPlace(value: name)
+//        }
         
         private func initHttpRequestsMonitor() {
             LoggingSystem.bootstrap(PersistentLogHandler.init)
             URLSessionProxyDelegate.enableAutomaticRegistration()
         }
       }
-    
 }
 
 class AppState: ObservableObject {

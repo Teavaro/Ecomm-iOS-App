@@ -1,8 +1,8 @@
 PODS:
   - FunnelConnectSDK (0.1.2)
-  - SDWebImage (5.18.1):
-    - SDWebImage/Core (= 5.18.1)
-  - SDWebImage/Core (5.18.1)
+  - SDWebImage (5.18.3):
+    - SDWebImage/Core (= 5.18.3)
+  - SDWebImage/Core (5.18.3)
   - SwrveGeoSDK (5.0.1)
   - SwrveSDK (8.8.1):
     - SDWebImage (~> 5.0)
@@ -27,7 +27,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FunnelConnectSDK: 7737eb8663a1c9e571b54b2929e8437db5f00fa7
-  SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
+  SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
   SwrveGeoSDK: d859ce71aa7f4f3ecb51f85fcf78521991ba6f99
   SwrveSDK: d0d66673d84bf73bc4f96b277bb1e086489fc0fd
   SwrveSDKCommon: 6e385e8d17a6d0d04c1bb61471d4bb21008dbb23

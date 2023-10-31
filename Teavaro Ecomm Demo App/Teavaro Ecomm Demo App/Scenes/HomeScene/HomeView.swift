@@ -47,6 +47,7 @@ struct HomeView: View {
         .onChange(of: scenePhase) { newPhase in
             TrackUtils.lifeCycle(phase: newPhase)
             if newPhase == .active {
+                store.showATTConsent()
                 if let section = AppState.shared.section{
                     if(section == "store"){
                         store.tabSelection = 2

@@ -43,14 +43,14 @@ struct PermissionsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Analytics Cookies:")
-                .foregroundColor(.gray)
-            Toggle("Enhance your experience. Our cookies improve our website by analyzing visitor behavior, such as page duration and return frequency.", isOn: $om)
-                .font(.system(size: 15))
             Text("Marketing and Social Network:")
                 .foregroundColor(.gray)
+            Toggle("Enhance your browsing experience. Our cookies evaluate your behavior and present relevant offers. They also enable valuable insights for advertisers and publishers. We share this information with trusted analytics, marketing, and social media partners. If you're logged in to a social network, your user profile may be enriched with your surfing behavior.", isOn: $om)
+                .font(.system(size: 15))
+            Text("Analytics Cookies:")
+                .foregroundColor(.gray)
                 .padding(.top, 15)
-            Toggle("Enhance your browsing experience. Our cookies evaluate your behavior and present relevant offers. They also enable valuable insights for advertisers and publishers. We share this information with trusted analytics, marketing, and social media partners. If you're logged in to a social network, your user profile may be enriched with your surfing behavior.", isOn: $opt)
+            Toggle("Enhance your experience. Our cookies improve our website by analyzing visitor behavior, such as page duration and return frequency.", isOn: $opt)
                 .font(.system(size: 15))
             Text("Personal Offers:")
                 .foregroundColor(.gray)

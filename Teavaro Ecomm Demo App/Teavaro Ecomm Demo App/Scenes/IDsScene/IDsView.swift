@@ -34,9 +34,14 @@ struct IDsView: View {
                     Text(store.atid ?? "")
                 }
                 Section{
-                    Text("Mtid")
+                    Text("Mtid:")
                         .bold()
                     Text(store.mtid ?? "")
+                }
+                Section{
+                    Text("Attributes:")
+                        .bold()
+                    Text(store.attributes ?? "")
                 }
             }
         }

@@ -11,6 +11,8 @@ import funnelConnectSDK
 import utiqSDK
 import SwrveSDK
 import SwrveGeoSDK
+import AppTrackingTransparency
+import AdSupport
 
 class Store: ObservableObject {
     @Published var listItems: [Item] = []
@@ -28,6 +30,7 @@ class Store: ObservableObject {
     @Published var abandonedCartId: Int = 0
     @Published var atid: String? = nil
     @Published var mtid: String? = nil
+    @Published var attributes: String? = nil
     @Published var umid: String? = nil
     @Published var userId: String? = nil
     @Published var isStub: Bool = false
@@ -163,7 +166,6 @@ class Store: ObservableObject {
     }
     
     func getBannerAttr(infoResponse: String) -> String?{
-        var text: String? = nil
         var obj: InfoResponse? = nil
         do {
             let decoder = JSONDecoder()
@@ -178,10 +180,10 @@ class Store: ObservableObject {
 //                text += "&amp;" + key + "=" + value
 //            }
             let attributes = "\(obj!.attributes)".replacingOccurrences(of: "[", with: "{").replacingOccurrences(of: "]", with: "}")
-            text = "\(attributes)"
-            print("attributes: \(text!)")
+            self.attributes = "\(attributes)"
+            print("attributes: \(self.attributes!)")
         }
-        return text
+        return self.attributes
     }
     
     func clearData(){
@@ -189,6 +191,7 @@ class Store: ObservableObject {
         isLogin = false
         isStub = false
         umid = ""
+        attributes = ""
         userId = ""
         processInfoResponse(infoResponse: """
             {}
@@ -225,17 +228,6 @@ class Store: ObservableObject {
             DataManager.shared.addItem(id: 3, title: "Good Soy Cookies", desc: description,price: 3.99, picture: "cookies", data: "/product/good-soy-cookies/")
             DataManager.shared.addItem(id: 4, title: "Jack Link’s Teriyaki, Beef Jerky", desc: description,price: 6.60, picture: "teriyaki", data: "/product/save-on-jack-links-beef-jerky-teriyaki/")
             DataManager.shared.addItem(id: 5, title: "Absolute Organic Cashews", desc: description,price: 20.00, picture: "cashews", data: "/product/healthy-snack-box-variety-pack-60-count/")
-//            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
-//            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
-//            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
-//            DataManager.shared.addItem(id: 3, title: "Morrisons Smoked Paprika", desc: description, price: 4.60, picture: "paprika")
-//            DataManager.shared.addItem(id: 4, title: "Jaffa Tropical Flavour Burst Seedless", desc: description, price: 2.50, picture: "burst")
-//            DataManager.shared.addItem(id: 5, title: "Pams Chopped Watermelon", desc: description, price: 3.99, picture: "watermelon")
-//            DataManager.shared.addItem(id: 6, title: "Woolworths Food Flavourburst Seedless Grapes", desc: description, price: 2.00, picture: "grapes")
-//            DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
-//            DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
-//            DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
-//            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370g", desc: description, price: 3.99, picture: "tomato")
             listItems = DataManager.shared.getItems()
         }
         listWish = DataManager.shared.getWishItems()
@@ -276,6 +268,11 @@ class Store: ObservableObject {
                     itemSelected = Int16(value) ?? -1
                     showItem = true
                 }
+                if(key == "item_data"){
+                    tabSelection = 1
+                    itemSelected = getItemFromData(data: value)?.id ?? -1
+                    showItem = true
+                }
                 if(key == "ab_cart_id"){
                     abandonedCartId = Int(value) ?? getAbCartId()
                 }
@@ -296,6 +293,15 @@ class Store: ObservableObject {
                 }
             }
         }
+    }
+    
+    func getItemFromData(data: String) -> Item?{
+        for item in listItems{
+            if item.data.contains(data){
+                return item
+            }
+        }
+        return nil
     }
     
     func getAbCartId() -> Int{
@@ -341,7 +347,7 @@ class Store: ObservableObject {
         if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
             if(isConsentAccepted){
                 let stubToken = UserDefaultsUtils.getStubToken()
-                UTIQ.shared.startService(stubToken: stubToken, dataCallback: {data in
+                UTIQ.shared.startService(isStub: true, dataCallback: {data in
                     self.mtid = data.mtid
                     TrackUtils.mtid = data.mtid
                     self.atid = data.atid
@@ -382,7 +388,8 @@ class Store: ObservableObject {
             FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {data in
                 self.processInfoResponse(infoResponse: data)
                 UserDefaultsUtils.setPermissionsRequested(value: true)
-                UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted()) 
+                UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted())
+                UserDefaultsUtils.setCdpOpt(opt: self.isOptPermissionGranted())
             }, errorCallback: {_ in })
         }
         if(self.isFunnelConnectStarted){
@@ -418,5 +425,27 @@ class Store: ObservableObject {
                 return true
         }
         return false
+    }
+    
+    func isOptPermissionGranted() -> Bool{
+        if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.getPermission(key: keyOpt){
+                return true
+        }
+        return false
+    }
+    
+    func showATTConsent(){
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+                        print("enable tracking")
+                    case .denied:
+                        print("disable tracking")
+                    default:
+                        print("tracking: \(status)")
+                }
+            }
+        }
     }
 }
