@@ -68,6 +68,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		001EA6E12B50027C00B90B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF1281E58AA1045D4B7F33FC56691C42;
+			remoteInfo = "SDWebImage-SDWebImage";
+		};
 		00AEA9D02A2F651600794528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
@@ -278,6 +285,7 @@
 			children = (
 				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
 				00BA72512AE7CE5E005A24AB /* SDWebImage */,
+				001EA6E22B50027C00B90B0D /* SDWebImage-SDWebImage */,
 				00BA72532AE7CE5E005A24AB /* SwrveSDK */,
 				00BA72552AE7CE5E005A24AB /* SwrveSDK-SwrveConversationSDK */,
 				00BA72572AE7CE5E005A24AB /* SwrveSDKCommon */,
@@ -578,6 +586,14 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		001EA6E22B50027C00B90B0D /* SDWebImage-SDWebImage */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SDWebImage-SDWebImage";
+			path = SDWebImage.bundle;
+			remoteRef = 001EA6E12B50027C00B90B0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -867,7 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -912,7 +928,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;

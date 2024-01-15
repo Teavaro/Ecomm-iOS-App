@@ -98,9 +98,13 @@ struct PermissionsView: View {
     }
     
     func showUtiqConsent(){
-//        if(UTIQ.shared.isInitialized()){
-            store.showUtiqConsent = true
-//        }
+        if(UTIQ.shared.isInitialized()){
+            UTIQ.shared.checkMNOEligibility{
+                store.showUtiqConsent = true
+            } errorCallback: {error in
+                
+            }
+        }
     }
 }
 

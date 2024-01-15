@@ -110,7 +110,7 @@ struct SettingsView: View {
                 TrackUtils.impression(value: "settings_view")
             })
             .sheet(isPresented: $showModal1, onDismiss: {
-                print(self.showModal1)
+                print("showing ModalUtiqView:\(self.showModal1)")
             }) {
                 ModalUtiqView(showModal: self.$showModal1)
             }

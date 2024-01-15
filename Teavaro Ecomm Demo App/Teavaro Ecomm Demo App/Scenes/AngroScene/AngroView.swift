@@ -115,12 +115,12 @@ struct AngroView: View {
             })
         }
         .sheet(isPresented: $store.showCdpPermissions, onDismiss: {
-            print(store.showCdpPermissions)
+            print("showCdpPermissions:\(store.showCdpPermissions)")
         }) {
             ModalPermissionsCdpView(showModal: $store.showCdpPermissions)
         }
         .sheet(isPresented: $store.showUtiqConsent, onDismiss: {
-            print(store.showUtiqConsent)
+            print("showUtiqConsent:\(store.showUtiqConsent)")
         }) {
             ModalUtiqView(showModal: $store.showUtiqConsent)
         }

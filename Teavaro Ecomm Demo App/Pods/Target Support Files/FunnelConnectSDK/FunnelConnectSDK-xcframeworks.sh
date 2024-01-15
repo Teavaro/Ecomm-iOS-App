@@ -20,7 +20,7 @@ variant_for_slice()
   "funnelConnectSDK.xcframework/ios-arm64")
     echo ""
     ;;
-  "funnelConnectSDK.xcframework/ios-x86_64-simulator")
+  "funnelConnectSDK.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   esac
@@ -32,8 +32,8 @@ archs_for_slice()
   "funnelConnectSDK.xcframework/ios-arm64")
     echo "arm64"
     ;;
-  "funnelConnectSDK.xcframework/ios-x86_64-simulator")
-    echo "x86_64"
+  "funnelConnectSDK.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   esac
 }
@@ -117,5 +117,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/FunnelConnectSDK/funnelConnectSDK.xcframework" "FunnelConnectSDK" "framework" "ios-arm64" "ios-x86_64-simulator"
+install_xcframework "${PODS_ROOT}/FunnelConnectSDK/funnelConnectSDK.xcframework" "FunnelConnectSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 

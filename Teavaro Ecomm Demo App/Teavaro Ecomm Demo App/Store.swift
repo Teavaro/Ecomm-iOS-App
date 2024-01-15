@@ -344,15 +344,18 @@ class Store: ObservableObject {
     }
     
     func utiqStartService(){
+        print(utiqStartService)
         if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
             if(isConsentAccepted){
+                print("isConsentAccepted:\(isConsentAccepted)")
                 let stubToken = UserDefaultsUtils.getStubToken()
-                UTIQ.shared.startService(isStub: true, dataCallback: {data in
+                UTIQ.shared.startService(stubToken: stubToken, dataCallback: {data in
+                    print("dataCallback: UTIQ.shared.startService")
                     self.mtid = data.mtid
                     TrackUtils.mtid = data.mtid
                     self.atid = data.atid
                 },errorCallback: {error in
-                    print("error UTIQ.shared.startService")
+                    print("errorCallback: UTIQ.shared.startService")
                     print("error: \(error)")
                 })
             }

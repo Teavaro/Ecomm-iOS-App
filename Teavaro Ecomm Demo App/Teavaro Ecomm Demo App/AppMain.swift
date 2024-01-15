@@ -56,11 +56,11 @@ struct AppMain: App {
             }
             
             print("excecuting FunnelConnectSDK.initialize()")
-            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
+            //FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
+            FunnelConnectSDK.shared.initialize(sdkToken: "cBsA3tQa.fyL749JH+?yJW=7", options:  FCOptions(enableLogging: true))
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 print("excecuting UTIQ.initialize()")
-                UTIQ.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  UTIQOptions(enableLogging: true))
-//                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  UTIQOptions(enableLogging: true))
+                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  UTIQOptions(enableLogging: true))
             }
             
             DispatchQueue.main.async {
@@ -75,13 +75,11 @@ struct AppMain: App {
                 SwrveSDK.sharedInstance(withAppID: 32153,
                     apiKey: "FiIpd4eZ8CtQ6carAAx9",
                     config: config)
-                print("end SwrveSDK.sharedInstance()")
-                print("")
-                let geoConfig = SwrveGeoConfig()
-                geoConfig.swrveGeofenceTransitionDelegate = self
-                SwrveGeoSDK.initWith(geoConfig)
-                
             }
+            print("end SwrveSDK.sharedInstance()")
+            let geoConfig = SwrveGeoConfig()
+            geoConfig.swrveGeofenceTransitionDelegate = self
+            SwrveGeoSDK.initWith(geoConfig)
           return true
         }
         
