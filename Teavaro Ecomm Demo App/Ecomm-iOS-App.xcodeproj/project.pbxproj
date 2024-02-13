@@ -75,6 +75,13 @@
 			remoteGlobalIDString = CF1281E58AA1045D4B7F33FC56691C42;
 			remoteInfo = "SDWebImage-SDWebImage";
 		};
+		002837902B7A46F300C6AA80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0933B761FCE6742098E12D6A0801B80E;
+			remoteInfo = "SwrveSDK-SwrveSDK";
+		};
 		00AEA9D02A2F651600794528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
@@ -288,6 +295,7 @@
 				001EA6E22B50027C00B90B0D /* SDWebImage-SDWebImage */,
 				00BA72532AE7CE5E005A24AB /* SwrveSDK */,
 				00BA72552AE7CE5E005A24AB /* SwrveSDK-SwrveConversationSDK */,
+				002837912B7A46F300C6AA80 /* SwrveSDK-SwrveSDK */,
 				00BA72572AE7CE5E005A24AB /* SwrveSDKCommon */,
 			);
 			name = Products;
@@ -592,6 +600,14 @@
 			name = "SDWebImage-SDWebImage";
 			path = SDWebImage.bundle;
 			remoteRef = 001EA6E12B50027C00B90B0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		002837912B7A46F300C6AA80 /* SwrveSDK-SwrveSDK */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SwrveSDK-SwrveSDK";
+			path = SwrveSDK.bundle;
+			remoteRef = 002837902B7A46F300C6AA80 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
