@@ -1,6 +1,0 @@
-framework module utiqSDK {
-    umbrella header "utiqSDK.h"
-
-    export *
-    module * { export * }
-}

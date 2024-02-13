@@ -1,0 +1,8 @@
+framework module UTIQ {
+    umbrella header "UTIQ.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

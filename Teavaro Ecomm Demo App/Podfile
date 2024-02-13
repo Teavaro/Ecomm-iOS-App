@@ -1,6 +1,5 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-platform :ios
 
 target 'Ecomm-iOS-App' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,8 +7,8 @@ target 'Ecomm-iOS-App' do
 
 pod 'SwrveSDK'
 pod 'SwrveGeoSDK'
-pod 'utiqSDK'
-pod 'FunnelConnectSDK'
+pod 'UTIQ'
+pod 'FunnelConnect'
 
   # Pods for Ecomm-iOS-App
 
