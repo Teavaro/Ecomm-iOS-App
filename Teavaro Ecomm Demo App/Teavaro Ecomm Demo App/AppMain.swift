@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import funnelConnectSDK
-import utiqSDK
-import SwrveSDK
-import SwrveGeoSDK
+import FunnelConnect
+import UTIQ
+//import SwrveSDK
+//import SwrveGeoSDK
 import Pulse
 import PulseUI
 import PulseLogHandler
@@ -35,7 +35,7 @@ struct AppMain: App {
             
         }
     
-    class AppDelegate: NSObject, UIApplicationDelegate, SwrvePushResponseDelegate, UNUserNotificationCenterDelegate, SwrveGeofenceTransitionDelegate{
+    class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate{//SwrvePushResponseDelegate, SwrveGeofenceTransitionDelegate{
         let NotificationCategoryIdentifier = "com.swrve.sampleAppButtons"
         let NotificationActionOneIdentifier = "ACTION1"
         let NotificationActionTwoIdentifier = "ACTION2"
@@ -56,30 +56,37 @@ struct AppMain: App {
             }
             
             print("excecuting FunnelConnectSDK.initialize()")
-            //FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  FCOptions(enableLogging: true))
-            FunnelConnectSDK.shared.initialize(sdkToken: "cBsA3tQa.fyL749JH+?yJW=7", options:  FCOptions(enableLogging: true))
+            let fcConfigs = Bundle.main.path(forResource: "fc_configs", ofType: "json")!
+            let options = FCOptions().enableLogging().setFallBackConfigJson(json: fcConfigs)
+            FunnelConnectSDK.shared.initialize(sdkToken: "ko8G.Rv_vT97LiDuoBHbhBJt", options:  options)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 print("excecuting UTIQ.initialize()")
-                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  UTIQOptions(enableLogging: true))
+                let utiqConfigs = Bundle.main.url(forResource: "utiq_configs", withExtension: "json")!
+                let fileContents = try? String(contentsOf: utiqConfigs)
+                print(fileContents!)
+                let options = UTIQOptions()
+                options.enableLogging()
+                options.setFallBackConfigJson(json: fileContents!)
+                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  options)
             }
             
-            DispatchQueue.main.async {
-                let config = SwrveConfig()
-                config.pushResponseDelegate = self
-                config.pushEnabled = true
-                config.initMode = SWRVE_INIT_MODE_MANAGED
-                config.pushNotificationEvents = Set(["full_permission_button_clicked"])
-                config.provisionalPushNotificationEvents = Set(["Swrve.session.start"])
-                config.notificationCategories = self.produceUNNotificationCategory() as! Set<UNNotificationCategory>
-                print("excecuting SwrveSDK.sharedInstance()")
-                SwrveSDK.sharedInstance(withAppID: 32153,
-                    apiKey: "FiIpd4eZ8CtQ6carAAx9",
-                    config: config)
-            }
+            //DispatchQueue.main.async {
+                //let config = SwrveConfig()
+                //config.pushResponseDelegate = self
+                //config.pushEnabled = true
+                //config.initMode = SWRVE_INIT_MODE_MANAGED
+                //config.pushNotificationEvents = Set(["full_permission_button_clicked"])
+                //config.provisionalPushNotificationEvents = Set(["Swrve.session.start"])
+                //config.notificationCategories = self.produceUNNotificationCategory() as! Set<UNNotificationCategory>
+                //print("excecuting SwrveSDK.sharedInstance()")
+                //SwrveSDK.sharedInstance(withAppID: 32153,
+                //    apiKey: "FiIpd4eZ8CtQ6carAAx9",
+                //    config: config)
+            //}
             print("end SwrveSDK.sharedInstance()")
-            let geoConfig = SwrveGeoConfig()
-            geoConfig.swrveGeofenceTransitionDelegate = self
-            SwrveGeoSDK.initWith(geoConfig)
+            //let geoConfig = SwrveGeoConfig()
+            //geoConfig.swrveGeofenceTransitionDelegate = self
+            //SwrveGeoSDK.initWith(geoConfig)
           return true
         }
         

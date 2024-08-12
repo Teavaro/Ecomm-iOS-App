@@ -18,10 +18,15 @@
 		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
 		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
 		0019CA2E299B489600A7D771 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2D299B489600A7D771 /* DataManager.swift */; };
+		002837F02B7F888100C6AA80 /* SwrveConversationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 002837EF2B7F888100C6AA80 /* SwrveConversationSDK */; };
+		002837F22B7F888100C6AA80 /* SwrveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 002837F12B7F888100C6AA80 /* SwrveSDK */; };
+		002837F42B7F888100C6AA80 /* SwrveSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 002837F32B7F888100C6AA80 /* SwrveSDKCommon */; };
 		002A747F29BBDD67009F5248 /* CeltraResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A747E29BBDD67009F5248 /* CeltraResponse.swift */; };
+		004472A42C2039B700D9CE83 /* utiq_configs.json in Resources */ = {isa = PBXBuildFile; fileRef = 004472A32C2039B700D9CE83 /* utiq_configs.json */; };
 		004A57762A3B899300BF32D0 /* PulseLogHandler in Frameworks */ = {isa = PBXBuildFile; productRef = 004A57752A3B899300BF32D0 /* PulseLogHandler */; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
+		007182FF2C3C35B1000A8357 /* fc_configs.json in Resources */ = {isa = PBXBuildFile; fileRef = 007182FE2C3C35B1000A8357 /* fc_configs.json */; };
 		0082B97A29E46D7200EC82F5 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0082B97929E46D7200EC82F5 /* NotificationsView.swift */; };
 		008513D529102135006898F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008513D429102135006898F7 /* GoogleService-Info.plist */; };
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
@@ -68,40 +73,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		002838042B7F9B5700C6AA80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE19EDBC490B82C974FED80E58DB7FC9;
+			remoteInfo = SwrveSDKCommon;
+		};
+		004472A12C202C6800D9CE83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DC3896FD8365317B21CBE654F961CD6;
+			remoteInfo = "SwrveSDKCommon-SwrveSDKCommon";
+		};
 		00AEA9D02A2F651600794528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 098854D079B8667BC4FED7C5E49C9890;
 			remoteInfo = "Pods-Ecomm-iOS-App";
-		};
-		00BA72502AE7CE5E005A24AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B0B214D775196BA7CA8E17E53048A493;
-			remoteInfo = SDWebImage;
-		};
-		00BA72522AE7CE5E005A24AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 88D6AE1705B83CE1128A4784A51C8247;
-			remoteInfo = SwrveSDK;
-		};
-		00BA72542AE7CE5E005A24AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 33EF3654856DCA62128847BE014483D0;
-			remoteInfo = "SwrveSDK-SwrveConversationSDK";
-		};
-		00BA72562AE7CE5E005A24AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE19EDBC490B82C974FED80E58DB7FC9;
-			remoteInfo = SwrveSDKCommon;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -118,8 +109,10 @@
 		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		0019CA2D299B489600A7D771 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		002A747E29BBDD67009F5248 /* CeltraResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraResponse.swift; sourceTree = "<group>"; };
+		004472A32C2039B700D9CE83 /* utiq_configs.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = utiq_configs.json; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		007182FE2C3C35B1000A8357 /* fc_configs.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = fc_configs.json; sourceTree = "<group>"; };
 		0082B97929E46D7200EC82F5 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		008513D429102135006898F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		008513D6291021DD006898F7 /* UserDefaultsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtils.swift; sourceTree = "<group>"; };
@@ -176,10 +169,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				004A57762A3B899300BF32D0 /* PulseLogHandler in Frameworks */,
+				002837F22B7F888100C6AA80 /* SwrveSDK in Frameworks */,
 				00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */,
 				00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */,
 				001455012AC48D24007F4D01 /* AppTrackingTransparency.framework in Frameworks */,
 				4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */,
+				002837F42B7F888100C6AA80 /* SwrveSDKCommon in Frameworks */,
+				002837F02B7F888100C6AA80 /* SwrveConversationSDK in Frameworks */,
 				001455032AC48D33007F4D01 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,10 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
-				00BA72512AE7CE5E005A24AB /* SDWebImage */,
-				00BA72532AE7CE5E005A24AB /* SwrveSDK */,
-				00BA72552AE7CE5E005A24AB /* SwrveSDK-SwrveConversationSDK */,
-				00BA72572AE7CE5E005A24AB /* SwrveSDKCommon */,
+				002838052B7F9B5700C6AA80 /* SwrveSDKCommon */,
+				004472A22C202C6800D9CE83 /* SwrveSDKCommon-SwrveSDKCommon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,6 +456,8 @@
 			children = (
 				C9FE779B28622C3F006DDD74 /* Assets.xcassets */,
 				00D547FD29BA5D3500E92B88 /* mraid.js */,
+				004472A32C2039B700D9CE83 /* utiq_configs.json */,
+				007182FE2C3C35B1000A8357 /* fc_configs.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -529,6 +525,9 @@
 				00AEA9DD2A2F83B900794528 /* Pulse */,
 				00AEA9DF2A2F83B900794528 /* PulseUI */,
 				004A57752A3B899300BF32D0 /* PulseLogHandler */,
+				002837EF2B7F888100C6AA80 /* SwrveConversationSDK */,
+				002837F12B7F888100C6AA80 /* SwrveSDK */,
+				002837F32B7F888100C6AA80 /* SwrveSDKCommon */,
 			);
 			productName = "Teavaro Ecomm Demo App";
 			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
@@ -561,6 +560,7 @@
 			packageReferences = (
 				00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */,
 				004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */,
+				002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */,
 			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
@@ -578,44 +578,28 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		002838052B7F9B5700C6AA80 /* SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SwrveSDKCommon;
+			path = SwrveSDKCommon.framework;
+			remoteRef = 002838042B7F9B5700C6AA80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		004472A22C202C6800D9CE83 /* SwrveSDKCommon-SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SwrveSDKCommon-SwrveSDKCommon";
+			path = SwrveSDKCommon.bundle;
+			remoteRef = 004472A12C202C6800D9CE83 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			name = "Pods-Ecomm-iOS-App";
 			path = Pods_Ecomm_iOS_App.framework;
 			remoteRef = 00AEA9D02A2F651600794528 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00BA72512AE7CE5E005A24AB /* SDWebImage */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = SDWebImage;
-			path = SDWebImage.framework;
-			remoteRef = 00BA72502AE7CE5E005A24AB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00BA72532AE7CE5E005A24AB /* SwrveSDK */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = SwrveSDK;
-			path = SwrveSDK.framework;
-			remoteRef = 00BA72522AE7CE5E005A24AB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00BA72552AE7CE5E005A24AB /* SwrveSDK-SwrveConversationSDK */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			name = "SwrveSDK-SwrveConversationSDK";
-			path = SwrveConversationSDK.bundle;
-			remoteRef = 00BA72542AE7CE5E005A24AB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		00BA72572AE7CE5E005A24AB /* SwrveSDKCommon */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = SwrveSDKCommon;
-			path = SwrveSDKCommon.framework;
-			remoteRef = 00BA72562AE7CE5E005A24AB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -627,8 +611,10 @@
 			files = (
 				00D547FE29BA5D3500E92B88 /* mraid.js in Resources */,
 				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
+				004472A42C2039B700D9CE83 /* utiq_configs.json in Resources */,
 				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
 				008513D529102135006898F7 /* GoogleService-Info.plist in Resources */,
+				007182FF2C3C35B1000A8357 /* fc_configs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +956,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swrve/swrve-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
+			};
+		};
 		004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/PulseLogHandler.git";
@@ -989,6 +983,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		002837EF2B7F888100C6AA80 /* SwrveConversationSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveConversationSDK;
+		};
+		002837F12B7F888100C6AA80 /* SwrveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDK;
+		};
+		002837F32B7F888100C6AA80 /* SwrveSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDKCommon;
+		};
 		004A57752A3B899300BF32D0 /* PulseLogHandler */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */;

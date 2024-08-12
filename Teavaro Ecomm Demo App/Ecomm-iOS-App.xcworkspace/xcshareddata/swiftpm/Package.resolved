@@ -19,12 +19,30 @@
       }
     },
     {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "5642d1ffe3dbe628592443bd14154e31929727b4",
+        "version" : "5.19.2"
+      }
+    },
+    {
       "identity" : "swift-log",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
         "revision" : "e97a6fcb1ab07462881ac165fdbb37f067e205d5",
         "version" : "1.5.4"
+      }
+    },
+    {
+      "identity" : "swrve-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swrve/swrve-ios-sdk",
+      "state" : {
+        "revision" : "d4337feb67a6661273cdb81861c97b6bc361d120",
+        "version" : "8.13.1"
       }
     }
   ],

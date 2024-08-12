@@ -7,8 +7,8 @@
 
 import SwiftUI
 import CoreData
-import utiqSDK
-import funnelConnectSDK
+import UTIQ
+import FunnelConnect
 import Combine
 
 struct AngroView: View {

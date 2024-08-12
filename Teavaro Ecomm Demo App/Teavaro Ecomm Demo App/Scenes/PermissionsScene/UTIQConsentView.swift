@@ -7,8 +7,8 @@
 
 import SwiftUI
 import CoreData
-import funnelConnectSDK
-import utiqSDK
+import FunnelConnect
+import UTIQ
 
 struct UTIQConsentView: View {
     
@@ -50,7 +50,9 @@ struct UTIQConsentView: View {
             VStack{
                 insertButton(title: "Accept", color: .green, action: {
                     TrackUtils.click(value: "accept_utiq_consent")
-                    try? UTIQ.shared.acceptConsent()
+                    if(UTIQ.shared.isInitialized()){
+                        try? UTIQ.shared.acceptConsent()
+                    }
                     store.updateUtiqPermission(consent: true)
                     store.utiqStartService()
                     dismiss()

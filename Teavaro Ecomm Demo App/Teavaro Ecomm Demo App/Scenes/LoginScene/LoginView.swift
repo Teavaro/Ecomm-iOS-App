@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import funnelConnectSDK
+import FunnelConnect
 
 struct LoginView: View {
     

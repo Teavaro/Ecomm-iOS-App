@@ -1,4 +1,4 @@
-framework module UTIQ {
+framework module "UTIQ" {
     umbrella header "UTIQ.h"
 
     export *

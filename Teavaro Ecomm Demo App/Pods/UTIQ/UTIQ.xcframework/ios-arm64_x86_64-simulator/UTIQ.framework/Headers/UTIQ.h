@@ -175,12 +175,10 @@ __attribute__((swift_name("IdConnectData.Companion")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UTIQOptions")))
 @interface UTIQUTIQOptions : UTIQBase
-- (instancetype)initWithEnableLogging:(BOOL)enableLogging __attribute__((swift_name("init(enableLogging:)"))) __attribute__((objc_designated_initializer));
-- (UTIQUTIQOptions *)doCopyEnableLogging:(BOOL)enableLogging __attribute__((swift_name("doCopy(enableLogging:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) BOOL enableLogging __attribute__((swift_name("enableLogging")));
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (UTIQUTIQOptions *)enableLogging __attribute__((swift_name("enableLogging()")));
+- (UTIQUTIQOptions *)setFallBackConfigJsonJson:(NSString *)json __attribute__((swift_name("setFallBackConfigJson(json:)")));
 @end
 
 __attribute__((swift_name("KotlinThrowable")))
@@ -439,6 +437,7 @@ __attribute__((swift_name("UTIQ")))
 */
 - (BOOL)acceptConsentAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("acceptConsent()")));
 - (void)checkMNOEligibilitySuccessCallback:(void (^)(void))successCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("checkMNOEligibility(successCallback:errorCallback:)")));
+- (void)checkMNOEligibilityStubToken:(NSString *)stubToken successCallback:(void (^)(void))successCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("checkMNOEligibility(stubToken:successCallback:errorCallback:)")));
 
 /**
  * @note This method converts all Kotlin exceptions to errors.
@@ -449,14 +448,16 @@ __attribute__((swift_name("UTIQ")))
  * @note This method converts all Kotlin exceptions to errors.
 */
 - (BOOL)clearDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("clearData()")));
+- (NSString *)consentHubUrl __attribute__((swift_name("consentHubUrl()")));
 - (void)didInitializeWithResultSuccess:(void (^)(void))success failure:(void (^)(NSError *))failure __attribute__((swift_name("didInitializeWithResult(success:failure:)")));
 
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
 - (UTIQIdConnectData * _Nullable)idConnectDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("idConnectData()")));
-- (void)initializeSdkToken:(NSString *)sdkToken plistFilePath:(NSString *)plistFilePath __attribute__((swift_name("initialize(sdkToken:plistFilePath:)")));
-- (void)initializeSdkToken:(NSString *)sdkToken plistFilePath:(NSString *)plistFilePath options:(UTIQUTIQOptions *)options __attribute__((swift_name("initialize(sdkToken:plistFilePath:options:)")));
+- (void)initializeSdkToken:(NSString *)sdkToken __attribute__((swift_name("initialize(sdkToken:)")));
+- (void)initializeSdkToken:(NSString *)sdkToken options:(UTIQUTIQOptions *)options __attribute__((swift_name("initialize(sdkToken:options:)")));
+- (void)initializeSdkToken:(NSString *)sdkToken options:(UTIQUTIQOptions *)options success:(void (^)(void))success failure:(void (^)(NSError *))failure __attribute__((swift_name("initialize(sdkToken:options:success:failure:)")));
 
 /**
  * @note This method converts all Kotlin exceptions to errors.

@@ -1,4 +1,4 @@
-<h1 align ="center"><b style='color:#2270FF'>UTIQ-iOS-SDK</b></h1>
+<h1 align ="center"><b style='color:#2270FF'>UTIQ iOS SDK</b></h1>
 <p align="center">
 <a href="https://cocoapods.org/pods/UTIQ"><img src="https://img.shields.io/cocoapods/p/UTIQ.svg?style=flat"></a>
 <a href="https://cocoapods.org/pods/UTIQ"><img src="https://img.shields.io/badge/Swift-5.9-F16D39.svg?style=flat"></a>

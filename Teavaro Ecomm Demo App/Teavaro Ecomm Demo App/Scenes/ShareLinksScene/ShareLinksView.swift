@@ -7,8 +7,8 @@
 
 import SwiftUI
 import CoreData
-import funnelConnectSDK
-import utiqSDK
+import FunnelConnect
+import UTIQ
 
 struct ShareLinksView: View {
     

@@ -7,10 +7,10 @@
 
 import Foundation
 import SwiftUI
-import funnelConnectSDK
-import utiqSDK
-import SwrveSDK
-import SwrveGeoSDK
+import FunnelConnect
+import UTIQ
+//import SwrveSDK
+//import SwrveGeoSDK
 import AppTrackingTransparency
 import AdSupport
 
@@ -344,7 +344,7 @@ class Store: ObservableObject {
     }
     
     func utiqStartService(){
-        print(utiqStartService)
+        print("utiqStartService")
         if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
             if(isConsentAccepted){
                 print("isConsentAccepted:\(isConsentAccepted)")
@@ -369,9 +369,9 @@ class Store: ObservableObject {
                 self.umid = umid
                 self.processInfoResponse(infoResponse: data)
                 print("excecuting SwrveSDK.start(withUserId: \(umid))")
-                SwrveSDK.start(withUserId: umid)
-                print("excecuting SwrveGeoSDK.start()")
-                SwrveGeoSDK.start()
+                //SwrveSDK.start(withUserId: umid)
+                //print("excecuting SwrveGeoSDK.start()")
+                //SwrveGeoSDK.start()
                 self.isFunnelConnectStarted = true
                 action()
             }
