@@ -5,11 +5,11 @@ target 'Ecomm-iOS-App' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-#pod 'SwrveSDK'
+pod 'SwrveSDK'
 pod 'SwrveGeoSDK'
 pod 'SwrveSDKCommon'
-pod 'UTIQ'
-pod 'FunnelConnect'
+#pod 'UTIQ'
+#pod 'FunnelConnect'
 
   # Pods for Ecomm-iOS-App
 

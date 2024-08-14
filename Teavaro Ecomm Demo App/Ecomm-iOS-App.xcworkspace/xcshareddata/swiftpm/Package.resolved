@@ -1,50 +1,33 @@
 {
+  "originHash" : "a8501c19e8db1a6a2ab606e1a505c5e85a36e7c2f27a556b3088b446ad879fd1",
   "pins" : [
+    {
+      "identity" : "funnelconnect-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Teavaro/FunnelConnect-iOS-SDK",
+      "state" : {
+        "revision" : "290af8732ba485cdc60d5e2c10b5dca9857b3fbe",
+        "version" : "0.1.37"
+      }
+    },
     {
       "identity" : "pulse",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kean/Pulse",
+      "location" : "https://github.com/kean/pulse.git",
       "state" : {
-        "revision" : "e8bc65bd43d1f32aef533e723f2d324830431120",
-        "version" : "3.7.3"
+        "revision" : "3ac5ee35ab233e900aa484919803d51791d1e351",
+        "version" : "4.2.7"
       }
     },
     {
-      "identity" : "pulseloghandler",
+      "identity" : "utiq-ios-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kean/PulseLogHandler.git",
+      "location" : "https://github.com/Utiq-tech/UTIQ-iOS-SDK",
       "state" : {
-        "revision" : "3ca42eada318ad8ed9c3246f5e32c19413dae3ce",
-        "version" : "3.2.0"
-      }
-    },
-    {
-      "identity" : "sdwebimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImage.git",
-      "state" : {
-        "revision" : "5642d1ffe3dbe628592443bd14154e31929727b4",
-        "version" : "5.19.2"
-      }
-    },
-    {
-      "identity" : "swift-log",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-log.git",
-      "state" : {
-        "revision" : "e97a6fcb1ab07462881ac165fdbb37f067e205d5",
-        "version" : "1.5.4"
-      }
-    },
-    {
-      "identity" : "swrve-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Swrve/swrve-ios-sdk",
-      "state" : {
-        "revision" : "d4337feb67a6661273cdb81861c97b6bc361d120",
-        "version" : "8.13.1"
+        "revision" : "b0b3bf276ebf83c0df54712780f5d4b48f3a9104",
+        "version" : "0.1.53"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

@@ -1,28 +1,31 @@
 PODS:
-  - FunnelConnect (0.1.37)
+  - SDWebImage (5.19.6):
+    - SDWebImage/Core (= 5.19.6)
+  - SDWebImage/Core (5.19.6)
   - SwrveGeoSDK (5.1.0)
+  - SwrveSDK (9.0.2):
+    - SDWebImage (~> 5.0)
+    - SwrveSDKCommon (= 9.0.2)
   - SwrveSDKCommon (9.0.2)
-  - UTIQ (0.1.51)
 
 DEPENDENCIES:
-  - FunnelConnect
   - SwrveGeoSDK
+  - SwrveSDK
   - SwrveSDKCommon
-  - UTIQ
 
 SPEC REPOS:
   trunk:
-    - FunnelConnect
+    - SDWebImage
     - SwrveGeoSDK
+    - SwrveSDK
     - SwrveSDKCommon
-    - UTIQ
 
 SPEC CHECKSUMS:
-  FunnelConnect: 781c9dd07b78ee89afed900698fce399f7f83198
+  SDWebImage: a79252b60f4678812d94316c91da69ec83089c9f
   SwrveGeoSDK: 04781ce81be91abb3d2e432fccdd0d975c7be15b
+  SwrveSDK: f07f42737c9ca94f39573ad0b199957fffa3be9d
   SwrveSDKCommon: e5bd7883906d37a456efd0197f7028dfe087b5b3
-  UTIQ: 03c01032bec8c4911638287ec2010700d48b6f9a
 
-PODFILE CHECKSUM: 19a4ca95dd4b6fedde6d1e7cd979c6e4053a644b
+PODFILE CHECKSUM: 1fab1adc6a5286dfba2be9136fdff054b8d92a75
 
 COCOAPODS: 1.15.2
