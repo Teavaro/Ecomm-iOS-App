@@ -73,26 +73,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		002838042B7F9B5700C6AA80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE19EDBC490B82C974FED80E58DB7FC9;
-			remoteInfo = SwrveSDKCommon;
-		};
-		004472A12C202C6800D9CE83 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3DC3896FD8365317B21CBE654F961CD6;
-			remoteInfo = "SwrveSDKCommon-SwrveSDKCommon";
-		};
 		00AEA9D02A2F651600794528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 098854D079B8667BC4FED7C5E49C9890;
 			remoteInfo = "Pods-Ecomm-iOS-App";
+		};
+		00F1D0E72C80BBCB005A2370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE19EDBC490B82C974FED80E58DB7FC9;
+			remoteInfo = SwrveSDKCommon;
+		};
+		00F1D0E92C80BBCB005A2370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DC3896FD8365317B21CBE654F961CD6;
+			remoteInfo = "SwrveSDKCommon-SwrveSDKCommon";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -273,8 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
-				002838052B7F9B5700C6AA80 /* SwrveSDKCommon */,
-				004472A22C202C6800D9CE83 /* SwrveSDKCommon-SwrveSDKCommon */,
+				00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */,
+				00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -578,28 +578,28 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		002838052B7F9B5700C6AA80 /* SwrveSDKCommon */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = SwrveSDKCommon;
-			path = SwrveSDKCommon.framework;
-			remoteRef = 002838042B7F9B5700C6AA80 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		004472A22C202C6800D9CE83 /* SwrveSDKCommon-SwrveSDKCommon */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			name = "SwrveSDKCommon-SwrveSDKCommon";
-			path = SwrveSDKCommon.bundle;
-			remoteRef = 004472A12C202C6800D9CE83 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			name = "Pods-Ecomm-iOS-App";
 			path = Pods_Ecomm_iOS_App.framework;
 			remoteRef = 00AEA9D02A2F651600794528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SwrveSDKCommon;
+			path = SwrveSDKCommon.framework;
+			remoteRef = 00F1D0E72C80BBCB005A2370 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SwrveSDKCommon-SwrveSDKCommon";
+			path = SwrveSDKCommon.bundle;
+			remoteRef = 00F1D0E92C80BBCB005A2370 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
