@@ -97,7 +97,7 @@ class DataManager {
       return fetchedItems
     }
     
-    func clearData(){
+    func clearData() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         var fetchedItems: [Item] = []
         do {
@@ -111,7 +111,7 @@ class DataManager {
         }
     }
     
-    func clearAbandonedCarts(){
+    func clearAbandonedCarts() {
         let request: NSFetchRequest<AbandonedCarts> = AbandonedCarts.fetchRequest()
         var fetchedItems: [AbandonedCarts] = []
         do {

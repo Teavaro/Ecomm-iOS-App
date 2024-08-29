@@ -189,7 +189,7 @@ class Store: ObservableObject {
         return self.attributes
     }
     
-    func clearData(){
+    func clearData() {
         isFunnelConnectStarted = false
         isLogin = false
         isStub = false
@@ -211,11 +211,11 @@ class Store: ObservableObject {
         initializeData()
     }
     
-    func clearUtiqData(){
+    func clearUtiqData() {
         atid = ""
         mtid = ""
-        try? Utiq.shared.clearData()
-        try? Utiq.shared.clearCookies()
+       // try? UTIQ.shared.clearData()
+        try? UTIQ.shared.clearCookies()
     }
     
     func initializeData(){
@@ -339,7 +339,7 @@ class Store: ObservableObject {
         return nil
     }
     
-    func getAbCartLink() -> String?{
+    func getAbCartLink() -> String? {
         if let abCartId = DataManager.shared.getAbandonedCarts().last?.id{
             return "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(abCartId)"
         }

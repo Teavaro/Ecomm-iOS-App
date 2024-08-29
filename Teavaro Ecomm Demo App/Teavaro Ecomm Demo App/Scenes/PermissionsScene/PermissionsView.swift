@@ -88,7 +88,7 @@ struct PermissionsView: View {
         .navigationTitle("CDP and UTIQ Consent")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            if let permissions = try? FunnelConnectSDK.shared.getPermissions(){
+            if let permissions = try? FunnelConnectSDK.shared.getPermissions() {
                 self.om = permissions.getPermission(key: store.keyOm)
                 self.opt = permissions.getPermission(key: store.keyOpt)
                 self.nba = permissions.getPermission(key: store.keyNba)
