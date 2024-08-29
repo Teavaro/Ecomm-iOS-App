@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FunnelConnect
-import UTIQ
+import Utiq
 //import SwrveSDK
 //import SwrveGeoSDK
 import Pulse
@@ -19,7 +19,7 @@ import Logging
 struct AppMain: App {
     
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-    @StateObject var store = Store()
+    @StateObject var store = Store.shared
     
     let persistenceController = PersistenceController.shared
 
@@ -64,10 +64,15 @@ struct AppMain: App {
                 let utiqConfigs = Bundle.main.url(forResource: "utiq_configs", withExtension: "json")!
                 let fileContents = try? String(contentsOf: utiqConfigs)
                 print(fileContents!)
-                let options = UTIQOptions()
+                let options = UtiqOptions()
                 options.enableLogging()
                 options.setFallBackConfigJson(json: fileContents!)
-                UTIQ.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  options)
+                Utiq.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  options, success: {
+                    print("excecuting UTIQ.shared.startService()")
+                    Store.shared.utiqStartService()
+                }, failure: { error in
+                    print("error: \(error)")
+                })
             }
             
             //DispatchQueue.main.async {

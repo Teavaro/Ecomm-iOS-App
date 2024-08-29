@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import UTIQ
+import Utiq
 import FunnelConnect
 import Combine
 
@@ -101,14 +101,14 @@ struct AngroView: View {
                             print("error FunnelConnectSDK.shared.didInitializeWithResult")
                             print("error: \(error)")
                         })
-                        print("excecuting UTIQ.shared.didInitializeWithResult")
-                        UTIQ.shared.didInitializeWithResult(success: {
-                            print("excecuting UTIQ.shared.startService()")
-                            store.utiqStartService()
-                        }, failure: { error in
-                            print("error UTIQ.shared.didInitializeWithResult")
-                            print("error: \(error)")
-                        })
+                        //print("excecuting UTIQ.shared.didInitializeWithResult")
+                        //Utiq.shared.didInitializeWithResult(success: {
+                        //    print("excecuting UTIQ.shared.startService()")
+                        //    store.utiqStartService()
+                        //}, failure: { error in
+                        //    print("error UTIQ.shared.didInitializeWithResult")
+                        //    print("error: \(error)")
+                        //})
                     }
                 }
                 TrackUtils.impression(value: "home_view")

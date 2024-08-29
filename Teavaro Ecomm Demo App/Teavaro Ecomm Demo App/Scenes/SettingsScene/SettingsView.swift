@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 import FunnelConnect
-import UTIQ
+import Utiq
 import Pulse
 import PulseUI
 

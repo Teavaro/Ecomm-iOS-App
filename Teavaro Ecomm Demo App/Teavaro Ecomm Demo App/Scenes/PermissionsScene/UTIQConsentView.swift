@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 import FunnelConnect
-import UTIQ
+import Utiq
 
 struct UTIQConsentView: View {
     
@@ -40,18 +40,18 @@ struct UTIQConsentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Your consent will activate Utiq. Allowing this website to personalise your experience or use analysts whilst enabling your to retain control over your data. You can manage your Utiq choice and withdraw Utiq consent in consenthub accessible below.")
+            Text("Your consent will activate Utiq. Allowing this website to personalize your experience or use analysts whilst enabling your to retain control over your data. You can manage your Utiq choice and withdraw Utiq consent in 'ConsentHub' accessible below.")
             insertText(text: "Your movil operator:")
             Text("Uses your IP address to check eligibility to use the service and create a random value, know as network signal.")
             insertText(text: "UTIQ:")
-            Text("Crates a randomised version of the network signal, know as consentpass, used to manage the Utiq service and Utiq consents.")
+            Text("Creates a randomized version of the network signal, known as 'ConsentPass', used to manage the Utiq service and Utiq consents.")
             insertText(text: "EcommDemoApp:")
-            Text("Recives only two Utiq marketing passes used to provide you with personalised consent and advertising or analytics.")
+            Text("Receives only two Utiq marketing passes used to provide you with personalized consent and advertising or analytics.")
             VStack{
                 insertButton(title: "Accept", color: .green, action: {
                     TrackUtils.click(value: "accept_utiq_consent")
-                    if(UTIQ.shared.isInitialized()){
-                        try? UTIQ.shared.acceptConsent()
+                    if(Utiq.shared.isInitialized()){
+                        try? Utiq.shared.acceptConsent()
                     }
                     store.updateUtiqPermission(consent: true)
                     store.utiqStartService()
@@ -60,7 +60,7 @@ struct UTIQConsentView: View {
                 insertButton(title: "Reject", color: .gray, action: {
                     TrackUtils.click(value: "reject_utiq_consent")
                     store.updateUtiqPermission(consent: false)
-                    try? UTIQ.shared.rejectConsent()
+                    try? Utiq.shared.rejectConsent()
                     dismiss()
                 })
             }

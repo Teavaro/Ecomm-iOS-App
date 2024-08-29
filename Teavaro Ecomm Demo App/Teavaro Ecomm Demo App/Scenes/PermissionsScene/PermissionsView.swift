@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 import FunnelConnect
-import UTIQ
+import Utiq
 
 struct PermissionsView: View {
     
@@ -62,7 +62,7 @@ struct PermissionsView: View {
                     TrackUtils.click(value: "reject_permissions")
                     store.clearData()
                     store.updatePermissions(om: false, nba: false, opt: false)
-                    try? UTIQ.shared.rejectConsent()
+                    try? Utiq.shared.rejectConsent()
                     dismiss()
                 })
                 insertButton(title: "Accept All", color: .green, action: {
@@ -79,7 +79,7 @@ struct PermissionsView: View {
                     showUtiqConsent()
                 }
                 else{
-                    try? UTIQ.shared.rejectConsent()
+                    try? Utiq.shared.rejectConsent()
                 }
                 dismiss()
             })
@@ -98,8 +98,8 @@ struct PermissionsView: View {
     }
     
     func showUtiqConsent(){
-        if(UTIQ.shared.isInitialized()){
-            UTIQ.shared.checkMNOEligibility{
+        if(Utiq.shared.isInitialized()){
+            Utiq.shared.checkMNOEligibility{
                 store.showUtiqConsent = true
             } errorCallback: {error in
                 

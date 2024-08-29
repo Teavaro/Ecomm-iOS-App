@@ -8,13 +8,16 @@
 import Foundation
 import SwiftUI
 import FunnelConnect
-import UTIQ
+import Utiq
 //import SwrveSDK
 //import SwrveGeoSDK
 import AppTrackingTransparency
 import AdSupport
 
 class Store: ObservableObject {
+    
+    static let shared = Store()
+    
     @Published var listItems: [Item] = []
     @Published var listWish: [Item] = []
     @Published var listCart: [Item] = []
@@ -211,8 +214,8 @@ class Store: ObservableObject {
     func clearUtiqData(){
         atid = ""
         mtid = ""
-        try? UTIQ.shared.clearData()
-        try? UTIQ.shared.clearCookies()
+        try? Utiq.shared.clearData()
+        try? Utiq.shared.clearCookies()
     }
     
     func initializeData(){
@@ -331,7 +334,7 @@ class Store: ObservableObject {
     
     func getClickIdentLink() -> String?{
         if let userName = UserDefaultsUtils.getUserId(){
-            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?\(userType)=\(userName)&uri=https%3A%2F%2Fweb.brand-demo.com%2F"
+            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?\(userType)=\(userName)&uri=https%3A%2F%2Fwww.brand-demo.com%2F"
         }
         return nil
     }
@@ -345,11 +348,11 @@ class Store: ObservableObject {
     
     func utiqStartService(){
         print("utiqStartService")
-        if let isConsentAccepted = try? UTIQ.shared.isConsentAccepted(){
+        if let isConsentAccepted = try? Utiq.shared.isConsentAccepted(){
             if(isConsentAccepted){
                 print("isConsentAccepted:\(isConsentAccepted)")
                 let stubToken = UserDefaultsUtils.getStubToken()
-                UTIQ.shared.startService(stubToken: stubToken, dataCallback: {data in
+                Utiq.shared.startService(stubToken: stubToken, dataCallback: {data in
                     print("dataCallback: UTIQ.shared.startService")
                     self.mtid = data.mtid
                     TrackUtils.mtid = data.mtid

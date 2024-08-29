@@ -7,7 +7,7 @@
 
 import Foundation
 import FunnelConnect
-import UTIQ
+import Utiq
 import SwiftUI
 
 class TrackUtils {
