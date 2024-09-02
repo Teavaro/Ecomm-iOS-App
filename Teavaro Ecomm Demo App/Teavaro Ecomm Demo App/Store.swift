@@ -298,6 +298,15 @@ class Store: ObservableObject {
         }
     }
     
+    func getQSStub() -> String{
+        let stubToken = UserDefaultsUtils.getStubToken()
+        var qsToken = ""
+        if(stubToken != ""){
+            qsToken = "?utiq_stub=\(stubToken)"
+        }
+        return qsToken
+    }
+    
     func getItemFromData(data: String) -> Item?{
         for item in listItems{
             if item.data.contains(data){

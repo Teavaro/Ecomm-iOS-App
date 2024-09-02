@@ -35,9 +35,6 @@ struct AngroView: View {
     
     fileprivate func headerView() -> some View {
         return VStack(alignment: .center, spacing: 20){
-            Text("B2B WooCommerce Theme")
-                .font(.title2)
-                .foregroundColor(.white)
             Text("Sale Up to 30%")
                 .font(.title)
                 .bold()
@@ -76,7 +73,9 @@ struct AngroView: View {
                             ItemRow(item: item)
                         }
                     }
-                    
+                    NavigationLink(destination: WebViewContainer(urlString: "https://publisher-demo.media\(store.getQSStub())")) {
+                        Text("Check our recipes").padding()
+                    }
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Home"))

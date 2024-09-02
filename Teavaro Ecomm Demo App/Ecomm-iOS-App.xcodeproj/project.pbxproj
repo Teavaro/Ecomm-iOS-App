@@ -46,6 +46,7 @@
 		00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DF2A2F83B900794528 /* PulseUI */; };
 		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
 		00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D625422AABABC7007B7C5F /* UTIQConsentView.swift */; };
+		00F1D1082C859F34005A2370 /* PublisherWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1D1072C859F34005A2370 /* PublisherWebView.swift */; };
 		00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBED312A3B3D6900C7E82D /* EmailHelper.swift */; };
 		4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
@@ -134,6 +135,7 @@
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00D547FD29BA5D3500E92B88 /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mraid.js; path = "../../../../../Downloads/1030a67464e061568a5b-b492c9c6a631adb6e6b13f4bf8fcb162825d4c02/mraid.js"; sourceTree = "<group>"; };
 		00D625422AABABC7007B7C5F /* UTIQConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTIQConsentView.swift; sourceTree = "<group>"; };
+		00F1D1072C859F34005A2370 /* PublisherWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherWebView.swift; sourceTree = "<group>"; };
 		00FBED312A3B3D6900C7E82D /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ecomm_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.debug.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
 				0065CCBF289DB09C00317DDD /* Store.swift */,
 				00ABB34F297AF43C001F7092 /* CeltraWebView.swift */,
+				00F1D1072C859F34005A2370 /* PublisherWebView.swift */,
 			);
 			path = "Teavaro Ecomm Demo App";
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
+				00F1D1082C859F34005A2370 /* PublisherWebView.swift in Sources */,
 				008725182A12B14F00263267 /* ShareLinksView.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
@@ -853,7 +857,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -898,7 +902,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
