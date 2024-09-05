@@ -23,6 +23,7 @@ extension Item {
     @NSManaged public var title: String?
     @NSManaged public var isInStock: Bool
     @NSManaged public var id: Int16
+    @NSManaged public var data: String
     @NSManaged public var isInWish: Bool
     @NSManaged public var countInCart: Int16
     @NSManaged public var abandonedCarts: AbandonedCarts?

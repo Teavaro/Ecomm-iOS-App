@@ -9,25 +9,16 @@ import Foundation
 
 class UserDefaultsUtils {
     
-    private static let CDP_CONSENT = "CDP_CONSENT"
     private static let CDP_OM = "CDP_OM"
     private static let CDP_OPT = "CDP_OPT"
     private static let CDP_NBA = "CDP_NBA"
     private static let PERMISSIONS_REQUESTED = "PERMISSIONS_REQUESTED"
     private static let userDefaults = UserDefaults.standard
     private static let IS_STUB = "IS_STUB"
-    
-    static func isCdpConsentAccepted() -> Bool {
-        return self.userDefaults.bool(forKey: CDP_CONSENT)
-    }
-    
-    static func acceptCdpConsent() {
-        self.userDefaults.set(true, forKey: CDP_CONSENT)
-    }
-    
-    static func rejectCdpConsent() {
-        self.userDefaults.set(false, forKey: CDP_CONSENT)
-    }
+    private static let IS_LOGIN = "IS_LOGIN"
+    private static let MTID = "MTID"
+    private static let USER_NAME = "USER_NAME"
+    private static let USER_ID = "USER_ID"
     
     static func isCdpOm() -> Bool {
         return self.userDefaults.bool(forKey: CDP_OM)
@@ -61,11 +52,44 @@ class UserDefaultsUtils {
         self.userDefaults.set(value, forKey: PERMISSIONS_REQUESTED)
     }
     
-    static func isStub() -> Bool {
-        return self.userDefaults.bool(forKey: IS_STUB)
+    static func getStubToken() -> String {
+        return self.userDefaults.string(forKey: IS_STUB) ?? ""
     }
     
-    static func setStub(value: Bool) {
+    static func setStubToken(value: String) {
         self.userDefaults.set(value, forKey: IS_STUB)
+    }
+    
+    static func isLogin() -> Bool {
+        return self.userDefaults.bool(forKey: IS_LOGIN)
+    }
+    
+    static func setLogin(value: Bool) {
+        self.userDefaults.set(value, forKey: IS_LOGIN)
+    }
+    
+    static func getUserName() -> String? {
+        return self.userDefaults.string(forKey: USER_NAME)
+    }
+    
+    static func setUserName(value: String) {
+        self.userDefaults.set(value, forKey: USER_NAME)
+    }
+    
+    static func getUserId() -> String? {
+        return self.userDefaults.string(forKey: USER_ID)
+    }
+    
+    static func setUserId(value: String) {
+        self.userDefaults.set(value, forKey: USER_ID)
+    }
+    
+    static func clear(){
+        setLogin(value: false)
+        setUserId(value: "")
+        setUserName(value: "")
+        setStubToken(value: "")
+        setPermissionsRequested(value: false)
+        setCdpNba(nba: false)
     }
 }

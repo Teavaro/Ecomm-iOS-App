@@ -6,25 +6,40 @@
 //
 
 import Foundation
-import FunnelConnectSDK
+import FunnelConnect
+import Utiq
 import SwiftUI
 
 class TrackUtils {
     
-    static let IMPRESSION = "impression"
-    static let CLICK = "click"
-    static let ABANDONED_CART_ID = "abandoned_cart_id"
+    static var mtid: String? = nil
+    static let EVENT_NAME = "event_name"
+    static let EVENT_DATA = "event_data"
     
     static func impression(value: String){
-        try? FunnelConnectSDK.shared.cdp().logEvent(key: IMPRESSION, value: value)
+        event(value: value, name: "navigation")
     }
     
     static func click(value: String){
-        try? FunnelConnectSDK.shared.cdp().logEvent(key: CLICK, value: value)
+        event(value: value, name: "click")
+    }
+    
+    static func event(value: String, name: String){
+        var eventsMap = [EVENT_NAME: name, EVENT_DATA: value]
+        if(mtid != nil){
+            eventsMap["mtid"] = mtid!
+        }
+        events(events: eventsMap)
     }
     
     static func events(events: [String: String]){
-        try? FunnelConnectSDK.shared.cdp().logEvents(events: events)
+        if(FunnelConnectSDK.shared.isInitialize() && UserDefaultsUtils.isCdpOpt()){
+            try? FunnelConnectSDK.shared.logEvents(events: events)
+        }
+    }
+    
+    static func geoPlace(value: String){
+        event(value: value, name: "location")
     }
     
     static func lifeCycle(phase: ScenePhase){

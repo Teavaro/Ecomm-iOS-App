@@ -7,14 +7,17 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
+import FunnelConnect
+import Utiq
+import Pulse
+import PulseUI
 
 struct SettingsView: View {
     
     @EnvironmentObject var store: Store
     @State var showingConfirmationAlert = false
     @State private var showModal1 = false
-    @State private var isStub: Bool = false
+    @State var showingDataClearedAlert: Bool = false
     
     var body: some View {
         NavigationView {
@@ -24,7 +27,6 @@ struct SettingsView: View {
                         if(!store.isLogin){
                             NavigationLink(destination: LoginView()) {
                                 Text("Login")
-                                    .bold()
                             }
                         }
                         else{
@@ -36,34 +38,50 @@ struct SettingsView: View {
                     }
                     Section(){
                         NavigationLink(destination: PermissionsView()) {
-                            Text("Consent Management")
-                                .bold()
+                            Text("CDP and UTIQ Consent")
                         }
                     }
                     Section(){
-                        Toggle("Stub Mode", isOn: $isStub)
+                        Toggle("Stub Mode", isOn: $store.isStub)
                             .onTapGesture {
-                                TrackUtils.click(value: "stub_mode_\(!isStub)")
-                                clearData()
-                                UserDefaultsUtils.setStub(value: !isStub)
+                                TrackUtils.click(value: "stub_mode_\(!store.isStub)")
+                                store.clearUtiqData()
+                                var token = ""
+                                if(!store.isStub){
+                                    token = "523393b9b7aa92a534db512af83084506d89e965b95c36f982200e76afcb82cb"
+                                }
+                                UserDefaultsUtils.setStubToken(value: token)
                                 showModal1.toggle()
                             }
                     }
-                    if (store.isCdpStarted) {
-                        Section(){
-                            Button("Send Notification", action: {
-                                TrackUtils.click(value: "send_notification")
-                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid(){
-                                    PushNotification().send(user: umid, message: "Swrve+App+Push+Notification")
-                                }
-                            })
+                    Section(){
+                        NavigationLink(destination: NotificationsView()) {
+                            Text("Send Notifications")
                         }
+                    }
+                    Section(){
+                        NavigationLink(destination: ShareLinksView()) {
+                            Text("Share Links")
+                        }
+                    }
+                    Section(){
+                        NavigationLink(destination: IDsView()) {
+                            Text("IDs")
+                        }
+                    }
+                    Section(){
+                        Button("Network logs", action: {
+                            let loggerView = UIHostingController(rootView: ConsoleView())
+                            UIApplication.shared.topViewController()?.present(loggerView, animated: true)
+                        })
                     }
                     Section(){
                         Button("Clear Data", action: {
                             TrackUtils.click(value: "clear_data")
-//                            updatePermissions(om: false, nba: false, opt: false)
-                            clearData()
+                            showingDataClearedAlert.toggle()
+//                            store.updatePermissions(om: false, nba: false, opt: false)
+//                            store.updateUtiqPermission(consent: false)
+                            store.clearData()
                         })
                     }
                 }
@@ -77,51 +95,27 @@ struct SettingsView: View {
                         message: Text("Do you want to proceed with logout?"),
                         primaryButton: .destructive(Text("Proceed"), action: {
                             TrackUtils.click(value: "logout_confirm")
+                            UserDefaultsUtils.setLogin(value: false)
                             store.isLogin = false
+                            store.userId = nil
                         }),
                         secondaryButton: .cancel(Text("Cancel"))
                     )
                 }
+                .alert("Data cleared!", isPresented: $showingDataClearedAlert) {
+                            Button("Ok", role: .cancel) { }
+                }
             }
             .onAppear(perform: {
                 TrackUtils.impression(value: "settings_view")
-                isStub = UserDefaultsUtils.isStub()
             })
             .sheet(isPresented: $showModal1, onDismiss: {
-                print(self.showModal1)
+                print("showing ModalUtiqView:\(self.showModal1)")
             }) {
-                ModalView1(showModal1: self.$showModal1)
+                ModalUtiqView(showModal: self.$showModal1)
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-    
-    fileprivate func clearData(){
-        store.clearData()
-        try? FunnelConnectSDK.shared.clearData()
-        try? FunnelConnectSDK.shared.clearCookies()
-    }
-    
-    fileprivate func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
-        let permissions = PermissionsMap()
-        permissions.addPermission(key: "CS-OM",accepted: om)
-        permissions.addPermission(key: "CS-OPT",accepted: opt)
-        permissions.addPermission(key: "CS-NBA",accepted: nba)
-        permissions.addPermission(key: "CS-TPID",accepted: nba)
-        try? FunnelConnectSDK.shared.cdp().updatePermissions(permissions: permissions, notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: {_ in
-            UserDefaultsUtils.setPermissionsRequested(value: true)
-        }, errorCallback: {_ in })
-    }
-}
-
-struct ModalView1: View {
-    @Environment(\.presentationMode) var presentation
-    @Binding var showModal1: Bool
-
-    var body: some View {
-        VStack {
-            PermissionsView()
-        }
     }
 }
 

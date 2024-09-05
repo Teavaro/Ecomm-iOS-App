@@ -7,7 +7,7 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
+import FunnelConnect
 
 struct LoginView: View {
     
@@ -36,7 +36,6 @@ struct LoginView: View {
             Text("*")
                 .foregroundColor(.orange)
         }
-        .padding(.top, 25)
     }
     
     var body: some View {
@@ -47,7 +46,8 @@ struct LoginView: View {
                 .frame(height: 35)
                 .padding(.top, 10)
             insertText(text: "Password")
-            TextField("Password", text: $password)
+                .padding(.top, 25)
+            SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
                 .frame(height: 35)
                 .padding(.top, 10)
@@ -55,14 +55,23 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    store.isLogin = true
-                    try? FunnelConnectSDK.shared.cdp().setUser(fcUser: FCUser(userIdType: "hemail", userId: loginId.hash256), dataCallback:
-                        { data in
-                            store.infoResponse = data
-                        }, errorCallback: { _ in
-                            
-                        })
-                    dismiss()
+                    if(FunnelConnectSDK.shared.isInitialize() && UserDefaultsUtils.isCdpNba()){
+                        if let userId = loginId.aes256{
+                            FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
+                                                                { data in
+                                store.processInfoResponse(infoResponse: data)
+                                store.umid = try? FunnelConnectSDK.shared.getUMID()
+                                store.userId = userId
+                                store.isLogin = true
+                                UserDefaultsUtils.setLogin(value: true)
+                                UserDefaultsUtils.setUserName(value: loginId)
+                                UserDefaultsUtils.setUserId(value: userId)
+                            }, errorCallback: { _ in
+                                
+                            })
+                            dismiss()
+                        }
+                    }
                 }
                 else{
                     self.showingEmptyFieldsAlert.toggle()

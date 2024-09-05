@@ -7,27 +7,53 @@
 
 import Foundation
 import SwiftUI
+import FunnelConnect
+import Utiq
+//import SwrveSDK
+//import SwrveGeoSDK
+import AppTrackingTransparency
+import AdSupport
 
 class Store: ObservableObject {
+    
+    static let shared = Store()
+    
     @Published var listItems: [Item] = []
     @Published var listWish: [Item] = []
     @Published var listCart: [Item] = []
     @Published var listOffer: [Item] = []
     @Published var isLogin = false
     @Published var isCdpStarted = false
-    @Published var showModal = false
+    @Published var showCdpPermissions = false
+    @Published var showUtiqConsent = false
     @Published var tabSelection: Int = 1
-    @Published var itemSelected: Int16? = -1
+    @Published var itemSelected: Int16 = -1
     @Published var showAbandonedCarts = false
+    @Published var showItem = false
     @Published var abandonedCartId: Int = 0
+    @Published var atid: String? = nil
+    @Published var mtid: String? = nil
+    @Published var attributes: String? = nil
+    @Published var umid: String? = nil
+    @Published var userId: String? = nil
+    @Published var isStub: Bool = false
+    @Published var banner: String = ""
+    @Published var showBanner = false
+    
+    let userType = "enemail"
+
     let cartId: Int16 = 12
-    var infoResponse = """
-    {}
-    """
     var isFunnelConnectStarted = false
     var isPermissionsValidated = false
     var description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum."
-
+    let keyOm = "CS-OM"
+    let keyOpt = "CS-OPT"
+    let keyNba = "CS-NBA"
+    let keyUtiq = "CS-UTIQ"
+    let fcNotificationsName = "MAIN_CS"
+    let utiqNotificationsName = "UTIQ_CS"
+    let notificationsVersion: Int32 = 1
+    
     init() {
         initializeData()
     }
@@ -85,30 +111,23 @@ class Store: ObservableObject {
         listCart.removeAll()
     }
     
-    func getBanner() -> String{
-        var text = ""
-        var obj: InfoResponse? = nil
-        do {
-            let decoder = JSONDecoder()
-            if let info = infoResponse.data(using: .utf8){
-                obj = try decoder.decode(InfoResponse.self, from: info)
+    func processInfoResponse(infoResponse: String){
+        print("getBanner()")
+        var urlCeltra = ""
+        if isNbaPermissionGranted(){
+            if let attr = getBannerAttr(infoResponse: infoResponse){
+                urlCeltra = "\(createURL(attributes: attr)!)".replacingOccurrences(of: "&", with: "&amp;")
             }
-        } catch {
-            print("readingAttrFromInfoResponse:error:\(error)")
-        }
-        if obj != nil{
-//            print("iran:attributes",obj!.attributes)
-            for (key, value) in obj!.attributes {
-                text += "&amp;" + key + "=" + value
+            else{
+                urlCeltra = "\(createURL(attributes: "")!)?attributes=%7B%7D&amp;allowTracking=true"
             }
         }
-        if let ab_cart_id = DataManager.shared.getAbandonedCarts().last?.id{
-            text += "&amp;" + "ab_cart_id" + "=\(ab_cart_id)"
+        else{
+            urlCeltra = "\(createURL(attributes: "")!)?attributes=%7B%7D&amp;allowTracking=false"
         }
-        text += "&amp;" + "impression" + "=" + "offer"
-//        print("iran:infoResponse", infoResponse)
-        print("iran:attr", text)
-        let htmlContent = """
+        print("urlCeltra: \(urlCeltra)")
+        self.showBanner = true
+        self.banner = """
             <!DOCTYPE html>
                <html>
                <body>
@@ -125,7 +144,7 @@ class Store: ObservableObject {
                                 for (var k in params) {
                                     qs += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
                                 }
-                                var src = 'https://ads.celtra.com/fa87bccb/web.js?' + qs + '\(text)';
+                                var src = '\(urlCeltra)' + qs;
                                 req.src = src;
                                 img.parentNode.insertBefore(req, img.nextSibling);
                             })(this);
@@ -134,15 +153,69 @@ class Store: ObservableObject {
                </body>
                </html>
             """
-        return htmlContent
+    }
+    
+    func createURL(attributes: String) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "funnelconnect.brand-demo.com"
+        urlComponents.path = "/op/brand-demo-web-celtra/ad"
+        if(attributes != ""){
+            let attributesParam = URLQueryItem(name: "attributes", value: attributes)
+            let allowTrackingParam = URLQueryItem(name: "allowTracking", value: "true")
+            urlComponents.queryItems = [attributesParam, allowTrackingParam]
+        }
+        return urlComponents.url
+    }
+    
+    func getBannerAttr(infoResponse: String) -> String?{
+        var obj: InfoResponse? = nil
+        do {
+            let decoder = JSONDecoder()
+            if let info = infoResponse.data(using: .utf8){
+                obj = try decoder.decode(InfoResponse.self, from: info)
+            }
+        } catch {
+            print("readingAttrFromInfoResponse:error:\(error)")
+        }
+        if obj != nil, obj!.attributes.count > 0{
+//            for (key, value) in obj!.attributes {
+//                text += "&amp;" + key + "=" + value
+//            }
+            let attributes = "\(obj!.attributes)".replacingOccurrences(of: "[", with: "{").replacingOccurrences(of: "]", with: "}")
+            self.attributes = "\(attributes)"
+            print("attributes: \(self.attributes!)")
+        }
+        return self.attributes
     }
     
     func clearData(){
         isFunnelConnectStarted = false
+        isLogin = false
+        isStub = false
+        umid = ""
+        attributes = ""
+        userId = ""
+        processInfoResponse(infoResponse: """
+            {}
+"""
+        )
+        clearUtiqData()
+        abandonedCartId = 0
         DataManager.shared.clearCart()
         DataManager.shared.clearData()
         DataManager.shared.clearAbandonedCarts()
+        UserDefaultsUtils.clear()
+        try? FunnelConnectSDK.shared.clearData()
+        try? FunnelConnectSDK.shared.clearCookies()
         initializeData()
+    }
+    
+    func clearUtiqData(){
+        atid = ""
+        mtid = ""
+        try? Utiq.shared.clearData()
+        try? Utiq.shared.clearCookies()
     }
     
     func initializeData(){
@@ -152,27 +225,26 @@ class Store: ObservableObject {
 //        print("\(listItems.count) Items ferched")
         
         if(listItems.isEmpty){
-            DataManager.shared.addItem(id: 0, title: "Jacob’s Baked Crinklys Cheese & Onion", desc: description,price: 1.99, picture: "crinklys", isOffer: true)
-            DataManager.shared.addItem(id: 1, title: "Pork Cocktail Sausages, Pack", desc: description, price: 3.29, picture: "pork", isOffer: true, isInStock: false)
-            DataManager.shared.addItem(id: 2, title: "Broccoli and Cauliflower Mix", desc: description, price: 1.99, picture: "cauliflower")
-            DataManager.shared.addItem(id: 3, title: "Morrisons Smoked Paprika", desc: description, price: 4.60, picture: "paprika")
-            DataManager.shared.addItem(id: 4, title: "Jaffa Tropical Flavour Burst Seedless", desc: description, price: 2.50, picture: "burst")
-            DataManager.shared.addItem(id: 5, title: "Pams Chopped Watermelon", desc: description, price: 3.99, picture: "watermelon")
-            DataManager.shared.addItem(id: 6, title: "Woolworths Food Flavourburst Seedless Grapes", desc: description, price: 2.00, picture: "grapes")
-            DataManager.shared.addItem(id: 7, title: "Ocado Mixed Seedless Grapes", desc: description, price: 2.00, picture: "mixed")
-            DataManager.shared.addItem(id: 8, title: "Whole Foods Market, Organic Coleslaw Mix", desc: description, price: 5.49, picture: "coleslaw")
-            DataManager.shared.addItem(id: 9, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine")
-            DataManager.shared.addItem(id: 10, title: "Knorr Tomato al Gusto All’ Arrabbiata Soße 370 g", desc: description, price: 3.99, picture: "tomato")
+            DataManager.shared.addItem(id: 0, title: "RUF Porridge Apfel Zimt mit Vollkorn Haferflocken", desc: description,price: 1.69, picture: "porridge", data: "/product/ruf-porridge-apfel-zimt-mit-vollkorn-haferflocken/")
+            DataManager.shared.addItem(id: 1, title: "TSARINE Caviar 50g", desc: description, price: 45.50, picture: "tsarine", data: "/product/marke-tsarine-caviar-50g/", isOffer: true)
+            DataManager.shared.addItem(id: 2, title: "Hillshire Farm Lit'l Smokies Salchicha ahumada, 14 oz", desc: description,price: 5.31, picture: "hillshire", data: "/product/hillshire-farm-litl-smokies-salchicha-ahumada-14-oz/", isOffer: true)
+            DataManager.shared.addItem(id: 3, title: "Good Soy Cookies", desc: description,price: 3.99, picture: "cookies", data: "/product/good-soy-cookies/")
+            DataManager.shared.addItem(id: 4, title: "Jack Link’s Teriyaki, Beef Jerky", desc: description,price: 6.60, picture: "teriyaki", data: "/product/save-on-jack-links-beef-jerky-teriyaki/")
+            DataManager.shared.addItem(id: 5, title: "Absolute Organic Cashews", desc: description,price: 20.00, picture: "cashews", data: "/product/healthy-snack-box-variety-pack-60-count/")
             listItems = DataManager.shared.getItems()
         }
         listWish = DataManager.shared.getWishItems()
         listCart = DataManager.shared.getCartItems()
         listOffer = DataManager.shared.getOfferItems()
+        isStub = UserDefaultsUtils.getStubToken() != ""
+        isLogin = UserDefaultsUtils.isLogin()
+        userId = UserDefaultsUtils.getUserId()
     }
     
     func processCelraAction(celtraResponse: String){
         let decoder = JSONDecoder()
-        var itemView = false, abCartView = false, shopView = false
+        var abCartView = false, goToWeb = false
+        var url = ""
         var obj: CeltraResponse? = nil
         do {
             if let celtraData = celtraResponse.data(using: .utf8){
@@ -184,28 +256,210 @@ class Store: ObservableObject {
         if obj != nil{
             for (key, value) in obj!.attributes {
                 if(key == "impression"){
-                    if(value == "ItemView"){
-                        itemView = true
-                    }
-                    else if(value == "ShopView"){
-                        shopView = true
+                    if(value == "ShopView"){
+                        tabSelection = 2
                     }
                     else if(value == "AbCartView"){
                         abCartView = true
                     }
+                    else if(value == "WebIdent"){
+                        goToWeb = true
+                    }
                 }
                 if(key == "item_id"){
+                    tabSelection = 1
                     itemSelected = Int16(value) ?? -1
+                    showItem = true
+                }
+                if(key == "item_data"){
+                    tabSelection = 1
+                    itemSelected = getItemFromData(data: value)?.id ?? -1
+                    showItem = true
                 }
                 if(key == "ab_cart_id"){
-                    abandonedCartId = Int(value) ?? -1
+                    abandonedCartId = Int(value) ?? getAbCartId()
+                }
+                if(key == "ident_url"){
+                    url = value
                 }
             }
-            if(itemView || shopView){
+            if(abCartView && abandonedCartId != 0){
+                showAbandonedCarts = true
+            }
+            if(goToWeb && url != ""){
+                if let webUrl = URL(string: url), UIApplication.shared.canOpenURL(webUrl) {
+                   if #available(iOS 10.0, *) {
+                      UIApplication.shared.open(webUrl, options: [:], completionHandler: nil)
+                   } else {
+                      UIApplication.shared.openURL(webUrl)
+                   }
+                }
+            }
+        }
+    }
+    
+    func getQSStub() -> String{
+        let stubToken = UserDefaultsUtils.getStubToken()
+        var qsToken = ""
+        if(stubToken != ""){
+            qsToken = "?utiq_stub=\(stubToken)"
+        }
+        return qsToken
+    }
+    
+    func getItemFromData(data: String) -> Item?{
+        for item in listItems{
+            if item.data.contains(data){
+                return item
+            }
+        }
+        return nil
+    }
+    
+    func getAbCartId() -> Int{
+        if let last = DataManager.shared.getAbandonedCarts().last{
+            return last.id
+        }
+        return -1
+    }
+    
+    func handleDeepLink(components: URLComponents){
+        if let parameter = components.queryItems?.first{
+//            print("iraniran:itemdescription", parameter.name + ", \(parameter.value)")
+            if(components.host == "showAbandonedCart" && parameter.name == "ab_cart_id" && parameter.value != nil){
+                abandonedCartId = Int(parameter.value!) ?? getAbCartId()
+                showAbandonedCarts = true
+            }
+            if(components.host == "showSection" && parameter.name == "impression" && parameter.value == "ShopView"){
                 tabSelection = 2
             }
-            else if(abCartView){
-                showAbandonedCarts = true
+            if(components.host == "itemdescription" && parameter.name == "item_id" && parameter.value != nil){
+                itemSelected = Int16(parameter.value ?? "-1")!
+                tabSelection = 1
+                showItem = true
+            }
+        }
+    }
+    
+    func getClickIdentLink() -> String?{
+        if let userName = UserDefaultsUtils.getUserId(){
+            return "https://funnelconnect.brand-demo.com/op/brand-demo-app-click-ident/click?\(userType)=\(userName)&uri=https%3A%2F%2Fwww.brand-demo.com%2F"
+        }
+        return nil
+    }
+    
+    func getAbCartLink() -> String?{
+        if let abCartId = DataManager.shared.getAbandonedCarts().last?.id{
+            return "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(abCartId)"
+        }
+        return nil
+    }
+    
+    func utiqStartService(){
+        print("utiqStartService")
+        if let isConsentAccepted = try? Utiq.shared.isConsentAccepted(){
+            if(isConsentAccepted){
+                print("isConsentAccepted:\(isConsentAccepted)")
+                let stubToken = UserDefaultsUtils.getStubToken()
+                Utiq.shared.startService(stubToken: stubToken, dataCallback: {data in
+                    print("dataCallback: UTIQ.shared.startService")
+                    self.mtid = data.mtid
+                    TrackUtils.mtid = data.mtid
+                    self.atid = data.atid
+                },errorCallback: {error in
+                    print("errorCallback: UTIQ.shared.startService")
+                    print("error: \(error)")
+                })
+            }
+        }
+    }
+    
+    func fcStartService(action: @escaping() -> Void){
+        FunnelConnectSDK.shared.startService(notificationsName: self.fcNotificationsName, notificationsVersion: 1, dataCallback: { data in
+            if let umid = try? FunnelConnectSDK.shared.getUMID() {
+                self.isCdpStarted.toggle()
+                self.umid = umid
+                self.processInfoResponse(infoResponse: data)
+                print("excecuting SwrveSDK.start(withUserId: \(umid))")
+                //SwrveSDK.start(withUserId: umid)
+                //print("excecuting SwrveGeoSDK.start()")
+                //SwrveGeoSDK.start()
+                self.isFunnelConnectStarted = true
+                action()
+            }
+        }, errorCallback: {error in
+            print("error FunnelConnectSDK.cdp.startService()")
+            print("error: \(error)")
+        })
+    }
+    
+    func updatePermissions(om: Bool, nba: Bool, opt: Bool) {
+        let action = {
+            print("excecuting updatePermissions")
+            let permissions = Permissions()
+            permissions.addPermission(key: self.keyNba,accepted: nba)
+            permissions.addPermission(key: self.keyOm,accepted: om)
+            permissions.addPermission(key: self.keyOpt,accepted: opt)
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.fcNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {data in
+                self.processInfoResponse(infoResponse: data)
+                UserDefaultsUtils.setPermissionsRequested(value: true)
+                UserDefaultsUtils.setCdpNba(nba: self.isNbaPermissionGranted())
+                UserDefaultsUtils.setCdpOpt(opt: self.isOptPermissionGranted())
+            }, errorCallback: {_ in })
+        }
+        if(self.isFunnelConnectStarted){
+            action()
+        }
+        else{
+            self.fcStartService(){
+                action()
+            }
+        }
+    }
+    
+    func updateUtiqPermission(consent: Bool){
+        let action = {
+            let permissions = Permissions()
+            permissions.addPermission(key: self.keyUtiq,accepted: consent)
+            FunnelConnectSDK.shared.updatePermissions(permissions: permissions, notificationsName: self.utiqNotificationsName, notificationsVersion: self.notificationsVersion, dataCallback: {data in
+                self.processInfoResponse(infoResponse: data)
+            }, errorCallback: {_ in })
+        }
+        if(self.isFunnelConnectStarted){
+            action()
+        }
+        else{
+            self.fcStartService(){
+                action()
+            }
+        }
+    }
+    
+    func isNbaPermissionGranted() -> Bool{
+        if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.getPermission(key: keyNba){
+                return true
+        }
+        return false
+    }
+    
+    func isOptPermissionGranted() -> Bool{
+        if let permissions = try? FunnelConnectSDK.shared.getPermissions(), permissions.getPermission(key: keyOpt){
+                return true
+        }
+        return false
+    }
+    
+    func showATTConsent(){
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                    case .authorized:
+                        print("enable tracking")
+                    case .denied:
+                        print("disable tracking")
+                    default:
+                        print("tracking: \(status)")
+                }
             }
         }
     }

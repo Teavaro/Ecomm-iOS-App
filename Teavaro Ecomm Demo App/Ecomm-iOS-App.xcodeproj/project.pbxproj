@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001455012AC48D24007F4D01 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001455002AC48D23007F4D01 /* AppTrackingTransparency.framework */; };
+		001455032AC48D33007F4D01 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001455022AC48D33007F4D01 /* AdSupport.framework */; };
 		00183CCE28A1A61C000E2F03 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CCD28A1A61C000E2F03 /* CartItemRow.swift */; };
 		00183CD228B52984000E2F03 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD128B52984000E2F03 /* SettingsView.swift */; };
 		00183CD728B53541000E2F03 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00183CD628B53541000E2F03 /* LoginView.swift */; };
@@ -16,19 +18,20 @@
 		00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2C2943C32C0033EF94 /* HttpRequest.swift */; };
 		00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00184F2E2943C7380033EF94 /* PushNotification.swift */; };
 		0019CA2E299B489600A7D771 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0019CA2D299B489600A7D771 /* DataManager.swift */; };
-		001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; };
-		001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		002837F02B7F888100C6AA80 /* SwrveConversationSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 002837EF2B7F888100C6AA80 /* SwrveConversationSDK */; };
+		002837F22B7F888100C6AA80 /* SwrveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 002837F12B7F888100C6AA80 /* SwrveSDK */; };
+		002837F42B7F888100C6AA80 /* SwrveSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 002837F32B7F888100C6AA80 /* SwrveSDKCommon */; };
 		002A747F29BBDD67009F5248 /* CeltraResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A747E29BBDD67009F5248 /* CeltraResponse.swift */; };
+		004472A42C2039B700D9CE83 /* utiq_configs.json in Resources */ = {isa = PBXBuildFile; fileRef = 004472A32C2039B700D9CE83 /* utiq_configs.json */; };
+		004A57762A3B899300BF32D0 /* PulseLogHandler in Frameworks */ = {isa = PBXBuildFile; productRef = 004A57752A3B899300BF32D0 /* PulseLogHandler */; };
 		0065CCBE289DAD8000317DDD /* AngroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBD289DAD8000317DDD /* AngroView.swift */; };
 		0065CCC0289DB09C00317DDD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065CCBF289DB09C00317DDD /* Store.swift */; };
-		0073235A29102F56003D15D9 /* SwrveSDKCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; };
-		0073235B29102F56003D15D9 /* SwrveSDKCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0073235C29102F56003D15D9 /* SwrveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235729102F56003D15D9 /* SwrveSDK.xcframework */; };
-		0073235D29102F56003D15D9 /* SwrveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235729102F56003D15D9 /* SwrveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0073235E29102F56003D15D9 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235829102F56003D15D9 /* SDWebImage.xcframework */; };
-		0073235F29102F56003D15D9 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0073235829102F56003D15D9 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		007182FF2C3C35B1000A8357 /* fc_configs.json in Resources */ = {isa = PBXBuildFile; fileRef = 007182FE2C3C35B1000A8357 /* fc_configs.json */; };
+		0082B97A29E46D7200EC82F5 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0082B97929E46D7200EC82F5 /* NotificationsView.swift */; };
 		008513D529102135006898F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 008513D429102135006898F7 /* GoogleService-Info.plist */; };
 		008513D7291021DD006898F7 /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008513D6291021DD006898F7 /* UserDefaultsUtils.swift */; };
+		008725182A12B14F00263267 /* ShareLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008725172A12B14F00263267 /* ShareLinksView.swift */; };
+		0087251B2A12B63200263267 /* IDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0087251A2A12B63200263267 /* IDsView.swift */; };
 		0092251228CF893200125041 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092251128CF893200125041 /* Extensions.swift */; };
 		009C9ACF289D6F4000599DB0 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C9ACE289D6F4000599DB0 /* WishlistView.swift */; };
 		00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4AE29A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift */; };
@@ -39,7 +42,13 @@
 		00A4C4BE29B0EC5F00B2B334 /* TrackUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */; };
 		00ABB350297AF43C001F7092 /* CeltraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB34F297AF43C001F7092 /* CeltraWebView.swift */; };
 		00ABB352297B29D3001F7092 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ABB351297B29D3001F7092 /* InfoResponse.swift */; };
+		00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DD2A2F83B900794528 /* Pulse */; };
+		00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DF2A2F83B900794528 /* PulseUI */; };
 		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
+		00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D625422AABABC7007B7C5F /* UTIQConsentView.swift */; };
+		00F1D1082C859F34005A2370 /* PublisherWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1D1072C859F34005A2370 /* PublisherWebView.swift */; };
+		00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBED312A3B3D6900C7E82D /* EmailHelper.swift */; };
+		4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */; };
 		C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */; };
 		C940477C286DF8E400C1DCAB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477B286DF8E400C1DCAB /* BlurView.swift */; };
 		C940477E286DF92200C1DCAB /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940477D286DF92200C1DCAB /* CheckboxStyle.swift */; };
@@ -64,24 +73,33 @@
 		C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE77CA2864EF6D006DDD74 /* DI.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		008B3FDB28F5140A00561A98 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0073235D29102F56003D15D9 /* SwrveSDK.xcframework in Embed Frameworks */,
-				0073235F29102F56003D15D9 /* SDWebImage.xcframework in Embed Frameworks */,
-				001E7FA029310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Embed Frameworks */,
-				0073235B29102F56003D15D9 /* SwrveSDKCommon.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		00AEA9D02A2F651600794528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 098854D079B8667BC4FED7C5E49C9890;
+			remoteInfo = "Pods-Ecomm-iOS-App";
 		};
-/* End PBXCopyFilesBuildPhase section */
+		00F1D0E72C80BBCB005A2370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE19EDBC490B82C974FED80E58DB7FC9;
+			remoteInfo = SwrveSDKCommon;
+		};
+		00F1D0E92C80BBCB005A2370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DC3896FD8365317B21CBE654F961CD6;
+			remoteInfo = "SwrveSDKCommon-SwrveSDKCommon";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001455002AC48D23007F4D01 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		001455022AC48D33007F4D01 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		00183CCD28A1A61C000E2F03 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
 		00183CD128B52984000E2F03 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		00183CD628B53541000E2F03 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -91,15 +109,16 @@
 		00184F2C2943C32C0033EF94 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		00184F2E2943C7380033EF94 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		0019CA2D299B489600A7D771 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "FunnelConnectSDK-0.1.28.xcframework"; path = "Teavaro Ecomm Demo App/FunnelConnectSDK-0.1.28.xcframework"; sourceTree = "<group>"; };
 		002A747E29BBDD67009F5248 /* CeltraResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraResponse.swift; sourceTree = "<group>"; };
+		004472A32C2039B700D9CE83 /* utiq_configs.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = utiq_configs.json; sourceTree = "<group>"; };
 		0065CCBD289DAD8000317DDD /* AngroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngroView.swift; sourceTree = "<group>"; };
 		0065CCBF289DB09C00317DDD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDKCommon.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDKCommon.xcframework"; sourceTree = "<group>"; };
-		0073235729102F56003D15D9 /* SwrveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwrveSDK.xcframework; path = "Teavaro Ecomm Demo App/SwrveSDK.xcframework"; sourceTree = "<group>"; };
-		0073235829102F56003D15D9 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = "Teavaro Ecomm Demo App/SDWebImage.xcframework"; sourceTree = "<group>"; };
+		007182FE2C3C35B1000A8357 /* fc_configs.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = fc_configs.json; sourceTree = "<group>"; };
+		0082B97929E46D7200EC82F5 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		008513D429102135006898F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		008513D6291021DD006898F7 /* UserDefaultsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtils.swift; sourceTree = "<group>"; };
+		008725172A12B14F00263267 /* ShareLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinksView.swift; sourceTree = "<group>"; };
+		0087251A2A12B63200263267 /* IDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDsView.swift; sourceTree = "<group>"; };
 		008B3FA328ECBC9300561A98 /* Ecomm-iOS-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ecomm-iOS-App.entitlements"; sourceTree = "<group>"; };
 		0092251128CF893200125041 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		009C9ACE289D6F4000599DB0 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishlistView.swift; path = "Teavaro Ecomm Demo App/Scenes/WishListScene/WishlistView.swift"; sourceTree = SOURCE_ROOT; };
@@ -111,8 +130,16 @@
 		00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackUtils.swift; sourceTree = "<group>"; };
 		00ABB34F297AF43C001F7092 /* CeltraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeltraWebView.swift; sourceTree = "<group>"; };
 		00ABB351297B29D3001F7092 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
+		00AEA9C62A2F650300794528 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		00AEA9C72A2F651600794528 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		00D3EC6B28E5C3160010B40C /* Teavaro-Ecomm-Demo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Teavaro-Ecomm-Demo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		00D547FD29BA5D3500E92B88 /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = mraid.js; path = "../../../../../Downloads/1030a67464e061568a5b-b492c9c6a631adb6e6b13f4bf8fcb162825d4c02/mraid.js"; sourceTree = "<group>"; };
+		00D625422AABABC7007B7C5F /* UTIQConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTIQConsentView.swift; sourceTree = "<group>"; };
+		00F1D1072C859F34005A2370 /* PublisherWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherWebView.swift; sourceTree = "<group>"; };
+		00FBED312A3B3D6900C7E82D /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ecomm_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.debug.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.debug.xcconfig"; sourceTree = "<group>"; };
+		C01BD2BE3469A12F78203EDA /* Pods-Ecomm-iOS-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecomm-iOS-App.release.xcconfig"; path = "Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App.release.xcconfig"; sourceTree = "<group>"; };
 		C9404779286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersRectange.swift; sourceTree = "<group>"; };
 		C940477B286DF8E400C1DCAB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C940477D286DF92200C1DCAB /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
@@ -143,10 +170,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0073235C29102F56003D15D9 /* SwrveSDK.xcframework in Frameworks */,
-				0073235E29102F56003D15D9 /* SDWebImage.xcframework in Frameworks */,
-				001E7F9F29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework in Frameworks */,
-				0073235A29102F56003D15D9 /* SwrveSDKCommon.xcframework in Frameworks */,
+				004A57762A3B899300BF32D0 /* PulseLogHandler in Frameworks */,
+				002837F22B7F888100C6AA80 /* SwrveSDK in Frameworks */,
+				00AEA9DE2A2F83B900794528 /* Pulse in Frameworks */,
+				00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */,
+				001455012AC48D24007F4D01 /* AppTrackingTransparency.framework in Frameworks */,
+				4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */,
+				002837F42B7F888100C6AA80 /* SwrveSDKCommon in Frameworks */,
+				002837F02B7F888100C6AA80 /* SwrveConversationSDK in Frameworks */,
+				001455032AC48D33007F4D01 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				00183CD928B56140000E2F03 /* PermissionsView.swift */,
+				00D625422AABABC7007B7C5F /* UTIQConsentView.swift */,
 			);
 			path = PermissionsScene;
 			sourceTree = "<group>";
@@ -183,6 +216,30 @@
 				0065CCBD289DAD8000317DDD /* AngroView.swift */,
 			);
 			path = AngroScene;
+			sourceTree = "<group>";
+		};
+		0082B97829E46D4300EC82F5 /* NotificationsScene */ = {
+			isa = PBXGroup;
+			children = (
+				0082B97929E46D7200EC82F5 /* NotificationsView.swift */,
+			);
+			path = NotificationsScene;
+			sourceTree = "<group>";
+		};
+		008725162A12B12500263267 /* ShareLinksScene */ = {
+			isa = PBXGroup;
+			children = (
+				008725172A12B14F00263267 /* ShareLinksView.swift */,
+			);
+			path = ShareLinksScene;
+			sourceTree = "<group>";
+		};
+		008725192A12B61D00263267 /* IDsScene */ = {
+			isa = PBXGroup;
+			children = (
+				0087251A2A12B63200263267 /* IDsView.swift */,
+			);
+			path = IDsScene;
 			sourceTree = "<group>";
 		};
 		00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */ = {
@@ -200,6 +257,7 @@
 				00184F2C2943C32C0033EF94 /* HttpRequest.swift */,
 				00184F2E2943C7380033EF94 /* PushNotification.swift */,
 				00A4C4BD29B0EC5F00B2B334 /* TrackUtils.swift */,
+				00FBED312A3B3D6900C7E82D /* EmailHelper.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -211,6 +269,16 @@
 				002A747E29BBDD67009F5248 /* CeltraResponse.swift */,
 			);
 			path = dataClases;
+			sourceTree = "<group>";
+		};
+		00AEA9C82A2F651600794528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
+				00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */,
+				00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		00CDFF2D28C048450096810C /* WishListScene */ = {
@@ -231,12 +299,22 @@
 		00CDFF3028C0EA590096810C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				001E7F9E29310B40004B814A /* FunnelConnectSDK-0.1.28.xcframework */,
-				0073235829102F56003D15D9 /* SDWebImage.xcframework */,
-				0073235729102F56003D15D9 /* SwrveSDK.xcframework */,
-				0073235629102F56003D15D9 /* SwrveSDKCommon.xcframework */,
+				001455022AC48D33007F4D01 /* AdSupport.framework */,
+				001455002AC48D23007F4D01 /* AppTrackingTransparency.framework */,
+				00AEA9C72A2F651600794528 /* Pods.xcodeproj */,
+				00AEA9C62A2F650300794528 /* Pods */,
+				10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C776D847EEC62C6A24000EDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */,
+				C01BD2BE3469A12F78203EDA /* Pods-Ecomm-iOS-App.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C9404778286DF8A100C1DCAB /* CustomViews */ = {
@@ -285,6 +363,7 @@
 				C9FE779628622C3E006DDD74 /* Teavaro Ecomm Demo App */,
 				C9FE779528622C3E006DDD74 /* Products */,
 				00CDFF3028C0EA590096810C /* Frameworks */,
+				C776D847EEC62C6A24000EDC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,6 +394,7 @@
 				C940477D286DF92200C1DCAB /* CheckboxStyle.swift */,
 				0065CCBF289DB09C00317DDD /* Store.swift */,
 				00ABB34F297AF43C001F7092 /* CeltraWebView.swift */,
+				00F1D1072C859F34005A2370 /* PublisherWebView.swift */,
 			);
 			path = "Teavaro Ecomm Demo App";
 			sourceTree = "<group>";
@@ -330,6 +410,9 @@
 		C9FE77B428636C61006DDD74 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				008725192A12B61D00263267 /* IDsScene */,
+				008725162A12B12500263267 /* ShareLinksScene */,
+				0082B97829E46D4300EC82F5 /* NotificationsScene */,
 				00A4C4B829A7F5D700B2B334 /* AbandonedCartsScene */,
 				00CDFF2D28C048450096810C /* WishListScene */,
 				00183CD828B56124000E2F03 /* PermissionsScene */,
@@ -376,6 +459,8 @@
 			children = (
 				C9FE779B28622C3F006DDD74 /* Assets.xcassets */,
 				00D547FD29BA5D3500E92B88 /* mraid.js */,
+				004472A32C2039B700D9CE83 /* utiq_configs.json */,
+				007182FE2C3C35B1000A8357 /* fc_configs.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -428,10 +513,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9FE77A728622C3F006DDD74 /* Build configuration list for PBXNativeTarget "Ecomm-iOS-App" */;
 			buildPhases = (
+				2D51C0F27DEA353860C70509 /* [CP] Check Pods Manifest.lock */,
 				C9FE779028622C3E006DDD74 /* Sources */,
 				C9FE779128622C3E006DDD74 /* Frameworks */,
 				C9FE779228622C3E006DDD74 /* Resources */,
-				008B3FDB28F5140A00561A98 /* Embed Frameworks */,
+				3311B771FF1F35E994CBD0BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -439,6 +525,12 @@
 			);
 			name = "Ecomm-iOS-App";
 			packageProductDependencies = (
+				00AEA9DD2A2F83B900794528 /* Pulse */,
+				00AEA9DF2A2F83B900794528 /* PulseUI */,
+				004A57752A3B899300BF32D0 /* PulseLogHandler */,
+				002837EF2B7F888100C6AA80 /* SwrveConversationSDK */,
+				002837F12B7F888100C6AA80 /* SwrveSDK */,
+				002837F32B7F888100C6AA80 /* SwrveSDKCommon */,
 			);
 			productName = "Teavaro Ecomm Demo App";
 			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
@@ -469,15 +561,51 @@
 			);
 			mainGroup = C9FE778B28622C3E006DDD74;
 			packageReferences = (
+				00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */,
+				004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */,
+				002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */,
 			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00AEA9C82A2F651600794528 /* Products */;
+					ProjectRef = 00AEA9C72A2F651600794528 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9FE779328622C3E006DDD74 /* Ecomm-iOS-App */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-Ecomm-iOS-App";
+			path = Pods_Ecomm_iOS_App.framework;
+			remoteRef = 00AEA9D02A2F651600794528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = SwrveSDKCommon;
+			path = SwrveSDKCommon.framework;
+			remoteRef = 00F1D0E72C80BBCB005A2370 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = "SwrveSDKCommon-SwrveSDKCommon";
+			path = SwrveSDKCommon.bundle;
+			remoteRef = 00F1D0E92C80BBCB005A2370 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9FE779228622C3E006DDD74 /* Resources */ = {
@@ -486,12 +614,56 @@
 			files = (
 				00D547FE29BA5D3500E92B88 /* mraid.js in Resources */,
 				C9FE779F28622C3F006DDD74 /* Preview Assets.xcassets in Resources */,
+				004472A42C2039B700D9CE83 /* utiq_configs.json in Resources */,
 				C9FE779C28622C3F006DDD74 /* Assets.xcassets in Resources */,
 				008513D529102135006898F7 /* GoogleService-Info.plist in Resources */,
+				007182FF2C3C35B1000A8357 /* fc_configs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D51C0F27DEA353860C70509 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ecomm-iOS-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3311B771FF1F35E994CBD0BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9FE779028622C3E006DDD74 /* Sources */ = {
@@ -501,6 +673,8 @@
 				00A4C4B229A6A82D00B2B334 /* AbandonedCarts+CoreDataClass.swift in Sources */,
 				C9FE77CB2864EF6D006DDD74 /* DI.swift in Sources */,
 				C9FE77C92864EF3D006DDD74 /* CheckoutViewModel.swift in Sources */,
+				00F1D1082C859F34005A2370 /* PublisherWebView.swift in Sources */,
+				008725182A12B14F00263267 /* ShareLinksView.swift in Sources */,
 				00183CDA28B56140000E2F03 /* PermissionsView.swift in Sources */,
 				C9FE77B3286367A6006DDD74 /* HomeView.swift in Sources */,
 				00184F2D2943C32C0033EF94 /* HttpRequest.swift in Sources */,
@@ -517,7 +691,11 @@
 				C940477A286DF8AF00C1DCAB /* TopRoundedCornersRectange.swift in Sources */,
 				002A747F29BBDD67009F5248 /* CeltraResponse.swift in Sources */,
 				00184F2F2943C7380033EF94 /* PushNotification.swift in Sources */,
+				0082B97A29E46D7200EC82F5 /* NotificationsView.swift in Sources */,
+				00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */,
+				0087251B2A12B63200263267 /* IDsView.swift in Sources */,
 				C9FE77C02864CF1C006DDD74 /* Resolver.swift in Sources */,
+				00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */,
 				C9FE77B128635C5E006DDD74 /* OrderView.swift in Sources */,
 				C9FE77AB286338C2006DDD74 /* StaticData.swift in Sources */,
 				C9FE77A128622C3F006DDD74 /* Persistence.swift in Sources */,
@@ -550,6 +728,7 @@
 		C9FE77A528622C3F006DDD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -598,12 +777,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -611,6 +791,7 @@
 		C9FE77A628622C3F006DDD74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -653,11 +834,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -665,6 +848,7 @@
 		};
 		C9FE77A828622C3F006DDD74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -673,7 +857,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -695,6 +879,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -708,6 +893,7 @@
 		};
 		C9FE77A928622C3F006DDD74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C01BD2BE3469A12F78203EDA /* Pods-Ecomm-iOS-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -716,7 +902,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -738,6 +924,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -771,6 +958,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swrve/swrve-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
+			};
+		};
+		004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/PulseLogHandler.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Pulse";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		002837EF2B7F888100C6AA80 /* SwrveConversationSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveConversationSDK;
+		};
+		002837F12B7F888100C6AA80 /* SwrveSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDK;
+		};
+		002837F32B7F888100C6AA80 /* SwrveSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */;
+			productName = SwrveSDKCommon;
+		};
+		004A57752A3B899300BF32D0 /* PulseLogHandler */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */;
+			productName = PulseLogHandler;
+		};
+		00AEA9DD2A2F83B900794528 /* Pulse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = Pulse;
+		};
+		00AEA9DF2A2F83B900794528 /* PulseUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */;
+			productName = PulseUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C9FE77A228622C3F006DDD74 /* Teavaro_Ecomm_Demo_App.xcdatamodeld */ = {

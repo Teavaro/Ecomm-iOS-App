@@ -17,7 +17,7 @@ struct HomeView: View {
 //            Image(uiImage: UIImage(imageLiteralResourceName: "logo-angro"))
 //                .padding()
             TabView(selection: $store.tabSelection) {
-                AngroView()
+                AngroView(coordinator: Coordinator(store: store))
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
@@ -47,6 +47,7 @@ struct HomeView: View {
         .onChange(of: scenePhase) { newPhase in
             TrackUtils.lifeCycle(phase: newPhase)
             if newPhase == .active {
+                store.showATTConsent()
                 if let section = AppState.shared.section{
                     if(section == "store"){
                         store.tabSelection = 2
@@ -62,17 +63,19 @@ struct HomeView: View {
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
                 return
             }
-            if let parameter = components.queryItems?.first{
-                if(components.host == "showAbandonedCart" && parameter.name == "id" && parameter.value != nil){
-                    store.abandonedCartId = Int(parameter.value!) ?? 0
-                    store.showAbandonedCarts = true
-                }
-            }
+            store.handleDeepLink(components: components)
         }
         .sheet(isPresented: $store.showAbandonedCarts, onDismiss: {
             print(store.showAbandonedCarts)
         }) {
             ModalAbandonedCarts(showAbandonedCarts: $store.showAbandonedCarts, listItems: DataManager.shared.getAbandonedCartItems(itemId: store.abandonedCartId))
+        }
+        .sheet(isPresented: $store.showItem, onDismiss: {
+            print(store.showItem)
+        }) {
+            if let item = DataManager.shared.getItem(itemId: store.itemSelected){
+                ModalItem(showItem: $store.showItem, item: item)
+            }
         }
     }
         
@@ -86,6 +89,18 @@ struct ModalAbandonedCarts: View {
     var body: some View {
         VStack {
             ACItemsListingView(listItems: listItems)
+        }
+    }
+}
+
+struct ModalItem: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showItem: Bool
+    var item: Item
+
+    var body: some View {
+        VStack {
+            ItemDetail(item: item)
         }
     }
 }

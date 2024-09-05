@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FunnelConnectSDK
 
 let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
 let tipAmounts = [10, 15, 20, 25, 0]
@@ -92,10 +91,9 @@ struct CheckoutView: View {
                                 message: Text("Do you want to clear the cart?"),
                                 primaryButton: .destructive(Text("Yes"), action: {
                                     let idCart = DataManager.shared.addAbandonedCart(items: store.listCart)
-                                    let events = [TrackUtils.CLICK: "clear_cart_confirm", TrackUtils.ABANDONED_CART_ID: String(idCart)]
-                                    TrackUtils.events(events: events)
+                                    TrackUtils.click(value: "clear_cart_confirm")
                                     store.removeAllCartItems()
-                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?id=\(idCart)"
+                                    UIPasteboard.general.string = "TeavaroEcommDemoApp://showAbandonedCart?ab_cart_id=\(idCart)"
                                 }),
                                 secondaryButton: .cancel(Text("No"), action: {
                                     TrackUtils.click(value: "clear_cart_cancel")

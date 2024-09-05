@@ -8,6 +8,6 @@
 #ifndef Ecomm_iOS_App_Bridging_Header_h
 #define Ecomm_iOS_App_Bridging_Header_h
 
-#import "SwrveSDK.h"
+#import "Pods/SwrveSDK/SwrveSDK/SDK/SwrveSDK.h"
 
 #endif /* Ecomm_iOS_App_Bridging_Header_h */

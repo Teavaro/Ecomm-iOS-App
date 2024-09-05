@@ -9,16 +9,17 @@ import Foundation
 import SwiftUI
 
 class HttpRequest {
-    func request(urlString: String) {
+    func request(url: String, params: String, method: String) {
         DispatchQueue.main.async {
-            if let serviceUrl = URL(string: urlString){
-//                print("iran: url good")
+            if let serviceUrl = URL(string: url){
                 var request = URLRequest(url: serviceUrl)
-                request.httpMethod = "POST"
+                request.httpMethod = method
                 request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+                request.httpBody = params.data(using: String.Encoding.utf8)
                 let session = URLSession.shared
                 session.dataTask(with: request) { (data, response, error) in
-//                    print("iran: \(response)")
+                    
+//                    print("response: \(response), error: \(error)")
                 }.resume()
             }
         }

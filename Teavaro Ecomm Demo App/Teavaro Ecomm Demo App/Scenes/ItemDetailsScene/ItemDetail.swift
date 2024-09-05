@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FunnelConnectSDK
 
 struct ItemDetail : View {
     
@@ -41,16 +40,14 @@ struct ItemDetail : View {
             
             if allowAddWish! && !store.isItemInWish(item: item){
                 insertButton(title: "Add to Wishlist", action: {
-                    let events = [TrackUtils.CLICK: "add_to_wish", "item_id": String(item.id)]
-                    TrackUtils.events(events: events)
+                    TrackUtils.click(value: "add_to_wishlist" + "," + item.data)
                     store.addItemToWish(id: item.id)
                     print("Product added.")
                 })
             }
             if allowAddCart! {
                 insertButton(title: "Add to Cart", action: {
-                    let events = [TrackUtils.CLICK: "add_to_cart", "item_id": String(item.id)]
-                    TrackUtils.events(events: events)
+                    TrackUtils.click(value: "add_to_cart" + "," + item.data)
                     store.addItemToCart(item: item)
                     print("Product added.")
                     dismiss()
@@ -62,8 +59,7 @@ struct ItemDetail : View {
         .navigationTitle(item.title ?? "")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: {
-            let events = [TrackUtils.IMPRESSION: "item_view", "item_id": String(item.id)]
-            TrackUtils.events(events: events)
+            TrackUtils.impression(value: item.data)
         })
     }
 }

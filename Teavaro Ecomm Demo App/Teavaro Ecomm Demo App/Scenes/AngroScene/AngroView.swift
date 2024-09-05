@@ -7,8 +7,8 @@
 
 import SwiftUI
 import CoreData
-import FunnelConnectSDK
-import SwrveSDK
+import Utiq
+import FunnelConnect
 import Combine
 
 struct AngroView: View {
@@ -16,6 +16,7 @@ struct AngroView: View {
     @EnvironmentObject var store: Store
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     let buildVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    var coordinator: Coordinator
     
     fileprivate func insertButton(title: String, action: @escaping() -> Void) -> some View {
         return Button {
@@ -34,9 +35,6 @@ struct AngroView: View {
     
     fileprivate func headerView() -> some View {
         return VStack(alignment: .center, spacing: 20){
-            Text("B2B WooCommerce Theme")
-                .font(.title2)
-                .foregroundColor(.white)
             Text("Sale Up to 30%")
                 .font(.title)
                 .bold()
@@ -59,8 +57,10 @@ struct AngroView: View {
                 List {
                     headerView()
                     
-                    CeltraWebView(store: store)
-                        .frame(height: 120)
+                    if(store.showBanner){
+                        CeltraWebView(banner: store.banner, coordinator: coordinator)
+                            .frame(height: 180)
+                    }
                     
                     Text("Best selling items:")
                         .font(.title)
@@ -73,7 +73,9 @@ struct AngroView: View {
                             ItemRow(item: item)
                         }
                     }
-                    
+                    NavigationLink(destination: WebViewContainer(urlString: "https://publisher-demo.media\(store.getQSStub())")) {
+                        Text("Check our recipes").padding()
+                    }
                 }
                 .navigationBarTitle(Text(""), displayMode: .inline)
                 .navigationBarItems(leading: TitleView(title: "Home"))
@@ -83,57 +85,74 @@ struct AngroView: View {
             }
             .onAppear(perform: {
                 if(!store.isFunnelConnectStarted){
-                    FunnelConnectSDK.shared.didInitializeWithResult {
-                        DispatchQueue.main.async {
-                            print("excecuting FunnelConnectSDK.trustpid.startService()")
-                            if let isConsentAccepted = try? FunnelConnectSDK.shared.trustPid().isConsentAccepted(){
-                                if(isConsentAccepted){
-                                    try? FunnelConnectSDK.shared.trustPid().startService(dataCallback: {_ in
-//                                        store.isFunnelConnectStarted = true
-                                    }, errorCallback: {_ in
-                                        
-                                    })
+                    DispatchQueue.main.async {
+                        print("excecuting FunnelConnectSDK.shared.didInitializeWithResult")
+                        FunnelConnectSDK.shared.didInitializeWithResult( success: {
+                            print("excecuting FunnelConnectSDK.cdp.startService()")
+                            store.fcStartService(){
+                                if let permissions = try? FunnelConnectSDK.shared.getPermissions() {
+                                    if permissions.isEmpty() {
+                                        store.showCdpPermissions.toggle()
+                                    }
                                 }
                             }
-                            print("excecuting FunnelConnectSDK.cdp.startService()")
-                            try? FunnelConnectSDK.shared.cdp().startService(notificationsName: "MAIN_CS", notificationsVersion: 1, dataCallback: { data in
-                                if let umid = try? FunnelConnectSDK.shared.cdp().getUmid() {
-                                    store.isCdpStarted.toggle()
-                                    store.infoResponse = data
-                                    if let permissions = try? FunnelConnectSDK.shared.cdp().getPermissions(), permissions.isEmpty() {
-                                        store.showModal.toggle()
-                                    }
-                                    print("excecuting SwrveSDK.start(withUserId: \(umid)")
-                                    SwrveSDK.start(withUserId: umid)
-                                    store.isFunnelConnectStarted = true
-                                }
-                            }, errorCallback: {_ in
-                                
-                            })
-                        }
-                    } failure: {_ in
-                        
+                        }, failure: {error in
+                            print("error FunnelConnectSDK.shared.didInitializeWithResult")
+                            print("error: \(error)")
+                        })
+                        //print("excecuting UTIQ.shared.didInitializeWithResult")
+                        //Utiq.shared.didInitializeWithResult(success: {
+                        //    print("excecuting UTIQ.shared.startService()")
+                        //    store.utiqStartService()
+                        //}, failure: { error in
+                        //    print("error UTIQ.shared.didInitializeWithResult")
+                        //    print("error: \(error)")
+                        //})
                     }
                 }
                 TrackUtils.impression(value: "home_view")
             })
         }
-        .sheet(isPresented: $store.showModal, onDismiss: {
-            print(store.showModal)
+        .sheet(isPresented: $store.showCdpPermissions, onDismiss: {
+            print("showCdpPermissions:\(store.showCdpPermissions)")
         }) {
-            ModalView(showModal: $store.showModal)
+            ModalPermissionsCdpView(showModal: $store.showCdpPermissions)
+        }
+        .sheet(isPresented: $store.showUtiqConsent, onDismiss: {
+            print("showUtiqConsent:\(store.showUtiqConsent)")
+        }) {
+            ModalUtiqView(showModal: $store.showUtiqConsent)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-struct ModalView: View {
+struct ModalPermissionsCdpView: View {
     @Environment(\.presentationMode) var presentation
     @Binding var showModal: Bool
 
     var body: some View {
         VStack {
+            Image("logo2")
+            Text("Consent to enable the Teavaro CDP service")
+                .font(.headline)
             PermissionsView()
+        }
+    }
+}
+
+struct ModalUtiqView: View {
+    @Environment(\.presentationMode) var presentation
+    @Binding var showModal: Bool
+
+    var body: some View {
+        VStack {
+            Image("utiq_icon")
+                .resizable()
+                .frame(width: 120, height: 50)
+            Text("Consent to enable the UTIQ service")
+                .font(.headline)
+            UTIQConsentView()
         }
     }
 }

@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "pulse",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Pulse",
+      "state" : {
+        "revision" : "e8bc65bd43d1f32aef533e723f2d324830431120",
+        "version" : "3.7.3"
+      }
+    },
+    {
+      "identity" : "pulseloghandler",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/PulseLogHandler.git",
+      "state" : {
+        "revision" : "3ca42eada318ad8ed9c3246f5e32c19413dae3ce",
+        "version" : "3.2.0"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "b11493f76481dff17ac8f45274a6b698ba0d3af5",
+        "version" : "5.18.11"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "532d8b529501fb73a2455b179e0bbb6d49b652ed",
+        "version" : "1.5.3"
+      }
+    },
+    {
+      "identity" : "swrve-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swrve/swrve-ios-sdk",
+      "state" : {
+        "revision" : "12d235f9fe3c8c2960c8b247b75d14a273dcdfd3",
+        "version" : "8.11.0"
+      }
+    }
+  ],
+  "version" : 2
+}
