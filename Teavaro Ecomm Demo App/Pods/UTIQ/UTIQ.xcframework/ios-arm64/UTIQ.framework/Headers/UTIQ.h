@@ -454,6 +454,18 @@ __attribute__((swift_name("Utiq")))
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
+- (BOOL)fetchIdConnectDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fetchIdConnectData()")));
+
+/**
+ * @note This method converts all Kotlin exceptions to errors.
+*/
+- (BOOL)fetchIdConnectDataStubToken:(NSString *)stubToken error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fetchIdConnectData(stubToken:)")));
+- (void)fetchIdConnectDataDataCallback:(void (^)(UtiqIdConnectData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("fetchIdConnectData(dataCallback:errorCallback:)")));
+- (void)fetchIdConnectDataStubToken:(NSString *)stubToken dataCallback:(void (^)(UtiqIdConnectData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("fetchIdConnectData(stubToken:dataCallback:errorCallback:)")));
+
+/**
+ * @note This method converts all Kotlin exceptions to errors.
+*/
 - (UtiqIdConnectData * _Nullable)idConnectDataAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("idConnectData()")));
 - (void)initializeSdkToken:(NSString *)sdkToken __attribute__((swift_name("initialize(sdkToken:)")));
 - (void)initializeSdkToken:(NSString *)sdkToken options:(UtiqUtiqOptions *)options __attribute__((swift_name("initialize(sdkToken:options:)")));
@@ -470,18 +482,6 @@ __attribute__((swift_name("Utiq")))
 */
 - (BOOL)rejectConsentAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("rejectConsent()")));
 - (void)rejectConsentSuccessCallback:(void (^)(void))successCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("rejectConsent(successCallback:errorCallback:)")));
-
-/**
- * @note This method converts all Kotlin exceptions to errors.
-*/
-- (BOOL)startServiceAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("startService()")));
-
-/**
- * @note This method converts all Kotlin exceptions to errors.
-*/
-- (BOOL)startServiceStubToken:(NSString *)stubToken error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("startService(stubToken:)")));
-- (void)startServiceDataCallback:(void (^)(UtiqIdConnectData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(dataCallback:errorCallback:)")));
-- (void)startServiceStubToken:(NSString *)stubToken dataCallback:(void (^)(UtiqIdConnectData *))dataCallback errorCallback:(void (^)(NSError *))errorCallback __attribute__((swift_name("startService(stubToken:dataCallback:errorCallback:)")));
 @end
 
 __attribute__((swift_name("Kotlinx_serialization_coreSerializationStrategy")))

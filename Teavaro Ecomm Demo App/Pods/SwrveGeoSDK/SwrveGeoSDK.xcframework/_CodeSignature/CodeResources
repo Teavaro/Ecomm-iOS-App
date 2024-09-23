@@ -26,7 +26,7 @@
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/Info.plist</key>
 		<data>
-		QrJXKfS1iXus97Iny+vybWJS8zA=
+		LuKoKtBKiaSxT48oVlozzY0TAwA=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		hKcvTWqj1GewKUQkKmXWiBFPBLM=
+		kNG9iia+JUKnKFxqlOTU0PvzvN4=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h</key>
 		<data>
-		UshwbYGuNXoOfl+GB+db1zjiX5I=
+		fhfVCr7NF1nIN661T0zuvJOMfg4=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h</key>
 		<data>
@@ -46,19 +46,19 @@
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK</key>
 		<data>
-		KrueGbiMbTNHf7YmfTJ2BwH05f0=
+		3UmsFe73tzviuow9JK8QU25OYtE=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom</key>
 		<data>
-		wzHP4INFbqteFZh/ppeeiYQo3DU=
+		ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK.mom</key>
 		<data>
-		FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+		hqtcgJfvGTYx4RXseg3J/Ni1thg=
 		</data>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>ios-arm64/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/DWARF/SwrveGeoSDK</key>
 		<data>
-		QFxOiZiyvb6578dFcxaiNl3N2Gk=
+		1KrdEr25lOK0Ba6yPySivOaaZkI=
 		</data>
 		<key>ios-arm64/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/SwrveGeoSDK.yml</key>
 		<data>
-		qMSnEQGpUfmlh3lLN9bq4rFzvM0=
+		rbTzvLb+Oy0kypNKmwSSfT3XAv8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeo.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/Info.plist</key>
 		<data>
-		mRVZBZcfP1AncNuk+Avf5XEr98U=
+		WMedZ1fTxZGM6FqoFI33k+B+c/o=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		hKcvTWqj1GewKUQkKmXWiBFPBLM=
+		kNG9iia+JUKnKFxqlOTU0PvzvN4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h</key>
 		<data>
-		UshwbYGuNXoOfl+GB+db1zjiX5I=
+		fhfVCr7NF1nIN661T0zuvJOMfg4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h</key>
 		<data>
@@ -126,19 +126,19 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK</key>
 		<data>
-		5JZ0VjkdP533OZ2wABwE5NpOHGM=
+		sTh28Qj+7ex4NjSXxFOwrvWe7Mo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom</key>
 		<data>
-		wzHP4INFbqteFZh/ppeeiYQo3DU=
+		ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK.mom</key>
 		<data>
-		FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+		hqtcgJfvGTYx4RXseg3J/Ni1thg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		GG1f+MVtf94TTHkbYvSBxPtwwqY=
+		5OkeLG2yx9caKLbQkOP9leE4pOM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -162,15 +162,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/DWARF/SwrveGeoSDK</key>
 		<data>
-		Daw+YhOmGJMEuiruA6UjK7tw2H8=
+		MsehbiMcxclGxrL1gEBOL8SzMbM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/SwrveGeoSDK.yml</key>
 		<data>
-		bxlaeOgXNShFYeDfceuPgQbPfKo=
+		rRbhb/OLSPlegbnT4aXS4xzP63E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/SwrveGeoSDK.yml</key>
 		<data>
-		UxvKONrnGcFE7QRvAjOpibCjOHg=
+		WlsVuL2yhbBLw1Irmfb8UVvF0RI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -234,11 +234,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QrJXKfS1iXus97Iny+vybWJS8zA=
+			LuKoKtBKiaSxT48oVlozzY0TAwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vjipap8IYaZndnvUgUivfc7c1lc+O4PaDy/zKs2z+Mg=
+			IRiapaYu4acuRUdhMTOsXEdFvJWv93bBnnNDPbcseL0=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/Modules/module.modulemap</key>
@@ -256,22 +256,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hKcvTWqj1GewKUQkKmXWiBFPBLM=
+			kNG9iia+JUKnKFxqlOTU0PvzvN4=
 			</data>
 			<key>hash2</key>
 			<data>
-			g56MuVK6CsNokYeSHv+Zl0RMmvoV3ttgHNeQUmiHJ7U=
+			xh2ZkZ8p4buBAcOMbkVzpEDWBELdoFXVFJf9wEit1U4=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UshwbYGuNXoOfl+GB+db1zjiX5I=
+			fhfVCr7NF1nIN661T0zuvJOMfg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2SRgwkGQj0/RKgWu4rU3vGebtfoJLGZ1T++ohLBy0h4=
+			J8jJokPxhHu1nMH1ilFOXjzt97EBRwB2fXzU3PfLcjc=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h</key>
@@ -289,44 +289,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KrueGbiMbTNHf7YmfTJ2BwH05f0=
+			3UmsFe73tzviuow9JK8QU25OYtE=
 			</data>
 			<key>hash2</key>
 			<data>
-			RFplGY/ToaAae36DrTRPN7clO6jhzbhn99wYDkyMf20=
+			+OMJ3Kl/gi4jcPHTUm/m5bQKpP3nGczrTmTMIYI1uaU=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wzHP4INFbqteFZh/ppeeiYQo3DU=
+			ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xi1Fl5HEryiIj0PmgrXx1ssCqsqfZ59TWrEYeNwZNuw=
+			RJQRErG1kUxEAck+ZhAiGQG3Yv8VGGzuBTJCuJsKM/4=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
@@ -344,11 +344,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+			hqtcgJfvGTYx4RXseg3J/Ni1thg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ic9M2g1aN8ICSGqzzS81WDawMJbrXGd/Dv3yFVOCnWs=
+			Z0r3VLLF3hL/CWNmDaRKYc5BrLL3gsPSDdVwaKnqZr8=
 			</data>
 		</dict>
 		<key>ios-arm64/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist</key>
@@ -377,22 +377,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QFxOiZiyvb6578dFcxaiNl3N2Gk=
+			1KrdEr25lOK0Ba6yPySivOaaZkI=
 			</data>
 			<key>hash2</key>
 			<data>
-			AQvMEhK+6yBw7VIQJQQViynQOe28Uu/ApRLMhJRhGj8=
+			oe/DxQLS12prNepET8LMM3/0r4YyHXq1Z7/X3kZhXVM=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/SwrveGeoSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qMSnEQGpUfmlh3lLN9bq4rFzvM0=
+			rbTzvLb+Oy0kypNKmwSSfT3XAv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			cuYyvPraOtPsCaymH0jzuh02y0rUkNxHev5bsxyr/A4=
+			MDiB6o014hoq4I4QqN5QcJ75K//Y7UcB9llp4i7cgeU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/Headers/SwrveGeo.h</key>
@@ -454,11 +454,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mRVZBZcfP1AncNuk+Avf5XEr98U=
+			WMedZ1fTxZGM6FqoFI33k+B+c/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			j1ynacgagAbtyerqA7o5XeISlEizx/RxlzsAsbARh0E=
+			qXDnAjxE2dLDTKyOFAig88O+Etaua3Grd6wNt0WbMb4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/Modules/module.modulemap</key>
@@ -476,22 +476,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hKcvTWqj1GewKUQkKmXWiBFPBLM=
+			kNG9iia+JUKnKFxqlOTU0PvzvN4=
 			</data>
 			<key>hash2</key>
 			<data>
-			g56MuVK6CsNokYeSHv+Zl0RMmvoV3ttgHNeQUmiHJ7U=
+			xh2ZkZ8p4buBAcOMbkVzpEDWBELdoFXVFJf9wEit1U4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UshwbYGuNXoOfl+GB+db1zjiX5I=
+			fhfVCr7NF1nIN661T0zuvJOMfg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2SRgwkGQj0/RKgWu4rU3vGebtfoJLGZ1T++ohLBy0h4=
+			J8jJokPxhHu1nMH1ilFOXjzt97EBRwB2fXzU3PfLcjc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/PrivateHeaders/SwrveGeoSDK.h</key>
@@ -509,44 +509,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5JZ0VjkdP533OZ2wABwE5NpOHGM=
+			sTh28Qj+7ex4NjSXxFOwrvWe7Mo=
 			</data>
 			<key>hash2</key>
 			<data>
-			w9rZfQQTEOAaUxcTOVffYtFg3qp/+m+/CIybVHON6Y4=
+			JXdzt+xYFFw1Fox/EP++ML2ld4ni9xcatNc+vyTeJp0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v2.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wzHP4INFbqteFZh/ppeeiYQo3DU=
+			ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xi1Fl5HEryiIj0PmgrXx1ssCqsqfZ59TWrEYeNwZNuw=
+			RJQRErG1kUxEAck+ZhAiGQG3Yv8VGGzuBTJCuJsKM/4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
@@ -564,11 +564,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+			hqtcgJfvGTYx4RXseg3J/Ni1thg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ic9M2g1aN8ICSGqzzS81WDawMJbrXGd/Dv3yFVOCnWs=
+			Z0r3VLLF3hL/CWNmDaRKYc5BrLL3gsPSDdVwaKnqZr8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/SwrveGeoSDK.framework/SwrveGeoSDK.momd/VersionInfo.plist</key>
@@ -586,11 +586,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GG1f+MVtf94TTHkbYvSBxPtwwqY=
+			5OkeLG2yx9caKLbQkOP9leE4pOM=
 			</data>
 			<key>hash2</key>
 			<data>
-			vaYOjOEvhyZfegck7q14X98/63yFwHSBwTCekUXH+jI=
+			yJrS9/ObbIRol1kf0JrSOGkRQjR7Ts4pDd7xCVSNLl4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Info.plist</key>
@@ -608,33 +608,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Daw+YhOmGJMEuiruA6UjK7tw2H8=
+			MsehbiMcxclGxrL1gEBOL8SzMbM=
 			</data>
 			<key>hash2</key>
 			<data>
-			1FUIi7135q36ywdbekYVJnPbNQE+y1t+g/zpdI0imuI=
+			QdvFUs/oypDp1TkyJ45ZnEEWOWhfLUz6PsFb/5uqjbM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/aarch64/SwrveGeoSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bxlaeOgXNShFYeDfceuPgQbPfKo=
+			rRbhb/OLSPlegbnT4aXS4xzP63E=
 			</data>
 			<key>hash2</key>
 			<data>
-			CCO/p2rKJ/9WZSQqKlABVPs0/m7fAoF+sSlNaMrian8=
+			uq4QutPKUpdyjHSjUYqyJtlD+T6Y3bUmJUpBC97hYUk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/SwrveGeoSDK.framework.dSYM/Contents/Resources/Relocations/x86_64/SwrveGeoSDK.yml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UxvKONrnGcFE7QRvAjOpibCjOHg=
+			WlsVuL2yhbBLw1Irmfb8UVvF0RI=
 			</data>
 			<key>hash2</key>
 			<data>
-			xb/uYv1GiCSesCenA1+h1QxIxx8ebVoMzVnQ3rIFQEg=
+			wcpMMfrnUp99x2uxetV2k4MvMI0k+5X4wNrVjS7LYj0=
 			</data>
 		</dict>
 	</dict>

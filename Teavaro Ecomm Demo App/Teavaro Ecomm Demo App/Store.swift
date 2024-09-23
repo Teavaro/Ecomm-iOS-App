@@ -163,7 +163,8 @@ class Store: ObservableObject {
         if(attributes != ""){
             let attributesParam = URLQueryItem(name: "attributes", value: attributes)
             let allowTrackingParam = URLQueryItem(name: "allowTracking", value: "true")
-            urlComponents.queryItems = [attributesParam, allowTrackingParam]
+            let umidParam = URLQueryItem(name: "fc_umid", value: self.umid)
+            urlComponents.queryItems = [attributesParam, allowTrackingParam, umidParam]
         }
         return urlComponents.url
     }
@@ -361,11 +362,14 @@ class Store: ObservableObject {
             if(isConsentAccepted){
                 print("isConsentAccepted:\(isConsentAccepted)")
                 let stubToken = UserDefaultsUtils.getStubToken()
-                Utiq.shared.startService(stubToken: stubToken, dataCallback: {data in
+                Utiq.shared.fetchIdConnectData(stubToken: stubToken, dataCallback: {data in
                     print("dataCallback: UTIQ.shared.startService")
                     self.mtid = data.mtid
-                    TrackUtils.mtid = data.mtid
+                    UserDefaultsUtils.setMartechpass(value: data.mtid ?? "")
                     self.atid = data.atid
+                    self.fcStartService(action: {
+                        
+                    })
                 },errorCallback: {error in
                     print("errorCallback: UTIQ.shared.startService")
                     print("error: \(error)")
@@ -375,7 +379,11 @@ class Store: ObservableObject {
     }
     
     func fcStartService(action: @escaping() -> Void){
-        FunnelConnectSDK.shared.startService(notificationsName: self.fcNotificationsName, notificationsVersion: 1, dataCallback: { data in
+        var passQuery: PassQuery? = nil
+        if let mtid = UserDefaultsUtils.getMartechpass(){
+            passQuery = PassQuery(key: "martechpass", value: mtid)
+        }
+        FunnelConnectSDK.shared.startService(passQuery: passQuery, notificationsName: self.fcNotificationsName, notificationsVersion: 1, dataCallback: { data in
             if let umid = try? FunnelConnectSDK.shared.getUMID() {
                 self.isCdpStarted.toggle()
                 self.umid = umid

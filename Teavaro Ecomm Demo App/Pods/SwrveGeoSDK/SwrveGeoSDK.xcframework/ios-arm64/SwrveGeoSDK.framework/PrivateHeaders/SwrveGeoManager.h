@@ -3,7 +3,7 @@
 #import "SwrveGeoCustomFilterDelegate.h"
 #import "SwrveGeofence.h"
 
-static NSString *const SWRVE_GEO_SDK_VERSION = @"5.1.0";
+static NSString *const SWRVE_GEO_SDK_VERSION = @"5.1.1";
 
 // Update the SwrveGEOSample README.md if min major/minor/patch version changes
 static int const MIN_SWRVE_SDK_MAJOR_VERSION = 7;

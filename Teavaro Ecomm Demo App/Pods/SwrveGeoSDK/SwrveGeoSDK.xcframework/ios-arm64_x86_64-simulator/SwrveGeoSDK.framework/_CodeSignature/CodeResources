@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mRVZBZcfP1AncNuk+Avf5XEr98U=
+		WMedZ1fTxZGM6FqoFI33k+B+c/o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		hKcvTWqj1GewKUQkKmXWiBFPBLM=
+		kNG9iia+JUKnKFxqlOTU0PvzvN4=
 		</data>
 		<key>PrivateHeaders/SwrveGeoManager.h</key>
 		<data>
-		UshwbYGuNXoOfl+GB+db1zjiX5I=
+		fhfVCr7NF1nIN661T0zuvJOMfg4=
 		</data>
 		<key>PrivateHeaders/SwrveGeoSDK.h</key>
 		<data>
@@ -46,15 +46,15 @@
 		</data>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v2.mom</key>
 		<data>
-		wzHP4INFbqteFZh/ppeeiYQo3DU=
+		ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 		</data>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<data>
-		a4K6P37yOrKSIK6g5zLqhV9yiRc=
+		N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 		</data>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK.mom</key>
 		<data>
-		FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+		hqtcgJfvGTYx4RXseg3J/Ni1thg=
 		</data>
 		<key>SwrveGeoSDK.momd/VersionInfo.plist</key>
 		<data>
@@ -141,22 +141,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hKcvTWqj1GewKUQkKmXWiBFPBLM=
+			kNG9iia+JUKnKFxqlOTU0PvzvN4=
 			</data>
 			<key>hash2</key>
 			<data>
-			g56MuVK6CsNokYeSHv+Zl0RMmvoV3ttgHNeQUmiHJ7U=
+			xh2ZkZ8p4buBAcOMbkVzpEDWBELdoFXVFJf9wEit1U4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/SwrveGeoManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UshwbYGuNXoOfl+GB+db1zjiX5I=
+			fhfVCr7NF1nIN661T0zuvJOMfg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2SRgwkGQj0/RKgWu4rU3vGebtfoJLGZ1T++ohLBy0h4=
+			J8jJokPxhHu1nMH1ilFOXjzt97EBRwB2fXzU3PfLcjc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/SwrveGeoSDK.h</key>
@@ -174,33 +174,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wzHP4INFbqteFZh/ppeeiYQo3DU=
+			ymyBjcitKbUlqQ2f+5J0byo1Cx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			xi1Fl5HEryiIj0PmgrXx1ssCqsqfZ59TWrEYeNwZNuw=
+			RJQRErG1kUxEAck+ZhAiGQG3Yv8VGGzuBTJCuJsKM/4=
 			</data>
 		</dict>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v3.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v4.mom</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a4K6P37yOrKSIK6g5zLqhV9yiRc=
+			N+w+EXh1ZhexxB0UzOqcY2Jq6kQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			bdnPZLXUSvbnNAp//pTOZ/Xmr/wVXdG6FNubZhUicyI=
+			CjJg+UeU2MMyE19NgGuhupHOTjaPdX95BbXcinMtYFQ=
 			</data>
 		</dict>
 		<key>SwrveGeoSDK.momd/SwrveGeoSDK v4.omo</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FKPFxtOGWFpwNvZkrKUFTyLKEq8=
+			hqtcgJfvGTYx4RXseg3J/Ni1thg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ic9M2g1aN8ICSGqzzS81WDawMJbrXGd/Dv3yFVOCnWs=
+			Z0r3VLLF3hL/CWNmDaRKYc5BrLL3gsPSDdVwaKnqZr8=
 			</data>
 		</dict>
 		<key>SwrveGeoSDK.momd/VersionInfo.plist</key>

@@ -12,7 +12,6 @@ import SwiftUI
 
 class TrackUtils {
     
-    static var mtid: String? = nil
     static let EVENT_NAME = "event_name"
     static let EVENT_DATA = "event_data"
     
@@ -26,8 +25,8 @@ class TrackUtils {
     
     static func event(value: String, name: String){
         var eventsMap = [EVENT_NAME: name, EVENT_DATA: value]
-        if(mtid != nil){
-            eventsMap["mtid"] = mtid!
+        if let mtid = UserDefaultsUtils.getMartechpass(){
+            eventsMap["martechpass"] = mtid
         }
         events(events: eventsMap)
     }

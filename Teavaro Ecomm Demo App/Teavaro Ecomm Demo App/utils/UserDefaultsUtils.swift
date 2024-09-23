@@ -19,6 +19,7 @@ class UserDefaultsUtils {
     private static let MTID = "MTID"
     private static let USER_NAME = "USER_NAME"
     private static let USER_ID = "USER_ID"
+    private static let MARTECHPASS = "MARTECHPASS"
     
     static func isCdpOm() -> Bool {
         return self.userDefaults.bool(forKey: CDP_OM)
@@ -82,6 +83,14 @@ class UserDefaultsUtils {
     
     static func setUserId(value: String) {
         self.userDefaults.set(value, forKey: USER_ID)
+    }
+    
+    static func getMartechpass() -> String? {
+        return self.userDefaults.string(forKey: MARTECHPASS)
+    }
+    
+    static func setMartechpass(value: String) {
+        self.userDefaults.set(value, forKey: MARTECHPASS)
     }
     
     static func clear(){

@@ -73,7 +73,7 @@ struct AngroView: View {
                             ItemRow(item: item)
                         }
                     }
-                    NavigationLink(destination: WebViewContainer(urlString: "https://publisher-demo.media\(store.getQSStub())")) {
+                    NavigationLink(destination: WebViewContainer(urlString: "https://www.publisher-demo.media\(store.getQSStub())")) {
                         Text("Check our recipes").padding()
                     }
                 }
