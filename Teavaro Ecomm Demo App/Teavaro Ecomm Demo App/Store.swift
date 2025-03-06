@@ -371,6 +371,8 @@ class Store: ObservableObject {
                         
                     })
                 },errorCallback: {error in
+                    self.atid = error.localizedDescription
+                    self.mtid = ""
                     print("errorCallback: UTIQ.shared.startService")
                     print("error: \(error)")
                 })

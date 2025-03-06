@@ -102,7 +102,8 @@ struct PermissionsView: View {
             Utiq.shared.checkMNOEligibility{
                 store.showUtiqConsent = true
             } errorCallback: {error in
-                
+                Store.shared.atid = error.localizedDescription
+                Store.shared.mtid = ""
             }
         }
     }

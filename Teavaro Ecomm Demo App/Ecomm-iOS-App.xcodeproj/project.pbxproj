@@ -274,9 +274,9 @@
 		00AEA9C82A2F651600794528 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */,
-				00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */,
-				00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */,
+				00AEA9D12A2F651600794528 /* Pods_Ecomm_iOS_App.framework */,
+				00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon.framework */,
+				00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,26 +581,23 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		00AEA9D12A2F651600794528 /* Pods-Ecomm-iOS-App */ = {
+		00AEA9D12A2F651600794528 /* Pods_Ecomm_iOS_App.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = "Pods-Ecomm-iOS-App";
 			path = Pods_Ecomm_iOS_App.framework;
 			remoteRef = 00AEA9D02A2F651600794528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon */ = {
+		00F1D0E82C80BBCB005A2370 /* SwrveSDKCommon.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = SwrveSDKCommon;
 			path = SwrveSDKCommon.framework;
 			remoteRef = 00F1D0E72C80BBCB005A2370 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon-SwrveSDKCommon */ = {
+		00F1D0EA2C80BBCB005A2370 /* SwrveSDKCommon.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			name = "SwrveSDKCommon-SwrveSDKCommon";
 			path = SwrveSDKCommon.bundle;
 			remoteRef = 00F1D0E92C80BBCB005A2370 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -850,6 +847,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14211E9C08320030ED3862C9 /* Pods-Ecomm-iOS-App.debug.xcconfig */;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -857,12 +855,13 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Teavaro-Ecomm-Demo-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ecomm IOS Demo App";
@@ -882,6 +881,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -895,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C01BD2BE3469A12F78203EDA /* Pods-Ecomm-iOS-App.release.xcconfig */;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -902,7 +904,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -927,6 +929,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teavaro.fcEcommDemo.Teavaro-Ecomm-Demo-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";

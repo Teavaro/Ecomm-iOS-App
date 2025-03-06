@@ -16,6 +16,7 @@ class TrackUtils {
     static let EVENT_DATA = "event_data"
     
     static func impression(value: String){
+        Store.shared.utiqStartService()
         event(value: value, name: "navigation")
     }
     

@@ -67,7 +67,7 @@ struct AppMain: App {
                 let options = UtiqOptions()
                 options.enableLogging()
                 options.setFallBackConfigJson(json: fileContents!)
-                Utiq.shared.initialize(sdkToken: "R&Ai^v>TfqCz4Y^HH2?3uk8j", options:  options, success: {
+                Utiq.shared.initialize(sdkToken: "rpCq2SQO9hdNAGwWF7zKVHTL3yU5zzto", options:  options, success: {
                     print("excecuting UTIQ.shared.startService()")
                     Store.shared.utiqStartService()
                 }, failure: { error in
