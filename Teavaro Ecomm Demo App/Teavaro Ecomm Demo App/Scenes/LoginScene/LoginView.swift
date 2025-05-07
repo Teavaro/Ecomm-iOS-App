@@ -55,7 +55,7 @@ struct LoginView: View {
             
             insertButton(title: "Login", action: {
                 if(loginId != "" && password != ""){
-                    if(FunnelConnectSDK.shared.isInitialize() && UserDefaultsUtils.isCdpNba()){
+                    if(FunnelConnectSDK.shared.isInitialized() && UserDefaultsUtils.isCdpNba()){
                         if let userId = loginId.aes256{
                             FunnelConnectSDK.shared.setUser(fcUser: FCUser(userIdType: "enemail", userId: userId), dataCallback:
                                                                 { data in

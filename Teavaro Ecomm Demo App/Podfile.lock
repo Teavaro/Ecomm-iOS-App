@@ -1,8 +1,8 @@
 PODS:
-  - FunnelConnect (0.1.46)
+  - FunnelConnect (0.1.49)
   - SwrveGeoSDK (5.1.1)
-  - SwrveSDKCommon (10.2.0)
-  - UTIQ (0.1.66)
+  - SwrveSDKCommon (10.4.0)
+  - UTIQ (0.1.72)
 
 DEPENDENCIES:
   - FunnelConnect
@@ -18,11 +18,11 @@ SPEC REPOS:
     - UTIQ
 
 SPEC CHECKSUMS:
-  FunnelConnect: 268bbf904350a422a307678697bb33a8528505fc
+  FunnelConnect: bc6c9f9643c36554612534cabe976f66a96f4403
   SwrveGeoSDK: 25b7a90b3b7c7f1223171fb8baf98751eb025acd
-  SwrveSDKCommon: e08fed2c93c7c819dada107e8506b2f871bd86a0
-  UTIQ: acde2893cc4b6819a90f7536b4f03b671c485f8f
+  SwrveSDKCommon: 67f70e1a5526d3778c2157d38a9d5121f4d69338
+  UTIQ: 644308b895e8c8528ae5ee637f62bf59da96ad92
 
 PODFILE CHECKSUM: 19a4ca95dd4b6fedde6d1e7cd979c6e4053a644b
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

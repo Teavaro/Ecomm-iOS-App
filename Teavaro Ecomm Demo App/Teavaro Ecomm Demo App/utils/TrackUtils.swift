@@ -33,7 +33,7 @@ class TrackUtils {
     }
     
     static func events(events: [String: String]){
-        if(FunnelConnectSDK.shared.isInitialize() && UserDefaultsUtils.isCdpOpt()){
+        if(FunnelConnectSDK.shared.isInitialized() && UserDefaultsUtils.isCdpOpt()){
             try? FunnelConnectSDK.shared.logEvents(events: events)
         }
     }

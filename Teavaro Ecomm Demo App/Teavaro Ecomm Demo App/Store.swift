@@ -216,7 +216,6 @@ class Store: ObservableObject {
         atid = ""
         mtid = ""
         try? Utiq.shared.clearData()
-        try? Utiq.shared.clearCookies()
     }
     
     func initializeData(){
@@ -362,20 +361,19 @@ class Store: ObservableObject {
             if(isConsentAccepted){
                 print("isConsentAccepted:\(isConsentAccepted)")
                 let stubToken = UserDefaultsUtils.getStubToken()
+                print("isConsentAccepted1:\(isConsentAccepted)")
                 Utiq.shared.fetchIdConnectData(stubToken: stubToken, dataCallback: {data in
                     print("dataCallback: UTIQ.shared.startService")
                     self.mtid = data.mtid
                     UserDefaultsUtils.setMartechpass(value: data.mtid ?? "")
                     self.atid = data.atid
-                    self.fcStartService(action: {
-                        
-                    })
                 },errorCallback: {error in
                     self.atid = error.localizedDescription
                     self.mtid = ""
                     print("errorCallback: UTIQ.shared.startService")
                     print("error: \(error)")
                 })
+                print("isConsentAccepted2:\(isConsentAccepted)")
             }
         }
     }
