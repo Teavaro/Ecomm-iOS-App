@@ -58,9 +58,16 @@ struct UTIQConsentView: View {
                     dismiss()
                 })
                 insertButton(title: "Reject", color: .gray, action: {
+                    Utiq.shared.rejectConsent(successCallback: {
+                        store.updateUtiqPermission(consent: false)
+                        store.mtid = ""
+                        UserDefaultsUtils.setMartechpass(value: "")
+                        store.atid = ""
+                    },errorCallback: {_ in
+                        store.mtid = ""
+                        UserDefaultsUtils.setMartechpass(value: "")
+                        store.atid = ""})
                     TrackUtils.click(value: "reject_utiq_consent")
-                    store.updateUtiqPermission(consent: false)
-                    try? Utiq.shared.rejectConsent()
                     dismiss()
                 })
             }

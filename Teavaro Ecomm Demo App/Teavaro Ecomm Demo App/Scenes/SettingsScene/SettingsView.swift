@@ -37,8 +37,13 @@ struct SettingsView: View {
                         }
                     }
                     Section(){
+                        NavigationLink(destination: UTIQConsentView()) {
+                            Text("Magange UTIQ")
+                        }
+                    }
+                    Section(){
                         NavigationLink(destination: PermissionsView()) {
-                            Text("CDP and UTIQ Consent")
+                            Text("CDP Consent")
                         }
                     }
                     Section(){

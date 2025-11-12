@@ -8,7 +8,7 @@ target 'Ecomm-iOS-App' do
 #pod 'SwrveSDK'
 pod 'SwrveGeoSDK'
 pod 'SwrveSDKCommon'
-pod 'UTIQ'
+#pod 'UTIQ', '0.1.77'
 pod 'FunnelConnect'
 
   # Pods for Ecomm-iOS-App

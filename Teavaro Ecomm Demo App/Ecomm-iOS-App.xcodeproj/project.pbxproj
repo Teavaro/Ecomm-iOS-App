@@ -46,6 +46,7 @@
 		00AEA9E02A2F83B900794528 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00AEA9DF2A2F83B900794528 /* PulseUI */; };
 		00D547FE29BA5D3500E92B88 /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = 00D547FD29BA5D3500E92B88 /* mraid.js */; };
 		00D625432AABABC7007B7C5F /* UTIQConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D625422AABABC7007B7C5F /* UTIQConsentView.swift */; };
+		00E76D7B2EC4B75800AC2671 /* Utiq in Frameworks */ = {isa = PBXBuildFile; productRef = 00E76D7A2EC4B75800AC2671 /* Utiq */; };
 		00F1D1082C859F34005A2370 /* PublisherWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F1D1072C859F34005A2370 /* PublisherWebView.swift */; };
 		00FBED322A3B3D6900C7E82D /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBED312A3B3D6900C7E82D /* EmailHelper.swift */; };
 		4CCAB908BAFDEE859ED6199F /* Pods_Ecomm_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10605ABB8E574EED16D30D94 /* Pods_Ecomm_iOS_App.framework */; };
@@ -179,6 +180,7 @@
 				002837F42B7F888100C6AA80 /* SwrveSDKCommon in Frameworks */,
 				002837F02B7F888100C6AA80 /* SwrveConversationSDK in Frameworks */,
 				001455032AC48D33007F4D01 /* AdSupport.framework in Frameworks */,
+				00E76D7B2EC4B75800AC2671 /* Utiq in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +533,7 @@
 				002837EF2B7F888100C6AA80 /* SwrveConversationSDK */,
 				002837F12B7F888100C6AA80 /* SwrveSDK */,
 				002837F32B7F888100C6AA80 /* SwrveSDKCommon */,
+				00E76D7A2EC4B75800AC2671 /* Utiq */,
 			);
 			productName = "Teavaro Ecomm Demo App";
 			productReference = C9FE779428622C3E006DDD74 /* Ecomm-iOS-App.app */;
@@ -564,6 +567,7 @@
 				00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */,
 				004A57742A3B899300BF32D0 /* XCRemoteSwiftPackageReference "PulseLogHandler" */,
 				002837EE2B7F888100C6AA80 /* XCRemoteSwiftPackageReference "swrve-ios-sdk" */,
+				00E76D792EC4B75800AC2671 /* XCRemoteSwiftPackageReference "ios-sdk" */,
 			);
 			productRefGroup = C9FE779528622C3E006DDD74 /* Products */;
 			projectDirPath = "";
@@ -651,9 +655,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ecomm-iOS-App/Pods-Ecomm-iOS-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -855,7 +863,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -904,7 +912,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Ecomm-iOS-App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 37;
 				DEVELOPMENT_ASSET_PATHS = "\"Teavaro Ecomm Demo App/Preview Content\"";
 				DEVELOPMENT_TEAM = C84BGQ5GW8;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -988,6 +996,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		00E76D792EC4B75800AC2671 /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/UtiqTech/ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.76;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1020,6 +1036,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 00AEA9DC2A2F83B900794528 /* XCRemoteSwiftPackageReference "Pulse" */;
 			productName = PulseUI;
+		};
+		00E76D7A2EC4B75800AC2671 /* Utiq */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00E76D792EC4B75800AC2671 /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = Utiq;
 		};
 /* End XCSwiftPackageProductDependency section */
 
