@@ -1,15 +1,6 @@
 {
-  "originHash" : "5e34fd1dd55e00abae681943db20e6bd22a7019672b3a0d430bde7a4c2fde263",
+  "originHash" : "ff5a59b43f62560f39c18bf4df3f2af4e6a44cfb3b0f0d2f39ba0f05bce6bee1",
   "pins" : [
-    {
-      "identity" : "ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/UtiqTech/ios-sdk",
-      "state" : {
-        "revision" : "602ddd97022f2e89ed72662e76032a3b6e75fbcc",
-        "version" : "0.1.76"
-      }
-    },
     {
       "identity" : "pulse",
       "kind" : "remoteSourceControl",
@@ -33,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SDWebImage/SDWebImage.git",
       "state" : {
-        "revision" : "2053b120767c42a70bcba21095f34e4cfb54a75d",
-        "version" : "5.21.3"
+        "revision" : "36e79ba485e9bb4d3cd4e3318908866dac5e7b51",
+        "version" : "5.21.5"
       }
     },
     {
@@ -42,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
-        "version" : "1.6.4"
+        "revision" : "2778fd4e5a12a8aaa30a3ee8285f4ce54c5f3181",
+        "version" : "1.9.1"
       }
     },
     {

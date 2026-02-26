@@ -50,9 +50,7 @@ struct UTIQConsentView: View {
             VStack{
                 insertButton(title: "Accept", color: .green, action: {
                     TrackUtils.click(value: "accept_utiq_consent")
-                    if(Utiq.shared.isInitialized()){
-                        try? Utiq.shared.acceptConsent()
-                    }
+                    try? Utiq.shared.acceptConsent()
                     store.updateUtiqPermission(consent: true)
                     store.utiqStartService()
                     dismiss()
